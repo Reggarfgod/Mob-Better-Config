@@ -1,0 +1,178 @@
+{
+  "text.autoconfig.mob_better_config.title": "Mob Better Config",
+
+  "text.autoconfig.mob_better_config.option.zombie": "Zombie",
+  "text.autoconfig.mob_better_config.option.skeleton": "Skeleton",
+
+
+  "text.autoconfig.mob_better_config.option.zombie.health": "Health",
+  "text.autoconfig.mob_better_config.option.zombie.attackDamage": "Attack Damage",
+  "text.autoconfig.mob_better_config.option.zombie.movementSpeed": "Movement Speed",
+  "text.autoconfig.mob_better_config.option.zombie.followRange": "Follow Range",
+  "text.autoconfig.mob_better_config.option.zombie.knockbackResistance": "Knockback Resistance",
+  "text.autoconfig.mob_better_config.option.zombie.reinforcementChance": "Reinforcement Chance",
+  "text.autoconfig.mob_better_config.option.zombie.canBreakDoors": "Can Break Doors",
+  "text.autoconfig.mob_better_config.option.zombie.doorBreakMode": "Door Break Speed",
+  "text.autoconfig.mob_better_config.option.zombie.burnInDaylight": "Burn In Daylight",
+  "text.autoconfig.mob_better_config.option.zombie.fireImmune": "Fire Immune",
+  "text.autoconfig.mob_better_config.option.zombie.glowing": "Glowing",
+  "text.autoconfig.mob_better_config.option.zombie.sprintAbility": "Sprint Ability",
+  "text.autoconfig.mob_better_config.option.zombie.rageMode": "Rage Mode",
+  "text.autoconfig.mob_better_config.option.zombie.spawnMultiplier": "Spawn Multiplier",
+  "text.autoconfig.mob_better_config.option.zombie.babyChance": "Baby Chance",
+  "text.autoconfig.mob_better_config.option.zombie.randomArmor": "Random Armor",
+  "text.autoconfig.mob_better_config.option.zombie.armorChance": "Armor Chance",
+
+
+  "text.autoconfig.mob_better_config.option.skeleton.health": "Health",
+  "text.autoconfig.mob_better_config.option.skeleton.attackDamage": "Attack Damage",
+  "text.autoconfig.mob_better_config.option.skeleton.movementSpeed": "Movement Speed",
+  "text.autoconfig.mob_better_config.option.skeleton.followRange": "Follow Range",
+  "text.autoconfig.mob_better_config.option.skeleton.knockbackResistance": "Knockback Resistance",
+  "text.autoconfig.mob_better_config.option.skeleton.fireImmune": "Fire Immune",
+  "text.autoconfig.mob_better_config.option.skeleton.burnInDaylight": "Burn In Daylight",
+  "text.autoconfig.mob_better_config.option.skeleton.glowing": "Glowing",
+  "text.autoconfig.mob_better_config.option.skeleton.spawnMultiplier": "Spawn Multiplier",
+  "text.autoconfig.mob_better_config.option.skeleton.randomArmorChance": "Random Armor Chance",
+  "text.autoconfig.mob_better_config.option.skeleton.bowPowerMultiplier": "Bow Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.skeleton.rapidFire": "Rapid Fire",
+  "text.autoconfig.mob_better_config.option.skeleton.reinforcementChance": "Reinforcement Chance",
+  "text.autoconfig.mob_better_config.option.skeleton.reinforcementChance.@Tooltip": "Chance for skeletons to summon reinforcements when damaged.",
+
+  "text.autoconfig.mob_better_config.option.zombieVillager": "Zombie Villager",
+
+  "text.autoconfig.mob_better_config.option.zombieVillager.health": "Health",
+  "text.autoconfig.mob_better_config.option.zombieVillager.health.@Tooltip": "Base health of Zombie Villager.",
+
+  "text.autoconfig.mob_better_config.option.zombieVillager.attackDamage": "Attack Damage",
+  "text.autoconfig.mob_better_config.option.zombieVillager.attackDamage.@Tooltip": "Base melee damage.",
+
+  "text.autoconfig.mob_better_config.option.zombieVillager.movementSpeed": "Movement Speed",
+  "text.autoconfig.mob_better_config.option.zombieVillager.movementSpeed.@Tooltip": "Movement speed multiplier.",
+
+  "text.autoconfig.mob_better_config.option.zombieVillager.followRange": "Follow Range",
+  "text.autoconfig.mob_better_config.option.zombieVillager.followRange.@Tooltip": "Distance at which it detects targets.",
+
+  "text.autoconfig.mob_better_config.option.zombieVillager.burnInDaylight": "Burn In Daylight",
+  "text.autoconfig.mob_better_config.option.zombieVillager.burnInDaylight.@Tooltip": "If true, burns in sunlight like normal zombies.",
+
+  "text.autoconfig.mob_better_config.option.zombieVillager.fireImmune": "Fire Immune",
+  "text.autoconfig.mob_better_config.option.zombieVillager.fireImmune.@Tooltip": "Prevents all fire damage.",
+
+  "text.autoconfig.mob_better_config.option.zombieVillager.glowing": "Glowing",
+  "text.autoconfig.mob_better_config.option.zombieVillager.glowing.@Tooltip": "Makes the mob glow permanently.",
+
+  "text.autoconfig.mob_better_config.option.zombieVillager.spawnMultiplier": "Spawn Multiplier",
+  "text.autoconfig.mob_better_config.option.zombieVillager.spawnMultiplier.@Tooltip": "Number of Zombie Villagers spawned per natural spawn. Keep low to avoid lag.",
+
+  "text.autoconfig.mob_better_config.option.zombieVillager.randomArmorChance": "Random Armor Chance",
+  "text.autoconfig.mob_better_config.option.zombieVillager.randomArmorChance.@Tooltip": "Chance to spawn with random armor.",
+
+  "text.autoconfig.mob_better_config.option.zombieVillager.reinforcementChance": "Reinforcement Chance",
+  "text.autoconfig.mob_better_config.option.zombieVillager.reinforcementChance.@Tooltip": "Chance to call reinforcements when damaged.",
+
+  "text.autoconfig.mob_better_config.option.zombieVillager.cureSpeedMultiplier": "Cure Speed Multiplier",
+  "text.autoconfig.mob_better_config.option.zombieVillager.cureSpeedMultiplier.@Tooltip": "Controls curing speed. 1.0 = normal, >1 faster, <1 slower.",
+
+  "text.autoconfig.mob_better_config.option.witch": "Witch",
+
+  "text.autoconfig.mob_better_config.option.witch.health": "Health",
+  "text.autoconfig.mob_better_config.option.witch.attackDamage": "Attack Damage",
+  "text.autoconfig.mob_better_config.option.witch.movementSpeed": "Movement Speed",
+  "text.autoconfig.mob_better_config.option.witch.followRange": "Follow Range",
+
+  "text.autoconfig.mob_better_config.option.witch.fireImmune": "Fire Immune",
+  "text.autoconfig.mob_better_config.option.witch.glowing": "Glowing",
+
+  "text.autoconfig.mob_better_config.option.witch.fasterPotionThrow": "Faster Potion Throw",
+  "text.autoconfig.mob_better_config.option.witch.fasterPotionThrow.@Tooltip": "Allows the Witch to throw potions more frequently.",
+
+  "text.autoconfig.mob_better_config.option.witch.potionDamageMultiplier": "Potion Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.witch.potionDamageMultiplier.@Tooltip": "Multiplies damage dealt by thrown potions. 1.0 = normal.",
+
+  "text.autoconfig.mob_better_config.option.witch.spawnMultiplier": "Spawn Multiplier",
+  "text.autoconfig.mob_better_config.option.witch.spawnMultiplier.@Tooltip": "Number of Witches spawned per natural spawn. Keep low to avoid lag.",
+
+  "text.autoconfig.mob_better_config.option.witch.randomArmorChance": "Random Armor Chance",
+
+  "text.autoconfig.mob_better_config.option.witch.reinforcementChance": "Reinforcement Chance",
+  "text.autoconfig.mob_better_config.option.witch.reinforcementChance.@Tooltip": "Chance for Witch to summon reinforcements when damaged.",
+
+  "text.autoconfig.mob_better_config.option.witch.lootMultiplier": "Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.witch.lootMultiplier.@Tooltip": "Multiplies the amount of items dropped by the Witch. 1.0 = normal.",
+
+  "text.autoconfig.mob_better_config.option.zombie.lootMultiplier": "Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.zombie.lootMultiplier.@Tooltip": "Multiplies items dropped by Zombies. 1.0 = normal.",
+
+  "text.autoconfig.mob_better_config.option.skeleton.lootMultiplier": "Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.skeleton.lootMultiplier.@Tooltip": "Multiplies items dropped by Skeletons. 1.0 = normal.",
+
+  "text.autoconfig.mob_better_config.option.zombieVillager.lootMultiplier": "Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.zombieVillager.lootMultiplier.@Tooltip": "Multiplies items dropped by Zombie Villagers. 1.0 = normal.",
+
+  "text.autoconfig.mob_better_config.option.spider": "Spider",
+
+  "text.autoconfig.mob_better_config.option.spider.health": "Health",
+  "text.autoconfig.mob_better_config.option.spider.health.@Tooltip": "Base maximum health of the Spider.",
+
+  "text.autoconfig.mob_better_config.option.spider.attackDamage": "Attack Damage",
+  "text.autoconfig.mob_better_config.option.spider.attackDamage.@Tooltip": "Base melee damage dealt by the Spider.",
+
+  "text.autoconfig.mob_better_config.option.spider.movementSpeed": "Movement Speed",
+  "text.autoconfig.mob_better_config.option.spider.movementSpeed.@Tooltip": "Movement speed multiplier.",
+
+  "text.autoconfig.mob_better_config.option.spider.followRange": "Follow Range",
+  "text.autoconfig.mob_better_config.option.spider.followRange.@Tooltip": "Distance at which Spider detects targets.",
+
+  "text.autoconfig.mob_better_config.option.spider.fireImmune": "Fire Immune",
+  "text.autoconfig.mob_better_config.option.spider.fireImmune.@Tooltip": "Makes the Spider immune to fire damage.",
+
+  "text.autoconfig.mob_better_config.option.spider.glowing": "Glowing",
+  "text.autoconfig.mob_better_config.option.spider.glowing.@Tooltip": "Makes the Spider glow permanently.",
+
+  "text.autoconfig.mob_better_config.option.spider.spawnMultiplier": "Spawn Multiplier",
+  "text.autoconfig.mob_better_config.option.spider.spawnMultiplier.@Tooltip": "Number of Spiders spawned per natural spawn. Keep low to avoid lag.",
+
+  "text.autoconfig.mob_better_config.option.spider.randomArmorChance": "Random Armor Chance",
+  "text.autoconfig.mob_better_config.option.spider.randomArmorChance.@Tooltip": "Chance for Spider to spawn with random armor.",
+
+  "text.autoconfig.mob_better_config.option.spider.reinforcementChance": "Reinforcement Chance",
+  "text.autoconfig.mob_better_config.option.spider.reinforcementChance.@Tooltip": "Chance for Spider to summon reinforcements when damaged.",
+
+  "text.autoconfig.mob_better_config.option.spider.lootMultiplier": "Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.spider.lootMultiplier.@Tooltip": "Multiplies items dropped by Spider. 1.0 = normal.",
+  "text.autoconfig.mob_better_config.option.caveSpider": "Cave Spider",
+
+  "text.autoconfig.mob_better_config.option.caveSpider.health": "Health",
+  "text.autoconfig.mob_better_config.option.caveSpider.health.@Tooltip": "Base maximum health of the Cave Spider.",
+
+  "text.autoconfig.mob_better_config.option.caveSpider.attackDamage": "Attack Damage",
+  "text.autoconfig.mob_better_config.option.caveSpider.attackDamage.@Tooltip": "Base melee damage dealt by the Cave Spider.",
+
+  "text.autoconfig.mob_better_config.option.caveSpider.movementSpeed": "Movement Speed",
+  "text.autoconfig.mob_better_config.option.caveSpider.movementSpeed.@Tooltip": "Movement speed multiplier.",
+
+  "text.autoconfig.mob_better_config.option.caveSpider.fireImmune": "Fire Immune",
+  "text.autoconfig.mob_better_config.option.caveSpider.fireImmune.@Tooltip": "Makes the Cave Spider immune to fire damage.",
+
+  "text.autoconfig.mob_better_config.option.caveSpider.glowing": "Glowing",
+  "text.autoconfig.mob_better_config.option.caveSpider.glowing.@Tooltip": "Makes the Cave Spider glow permanently.",
+
+  "text.autoconfig.mob_better_config.option.caveSpider.spawnMultiplier": "Spawn Multiplier",
+  "text.autoconfig.mob_better_config.option.caveSpider.spawnMultiplier.@Tooltip": "Number of Cave Spiders spawned per natural spawn. Keep low to avoid lag.",
+
+  "text.autoconfig.mob_better_config.option.caveSpider.reinforcementChance": "Reinforcement Chance",
+  "text.autoconfig.mob_better_config.option.caveSpider.reinforcementChance.@Tooltip": "Chance for Cave Spider to summon reinforcements when damaged.",
+
+  "text.autoconfig.mob_better_config.option.caveSpider.lootMultiplier": "Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.caveSpider.lootMultiplier.@Tooltip": "Multiplies items dropped by Cave Spider. 1.0 = normal.",
+
+  "text.autoconfig.mob_better_config.option.caveSpider.enablePoison": "Enable Poison",
+  "text.autoconfig.mob_better_config.option.caveSpider.enablePoison.@Tooltip": "If false, Cave Spider will not apply poison.",
+
+  "text.autoconfig.mob_better_config.option.caveSpider.poisonDurationMultiplier": "Poison Duration Multiplier",
+  "text.autoconfig.mob_better_config.option.caveSpider.poisonDurationMultiplier.@Tooltip": "Multiplies poison duration. 1.0 = normal.",
+
+  "text.autoconfig.mob_better_config.option.caveSpider.poisonAmplifierMultiplier": "Poison Amplifier Multiplier",
+  "text.autoconfig.mob_better_config.option.caveSpider.poisonAmplifierMultiplier.@Tooltip": "Multiplies poison strength. 1.0 = normal."
+}
