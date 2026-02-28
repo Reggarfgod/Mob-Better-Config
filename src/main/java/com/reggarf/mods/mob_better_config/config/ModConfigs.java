@@ -35,4 +35,17 @@ public class ModConfigs {
     public static CreeperConfig getCreeper() {
         return ROOT.creeper;
     }
+    public static WardenConfig getWarden() {
+        return ROOT.warden;
+    }
+    public static VindicatorConfig getVindicator() {
+        return ROOT.vindicator;
+    }
+    public static StrayConfig getStray() {
+        return ROOT.stray;
+    }
+
+    public static SlimeConfig getSlime() {
+        return ROOT.slime;
+    }
 }

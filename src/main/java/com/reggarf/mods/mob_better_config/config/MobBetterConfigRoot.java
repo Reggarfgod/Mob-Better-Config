@@ -27,4 +27,16 @@ public class MobBetterConfigRoot implements ConfigData {
 
     @ConfigEntry.Gui.CollapsibleObject
     public CreeperConfig creeper = new CreeperConfig();
+
+    @ConfigEntry.Gui.CollapsibleObject
+    public WardenConfig warden = new WardenConfig();
+
+    @ConfigEntry.Gui.CollapsibleObject
+    public VindicatorConfig vindicator = new VindicatorConfig();
+
+    @ConfigEntry.Gui.CollapsibleObject
+    public StrayConfig stray = new StrayConfig();
+
+    @ConfigEntry.Gui.CollapsibleObject
+    public SlimeConfig slime = new SlimeConfig();
 }

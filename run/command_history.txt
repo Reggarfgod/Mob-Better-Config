@@ -5,3 +5,26 @@
 /gamemode survival
 /gamemode spectator
 /gamemode creative
+/gamemode survival
+/give Dev minecraft:warden_spawn_egg
+/gamemode creative
+/gamemode survival
+/gamemode creative
+/gamemode survival
+/gamemode creative
+/gamemode survival
+/gamemode creative
+/gamemode survival
+/gamemode spectator
+/gamemode survival
+/gamemode creative
+/gamemode survival\
+/gamemode survival
+/gamemode creative
+/gamemode survival
+/give Dev minecraft:stray_spawn_egg
+/gamemode creative
+/gamemode survival
+/gamemode creative
+/gamemode survival
+/give Dev minecraft:slime_spawn_egg
