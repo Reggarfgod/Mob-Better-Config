@@ -39,4 +39,13 @@ public class MobBetterConfigRoot implements ConfigData {
 
     @ConfigEntry.Gui.CollapsibleObject
     public SlimeConfig slime = new SlimeConfig();
+
+    @ConfigEntry.Gui.CollapsibleObject
+    public HuskConfig husk = new HuskConfig();
+
+    @ConfigEntry.Gui.CollapsibleObject
+    public PillagerConfig pillager = new PillagerConfig();
+
+    @ConfigEntry.Gui.CollapsibleObject
+    public PhantomConfig phantom= new PhantomConfig();
 }

@@ -41,6 +41,9 @@ public class Mob_better_config {
         NeoForge.EVENT_BUS.register(new VindicatorEvents());
         NeoForge.EVENT_BUS.register(new StrayEvents());
         NeoForge.EVENT_BUS.register(new SlimeEvents());
+        NeoForge.EVENT_BUS.register(new HuskEvents());
+        NeoForge.EVENT_BUS.register(new PillagerEvents());
+        NeoForge.EVENT_BUS.register(new PhantomEvents());
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

@@ -21,9 +21,7 @@ public class CaveSpiderEvents {
 
     private static final String POISON_TAG = "mob_better_config_poison_flag";
 
-    // =========================
-    // SPAWN LOGIC
-    // =========================
+
     @SubscribeEvent
     public void onJoin(EntityJoinLevelEvent event) {
 
@@ -58,9 +56,6 @@ public class CaveSpiderEvents {
         }
     }
 
-    // =========================
-    // APPLY ATTRIBUTES
-    // =========================
     private void applyConfig(CaveSpider spider) {
 
         CaveSpiderConfig config = ModConfigs.getCaveSpider();
@@ -83,9 +78,6 @@ public class CaveSpiderEvents {
             spider.setGlowingTag(true);
     }
 
-    // =========================
-    // DAMAGE EVENT
-    // =========================
     @SubscribeEvent
     public void onDamage(LivingDamageEvent.Post event) {
 
@@ -111,9 +103,6 @@ public class CaveSpiderEvents {
         }
     }
 
-    // =========================
-    // POISON CONTROL (NEXT TICK FIX)
-    // =========================
     @SubscribeEvent
     public void onTick(EntityTickEvent.Post event) {
 

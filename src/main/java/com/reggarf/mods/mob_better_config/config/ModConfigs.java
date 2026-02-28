@@ -48,4 +48,13 @@ public class ModConfigs {
     public static SlimeConfig getSlime() {
         return ROOT.slime;
     }
+    public static HuskConfig getHusk() {
+        return ROOT.husk;
+    }
+    public static PillagerConfig getPillager() {
+        return ROOT.pillager;
+    }
+    public static PhantomConfig getPhantom() {
+        return ROOT.phantom;
+    }
 }

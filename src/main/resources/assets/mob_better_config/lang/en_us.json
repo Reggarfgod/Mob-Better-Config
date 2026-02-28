@@ -421,7 +421,7 @@
   "text.autoconfig.mob_better_config.option.slime.despawnInPeaceful.@Tooltip": "If enabled, slimes despawn when difficulty is set to Peaceful.",
 
   "text.autoconfig.mob_better_config.option.slime.bossMode": "Enable Boss Mode",
-  "text.autoconfig.mob_better_config.option.slime.bossMode.@Tooltip": "Enables boss variants for slimes. If disabled, no slimes can become bosses regardless of spawn chance.",
+  "text.autoconfig.mob_better_config.option.slime.bossMode.@Tooltip": "Enables boss variants for Pillagers. If disabled, no Pillager can become a Boss regardless of boss spawn chance.",
 
   "text.autoconfig.mob_better_config.option.slime.forceAllBoss": "Force All Boss",
   "text.autoconfig.mob_better_config.option.slime.forceAllBoss.@Tooltip": "If enabled, every spawned slime becomes a boss. Overrides boss spawn chance.",
@@ -439,5 +439,217 @@
   "text.autoconfig.mob_better_config.option.slime.bossGlowing.@Tooltip": "If enabled, boss slimes will glow to make them easier to identify.",
 
   "text.autoconfig.mob_better_config.option.slime.bossCustomName": "Boss Custom Name",
-  "text.autoconfig.mob_better_config.option.slime.bossCustomName.@Tooltip": "If enabled, boss slimes display a red 'Boss' name tag."
+  "text.autoconfig.mob_better_config.option.slime.bossCustomName.@Tooltip": "If enabled, boss slimes display a red 'Boss' name tag.",
+
+  "text.autoconfig.mob_better_config.option.husk": "Husk",
+
+  "text.autoconfig.mob_better_config.option.husk.health": "Health",
+  "text.autoconfig.mob_better_config.option.husk.health.@Tooltip": "Base maximum health of the Husk. Vanilla: 20",
+
+  "text.autoconfig.mob_better_config.option.husk.attackDamageMultiplier": "Attack Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.husk.attackDamageMultiplier.@Tooltip": "Multiplies Husk attack damage. 1.0 = normal.",
+
+  "text.autoconfig.mob_better_config.option.husk.movementSpeedMultiplier": "Movement Speed Multiplier",
+  "text.autoconfig.mob_better_config.option.husk.movementSpeedMultiplier.@Tooltip": "Multiplies Husk movement speed. 1.0 = normal.",
+
+  "text.autoconfig.mob_better_config.option.husk.followRangeMultiplier": "Follow Range Multiplier",
+  "text.autoconfig.mob_better_config.option.husk.followRangeMultiplier.@Tooltip": "Multiplies detection range. 1.0 = normal.",
+
+  "text.autoconfig.mob_better_config.option.husk.xpMultiplier": "XP Multiplier",
+  "text.autoconfig.mob_better_config.option.husk.xpMultiplier.@Tooltip": "Multiplies experience dropped. 1.0 = normal.",
+
+  "text.autoconfig.mob_better_config.option.husk.enableHunger": "Enable Hunger Effect",
+  "text.autoconfig.mob_better_config.option.husk.enableHunger.@Tooltip": "If enabled, Husk applies Hunger when attacking with empty hand.",
+
+  "text.autoconfig.mob_better_config.option.husk.hungerDuration": "Hunger Duration",
+  "text.autoconfig.mob_better_config.option.husk.hungerDuration.@Tooltip": "Duration in ticks. 20 ticks = 1 second. Vanilla: 140",
+
+  "text.autoconfig.mob_better_config.option.husk.hungerAmplifier": "Hunger Amplifier",
+  "text.autoconfig.mob_better_config.option.husk.hungerAmplifier.@Tooltip": "Strength level of Hunger. 0 = Hunger I.",
+
+  "text.autoconfig.mob_better_config.option.husk.desertBuff": "Enable Desert Buff",
+  "text.autoconfig.mob_better_config.option.husk.desertBuff.@Tooltip": "If enabled, Husk becomes stronger in desert biomes.",
+
+  "text.autoconfig.mob_better_config.option.husk.desertHealth": "Desert Health",
+  "text.autoconfig.mob_better_config.option.husk.desertHealth.@Tooltip": "Health value while in desert biome.",
+
+  "text.autoconfig.mob_better_config.option.husk.desertDamageBonus": "Desert Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.husk.desertDamageBonus.@Tooltip": "Multiplies attack damage in desert biome. 1.0 = normal.",
+
+  "text.autoconfig.mob_better_config.option.husk.spawnMultiplier": "Spawn Multiplier",
+  "text.autoconfig.mob_better_config.option.husk.spawnMultiplier.@Tooltip": "Extra Husks spawned per natural spawn. Keep low to avoid lag.",
+
+  "text.autoconfig.mob_better_config.option.husk.reinforcementChance": "Reinforcement Chance",
+  "text.autoconfig.mob_better_config.option.husk.reinforcementChance.@Tooltip": "Chance to summon extra Husks when damaged.",
+
+  "text.autoconfig.mob_better_config.option.husk.lootMultiplier": "Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.husk.lootMultiplier.@Tooltip": "Multiplies item drops. 1.0 = normal.",
+
+  "text.autoconfig.mob_better_config.option.husk.fireImmune": "Fire Immune",
+  "text.autoconfig.mob_better_config.option.husk.fireImmune.@Tooltip": "If enabled, Husk will not burn in sunlight.",
+
+  "text.autoconfig.mob_better_config.option.husk.glowing": "Glowing",
+  "text.autoconfig.mob_better_config.option.husk.glowing.@Tooltip": "Makes the Husk glow permanently.",
+
+  "text.autoconfig.mob_better_config.option.husk.convertInWater": "Convert In Water",
+  "text.autoconfig.mob_better_config.option.husk.convertInWater.@Tooltip": "If enabled, Husk converts into Zombie when submerged.",
+
+  "text.autoconfig.mob_better_config.option.husk.waterConversionTime": "Water Conversion Time",
+  "text.autoconfig.mob_better_config.option.husk.waterConversionTime.@Tooltip": "Time in ticks before conversion. Vanilla ~300 ticks.",
+
+  "text.autoconfig.mob_better_config.option.husk.bossMode": "Boss Mode",
+  "text.autoconfig.mob_better_config.option.husk.bossMode.@Tooltip": "Enables boss variants for husk. If disabled, no husk can become bosses regardless of spawn chance.",
+
+  "text.autoconfig.mob_better_config.option.husk.forceAllBoss": "Force All Boss",
+  "text.autoconfig.mob_better_config.option.husk.forceAllBoss.@Tooltip": "If enabled, every spawned Husk becomes a Boss. Overrides boss chance.",
+
+  "text.autoconfig.mob_better_config.option.husk.bossChance": "Boss Spawn Chance",
+  "text.autoconfig.mob_better_config.option.husk.bossChance.@Tooltip": "Chance for a Husk to spawn as Boss when Boss Mode is enabled. 0.05 = 5%.",
+
+  "text.autoconfig.mob_better_config.option.husk.bossHealthMultiplier": "Boss Health Multiplier",
+  "text.autoconfig.mob_better_config.option.husk.bossHealthMultiplier.@Tooltip": "Multiplies maximum health for Boss Husks.",
+
+  "text.autoconfig.mob_better_config.option.husk.bossDamageMultiplier": "Boss Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.husk.bossDamageMultiplier.@Tooltip": "Multiplies attack damage for Boss Husks.",
+
+  "text.autoconfig.mob_better_config.option.husk.bossGlowing": "Boss Glowing Effect",
+  "text.autoconfig.mob_better_config.option.husk.bossGlowing.@Tooltip": "If enabled, Boss Husks glow to make them easier to identify.",
+
+  "text.autoconfig.mob_better_config.option.husk.bossCustomName": "Boss Custom Name",
+  "text.autoconfig.mob_better_config.option.husk.bossCustomName.@Tooltip": "If enabled, Boss Husks display a custom red 'Boss' name tag.",
+
+
+  "text.autoconfig.mob_better_config.option.pillager": "Pillager",
+
+  "text.autoconfig.mob_better_config.option.pillager.health": "Health",
+  "text.autoconfig.mob_better_config.option.pillager.health.@Tooltip": "Base maximum health of the Pillager. Vanilla: 24",
+
+  "text.autoconfig.mob_better_config.option.pillager.attackDamage": "Attack Damage",
+  "text.autoconfig.mob_better_config.option.pillager.attackDamage.@Tooltip": "Base melee damage dealt by the Pillager. Vanilla: 5",
+
+  "text.autoconfig.mob_better_config.option.pillager.movementSpeed": "Flying Speed",
+  "text.autoconfig.mob_better_config.option.pillager.movementSpeed.@Tooltip": "Flying speed multiplier. Vanilla: 0.6",
+
+  "text.autoconfig.mob_better_config.option.pillager.followRange": "Follow Range",
+  "text.autoconfig.mob_better_config.option.pillager.followRange.@Tooltip": "Distance at which the Pillager detects targets. Vanilla: 32",
+
+  "text.autoconfig.mob_better_config.option.pillager.crossbowDamageMultiplier": "Crossbow Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.pillager.crossbowDamageMultiplier.@Tooltip": "Multiplies damage dealt by crossbow shots. 1.0 = normal.",
+
+  "text.autoconfig.mob_better_config.option.pillager.strongerInRaid": "Stronger In Raid",
+  "text.autoconfig.mob_better_config.option.pillager.strongerInRaid.@Tooltip": "If enabled, Pillagers receive stat bonuses during raids.",
+
+  "text.autoconfig.mob_better_config.option.pillager.raidDamageBonus": "Raid Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.pillager.raidDamageBonus.@Tooltip": "Damage multiplier applied during raids. 1.0 = normal.",
+
+  "text.autoconfig.mob_better_config.option.pillager.raidHealthBonus": "Raid Health Multiplier",
+  "text.autoconfig.mob_better_config.option.pillager.raidHealthBonus.@Tooltip": "Health multiplier applied during raids. 1.0 = normal.",
+
+  "text.autoconfig.mob_better_config.option.pillager.spawnMultiplier": "Spawn Multiplier",
+  "text.autoconfig.mob_better_config.option.pillager.spawnMultiplier.@Tooltip": "Number of Pillagers spawned per natural spawn. Keep low to avoid lag.",
+
+  "text.autoconfig.mob_better_config.option.pillager.xpMultiplier": "XP Multiplier",
+  "text.autoconfig.mob_better_config.option.pillager.xpMultiplier.@Tooltip": "Multiplies experience dropped. 1.0 = normal.",
+
+  "text.autoconfig.mob_better_config.option.pillager.lootMultiplier": "Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.pillager.lootMultiplier.@Tooltip": "Multiplies item drops. 1.0 = normal.",
+
+  "text.autoconfig.mob_better_config.option.pillager.reinforcementChance": "Reinforcement Chance",
+  "text.autoconfig.mob_better_config.option.pillager.reinforcementChance.@Tooltip": "Chance for Pillager to summon reinforcements when damaged.",
+
+  "text.autoconfig.mob_better_config.option.pillager.fireImmune": "Fire Immune",
+  "text.autoconfig.mob_better_config.option.pillager.fireImmune.@Tooltip": "If enabled, Pillager ignores fire damage.",
+
+  "text.autoconfig.mob_better_config.option.pillager.glowing": "Glowing",
+  "text.autoconfig.mob_better_config.option.pillager.glowing.@Tooltip": "Makes the Pillager glow permanently.",
+
+  "text.autoconfig.mob_better_config.option.pillager.bossMode": "Boss Mode",
+  "text.autoconfig.mob_better_config.option.pillager.bossMode.@Tooltip": "Enables boss variants for Pillagers.",
+
+  "text.autoconfig.mob_better_config.option.pillager.forceAllBoss": "Force All Boss",
+  "text.autoconfig.mob_better_config.option.pillager.forceAllBoss.@Tooltip": "If enabled, every spawned Pillager becomes a Boss. Overrides boss chance.",
+
+  "text.autoconfig.mob_better_config.option.pillager.bossChance": "Boss Spawn Chance",
+  "text.autoconfig.mob_better_config.option.pillager.bossChance.@Tooltip": "Chance for a Pillager to spawn as Boss when Boss Mode is enabled. 0.05 = 5%.",
+
+  "text.autoconfig.mob_better_config.option.pillager.bossHealthMultiplier": "Boss Health Multiplier",
+  "text.autoconfig.mob_better_config.option.pillager.bossHealthMultiplier.@Tooltip": "Multiplies maximum health for Boss Pillagers.",
+
+  "text.autoconfig.mob_better_config.option.pillager.bossDamageMultiplier": "Boss Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.pillager.bossDamageMultiplier.@Tooltip": "Multiplies attack damage for Boss Pillagers.",
+
+  "text.autoconfig.mob_better_config.option.pillager.bossGlowing": "Boss Glowing Effect",
+  "text.autoconfig.mob_better_config.option.pillager.bossGlowing.@Tooltip": "If enabled, Boss Pillagers glow to make them easier to identify.",
+
+  "text.autoconfig.mob_better_config.option.pillager.bossCustomName": "Boss Custom Name",
+  "text.autoconfig.mob_better_config.option.pillager.bossCustomName.@Tooltip": "If enabled, Boss Pillagers display a custom red 'Boss' name tag.",
+
+
+  "text.autoconfig.mob_better_config.option.phantom": "Phantom",
+
+  "text.autoconfig.mob_better_config.option.phantom.health": "Health",
+  "text.autoconfig.mob_better_config.option.phantom.health.@Tooltip": "Base maximum health of the Phantom. Vanilla: 20",
+
+  "text.autoconfig.mob_better_config.option.phantom.attackDamage": "Attack Damage",
+  "text.autoconfig.mob_better_config.option.phantom.attackDamage.@Tooltip": "Base melee damage dealt by the Phantom. Vanilla: 6",
+
+  "text.autoconfig.mob_better_config.option.phantom.movementSpeed": "Movement Speed",
+  "text.autoconfig.mob_better_config.option.phantom.movementSpeed.@Tooltip": "Movement speed multiplier. Vanilla approx: 0.6",
+
+  "text.autoconfig.mob_better_config.option.phantom.followRange": "Follow Range",
+  "text.autoconfig.mob_better_config.option.phantom.followRange.@Tooltip": "Distance at which the Phantom detects targets. Vanilla: 64",
+
+  "text.autoconfig.mob_better_config.option.phantom.fixedSize": "Fixed Size",
+  "text.autoconfig.mob_better_config.option.phantom.fixedSize.@Tooltip": "Forces Phantom to spawn at this size. -1 = vanilla scaling behavior.",
+
+  "text.autoconfig.mob_better_config.option.phantom.sizeMultiplier": "Size Multiplier",
+  "text.autoconfig.mob_better_config.option.phantom.sizeMultiplier.@Tooltip": "Multiplies Phantom size on spawn. 1.0 = normal.",
+
+  "text.autoconfig.mob_better_config.option.phantom.spawnMultiplier": "Spawn Multiplier",
+  "text.autoconfig.mob_better_config.option.phantom.spawnMultiplier.@Tooltip": "Number of Phantoms spawned per natural spawn event. Keep low to avoid lag.",
+
+  "text.autoconfig.mob_better_config.option.phantom.xpMultiplier": "XP Multiplier",
+  "text.autoconfig.mob_better_config.option.phantom.xpMultiplier.@Tooltip": "Multiplies experience dropped by Phantom. 1.0 = normal.",
+
+  "text.autoconfig.mob_better_config.option.phantom.lootMultiplier": "Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.phantom.lootMultiplier.@Tooltip": "Multiplies item drops. 1.0 = normal.",
+
+  "text.autoconfig.mob_better_config.option.phantom.reinforcementChance": "Reinforcement Chance",
+  "text.autoconfig.mob_better_config.option.phantom.reinforcementChance.@Tooltip": "Chance for Phantom to summon another Phantom when damaged.",
+
+  "text.autoconfig.mob_better_config.option.phantom.fireImmune": "Fire Immune",
+  "text.autoconfig.mob_better_config.option.phantom.fireImmune.@Tooltip": "If enabled, Phantom ignores fire damage.",
+
+  "text.autoconfig.mob_better_config.option.phantom.glowing": "Glowing",
+  "text.autoconfig.mob_better_config.option.phantom.glowing.@Tooltip": "Makes the Phantom glow permanently.",
+
+  "text.autoconfig.mob_better_config.option.phantom.burnInDaylight": "Burn In Daylight",
+  "text.autoconfig.mob_better_config.option.phantom.burnInDaylight.@Tooltip": "If enabled, Phantom burns in daylight (not vanilla behavior).",
+
+  "text.autoconfig.mob_better_config.option.phantom.bossMode": "Boss Mode",
+  "text.autoconfig.mob_better_config.option.phantom.bossMode.@Tooltip": "Enables boss variants for Phantoms. If disabled, no Phantom can become a Boss regardless of spawn chance.",
+
+  "text.autoconfig.mob_better_config.option.phantom.forceAllBoss": "Force All Boss",
+  "text.autoconfig.mob_better_config.option.phantom.forceAllBoss.@Tooltip": "If enabled, every spawned Phantom becomes a Boss. Overrides boss spawn chance.",
+
+  "text.autoconfig.mob_better_config.option.phantom.bossChance": "Boss Spawn Chance",
+  "text.autoconfig.mob_better_config.option.phantom.bossChance.@Tooltip": "Chance for a Phantom to spawn as Boss when Boss Mode is enabled. 0.05 = 5%.",
+
+  "text.autoconfig.mob_better_config.option.phantom.bossHealthMultiplier": "Boss Health Multiplier",
+  "text.autoconfig.mob_better_config.option.phantom.bossHealthMultiplier.@Tooltip": "Multiplies maximum health for Boss Phantoms.",
+
+  "text.autoconfig.mob_better_config.option.phantom.bossDamageMultiplier": "Boss Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.phantom.bossDamageMultiplier.@Tooltip": "Multiplies attack damage for Boss Phantoms.",
+
+  "text.autoconfig.mob_better_config.option.phantom.bossGlowing": "Boss Glowing Effect",
+  "text.autoconfig.mob_better_config.option.phantom.bossGlowing.@Tooltip": "If enabled, Boss Phantoms glow to make them easier to identify.",
+
+  "text.autoconfig.mob_better_config.option.phantom.bossCustomName": "Boss Custom Name",
+  "text.autoconfig.mob_better_config.option.phantom.bossCustomName.@Tooltip": "If enabled, Boss Phantoms display a custom red 'Boss' name tag.",
+
+  "text.autoconfig.mob_better_config.option.phantom.circleSpeedMultiplier": "Circle Speed Multiplier",
+  "text.autoconfig.mob_better_config.option.phantom.circleSpeedMultiplier.@Tooltip": "Multiplies the Phantom's circling movement speed before attacking. 1.0 = normal vanilla behavior.",
+
+  "text.autoconfig.mob_better_config.option.phantom.swoopSpeedMultiplier": "Swoop Speed Multiplier",
+  "text.autoconfig.mob_better_config.option.phantom.swoopSpeedMultiplier.@Tooltip": "Multiplies the Phantom's dive (swoop) attack speed. Vanilla approx: 1.5"
 }
