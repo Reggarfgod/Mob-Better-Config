@@ -174,5 +174,41 @@
   "text.autoconfig.mob_better_config.option.caveSpider.poisonDurationMultiplier.@Tooltip": "Multiplies poison duration. 1.0 = normal.",
 
   "text.autoconfig.mob_better_config.option.caveSpider.poisonAmplifierMultiplier": "Poison Amplifier Multiplier",
-  "text.autoconfig.mob_better_config.option.caveSpider.poisonAmplifierMultiplier.@Tooltip": "Multiplies poison strength. 1.0 = normal."
+  "text.autoconfig.mob_better_config.option.caveSpider.poisonAmplifierMultiplier.@Tooltip": "Multiplies poison strength. 1.0 = normal.",
+
+  "text.autoconfig.mob_better_config.option.creeper": "Creeper",
+
+  "text.autoconfig.mob_better_config.option.creeper.health": "Health",
+  "text.autoconfig.mob_better_config.option.creeper.health.@Tooltip": "Base health of the Creeper.",
+
+  "text.autoconfig.mob_better_config.option.creeper.movementSpeed": "Movement Speed",
+  "text.autoconfig.mob_better_config.option.creeper.movementSpeed.@Tooltip": "How fast the Creeper moves.",
+
+  "text.autoconfig.mob_better_config.option.creeper.explosionRadius": "Explosion Radius",
+  "text.autoconfig.mob_better_config.option.creeper.explosionRadius.@Tooltip": "Size of the explosion. Vanilla is 3.",
+
+  "text.autoconfig.mob_better_config.option.creeper.explosionDamageMultiplier": "Explosion Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.creeper.explosionDamageMultiplier.@Tooltip": "Multiplies explosion power. 1.0 = normal, 2.0 = double damage.",
+
+  "text.autoconfig.mob_better_config.option.creeper.fuseTime": "Fuse Time (Ticks)",
+  "text.autoconfig.mob_better_config.option.creeper.fuseTime.@Tooltip": "Time before explosion. 20 ticks = 1 second. Vanilla is 30.",
+
+  "text.autoconfig.mob_better_config.option.creeper.powered": "Always Charged Creeper",
+  "text.autoconfig.mob_better_config.option.creeper.powered.@Tooltip": "If enabled, Creepers spawn in charged (blue aura) state.",
+
+  "text.autoconfig.mob_better_config.option.creeper.fireImmune": "Fire Immune",
+  "text.autoconfig.mob_better_config.option.creeper.fireImmune.@Tooltip": "Prevents Creeper from taking fire damage.",
+
+  "text.autoconfig.mob_better_config.option.creeper.glowing": "Glowing",
+  "text.autoconfig.mob_better_config.option.creeper.glowing.@Tooltip": "Makes Creeper glow permanently.",
+
+  "text.autoconfig.mob_better_config.option.creeper.spawnMultiplier": "Spawn Multiplier",
+  "text.autoconfig.mob_better_config.option.creeper.spawnMultiplier.@Tooltip": "Number of Creepers spawned per natural spawn. Keep low to avoid lag.",
+
+  "text.autoconfig.mob_better_config.option.creeper.reinforcementChance": "Reinforcement Chance",
+  "text.autoconfig.mob_better_config.option.creeper.reinforcementChance.@Tooltip": "Chance to summon another Creeper when damaged.",
+
+  "text.autoconfig.mob_better_config.option.creeper.lootMultiplier": "Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.creeper.lootMultiplier.@Tooltip": "Multiplies dropped loot. 1.0 = normal."
+
 }

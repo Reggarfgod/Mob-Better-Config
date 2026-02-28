@@ -32,4 +32,7 @@ public class ModConfigs {
     public static CaveSpiderConfig getCaveSpider() {
         return ROOT.caveSpider;
     }
+    public static CreeperConfig getCreeper() {
+        return ROOT.creeper;
+    }
 }

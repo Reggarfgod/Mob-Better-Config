@@ -36,6 +36,7 @@ public class Mob_better_config {
         NeoForge.EVENT_BUS.register(new WitchEvents());
         NeoForge.EVENT_BUS.register(new SpiderEvents());
         NeoForge.EVENT_BUS.register(new CaveSpiderEvents());
+        NeoForge.EVENT_BUS.register(new CreeperEvents());
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

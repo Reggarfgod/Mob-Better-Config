@@ -25,4 +25,6 @@ public class MobBetterConfigRoot implements ConfigData {
     @ConfigEntry.Gui.CollapsibleObject
     public CaveSpiderConfig caveSpider = new CaveSpiderConfig();
 
+    @ConfigEntry.Gui.CollapsibleObject
+    public CreeperConfig creeper = new CreeperConfig();
 }
