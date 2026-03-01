@@ -688,5 +688,159 @@
   "text.autoconfig.mob_better_config.option.drowned.bossGlowing.@Tooltip": "Makes boss Drowned glow.",
 
   "text.autoconfig.mob_better_config.option.drowned.bossCustomName": "Boss Custom Name",
-  "text.autoconfig.mob_better_config.option.drowned.bossCustomName.@Tooltip": "Boss Drowned spawn with a special custom name."
+  "text.autoconfig.mob_better_config.option.drowned.bossCustomName.@Tooltip": "Boss Drowned spawn with a special custom name.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube": "Magma Cube",
+  "text.autoconfig.mob_better_config.option.magma_cube.CustomName": "Custom Name",
+  "text.autoconfig.mob_better_config.option.magma_cube.CustomName.@Tooltip": "Allows Magma Cube to spawn with a custom name.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.healthMultiplier": "Health Multiplier",
+  "text.autoconfig.mob_better_config.option.magma_cube.healthMultiplier.@Tooltip": "Multiplies the Magma Cube's base health.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.attackDamageMultiplier": "Attack Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.magma_cube.attackDamageMultiplier.@Tooltip": "Multiplies the Magma Cube's attack damage.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.xpMultiplier": "XP Multiplier",
+  "text.autoconfig.mob_better_config.option.magma_cube.xpMultiplier.@Tooltip": "Multiplies the experience dropped by the Magma Cube.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.lootMultiplier": "Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.magma_cube.lootMultiplier.@Tooltip": "Multiplies the loot dropped by the Magma Cube.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.fixedSize": "Fixed Size",
+  "text.autoconfig.mob_better_config.option.magma_cube.fixedSize.@Tooltip": "Sets a fixed size for Magma Cubes. Use -1 for vanilla behavior.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.sizeMultiplier": "Size Multiplier",
+  "text.autoconfig.mob_better_config.option.magma_cube.sizeMultiplier.@Tooltip": "Multiplies the Magma Cube's size.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.minSize": "Minimum Size",
+  "text.autoconfig.mob_better_config.option.magma_cube.minSize.@Tooltip": "Minimum allowed size for Magma Cubes.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.maxSize": "Maximum Size",
+  "text.autoconfig.mob_better_config.option.magma_cube.maxSize.@Tooltip": "Maximum allowed size for Magma Cubes.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.allowSplit": "Allow Splitting",
+  "text.autoconfig.mob_better_config.option.magma_cube.allowSplit.@Tooltip": "Allows Magma Cubes to split when defeated.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.preventSplitWhenBoss": "Prevent Boss Splitting",
+  "text.autoconfig.mob_better_config.option.magma_cube.preventSplitWhenBoss.@Tooltip": "Prevents boss Magma Cubes from splitting on death.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.splitSizeMultiplier": "Split Size Multiplier",
+  "text.autoconfig.mob_better_config.option.magma_cube.splitSizeMultiplier.@Tooltip": "Multiplier applied to size when splitting. Vanilla: 0.5 (size / 2).",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.minSplitCount": "Minimum Split Count",
+  "text.autoconfig.mob_better_config.option.magma_cube.minSplitCount.@Tooltip": "Minimum number of smaller Magma Cubes spawned on split. Vanilla: 2.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.maxSplitCount": "Maximum Split Count",
+  "text.autoconfig.mob_better_config.option.magma_cube.maxSplitCount.@Tooltip": "Maximum number of smaller Magma Cubes spawned on split. Vanilla: 4.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.baseMovementSpeed": "Base Movement Speed",
+  "text.autoconfig.mob_better_config.option.magma_cube.baseMovementSpeed.@Tooltip": "Base movement speed of the Magma Cube (before size scaling).",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.speedPerSize": "Speed Per Size",
+  "text.autoconfig.mob_better_config.option.magma_cube.speedPerSize.@Tooltip": "Additional movement speed added per size level.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.knockbackStrength": "Knockback Strength",
+  "text.autoconfig.mob_better_config.option.magma_cube.knockbackStrength.@Tooltip": "Knockback strength applied when attacking.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.damageScalesWithSize": "Damage Scales With Size",
+  "text.autoconfig.mob_better_config.option.magma_cube.damageScalesWithSize.@Tooltip": "If enabled, attack damage increases with size.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.despawnInPeaceful": "Despawn In Peaceful",
+  "text.autoconfig.mob_better_config.option.magma_cube.despawnInPeaceful.@Tooltip": "If enabled, Magma Cubes despawn in Peaceful difficulty.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.spawnMultiplier": "Spawn Multiplier",
+  "text.autoconfig.mob_better_config.option.magma_cube.spawnMultiplier.@Tooltip": "Multiplies the number of Magma Cubes spawned.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.reinforcementChance": "Reinforcement Chance",
+  "text.autoconfig.mob_better_config.option.magma_cube.reinforcementChance.@Tooltip": "Chance for additional Magma Cubes to spawn as reinforcements.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.glowing": "Glowing",
+  "text.autoconfig.mob_better_config.option.magma_cube.glowing.@Tooltip": "If enabled, Magma Cubes will have the glowing effect.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.bossMode": "Boss Mode",
+  "text.autoconfig.mob_better_config.option.magma_cube.bossMode.@Tooltip": "Enables boss mechanics for Magma Cubes.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.forceAllBoss": "Force All Boss",
+  "text.autoconfig.mob_better_config.option.magma_cube.forceAllBoss.@Tooltip": "Forces all Magma Cubes to spawn as bosses.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.bossChance": "Boss Chance",
+  "text.autoconfig.mob_better_config.option.magma_cube.bossChance.@Tooltip": "Chance for a Magma Cube to spawn as a boss.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.bossHealthMultiplier": "Boss Health Multiplier",
+  "text.autoconfig.mob_better_config.option.magma_cube.bossHealthMultiplier.@Tooltip": "Additional health multiplier applied to boss Magma Cubes.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.bossDamageMultiplier": "Boss Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.magma_cube.bossDamageMultiplier.@Tooltip": "Additional damage multiplier applied to boss Magma Cubes.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.bossGlowing": "Boss Glowing",
+  "text.autoconfig.mob_better_config.option.magma_cube.bossGlowing.@Tooltip": "If enabled, boss Magma Cubes will glow.",
+
+  "text.autoconfig.mob_better_config.option.magma_cube.bossCustomName": "Boss Custom Name",
+  "text.autoconfig.mob_better_config.option.magma_cube.bossCustomName.@Tooltip": "Boss Magma Cubes spawn with a special custom name.",
+  "text.autoconfig.mob_better_config.option.blaze.health": "Health",
+  "text.autoconfig.mob_better_config.option.blaze.health.@Tooltip": "Sets the base health of the Blaze. Vanilla: 20.0",
+
+  "text.autoconfig.mob_better_config.option.blaze.attackDamage": "Attack Damage",
+  "text.autoconfig.mob_better_config.option.blaze.attackDamage.@Tooltip": "Sets the melee attack damage of the Blaze. Vanilla: 6.0",
+
+  "text.autoconfig.mob_better_config.option.blaze.movementSpeed": "Movement Speed",
+  "text.autoconfig.mob_better_config.option.blaze.movementSpeed.@Tooltip": "Sets the movement speed of the Blaze. Vanilla: 0.23",
+
+  "text.autoconfig.mob_better_config.option.blaze.followRange": "Follow Range",
+  "text.autoconfig.mob_better_config.option.blaze.followRange.@Tooltip": "Sets how far the Blaze can detect targets. Vanilla: 48.0",
+
+  "text.autoconfig.mob_better_config.option.blaze.fireballDamageMultiplier": "Fireball Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.blaze.fireballDamageMultiplier.@Tooltip": "Multiplies the damage dealt by Blaze fireballs.",
+
+  "text.autoconfig.mob_better_config.option.blaze.fireballCount": "Fireball Count",
+  "text.autoconfig.mob_better_config.option.blaze.fireballCount.@Tooltip": "Number of fireballs shot per burst. Vanilla: 1",
+
+  "text.autoconfig.mob_better_config.option.blaze.burstCooldown": "Burst Cooldown",
+  "text.autoconfig.mob_better_config.option.blaze.burstCooldown.@Tooltip": "Cooldown after completing a fireball burst. Vanilla: 100 ticks",
+
+  "text.autoconfig.mob_better_config.option.blaze.chargedTime": "Charged Time",
+  "text.autoconfig.mob_better_config.option.blaze.chargedTime.@Tooltip": "Time before the first fireball in a burst is fired. Vanilla: 60 ticks",
+
+  "text.autoconfig.mob_better_config.option.blaze.verticalBoostMultiplier": "Vertical Boost Multiplier",
+  "text.autoconfig.mob_better_config.option.blaze.verticalBoostMultiplier.@Tooltip": "Multiplier applied to vertical movement while attacking.\n\nValue Guide:\n0.0 = No upward boost\n1.0 = Slight lift\n2.0 = Fast upward chase\n3.0 = Aggressive vertical hunter\n5.0 = Rocket mode",
+
+  "text.autoconfig.mob_better_config.option.blaze.fallSlowMultiplier": "Fall Slow Multiplier",
+  "text.autoconfig.mob_better_config.option.blaze.fallSlowMultiplier.@Tooltip": "Multiplier applied to downward motion to slow falling.\n\nValue Guide:\n1.0 = Vanilla fall speed\n0.6 = Slower fall (Vanilla Blaze default)\n0.3 = Floaty\n0.1 = Almost hovering\n2.0 = Heavy falling",
+  "text.autoconfig.mob_better_config.option.blaze.takeWaterDamage": "Take Water Damage",
+  "text.autoconfig.mob_better_config.option.blaze.takeWaterDamage.@Tooltip": "If enabled, Blaze takes damage while in water. Vanilla behavior: true",
+
+  "text.autoconfig.mob_better_config.option.blaze.spawnMultiplier": "Spawn Multiplier",
+  "text.autoconfig.mob_better_config.option.blaze.spawnMultiplier.@Tooltip": "Multiplies the number of Blazes spawned.",
+
+  "text.autoconfig.mob_better_config.option.blaze.reinforcementChance": "Reinforcement Chance",
+  "text.autoconfig.mob_better_config.option.blaze.reinforcementChance.@Tooltip": "Chance for additional Blazes to spawn when damaged.",
+
+  "text.autoconfig.mob_better_config.option.blaze.xpMultiplier": "XP Multiplier",
+  "text.autoconfig.mob_better_config.option.blaze.xpMultiplier.@Tooltip": "Multiplies the experience dropped by the Blaze.",
+
+  "text.autoconfig.mob_better_config.option.blaze.lootMultiplier": "Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.blaze.lootMultiplier.@Tooltip": "Multiplies the loot dropped by the Blaze.",
+
+  "text.autoconfig.mob_better_config.option.blaze.bossMode": "Boss Mode",
+  "text.autoconfig.mob_better_config.option.blaze.bossMode.@Tooltip": "Enables boss mechanics for Blazes.",
+
+  "text.autoconfig.mob_better_config.option.blaze.forceAllBoss": "Force All Boss",
+  "text.autoconfig.mob_better_config.option.blaze.forceAllBoss.@Tooltip": "Forces all Blazes to spawn as bosses.",
+
+  "text.autoconfig.mob_better_config.option.blaze.bossChance": "Boss Chance",
+  "text.autoconfig.mob_better_config.option.blaze.bossChance.@Tooltip": "Chance for a Blaze to spawn as a boss.",
+
+  "text.autoconfig.mob_better_config.option.blaze.bossHealthMultiplier": "Boss Health Multiplier",
+  "text.autoconfig.mob_better_config.option.blaze.bossHealthMultiplier.@Tooltip": "Additional health multiplier applied to boss Blazes.",
+
+  "text.autoconfig.mob_better_config.option.blaze.bossDamageMultiplier": "Boss Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.blaze.bossDamageMultiplier.@Tooltip": "Additional damage multiplier applied to boss Blazes.",
+
+  "text.autoconfig.mob_better_config.option.blaze.bossGlowing": "Boss Glowing",
+  "text.autoconfig.mob_better_config.option.blaze.bossGlowing.@Tooltip": "If enabled, boss Blazes will glow.",
+
+  "text.autoconfig.mob_better_config.option.blaze.bossCustomName": "Boss Custom Name",
+  "text.autoconfig.mob_better_config.option.blaze.bossCustomName.@Tooltip": "Boss Blazes spawn with a special custom name.",
+
+  "text.autoconfig.mob_better_config.option.blaze": "Blaze"
 }

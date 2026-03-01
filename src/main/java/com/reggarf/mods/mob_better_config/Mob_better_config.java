@@ -47,6 +47,8 @@ public class Mob_better_config {
         NeoForge.EVENT_BUS.register(new EndermanEvents());
         NeoForge.EVENT_BUS.register(new WitherSkeletonEvents());
         NeoForge.EVENT_BUS.register(new DrownedEvents());
+        NeoForge.EVENT_BUS.register(new MagmaCubeEvents());
+        NeoForge.EVENT_BUS.register(new BlazeEvents());
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

@@ -66,4 +66,10 @@ public class ModConfigs {
     public static DrownedConfig getDrowned() {
         return ROOT.drowned;
     }
+    public static MagmaCubeConfig getMagmaCube() {
+        return ROOT.magma_cube;
+    }
+    public static BlazeConfig getBlaze() {
+        return ROOT.blaze;
+    }
 }

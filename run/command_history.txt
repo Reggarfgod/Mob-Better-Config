@@ -1,18 +1,3 @@
-/gamemode survival
-/gamemode creative
-/gamemode survival
-/give Dev minecraft:enderman_spawn_egg
-/gamemode creative
-/gamemode survival
-/gamemode creative
-/gamemode survival
-/give Dev minecraft:water_bucket
-/give Dev minecraft:enderman_spawn_egg
-/gamemode creative
-/gamemode survival
-/gamemode spectator
-/gamemode creative
-/gamemode survival
 /gamemode creative
 /gamemode survival
 /gamemode creative
@@ -46,5 +31,20 @@
 /time set day
 /gamemode survival
 /give Dev minecraft:drowned_spawn_egg
+/gamemode creative
+/gamemode survival
+/gamemode creative
+/gamemode survival
+/gamemode creative
+/gamemode survival
+/gamerule keepInventory true
+/gamemode creative
+/gamemode survival
+/gamemode creative
+/gamerule doMobSpawning false
+/kill @e
+/gamemode survival
+/gamemode creative
+/gamemode survival
 /gamemode creative
 /gamemode survival

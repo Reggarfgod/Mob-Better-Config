@@ -59,5 +59,9 @@ public class MobBetterConfigRoot implements ConfigData {
     @ConfigEntry.Gui.CollapsibleObject
     public DrownedConfig drowned= new DrownedConfig();
 
+    @ConfigEntry.Gui.CollapsibleObject
+    public MagmaCubeConfig magma_cube= new MagmaCubeConfig();
 
+    @ConfigEntry.Gui.CollapsibleObject
+    public BlazeConfig blaze= new BlazeConfig();
 }
