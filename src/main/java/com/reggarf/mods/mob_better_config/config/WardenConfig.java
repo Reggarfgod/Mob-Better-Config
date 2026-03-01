@@ -2,12 +2,14 @@ package com.reggarf.mods.mob_better_config.config;
 
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
+import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
 @Config(name = "configurable_warden")
 public class WardenConfig implements ConfigData {
 
+    @ConfigEntry.Gui.Tooltip
+    public boolean CustomName = true;
 
-    // Core Attributes (Vanilla Based)
     public float health = 500.0F;                  // Vanilla: 500
     public double movementSpeed = 0.3D;            // Vanilla: 0.3
     public double knockbackResistance = 1.0D;      // Vanilla: 1.0

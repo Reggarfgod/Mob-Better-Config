@@ -2,10 +2,7 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.PillagerConfig;
-import com.reggarf.mods.mob_better_config.util.BossUtil;
-import com.reggarf.mods.mob_better_config.util.LootUtil;
-import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
-import com.reggarf.mods.mob_better_config.util.XPUtil;
+import com.reggarf.mods.mob_better_config.util.*;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -19,10 +16,6 @@ import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
 import net.neoforged.neoforge.event.entity.living.LivingExperienceDropEvent;
 
 public class PillagerEvents {
-
-    /* -----------------------------------------------------------
-       SPAWN / ATTRIBUTE APPLICATION
-    ------------------------------------------------------------ */
 
     @SubscribeEvent
     public void onJoin(EntityJoinLevelEvent event) {
@@ -73,7 +66,9 @@ public class PillagerEvents {
     }
 
     private void applyConfig(Pillager pillager, PillagerConfig config) {
-
+        if (config.CustomName) {
+            MobNameUtil.applyRandomName(pillager);
+        }
         if (pillager.getAttribute(Attributes.MAX_HEALTH) != null)
             pillager.getAttribute(Attributes.MAX_HEALTH)
                     .setBaseValue(config.health);
@@ -113,10 +108,6 @@ public class PillagerEvents {
         }
     }
 
-    /* -----------------------------------------------------------
-       CROSSBOW DAMAGE SCALING (NeoForge FIXED)
-    ------------------------------------------------------------ */
-
     @SubscribeEvent
     public void onDamage(LivingDamageEvent.Pre event) {
 
@@ -140,10 +131,6 @@ public class PillagerEvents {
         event.setNewDamage(scaledDamage);
     }
 
-    /* -----------------------------------------------------------
-       XP SCALING
-    ------------------------------------------------------------ */
-
     @SubscribeEvent
     public void onXP(LivingExperienceDropEvent event) {
 
@@ -155,10 +142,6 @@ public class PillagerEvents {
                 config.xpMultiplier
         );
     }
-
-    /* -----------------------------------------------------------
-       LOOT SCALING
-    ------------------------------------------------------------ */
 
     @SubscribeEvent
     public void onDrops(LivingDropsEvent event) {
@@ -178,10 +161,6 @@ public class PillagerEvents {
                 config.lootMultiplier
         );
     }
-
-    /* -----------------------------------------------------------
-       REINFORCEMENT SYSTEM
-    ------------------------------------------------------------ */
 
     @SubscribeEvent
     public void onDamaged(LivingDamageEvent.Post event) {

@@ -4,6 +4,7 @@ import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.StrayConfig;
 import com.reggarf.mods.mob_better_config.util.ArmorUtil;
 import com.reggarf.mods.mob_better_config.util.LootUtil;
+import com.reggarf.mods.mob_better_config.util.MobNameUtil;
 import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
@@ -75,7 +76,9 @@ public class StrayEvents {
     private void applyConfig(Stray stray) {
 
         StrayConfig config = ModConfigs.getStray();
-
+        if (config.CustomName) {
+            MobNameUtil.applyRandomName(stray);
+        }
         if (stray.getAttribute(Attributes.MAX_HEALTH) != null)
             stray.getAttribute(Attributes.MAX_HEALTH).setBaseValue(config.health);
 

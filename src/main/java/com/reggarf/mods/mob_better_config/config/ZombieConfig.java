@@ -7,7 +7,9 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 @Config(name = "configurable_zombie")
 public class ZombieConfig implements ConfigData {
 
-    // Attributes
+    @ConfigEntry.Gui.Tooltip
+    public boolean CustomName = true;
+
     public float health = 40.0F;
     public float attackDamage = 6.0F;
     public double movementSpeed = 0.25D;

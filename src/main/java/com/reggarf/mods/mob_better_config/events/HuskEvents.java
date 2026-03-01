@@ -2,10 +2,7 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.HuskConfig;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
-import com.reggarf.mods.mob_better_config.util.BossUtil;
-import com.reggarf.mods.mob_better_config.util.LootUtil;
-import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
-import com.reggarf.mods.mob_better_config.util.XPUtil;
+import com.reggarf.mods.mob_better_config.util.*;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.entity.EntityType;
@@ -73,7 +70,9 @@ public class HuskEvents {
     }
 
     private void applyConfig(Husk husk, HuskConfig config) {
-
+        if (config.CustomName) {
+            MobNameUtil.applyRandomName(husk);
+        }
         if (husk.getAttribute(Attributes.MAX_HEALTH) != null)
             husk.getAttribute(Attributes.MAX_HEALTH).setBaseValue(config.health);
 

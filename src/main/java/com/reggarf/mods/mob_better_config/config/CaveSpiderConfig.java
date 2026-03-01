@@ -2,9 +2,12 @@ package com.reggarf.mods.mob_better_config.config;
 
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
+import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
 @Config(name = "configurable_cave_spider")
 public class CaveSpiderConfig implements ConfigData {
+    @ConfigEntry.Gui.Tooltip
+    public boolean CustomName = true;
 
     public float health = 12.0F;
     public float attackDamage = 2.0F;

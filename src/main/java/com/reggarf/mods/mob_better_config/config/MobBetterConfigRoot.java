@@ -48,4 +48,16 @@ public class MobBetterConfigRoot implements ConfigData {
 
     @ConfigEntry.Gui.CollapsibleObject
     public PhantomConfig phantom= new PhantomConfig();
+
+    @ConfigEntry.Gui.CollapsibleObject
+
+    public EndermanConfig enderman= new EndermanConfig();
+
+    @ConfigEntry.Gui.CollapsibleObject
+    public WitherSkeletonConfig wither_skeleton= new WitherSkeletonConfig();
+
+    @ConfigEntry.Gui.CollapsibleObject
+    public DrownedConfig drowned= new DrownedConfig();
+
+
 }

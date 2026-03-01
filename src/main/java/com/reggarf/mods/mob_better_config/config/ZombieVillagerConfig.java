@@ -2,12 +2,15 @@ package com.reggarf.mods.mob_better_config.config;
 
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
+import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
 @Config(name = "configurable_zombie_villager")
 public class ZombieVillagerConfig implements ConfigData {
 
 
-    // Attributes
+    @ConfigEntry.Gui.Tooltip
+    public boolean CustomName = true;
+
     public float health = 20.0F;
     public float attackDamage = 5.0F;
     public double movementSpeed = 0.23D;

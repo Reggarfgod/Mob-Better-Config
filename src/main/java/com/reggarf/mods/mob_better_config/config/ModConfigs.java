@@ -57,4 +57,13 @@ public class ModConfigs {
     public static PhantomConfig getPhantom() {
         return ROOT.phantom;
     }
+    public static EndermanConfig getEnderman() {
+        return ROOT.enderman;
+    }
+    public static WitherSkeletonConfig getWitherSkeleton() {
+        return ROOT.wither_skeleton;
+    }
+    public static DrownedConfig getDrowned() {
+        return ROOT.drowned;
+    }
 }

@@ -4,6 +4,7 @@ import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.SkeletonConfig;
 import com.reggarf.mods.mob_better_config.util.ArmorUtil;
 import com.reggarf.mods.mob_better_config.util.LootUtil;
+import com.reggarf.mods.mob_better_config.util.MobNameUtil;
 import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
@@ -52,7 +53,9 @@ public class SkeletonEvents {
 
         SkeletonConfig config = ModConfigs.getSkeleton();
         RandomSource random = skeleton.level().getRandom();
-
+        if (config.CustomName) {
+            MobNameUtil.applyRandomName(skeleton);
+        }
         // ===== Attributes =====
         if (skeleton.getAttribute(Attributes.MAX_HEALTH) != null)
             skeleton.getAttribute(Attributes.MAX_HEALTH).setBaseValue(config.health);

@@ -4,6 +4,7 @@ import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.SlimeConfig;
 import com.reggarf.mods.mob_better_config.util.BossUtil;
 import com.reggarf.mods.mob_better_config.util.LootUtil;
+import com.reggarf.mods.mob_better_config.util.MobNameUtil;
 import com.reggarf.mods.mob_better_config.util.XPUtil;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.Mth;
@@ -111,6 +112,9 @@ public class SlimeEvents {
 
         if (config.glowing)
             slime.setGlowingTag(true);
+        if (config.CustomName) {
+            MobNameUtil.applyRandomName(slime);
+        }
     }
 
     @SubscribeEvent

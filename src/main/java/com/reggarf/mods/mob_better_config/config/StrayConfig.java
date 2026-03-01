@@ -2,10 +2,13 @@ package com.reggarf.mods.mob_better_config.config;
 
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
+import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
 @Config(name = "configurable_stray")
 public class StrayConfig implements ConfigData {
 
+    @ConfigEntry.Gui.Tooltip
+    public boolean CustomName = true;
 
     public float health = 20.0F;              // Vanilla: 20
     public float attackDamage = 2.0F;         // Base melee damage

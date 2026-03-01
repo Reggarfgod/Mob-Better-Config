@@ -105,12 +105,21 @@ public class BossUtil {
         if (glowing) {
             entity.setGlowingTag(true);
         }
-
         if (customName) {
+
             entity.setCustomName(
                     Component.literal("§cBoss " + entity.getName().getString())
             );
-            entity.setCustomNameVisible(true);
+            entity.setCustomNameVisible(false);
+
+        } else {
+
+            // Remove boss name only if it was applied by boss system
+            if (entity.getPersistentData().getBoolean(BOSS_TAG)) {
+
+                entity.setCustomName(null);
+                entity.setCustomNameVisible(false);
+            }
         }
     }
 

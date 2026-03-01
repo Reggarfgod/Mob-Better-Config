@@ -3,6 +3,7 @@ package com.reggarf.mods.mob_better_config.events;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.VindicatorConfig;
 import com.reggarf.mods.mob_better_config.util.LootUtil;
+import com.reggarf.mods.mob_better_config.util.MobNameUtil;
 import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
@@ -14,10 +15,6 @@ import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
 
 public class VindicatorEvents {
-
-    // =========================
-    // SPAWN
-    // =========================
 
     @SubscribeEvent
     public void onJoin(EntityJoinLevelEvent event) {
@@ -60,14 +57,13 @@ public class VindicatorEvents {
         }
     }
 
-    // =========================
-    // APPLY ATTRIBUTES
-    // =========================
 
     private void applyConfig(Vindicator vindicator) {
 
         VindicatorConfig config = ModConfigs.getVindicator();
-
+        if (config.CustomName) {
+            MobNameUtil.applyRandomName(vindicator);
+        }
         if (vindicator.getAttribute(Attributes.MAX_HEALTH) != null)
             vindicator.getAttribute(Attributes.MAX_HEALTH)
                     .setBaseValue(config.health);
@@ -93,10 +89,6 @@ public class VindicatorEvents {
             vindicator.setGlowingTag(true);
     }
 
-    // =========================
-    // REINFORCEMENT
-    // =========================
-
     @SubscribeEvent
     public void onDamaged(LivingDamageEvent.Post event) {
 
@@ -116,9 +108,6 @@ public class VindicatorEvents {
         );
     }
 
-    // =========================
-    // LOOT
-    // =========================
 
     @SubscribeEvent
     public void onDrops(LivingDropsEvent event) {

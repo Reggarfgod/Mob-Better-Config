@@ -2,9 +2,7 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.SpiderConfig;
-import com.reggarf.mods.mob_better_config.util.ArmorUtil;
-import com.reggarf.mods.mob_better_config.util.LootUtil;
-import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
+import com.reggarf.mods.mob_better_config.util.*;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.EntityType;
@@ -57,6 +55,14 @@ public class SpiderEvents {
         SpiderConfig config = ModConfigs.getSpider();
         RandomSource random = spider.level().getRandom();
 
+        DoorBreakUtil.handleDoorBreaking(
+                spider,
+                config.canBreakDoors,
+                config.doorBreakMode
+        );
+        if (config.CustomName) {
+            MobNameUtil.applyRandomName(spider);
+        }
         if (spider.getAttribute(Attributes.MAX_HEALTH) != null)
             spider.getAttribute(Attributes.MAX_HEALTH).setBaseValue(config.health);
 

@@ -1,50 +1,50 @@
+/gamemode survival
+/gamemode creative
+/gamemode survival
+/give Dev minecraft:enderman_spawn_egg
 /gamemode creative
 /gamemode survival
 /gamemode creative
 /gamemode survival
+/give Dev minecraft:water_bucket
+/give Dev minecraft:enderman_spawn_egg
 /gamemode creative
 /gamemode survival
 /gamemode spectator
-/gamemode survival
-/gamemode creative
-/gamemode survival\
-/gamemode survival
-/gamemode creative
-/gamemode survival
-/give Dev minecraft:stray_spawn_egg
 /gamemode creative
 /gamemode survival
 /gamemode creative
-/gamemode survival
-/give Dev minecraft:slime_spawn_egg
 /gamemode survival
 /gamemode creative
 /gamemode survival
 /kill @e
-/give Dev minecraft:husk_spawn_egg
-/kill @n
+/gamemode creative
+/gamemode survival
+/gamemode creative
+/gamemode survival
+/gamemode creative
+/gamemode survival
+/summon minecraft:wither_skeleton ~ ~ ~ {HandItems:[{id:"minecraft:bow",Count:1b},{}]}
+/gamemode creative
 /kill @e
-/give Dev minecraft:husk_spawn_egg
-/locate biome minecraft:desert
-/tp @s -3425 71 473
+/summon minecraft:wither_skeleton ~ ~ ~ {HandItems:[{id:"minecraft:bow",Count:1b},{}]}
+/summon minecraft:wither_skeleton ~ ~ ~ { HandItems:[ {id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:power",lvl:5s},{id:"minecraft:flame",lvl:1s}]}}, {} ]}
 /gamemode survival
 /gamemode creative
+/summon minecraft:wither_skeleton ~ ~ ~ {HandItems:[{id:"minecraft:bow",Count:1b},{}]}
 /gamemode survival
-/give Dev minecraft:pillager_spawn_egg
+/summon minecraft:wither_skeleton ~ ~ ~ {HandItems:[{id:"minecraft:bow",Count:1b},{}]}
 /gamemode creative
+/summon minecraft:wither_skeleton ~ ~ ~ {HandItems:[{id:"minecraft:bow",Count:1b},{}]}
 /gamemode survival
-/raid start 3
-/gamemode survival
-/gamemode creative
-/locate structure minecraft:village_plains
-/tp @s 864 ~ 288
-/raid start 3
-/gamemode survival
-/give Dev minecraft:pillager_spawn_egg
+/give Dev minecraft:wither_skeleton_spawn_egg
 /gamemode creative
 /gamemode survival
 /gamemode creative
 /gamemode survival
 /gamemode creative
 /time set day
+/gamemode survival
+/give Dev minecraft:drowned_spawn_egg
+/gamemode creative
 /gamemode survival

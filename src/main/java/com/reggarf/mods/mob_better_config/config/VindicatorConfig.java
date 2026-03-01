@@ -7,9 +7,8 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 @Config(name = "configurable_vindicator")
 public class VindicatorConfig implements ConfigData {
 
-    /* =========================
-       Attributes
-       ========================= */
+    @ConfigEntry.Gui.Tooltip
+    public boolean CustomName = true;
 
     @ConfigEntry.Category("attributes")
     @ConfigEntry.Gui.Tooltip

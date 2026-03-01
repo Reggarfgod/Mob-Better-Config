@@ -1,30 +1,40 @@
 package com.reggarf.mods.mob_better_config.util;
 
 import com.reggarf.mods.mob_better_config.ai.CustomBreakDoorGoal;
-import com.reggarf.mods.mob_better_config.config.ZombieConfig;
-
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.monster.Zombie;
 
 public class DoorBreakUtil {
 
-    /**
-     * Applies door breaking behavior based on config.
-     */
-    public static void applyDoorBreakMode(Zombie zombie, ZombieConfig config) {
+    private DoorBreakUtil() {}
 
-        // Remove existing BreakDoor goals
+    /**
+     * Applies configurable door breaking behavior.
+     * Works for Zombies and any Mob that supports door breaking.
+     */
+    public static void handleDoorBreaking(
+            Mob mob,
+            boolean canBreakDoors,
+            int doorBreakMode
+    ) {
+
+        // Only mobs with door-breaking capability (Zombie-based mobs)
+        if (!(mob instanceof Zombie zombie))
+            return;
+
+        // Remove existing break door goals (vanilla + custom)
         zombie.goalSelector.removeAllGoals(goal ->
                 goal.getClass().getName().contains("BreakDoor"));
 
         // Disabled
-        if (!config.canBreakDoors || config.doorBreakMode == 0) {
+        if (!canBreakDoors || doorBreakMode <= 0) {
             zombie.setCanBreakDoors(false);
             return;
         }
 
         zombie.setCanBreakDoors(true);
 
-        int breakTicks = getBreakTicks(config.doorBreakMode);
+        int breakTicks = getBreakTicks(doorBreakMode);
 
         zombie.goalSelector.addGoal(
                 1,
@@ -33,7 +43,7 @@ public class DoorBreakUtil {
     }
 
     /**
-     * Converts mode into break speed.
+     * Converts config mode into break duration.
      */
     private static int getBreakTicks(int mode) {
         return switch (mode) {

@@ -3,6 +3,7 @@ package com.reggarf.mods.mob_better_config.events;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.WardenConfig;
 import com.reggarf.mods.mob_better_config.util.LootUtil;
+import com.reggarf.mods.mob_better_config.util.MobNameUtil;
 import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
@@ -21,10 +22,6 @@ import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
 public class WardenEvents {
-
-    // =========================
-    // SPAWN
-    // =========================
 
     @SubscribeEvent
     public void onJoin(EntityJoinLevelEvent event) {
@@ -63,7 +60,9 @@ public class WardenEvents {
     private void applyConfig(Warden warden) {
 
         WardenConfig config = ModConfigs.getWarden();
-
+        if (config.CustomName) {
+            MobNameUtil.applyRandomName(warden);
+        }
         if (warden.getAttribute(Attributes.MAX_HEALTH) != null)
             warden.getAttribute(Attributes.MAX_HEALTH)
                     .setBaseValue(config.health);

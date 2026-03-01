@@ -4,6 +4,7 @@ import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.WitchConfig;
 import com.reggarf.mods.mob_better_config.util.ArmorUtil;
 import com.reggarf.mods.mob_better_config.util.LootUtil;
+import com.reggarf.mods.mob_better_config.util.MobNameUtil;
 import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
@@ -62,7 +63,9 @@ public class WitchEvents {
 
         WitchConfig config = ModConfigs.getWitch();
         RandomSource random = witch.level().getRandom();
-
+        if (config.CustomName) {
+            MobNameUtil.applyRandomName(witch);
+        }
         if (witch.getAttribute(Attributes.MAX_HEALTH) != null)
             witch.getAttribute(Attributes.MAX_HEALTH).setBaseValue(config.health);
 

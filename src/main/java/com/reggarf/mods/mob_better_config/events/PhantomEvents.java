@@ -2,10 +2,7 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.PhantomConfig;
-import com.reggarf.mods.mob_better_config.util.BossUtil;
-import com.reggarf.mods.mob_better_config.util.LootUtil;
-import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
-import com.reggarf.mods.mob_better_config.util.XPUtil;
+import com.reggarf.mods.mob_better_config.util.*;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -68,7 +65,14 @@ public class PhantomEvents {
 
     private void applyConfig(Phantom phantom, PhantomConfig config) {
 
-
+        DoorBreakUtil.handleDoorBreaking(
+                phantom,
+                config.canBreakDoors,
+                config.doorBreakMode
+        );
+        if (config.CustomName) {
+            MobNameUtil.applyRandomName(phantom);
+        }
         if (phantom.getAttribute(Attributes.MAX_HEALTH) != null)
             phantom.getAttribute(Attributes.MAX_HEALTH)
                     .setBaseValue(config.health);
@@ -168,12 +172,6 @@ public class PhantomEvents {
         if (!phantom.isAlive())
             return;
 
-        /*
-         * =========================================
-         *   SUN BURN CONTROL
-         * =========================================
-         */
-
         if (!config.burnInDaylight) {
 
             if (phantom.isOnFire())
@@ -193,12 +191,6 @@ public class PhantomEvents {
                 }
             }
         }
-
-        /*
-         * =========================================
-         *   FLIGHT SPEED CONTROL
-         * =========================================
-         */
 
         double circleMultiplier = config.circleSpeedMultiplier;
         double swoopMultiplier = config.swoopSpeedMultiplier;

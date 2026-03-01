@@ -3,6 +3,7 @@ package com.reggarf.mods.mob_better_config.events;
 import com.reggarf.mods.mob_better_config.config.CreeperConfig;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.util.LootUtil;
+import com.reggarf.mods.mob_better_config.util.MobNameUtil;
 import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
@@ -23,9 +24,6 @@ public class CreeperEvents {
 
     private static final String SPAWN_TAG = "mob_better_config_spawned";
 
-    // ======================
-    // SPAWN
-    // ======================
     @SubscribeEvent
     public void onJoin(EntityJoinLevelEvent event) {
 
@@ -63,13 +61,12 @@ public class CreeperEvents {
         }
     }
 
-    // ======================
-    // APPLY CONFIG
-    // ======================
     private void applyConfig(Creeper creeper) {
 
         CreeperConfig config = ModConfigs.getCreeper();
-
+        if (config.CustomName) {
+            MobNameUtil.applyRandomName(creeper);
+        }
         // Health
         if (creeper.getAttribute(Attributes.MAX_HEALTH) != null) {
             creeper.getAttribute(Attributes.MAX_HEALTH)

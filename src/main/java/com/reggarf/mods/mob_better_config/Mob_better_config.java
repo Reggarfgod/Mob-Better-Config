@@ -44,6 +44,9 @@ public class Mob_better_config {
         NeoForge.EVENT_BUS.register(new HuskEvents());
         NeoForge.EVENT_BUS.register(new PillagerEvents());
         NeoForge.EVENT_BUS.register(new PhantomEvents());
+        NeoForge.EVENT_BUS.register(new EndermanEvents());
+        NeoForge.EVENT_BUS.register(new WitherSkeletonEvents());
+        NeoForge.EVENT_BUS.register(new DrownedEvents());
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

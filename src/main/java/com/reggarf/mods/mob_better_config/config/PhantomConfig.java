@@ -6,6 +6,8 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
 @Config(name = "configurable_phantom")
 public class PhantomConfig implements ConfigData {
+    @ConfigEntry.Gui.Tooltip
+    public boolean CustomName = true;
 
     public double health = 20.0D;          // Vanilla: 20
     public double attackDamage = 6.0D;     // Vanilla: 6
@@ -13,6 +15,13 @@ public class PhantomConfig implements ConfigData {
     public double circleSpeedMultiplier = 1.0D;
     public double swoopSpeedMultiplier = 1.5D; // Vanilla approx
     public double followRange = 64.0D;     // Vanilla: 64
+
+    @ConfigEntry.Gui.Tooltip
+    public boolean canBreakDoors = false;
+
+    @ConfigEntry.Gui.Tooltip
+    @ConfigEntry.BoundedDiscrete(min = 0, max = 5)
+    public int doorBreakMode = 3;
 
     public int fixedSize = -1;             // -1 = vanilla scaling
     public double sizeMultiplier = 1.0D;

@@ -2,10 +2,13 @@ package com.reggarf.mods.mob_better_config.config;
 
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
+import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
 @Config(name = "configurable_witch")
 public class WitchConfig implements ConfigData {
 
+    @ConfigEntry.Gui.Tooltip
+    public boolean CustomName = true;
 
     // Attributes
     public float health = 26.0F;

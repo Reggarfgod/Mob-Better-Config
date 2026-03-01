@@ -5,6 +5,7 @@ import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.ZombieConfig;
 import com.reggarf.mods.mob_better_config.util.ArmorUtil;
 import com.reggarf.mods.mob_better_config.util.LootUtil;
+import com.reggarf.mods.mob_better_config.util.MobNameUtil;
 import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
@@ -55,7 +56,9 @@ public class ZombieEvents {
 
         ZombieConfig config = ModConfigs.getZombie();
         RandomSource random = zombie.level().getRandom();
-
+        if (config.CustomName) {
+            MobNameUtil.applyRandomName(zombie);
+        }
         if (zombie.getAttribute(Attributes.MAX_HEALTH) != null)
             zombie.getAttribute(Attributes.MAX_HEALTH).setBaseValue(config.health);
 
@@ -71,10 +74,6 @@ public class ZombieEvents {
         if (zombie.getAttribute(Attributes.KNOCKBACK_RESISTANCE) != null)
             zombie.getAttribute(Attributes.KNOCKBACK_RESISTANCE)
                     .setBaseValue(config.knockbackResistance);
-
-//        if (zombie.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
-//            zombie.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE)
-//                    .setBaseValue(config.reinforcementChance);
 
         zombie.setHealth(config.health);
 

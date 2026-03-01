@@ -1,10 +1,7 @@
 {
   "text.autoconfig.mob_better_config.title": "Mob Better Config",
-
   "text.autoconfig.mob_better_config.option.zombie": "Zombie",
   "text.autoconfig.mob_better_config.option.skeleton": "Skeleton",
-
-
   "text.autoconfig.mob_better_config.option.zombie.health": "Health",
   "text.autoconfig.mob_better_config.option.zombie.attackDamage": "Attack Damage",
   "text.autoconfig.mob_better_config.option.zombie.movementSpeed": "Movement Speed",
@@ -22,8 +19,6 @@
   "text.autoconfig.mob_better_config.option.zombie.babyChance": "Baby Chance",
   "text.autoconfig.mob_better_config.option.zombie.randomArmor": "Random Armor",
   "text.autoconfig.mob_better_config.option.zombie.armorChance": "Armor Chance",
-
-
   "text.autoconfig.mob_better_config.option.skeleton.health": "Health",
   "text.autoconfig.mob_better_config.option.skeleton.attackDamage": "Attack Damage",
   "text.autoconfig.mob_better_config.option.skeleton.movementSpeed": "Movement Speed",
@@ -38,618 +33,660 @@
   "text.autoconfig.mob_better_config.option.skeleton.rapidFire": "Rapid Fire",
   "text.autoconfig.mob_better_config.option.skeleton.reinforcementChance": "Reinforcement Chance",
   "text.autoconfig.mob_better_config.option.skeleton.reinforcementChance.@Tooltip": "Chance for skeletons to summon reinforcements when damaged.",
-
   "text.autoconfig.mob_better_config.option.zombieVillager": "Zombie Villager",
-
   "text.autoconfig.mob_better_config.option.zombieVillager.health": "Health",
   "text.autoconfig.mob_better_config.option.zombieVillager.health.@Tooltip": "Base health of Zombie Villager.",
-
   "text.autoconfig.mob_better_config.option.zombieVillager.attackDamage": "Attack Damage",
   "text.autoconfig.mob_better_config.option.zombieVillager.attackDamage.@Tooltip": "Base melee damage.",
-
   "text.autoconfig.mob_better_config.option.zombieVillager.movementSpeed": "Movement Speed",
   "text.autoconfig.mob_better_config.option.zombieVillager.movementSpeed.@Tooltip": "Movement speed multiplier.",
-
   "text.autoconfig.mob_better_config.option.zombieVillager.followRange": "Follow Range",
   "text.autoconfig.mob_better_config.option.zombieVillager.followRange.@Tooltip": "Distance at which it detects targets.",
-
   "text.autoconfig.mob_better_config.option.zombieVillager.burnInDaylight": "Burn In Daylight",
   "text.autoconfig.mob_better_config.option.zombieVillager.burnInDaylight.@Tooltip": "If true, burns in sunlight like normal zombies.",
-
   "text.autoconfig.mob_better_config.option.zombieVillager.fireImmune": "Fire Immune",
   "text.autoconfig.mob_better_config.option.zombieVillager.fireImmune.@Tooltip": "Prevents all fire damage.",
-
   "text.autoconfig.mob_better_config.option.zombieVillager.glowing": "Glowing",
   "text.autoconfig.mob_better_config.option.zombieVillager.glowing.@Tooltip": "Makes the mob glow permanently.",
-
   "text.autoconfig.mob_better_config.option.zombieVillager.spawnMultiplier": "Spawn Multiplier",
   "text.autoconfig.mob_better_config.option.zombieVillager.spawnMultiplier.@Tooltip": "Number of Zombie Villagers spawned per natural spawn. Keep low to avoid lag.",
-
   "text.autoconfig.mob_better_config.option.zombieVillager.randomArmorChance": "Random Armor Chance",
   "text.autoconfig.mob_better_config.option.zombieVillager.randomArmorChance.@Tooltip": "Chance to spawn with random armor.",
-
   "text.autoconfig.mob_better_config.option.zombieVillager.reinforcementChance": "Reinforcement Chance",
   "text.autoconfig.mob_better_config.option.zombieVillager.reinforcementChance.@Tooltip": "Chance to call reinforcements when damaged.",
-
   "text.autoconfig.mob_better_config.option.zombieVillager.cureSpeedMultiplier": "Cure Speed Multiplier",
   "text.autoconfig.mob_better_config.option.zombieVillager.cureSpeedMultiplier.@Tooltip": "Controls curing speed. 1.0 = normal, >1 faster, <1 slower.",
-
   "text.autoconfig.mob_better_config.option.witch": "Witch",
-
   "text.autoconfig.mob_better_config.option.witch.health": "Health",
   "text.autoconfig.mob_better_config.option.witch.attackDamage": "Attack Damage",
   "text.autoconfig.mob_better_config.option.witch.movementSpeed": "Movement Speed",
   "text.autoconfig.mob_better_config.option.witch.followRange": "Follow Range",
-
   "text.autoconfig.mob_better_config.option.witch.fireImmune": "Fire Immune",
   "text.autoconfig.mob_better_config.option.witch.glowing": "Glowing",
-
   "text.autoconfig.mob_better_config.option.witch.fasterPotionThrow": "Faster Potion Throw",
   "text.autoconfig.mob_better_config.option.witch.fasterPotionThrow.@Tooltip": "Allows the Witch to throw potions more frequently.",
-
   "text.autoconfig.mob_better_config.option.witch.potionDamageMultiplier": "Potion Damage Multiplier",
   "text.autoconfig.mob_better_config.option.witch.potionDamageMultiplier.@Tooltip": "Multiplies damage dealt by thrown potions. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.witch.spawnMultiplier": "Spawn Multiplier",
   "text.autoconfig.mob_better_config.option.witch.spawnMultiplier.@Tooltip": "Number of Witches spawned per natural spawn. Keep low to avoid lag.",
-
   "text.autoconfig.mob_better_config.option.witch.randomArmorChance": "Random Armor Chance",
-
   "text.autoconfig.mob_better_config.option.witch.reinforcementChance": "Reinforcement Chance",
   "text.autoconfig.mob_better_config.option.witch.reinforcementChance.@Tooltip": "Chance for Witch to summon reinforcements when damaged.",
-
   "text.autoconfig.mob_better_config.option.witch.lootMultiplier": "Loot Multiplier",
   "text.autoconfig.mob_better_config.option.witch.lootMultiplier.@Tooltip": "Multiplies the amount of items dropped by the Witch. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.zombie.lootMultiplier": "Loot Multiplier",
   "text.autoconfig.mob_better_config.option.zombie.lootMultiplier.@Tooltip": "Multiplies items dropped by Zombies. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.skeleton.lootMultiplier": "Loot Multiplier",
   "text.autoconfig.mob_better_config.option.skeleton.lootMultiplier.@Tooltip": "Multiplies items dropped by Skeletons. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.zombieVillager.lootMultiplier": "Loot Multiplier",
   "text.autoconfig.mob_better_config.option.zombieVillager.lootMultiplier.@Tooltip": "Multiplies items dropped by Zombie Villagers. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.spider": "Spider",
-
   "text.autoconfig.mob_better_config.option.spider.health": "Health",
   "text.autoconfig.mob_better_config.option.spider.health.@Tooltip": "Base maximum health of the Spider.",
-
   "text.autoconfig.mob_better_config.option.spider.attackDamage": "Attack Damage",
   "text.autoconfig.mob_better_config.option.spider.attackDamage.@Tooltip": "Base melee damage dealt by the Spider.",
-
   "text.autoconfig.mob_better_config.option.spider.movementSpeed": "Movement Speed",
   "text.autoconfig.mob_better_config.option.spider.movementSpeed.@Tooltip": "Movement speed multiplier.",
-
   "text.autoconfig.mob_better_config.option.spider.followRange": "Follow Range",
   "text.autoconfig.mob_better_config.option.spider.followRange.@Tooltip": "Distance at which Spider detects targets.",
-
   "text.autoconfig.mob_better_config.option.spider.fireImmune": "Fire Immune",
   "text.autoconfig.mob_better_config.option.spider.fireImmune.@Tooltip": "Makes the Spider immune to fire damage.",
-
   "text.autoconfig.mob_better_config.option.spider.glowing": "Glowing",
   "text.autoconfig.mob_better_config.option.spider.glowing.@Tooltip": "Makes the Spider glow permanently.",
-
   "text.autoconfig.mob_better_config.option.spider.spawnMultiplier": "Spawn Multiplier",
   "text.autoconfig.mob_better_config.option.spider.spawnMultiplier.@Tooltip": "Number of Spiders spawned per natural spawn. Keep low to avoid lag.",
-
   "text.autoconfig.mob_better_config.option.spider.randomArmorChance": "Random Armor Chance",
   "text.autoconfig.mob_better_config.option.spider.randomArmorChance.@Tooltip": "Chance for Spider to spawn with random armor.",
-
   "text.autoconfig.mob_better_config.option.spider.reinforcementChance": "Reinforcement Chance",
   "text.autoconfig.mob_better_config.option.spider.reinforcementChance.@Tooltip": "Chance for Spider to summon reinforcements when damaged.",
-
   "text.autoconfig.mob_better_config.option.spider.lootMultiplier": "Loot Multiplier",
   "text.autoconfig.mob_better_config.option.spider.lootMultiplier.@Tooltip": "Multiplies items dropped by Spider. 1.0 = normal.",
   "text.autoconfig.mob_better_config.option.caveSpider": "Cave Spider",
-
   "text.autoconfig.mob_better_config.option.caveSpider.health": "Health",
   "text.autoconfig.mob_better_config.option.caveSpider.health.@Tooltip": "Base maximum health of the Cave Spider.",
-
   "text.autoconfig.mob_better_config.option.caveSpider.attackDamage": "Attack Damage",
   "text.autoconfig.mob_better_config.option.caveSpider.attackDamage.@Tooltip": "Base melee damage dealt by the Cave Spider.",
-
   "text.autoconfig.mob_better_config.option.caveSpider.movementSpeed": "Movement Speed",
   "text.autoconfig.mob_better_config.option.caveSpider.movementSpeed.@Tooltip": "Movement speed multiplier.",
-
   "text.autoconfig.mob_better_config.option.caveSpider.fireImmune": "Fire Immune",
   "text.autoconfig.mob_better_config.option.caveSpider.fireImmune.@Tooltip": "Makes the Cave Spider immune to fire damage.",
-
   "text.autoconfig.mob_better_config.option.caveSpider.glowing": "Glowing",
   "text.autoconfig.mob_better_config.option.caveSpider.glowing.@Tooltip": "Makes the Cave Spider glow permanently.",
-
   "text.autoconfig.mob_better_config.option.caveSpider.spawnMultiplier": "Spawn Multiplier",
   "text.autoconfig.mob_better_config.option.caveSpider.spawnMultiplier.@Tooltip": "Number of Cave Spiders spawned per natural spawn. Keep low to avoid lag.",
-
   "text.autoconfig.mob_better_config.option.caveSpider.reinforcementChance": "Reinforcement Chance",
   "text.autoconfig.mob_better_config.option.caveSpider.reinforcementChance.@Tooltip": "Chance for Cave Spider to summon reinforcements when damaged.",
-
   "text.autoconfig.mob_better_config.option.caveSpider.lootMultiplier": "Loot Multiplier",
   "text.autoconfig.mob_better_config.option.caveSpider.lootMultiplier.@Tooltip": "Multiplies items dropped by Cave Spider. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.caveSpider.enablePoison": "Enable Poison",
   "text.autoconfig.mob_better_config.option.caveSpider.enablePoison.@Tooltip": "If false, Cave Spider will not apply poison.",
-
   "text.autoconfig.mob_better_config.option.caveSpider.poisonDurationMultiplier": "Poison Duration Multiplier",
   "text.autoconfig.mob_better_config.option.caveSpider.poisonDurationMultiplier.@Tooltip": "Multiplies poison duration. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.caveSpider.poisonAmplifierMultiplier": "Poison Amplifier Multiplier",
   "text.autoconfig.mob_better_config.option.caveSpider.poisonAmplifierMultiplier.@Tooltip": "Multiplies poison strength. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.creeper": "Creeper",
-
   "text.autoconfig.mob_better_config.option.creeper.health": "Health",
   "text.autoconfig.mob_better_config.option.creeper.health.@Tooltip": "Base health of the Creeper.",
-
   "text.autoconfig.mob_better_config.option.creeper.movementSpeed": "Movement Speed",
   "text.autoconfig.mob_better_config.option.creeper.movementSpeed.@Tooltip": "How fast the Creeper moves.",
-
   "text.autoconfig.mob_better_config.option.creeper.explosionRadius": "Explosion Radius",
   "text.autoconfig.mob_better_config.option.creeper.explosionRadius.@Tooltip": "Size of the explosion. Vanilla is 3.",
-
   "text.autoconfig.mob_better_config.option.creeper.explosionDamageMultiplier": "Explosion Damage Multiplier",
   "text.autoconfig.mob_better_config.option.creeper.explosionDamageMultiplier.@Tooltip": "Multiplies explosion power. 1.0 = normal, 2.0 = double damage.",
-
   "text.autoconfig.mob_better_config.option.creeper.fuseTime": "Fuse Time (Ticks)",
   "text.autoconfig.mob_better_config.option.creeper.fuseTime.@Tooltip": "Time before explosion. 20 ticks = 1 second. Vanilla is 30.",
-
   "text.autoconfig.mob_better_config.option.creeper.powered": "Always Charged Creeper",
   "text.autoconfig.mob_better_config.option.creeper.powered.@Tooltip": "If enabled, Creepers spawn in charged (blue aura) state.",
-
   "text.autoconfig.mob_better_config.option.creeper.fireImmune": "Fire Immune",
   "text.autoconfig.mob_better_config.option.creeper.fireImmune.@Tooltip": "Prevents Creeper from taking fire damage.",
-
   "text.autoconfig.mob_better_config.option.creeper.glowing": "Glowing",
   "text.autoconfig.mob_better_config.option.creeper.glowing.@Tooltip": "Makes Creeper glow permanently.",
-
   "text.autoconfig.mob_better_config.option.creeper.spawnMultiplier": "Spawn Multiplier",
   "text.autoconfig.mob_better_config.option.creeper.spawnMultiplier.@Tooltip": "Number of Creepers spawned per natural spawn. Keep low to avoid lag.",
-
   "text.autoconfig.mob_better_config.option.creeper.reinforcementChance": "Reinforcement Chance",
   "text.autoconfig.mob_better_config.option.creeper.reinforcementChance.@Tooltip": "Chance to summon another Creeper when damaged.",
-
   "text.autoconfig.mob_better_config.option.creeper.lootMultiplier": "Loot Multiplier",
   "text.autoconfig.mob_better_config.option.creeper.lootMultiplier.@Tooltip": "Multiplies dropped loot. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.warden": "Warden",
-
   "text.autoconfig.mob_better_config.option.warden.health": "Health",
   "text.autoconfig.mob_better_config.option.warden.health.@Tooltip": "Base maximum health of the Warden. Vanilla: 500",
-
   "text.autoconfig.mob_better_config.option.warden.movementSpeed": "Movement Speed",
   "text.autoconfig.mob_better_config.option.warden.movementSpeed.@Tooltip": "Movement speed while active. Vanilla: 0.3",
-
   "text.autoconfig.mob_better_config.option.warden.knockbackResistance": "Knockback Resistance",
   "text.autoconfig.mob_better_config.option.warden.knockbackResistance.@Tooltip": "Resistance to knockback. 1.0 = immune (Vanilla).",
-
   "text.autoconfig.mob_better_config.option.warden.attackKnockback": "Attack Knockback",
   "text.autoconfig.mob_better_config.option.warden.attackKnockback.@Tooltip": "How far targets are launched on melee hit. Vanilla: 1.5",
-
   "text.autoconfig.mob_better_config.option.warden.attackDamage": "Attack Damage",
   "text.autoconfig.mob_better_config.option.warden.attackDamage.@Tooltip": "Base melee damage. Vanilla: 30",
-
   "text.autoconfig.mob_better_config.option.warden.followRange": "Follow Range",
   "text.autoconfig.mob_better_config.option.warden.followRange.@Tooltip": "Distance at which the Warden detects targets.",
-
   "text.autoconfig.mob_better_config.option.warden.sonicBoomDamageMultiplier": "Sonic Boom Damage Multiplier",
   "text.autoconfig.mob_better_config.option.warden.sonicBoomDamageMultiplier.@Tooltip": "Multiplies sonic boom damage. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.warden.sonicBoomCooldown": "Sonic Boom Cooldown (Ticks)",
   "text.autoconfig.mob_better_config.option.warden.sonicBoomCooldown.@Tooltip": "Cooldown between sonic boom uses. Vanilla: 200 ticks.",
-
   "text.autoconfig.mob_better_config.option.warden.sonicBoomInitialDelay": "Sonic Boom Initial Delay (Ticks)",
   "text.autoconfig.mob_better_config.option.warden.sonicBoomInitialDelay.@Tooltip": "Delay after melee before sonic boom can trigger. Vanilla: 40 ticks.",
-
   "text.autoconfig.mob_better_config.option.warden.enableDarkness": "Enable Darkness Effect",
   "text.autoconfig.mob_better_config.option.warden.enableDarkness.@Tooltip": "If enabled, Warden applies Darkness periodically.",
-
   "text.autoconfig.mob_better_config.option.warden.darknessRadius": "Darkness Radius",
   "text.autoconfig.mob_better_config.option.warden.darknessRadius.@Tooltip": "Radius around Warden where Darkness is applied. Vanilla: 20",
-
   "text.autoconfig.mob_better_config.option.warden.darknessDuration": "Darkness Duration (Ticks)",
   "text.autoconfig.mob_better_config.option.warden.darknessDuration.@Tooltip": "How long Darkness lasts. Vanilla: 260 ticks.",
-
   "text.autoconfig.mob_better_config.option.warden.darknessInterval": "Darkness Interval (Ticks)",
   "text.autoconfig.mob_better_config.option.warden.darknessInterval.@Tooltip": "How often Darkness is applied. Vanilla: 120 ticks.",
-
   "text.autoconfig.mob_better_config.option.warden.defaultAnger": "Default Anger",
   "text.autoconfig.mob_better_config.option.warden.defaultAnger.@Tooltip": "Base anger increase when provoked. Vanilla: 35",
-
   "text.autoconfig.mob_better_config.option.warden.projectileAnger": "Projectile Anger",
   "text.autoconfig.mob_better_config.option.warden.projectileAnger.@Tooltip": "Anger increase when hit by projectile. Vanilla: 10",
-
   "text.autoconfig.mob_better_config.option.warden.onHurtAngerBoost": "On Hurt Anger Boost",
   "text.autoconfig.mob_better_config.option.warden.onHurtAngerBoost.@Tooltip": "Extra anger added when Warden takes damage. Vanilla: 20",
-
   "text.autoconfig.mob_better_config.option.warden.spawnMultiplier": "Spawn Multiplier",
   "text.autoconfig.mob_better_config.option.warden.spawnMultiplier.@Tooltip": "Number of Wardens spawned per spawn event. Use carefully.",
-
   "text.autoconfig.mob_better_config.option.warden.reinforcementChance": "Reinforcement Chance",
   "text.autoconfig.mob_better_config.option.warden.reinforcementChance.@Tooltip": "Chance to spawn another Warden when damaged.",
-
   "text.autoconfig.mob_better_config.option.warden.lootMultiplier": "Loot Multiplier",
   "text.autoconfig.mob_better_config.option.warden.lootMultiplier.@Tooltip": "Multiplies dropped loot. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.warden.fireImmune": "Fire Immune",
   "text.autoconfig.mob_better_config.option.warden.fireImmune.@Tooltip": "If enabled, Warden ignores fire damage.",
-
   "text.autoconfig.mob_better_config.option.warden.glowing": "Glowing",
   "text.autoconfig.mob_better_config.option.warden.glowing.@Tooltip": "Makes the Warden glow permanently.",
-
   "text.autoconfig.mob_better_config.option.vindicator": "Vindicator",
-
   "text.autoconfig.mob_better_config.option.vindicator.health": "Health",
   "text.autoconfig.mob_better_config.option.vindicator.health.@Tooltip": "Base maximum health of the Vindicator.",
-
   "text.autoconfig.mob_better_config.option.vindicator.attackDamage": "Attack Damage",
   "text.autoconfig.mob_better_config.option.vindicator.attackDamage.@Tooltip": "Base axe damage dealt by the Vindicator.",
-
   "text.autoconfig.mob_better_config.option.vindicator.movementSpeed": "Movement Speed",
   "text.autoconfig.mob_better_config.option.vindicator.movementSpeed.@Tooltip": "Movement speed multiplier.",
-
   "text.autoconfig.mob_better_config.option.vindicator.followRange": "Follow Range",
   "text.autoconfig.mob_better_config.option.vindicator.followRange.@Tooltip": "Distance at which the Vindicator detects targets.",
-
   "text.autoconfig.mob_better_config.option.vindicator.enableJohnnyMode": "Enable Johnny Mode",
   "text.autoconfig.mob_better_config.option.vindicator.enableJohnnyMode.@Tooltip": "If enabled, Vindicator will attack all mobs like 'Johnny'.",
-
   "text.autoconfig.mob_better_config.option.vindicator.spawnMultiplier": "Spawn Multiplier",
   "text.autoconfig.mob_better_config.option.vindicator.spawnMultiplier.@Tooltip": "Number of Vindicators spawned per natural spawn. Keep low to avoid lag.",
-
   "text.autoconfig.mob_better_config.option.vindicator.reinforcementChance": "Reinforcement Chance",
   "text.autoconfig.mob_better_config.option.vindicator.reinforcementChance.@Tooltip": "Chance to summon extra Vindicators when damaged.",
-
   "text.autoconfig.mob_better_config.option.vindicator.lootMultiplier": "Loot Multiplier",
   "text.autoconfig.mob_better_config.option.vindicator.lootMultiplier.@Tooltip": "Multiplies item drops. 1.0 = normal drops.",
-
   "text.autoconfig.mob_better_config.option.vindicator.fireImmune": "Fire Immune",
   "text.autoconfig.mob_better_config.option.vindicator.fireImmune.@Tooltip": "Prevents fire damage.",
-
   "text.autoconfig.mob_better_config.option.vindicator.glowing": "Glowing",
   "text.autoconfig.mob_better_config.option.vindicator.glowing.@Tooltip": "Makes the Vindicator glow permanently.",
-
   "text.autoconfig.mob_better_config.option.stray": "Stray",
-
   "text.autoconfig.mob_better_config.option.stray.health": "Health",
   "text.autoconfig.mob_better_config.option.stray.health.@Tooltip": "Base maximum health of the Stray.",
-
   "text.autoconfig.mob_better_config.option.stray.attackDamage": "Attack Damage",
   "text.autoconfig.mob_better_config.option.stray.attackDamage.@Tooltip": "Base melee damage dealt by the Stray.",
-
   "text.autoconfig.mob_better_config.option.stray.movementSpeed": "Movement Speed",
   "text.autoconfig.mob_better_config.option.stray.movementSpeed.@Tooltip": "Movement speed multiplier.",
-
   "text.autoconfig.mob_better_config.option.stray.followRange": "Follow Range",
   "text.autoconfig.mob_better_config.option.stray.followRange.@Tooltip": "Distance at which the Stray detects targets.",
-
   "text.autoconfig.mob_better_config.option.stray.enableSlowness": "Enable Slowness Arrows",
   "text.autoconfig.mob_better_config.option.stray.enableSlowness.@Tooltip": "If enabled, arrows apply Slowness effect.",
-
   "text.autoconfig.mob_better_config.option.stray.slownessDuration": "Slowness Duration",
   "text.autoconfig.mob_better_config.option.stray.slownessDuration.@Tooltip": "Duration of Slowness effect in ticks (20 ticks = 1 second).",
-
   "text.autoconfig.mob_better_config.option.stray.slownessAmplifier": "Slowness Amplifier",
   "text.autoconfig.mob_better_config.option.stray.slownessAmplifier.@Tooltip": "Strength level of Slowness. 0 = Slowness I, 1 = Slowness II.",
-
   "text.autoconfig.mob_better_config.option.stray.spawnMultiplier": "Spawn Multiplier",
   "text.autoconfig.mob_better_config.option.stray.spawnMultiplier.@Tooltip": "Number of Strays spawned per natural spawn. Keep low to avoid lag.",
-
   "text.autoconfig.mob_better_config.option.stray.reinforcementChance": "Reinforcement Chance",
   "text.autoconfig.mob_better_config.option.stray.reinforcementChance.@Tooltip": "Chance to summon extra Strays when damaged.",
-
   "text.autoconfig.mob_better_config.option.stray.lootMultiplier": "Loot Multiplier",
   "text.autoconfig.mob_better_config.option.stray.lootMultiplier.@Tooltip": "Multiplies item drops. 1.0 = normal drops.",
-
   "text.autoconfig.mob_better_config.option.stray.fireImmune": "Fire Immune",
   "text.autoconfig.mob_better_config.option.stray.fireImmune.@Tooltip": "Prevents fire damage.",
-
   "text.autoconfig.mob_better_config.option.stray.glowing": "Glowing",
   "text.autoconfig.mob_better_config.option.stray.glowing.@Tooltip": "Makes the Stray glow permanently.",
-
   "text.autoconfig.mob_better_config.option.stray.burnInDaylight": "Burn In Daylight",
   "text.autoconfig.mob_better_config.option.stray.burnInDaylight.@Tooltip": "If true, the Stray burns in sunlight like a normal Skeleton.",
-
   "text.autoconfig.mob_better_config.option.stray.randomArmor": "Random Armor",
   "text.autoconfig.mob_better_config.option.stray.randomArmor.@Tooltip": "If enabled, the Stray can spawn wearing random armor pieces.",
-
   "text.autoconfig.mob_better_config.option.stray.armorChance": "Armor Chance",
   "text.autoconfig.mob_better_config.option.stray.armorChance.@Tooltip": "Chance for the Stray to spawn with armor. 0.15 = 15%.",
-
   "text.autoconfig.mob_better_config.option.slime": "Slime",
-
   "text.autoconfig.mob_better_config.option.slime.healthMultiplier": "Health Multiplier",
   "text.autoconfig.mob_better_config.option.slime.healthMultiplier.@Tooltip": "Multiplies slime maximum health. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.slime.attackDamageMultiplier": "Attack Damage Multiplier",
   "text.autoconfig.mob_better_config.option.slime.attackDamageMultiplier.@Tooltip": "Multiplies slime melee damage. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.slime.xpMultiplier": "XP Multiplier",
   "text.autoconfig.mob_better_config.option.slime.xpMultiplier.@Tooltip": "Multiplies experience dropped by normal slimes. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.slime.fixedSize": "Fixed Size",
   "text.autoconfig.mob_better_config.option.slime.fixedSize.@Tooltip": "Forces slimes to spawn at this size. -1 = vanilla size behavior.",
-
   "text.autoconfig.mob_better_config.option.slime.sizeMultiplier": "Size Multiplier",
   "text.autoconfig.mob_better_config.option.slime.sizeMultiplier.@Tooltip": "Multiplies slime size on spawn.",
-
   "text.autoconfig.mob_better_config.option.slime.minSize": "Minimum Size",
   "text.autoconfig.mob_better_config.option.slime.minSize.@Tooltip": "Minimum allowed slime size.",
-
   "text.autoconfig.mob_better_config.option.slime.maxSize": "Maximum Size",
   "text.autoconfig.mob_better_config.option.slime.maxSize.@Tooltip": "Maximum allowed slime size. Vanilla internal max is 127.",
-
   "text.autoconfig.mob_better_config.option.slime.baseMovementSpeed": "Base Movement Speed",
   "text.autoconfig.mob_better_config.option.slime.baseMovementSpeed.@Tooltip": "Base movement speed before size scaling. Vanilla: 0.2.",
-
   "text.autoconfig.mob_better_config.option.slime.speedPerSize": "Speed Per Size",
   "text.autoconfig.mob_better_config.option.slime.speedPerSize.@Tooltip": "Additional movement speed added per slime size level.",
-
   "text.autoconfig.mob_better_config.option.slime.allowSplit": "Allow Split",
   "text.autoconfig.mob_better_config.option.slime.allowSplit.@Tooltip": "If disabled, slimes will not split into smaller slimes when killed.",
-
   "text.autoconfig.mob_better_config.option.slime.splitSizeMultiplier": "Split Size Multiplier",
   "text.autoconfig.mob_better_config.option.slime.splitSizeMultiplier.@Tooltip": "Multiplier applied to child slime size when splitting. Vanilla: 0.5.",
-
   "text.autoconfig.mob_better_config.option.slime.minSplitCount": "Minimum Split Count",
   "text.autoconfig.mob_better_config.option.slime.minSplitCount.@Tooltip": "Minimum number of child slimes created on split. Vanilla: 2.",
-
   "text.autoconfig.mob_better_config.option.slime.maxSplitCount": "Maximum Split Count",
   "text.autoconfig.mob_better_config.option.slime.maxSplitCount.@Tooltip": "Maximum number of child slimes created on split. Vanilla: 4.",
-
   "text.autoconfig.mob_better_config.option.slime.spawnMultiplier": "Spawn Multiplier",
   "text.autoconfig.mob_better_config.option.slime.spawnMultiplier.@Tooltip": "Number of slimes spawned per natural spawn. Keep low to avoid lag.",
-
   "text.autoconfig.mob_better_config.option.slime.preventSplitWhenBoss": "Prevent Split When Boss",
   "text.autoconfig.mob_better_config.option.slime.preventSplitWhenBoss.@Tooltip": "If enabled, boss slimes will not split on death.",
-
   "text.autoconfig.mob_better_config.option.slime.damageScalesWithSize": "Damage Scales With Size",
   "text.autoconfig.mob_better_config.option.slime.damageScalesWithSize.@Tooltip": "If enabled, slime damage increases based on its size.",
-
   "text.autoconfig.mob_better_config.option.slime.knockbackStrength": "Knockback Strength",
   "text.autoconfig.mob_better_config.option.slime.knockbackStrength.@Tooltip": "Knockback applied to targets when slime attacks.",
-
   "text.autoconfig.mob_better_config.option.slime.lootMultiplier": "Loot Multiplier",
   "text.autoconfig.mob_better_config.option.slime.lootMultiplier.@Tooltip": "Multiplies slime drops. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.slime.fireImmune": "Fire Immune",
   "text.autoconfig.mob_better_config.option.slime.fireImmune.@Tooltip": "If enabled, slime ignores fire damage.",
-
   "text.autoconfig.mob_better_config.option.slime.glowing": "Glowing",
   "text.autoconfig.mob_better_config.option.slime.glowing.@Tooltip": "Makes slimes glow permanently.",
-
   "text.autoconfig.mob_better_config.option.slime.despawnInPeaceful": "Despawn In Peaceful",
   "text.autoconfig.mob_better_config.option.slime.despawnInPeaceful.@Tooltip": "If enabled, slimes despawn when difficulty is set to Peaceful.",
-
   "text.autoconfig.mob_better_config.option.slime.bossMode": "Enable Boss Mode",
   "text.autoconfig.mob_better_config.option.slime.bossMode.@Tooltip": "Enables boss variants for Pillagers. If disabled, no Pillager can become a Boss regardless of boss spawn chance.",
-
   "text.autoconfig.mob_better_config.option.slime.forceAllBoss": "Force All Boss",
   "text.autoconfig.mob_better_config.option.slime.forceAllBoss.@Tooltip": "If enabled, every spawned slime becomes a boss. Overrides boss spawn chance.",
-
   "text.autoconfig.mob_better_config.option.slime.bossChance": "Boss Spawn Chance",
   "text.autoconfig.mob_better_config.option.slime.bossChance.@Tooltip": "Chance for a slime to spawn as a boss when Boss Mode is enabled. 0.05 = 5%.",
-
   "text.autoconfig.mob_better_config.option.slime.bossHealthMultiplier": "Boss Health Multiplier",
   "text.autoconfig.mob_better_config.option.slime.bossHealthMultiplier.@Tooltip": "Multiplies maximum health for boss slimes.",
-
   "text.autoconfig.mob_better_config.option.slime.bossDamageMultiplier": "Boss Damage Multiplier",
   "text.autoconfig.mob_better_config.option.slime.bossDamageMultiplier.@Tooltip": "Multiplies attack damage for boss slimes.",
-
   "text.autoconfig.mob_better_config.option.slime.bossGlowing": "Boss Glowing Effect",
   "text.autoconfig.mob_better_config.option.slime.bossGlowing.@Tooltip": "If enabled, boss slimes will glow to make them easier to identify.",
-
   "text.autoconfig.mob_better_config.option.slime.bossCustomName": "Boss Custom Name",
   "text.autoconfig.mob_better_config.option.slime.bossCustomName.@Tooltip": "If enabled, boss slimes display a red 'Boss' name tag.",
-
   "text.autoconfig.mob_better_config.option.husk": "Husk",
-
   "text.autoconfig.mob_better_config.option.husk.health": "Health",
   "text.autoconfig.mob_better_config.option.husk.health.@Tooltip": "Base maximum health of the Husk. Vanilla: 20",
-
   "text.autoconfig.mob_better_config.option.husk.attackDamageMultiplier": "Attack Damage Multiplier",
   "text.autoconfig.mob_better_config.option.husk.attackDamageMultiplier.@Tooltip": "Multiplies Husk attack damage. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.husk.movementSpeedMultiplier": "Movement Speed Multiplier",
   "text.autoconfig.mob_better_config.option.husk.movementSpeedMultiplier.@Tooltip": "Multiplies Husk movement speed. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.husk.followRangeMultiplier": "Follow Range Multiplier",
   "text.autoconfig.mob_better_config.option.husk.followRangeMultiplier.@Tooltip": "Multiplies detection range. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.husk.xpMultiplier": "XP Multiplier",
   "text.autoconfig.mob_better_config.option.husk.xpMultiplier.@Tooltip": "Multiplies experience dropped. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.husk.enableHunger": "Enable Hunger Effect",
   "text.autoconfig.mob_better_config.option.husk.enableHunger.@Tooltip": "If enabled, Husk applies Hunger when attacking with empty hand.",
-
   "text.autoconfig.mob_better_config.option.husk.hungerDuration": "Hunger Duration",
   "text.autoconfig.mob_better_config.option.husk.hungerDuration.@Tooltip": "Duration in ticks. 20 ticks = 1 second. Vanilla: 140",
-
   "text.autoconfig.mob_better_config.option.husk.hungerAmplifier": "Hunger Amplifier",
   "text.autoconfig.mob_better_config.option.husk.hungerAmplifier.@Tooltip": "Strength level of Hunger. 0 = Hunger I.",
-
   "text.autoconfig.mob_better_config.option.husk.desertBuff": "Enable Desert Buff",
   "text.autoconfig.mob_better_config.option.husk.desertBuff.@Tooltip": "If enabled, Husk becomes stronger in desert biomes.",
-
   "text.autoconfig.mob_better_config.option.husk.desertHealth": "Desert Health",
   "text.autoconfig.mob_better_config.option.husk.desertHealth.@Tooltip": "Health value while in desert biome.",
-
   "text.autoconfig.mob_better_config.option.husk.desertDamageBonus": "Desert Damage Multiplier",
   "text.autoconfig.mob_better_config.option.husk.desertDamageBonus.@Tooltip": "Multiplies attack damage in desert biome. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.husk.spawnMultiplier": "Spawn Multiplier",
   "text.autoconfig.mob_better_config.option.husk.spawnMultiplier.@Tooltip": "Extra Husks spawned per natural spawn. Keep low to avoid lag.",
-
   "text.autoconfig.mob_better_config.option.husk.reinforcementChance": "Reinforcement Chance",
   "text.autoconfig.mob_better_config.option.husk.reinforcementChance.@Tooltip": "Chance to summon extra Husks when damaged.",
-
   "text.autoconfig.mob_better_config.option.husk.lootMultiplier": "Loot Multiplier",
   "text.autoconfig.mob_better_config.option.husk.lootMultiplier.@Tooltip": "Multiplies item drops. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.husk.fireImmune": "Fire Immune",
   "text.autoconfig.mob_better_config.option.husk.fireImmune.@Tooltip": "If enabled, Husk will not burn in sunlight.",
-
   "text.autoconfig.mob_better_config.option.husk.glowing": "Glowing",
   "text.autoconfig.mob_better_config.option.husk.glowing.@Tooltip": "Makes the Husk glow permanently.",
-
   "text.autoconfig.mob_better_config.option.husk.convertInWater": "Convert In Water",
   "text.autoconfig.mob_better_config.option.husk.convertInWater.@Tooltip": "If enabled, Husk converts into Zombie when submerged.",
-
   "text.autoconfig.mob_better_config.option.husk.waterConversionTime": "Water Conversion Time",
   "text.autoconfig.mob_better_config.option.husk.waterConversionTime.@Tooltip": "Time in ticks before conversion. Vanilla ~300 ticks.",
-
   "text.autoconfig.mob_better_config.option.husk.bossMode": "Boss Mode",
   "text.autoconfig.mob_better_config.option.husk.bossMode.@Tooltip": "Enables boss variants for husk. If disabled, no husk can become bosses regardless of spawn chance.",
-
   "text.autoconfig.mob_better_config.option.husk.forceAllBoss": "Force All Boss",
   "text.autoconfig.mob_better_config.option.husk.forceAllBoss.@Tooltip": "If enabled, every spawned Husk becomes a Boss. Overrides boss chance.",
-
   "text.autoconfig.mob_better_config.option.husk.bossChance": "Boss Spawn Chance",
   "text.autoconfig.mob_better_config.option.husk.bossChance.@Tooltip": "Chance for a Husk to spawn as Boss when Boss Mode is enabled. 0.05 = 5%.",
-
   "text.autoconfig.mob_better_config.option.husk.bossHealthMultiplier": "Boss Health Multiplier",
   "text.autoconfig.mob_better_config.option.husk.bossHealthMultiplier.@Tooltip": "Multiplies maximum health for Boss Husks.",
-
   "text.autoconfig.mob_better_config.option.husk.bossDamageMultiplier": "Boss Damage Multiplier",
   "text.autoconfig.mob_better_config.option.husk.bossDamageMultiplier.@Tooltip": "Multiplies attack damage for Boss Husks.",
-
   "text.autoconfig.mob_better_config.option.husk.bossGlowing": "Boss Glowing Effect",
   "text.autoconfig.mob_better_config.option.husk.bossGlowing.@Tooltip": "If enabled, Boss Husks glow to make them easier to identify.",
-
   "text.autoconfig.mob_better_config.option.husk.bossCustomName": "Boss Custom Name",
   "text.autoconfig.mob_better_config.option.husk.bossCustomName.@Tooltip": "If enabled, Boss Husks display a custom red 'Boss' name tag.",
-
-
   "text.autoconfig.mob_better_config.option.pillager": "Pillager",
-
   "text.autoconfig.mob_better_config.option.pillager.health": "Health",
   "text.autoconfig.mob_better_config.option.pillager.health.@Tooltip": "Base maximum health of the Pillager. Vanilla: 24",
-
   "text.autoconfig.mob_better_config.option.pillager.attackDamage": "Attack Damage",
   "text.autoconfig.mob_better_config.option.pillager.attackDamage.@Tooltip": "Base melee damage dealt by the Pillager. Vanilla: 5",
-
   "text.autoconfig.mob_better_config.option.pillager.movementSpeed": "Flying Speed",
   "text.autoconfig.mob_better_config.option.pillager.movementSpeed.@Tooltip": "Flying speed multiplier. Vanilla: 0.6",
-
   "text.autoconfig.mob_better_config.option.pillager.followRange": "Follow Range",
   "text.autoconfig.mob_better_config.option.pillager.followRange.@Tooltip": "Distance at which the Pillager detects targets. Vanilla: 32",
-
   "text.autoconfig.mob_better_config.option.pillager.crossbowDamageMultiplier": "Crossbow Damage Multiplier",
   "text.autoconfig.mob_better_config.option.pillager.crossbowDamageMultiplier.@Tooltip": "Multiplies damage dealt by crossbow shots. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.pillager.strongerInRaid": "Stronger In Raid",
   "text.autoconfig.mob_better_config.option.pillager.strongerInRaid.@Tooltip": "If enabled, Pillagers receive stat bonuses during raids.",
-
   "text.autoconfig.mob_better_config.option.pillager.raidDamageBonus": "Raid Damage Multiplier",
   "text.autoconfig.mob_better_config.option.pillager.raidDamageBonus.@Tooltip": "Damage multiplier applied during raids. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.pillager.raidHealthBonus": "Raid Health Multiplier",
   "text.autoconfig.mob_better_config.option.pillager.raidHealthBonus.@Tooltip": "Health multiplier applied during raids. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.pillager.spawnMultiplier": "Spawn Multiplier",
   "text.autoconfig.mob_better_config.option.pillager.spawnMultiplier.@Tooltip": "Number of Pillagers spawned per natural spawn. Keep low to avoid lag.",
-
   "text.autoconfig.mob_better_config.option.pillager.xpMultiplier": "XP Multiplier",
   "text.autoconfig.mob_better_config.option.pillager.xpMultiplier.@Tooltip": "Multiplies experience dropped. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.pillager.lootMultiplier": "Loot Multiplier",
   "text.autoconfig.mob_better_config.option.pillager.lootMultiplier.@Tooltip": "Multiplies item drops. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.pillager.reinforcementChance": "Reinforcement Chance",
   "text.autoconfig.mob_better_config.option.pillager.reinforcementChance.@Tooltip": "Chance for Pillager to summon reinforcements when damaged.",
-
   "text.autoconfig.mob_better_config.option.pillager.fireImmune": "Fire Immune",
   "text.autoconfig.mob_better_config.option.pillager.fireImmune.@Tooltip": "If enabled, Pillager ignores fire damage.",
-
   "text.autoconfig.mob_better_config.option.pillager.glowing": "Glowing",
   "text.autoconfig.mob_better_config.option.pillager.glowing.@Tooltip": "Makes the Pillager glow permanently.",
-
   "text.autoconfig.mob_better_config.option.pillager.bossMode": "Boss Mode",
   "text.autoconfig.mob_better_config.option.pillager.bossMode.@Tooltip": "Enables boss variants for Pillagers.",
-
   "text.autoconfig.mob_better_config.option.pillager.forceAllBoss": "Force All Boss",
   "text.autoconfig.mob_better_config.option.pillager.forceAllBoss.@Tooltip": "If enabled, every spawned Pillager becomes a Boss. Overrides boss chance.",
-
   "text.autoconfig.mob_better_config.option.pillager.bossChance": "Boss Spawn Chance",
   "text.autoconfig.mob_better_config.option.pillager.bossChance.@Tooltip": "Chance for a Pillager to spawn as Boss when Boss Mode is enabled. 0.05 = 5%.",
-
   "text.autoconfig.mob_better_config.option.pillager.bossHealthMultiplier": "Boss Health Multiplier",
   "text.autoconfig.mob_better_config.option.pillager.bossHealthMultiplier.@Tooltip": "Multiplies maximum health for Boss Pillagers.",
-
   "text.autoconfig.mob_better_config.option.pillager.bossDamageMultiplier": "Boss Damage Multiplier",
   "text.autoconfig.mob_better_config.option.pillager.bossDamageMultiplier.@Tooltip": "Multiplies attack damage for Boss Pillagers.",
-
   "text.autoconfig.mob_better_config.option.pillager.bossGlowing": "Boss Glowing Effect",
   "text.autoconfig.mob_better_config.option.pillager.bossGlowing.@Tooltip": "If enabled, Boss Pillagers glow to make them easier to identify.",
-
   "text.autoconfig.mob_better_config.option.pillager.bossCustomName": "Boss Custom Name",
   "text.autoconfig.mob_better_config.option.pillager.bossCustomName.@Tooltip": "If enabled, Boss Pillagers display a custom red 'Boss' name tag.",
-
-
   "text.autoconfig.mob_better_config.option.phantom": "Phantom",
-
   "text.autoconfig.mob_better_config.option.phantom.health": "Health",
   "text.autoconfig.mob_better_config.option.phantom.health.@Tooltip": "Base maximum health of the Phantom. Vanilla: 20",
-
   "text.autoconfig.mob_better_config.option.phantom.attackDamage": "Attack Damage",
   "text.autoconfig.mob_better_config.option.phantom.attackDamage.@Tooltip": "Base melee damage dealt by the Phantom. Vanilla: 6",
-
   "text.autoconfig.mob_better_config.option.phantom.movementSpeed": "Movement Speed",
   "text.autoconfig.mob_better_config.option.phantom.movementSpeed.@Tooltip": "Movement speed multiplier. Vanilla approx: 0.6",
-
   "text.autoconfig.mob_better_config.option.phantom.followRange": "Follow Range",
   "text.autoconfig.mob_better_config.option.phantom.followRange.@Tooltip": "Distance at which the Phantom detects targets. Vanilla: 64",
-
   "text.autoconfig.mob_better_config.option.phantom.fixedSize": "Fixed Size",
   "text.autoconfig.mob_better_config.option.phantom.fixedSize.@Tooltip": "Forces Phantom to spawn at this size. -1 = vanilla scaling behavior.",
-
   "text.autoconfig.mob_better_config.option.phantom.sizeMultiplier": "Size Multiplier",
   "text.autoconfig.mob_better_config.option.phantom.sizeMultiplier.@Tooltip": "Multiplies Phantom size on spawn. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.phantom.spawnMultiplier": "Spawn Multiplier",
   "text.autoconfig.mob_better_config.option.phantom.spawnMultiplier.@Tooltip": "Number of Phantoms spawned per natural spawn event. Keep low to avoid lag.",
-
   "text.autoconfig.mob_better_config.option.phantom.xpMultiplier": "XP Multiplier",
   "text.autoconfig.mob_better_config.option.phantom.xpMultiplier.@Tooltip": "Multiplies experience dropped by Phantom. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.phantom.lootMultiplier": "Loot Multiplier",
   "text.autoconfig.mob_better_config.option.phantom.lootMultiplier.@Tooltip": "Multiplies item drops. 1.0 = normal.",
-
   "text.autoconfig.mob_better_config.option.phantom.reinforcementChance": "Reinforcement Chance",
   "text.autoconfig.mob_better_config.option.phantom.reinforcementChance.@Tooltip": "Chance for Phantom to summon another Phantom when damaged.",
-
   "text.autoconfig.mob_better_config.option.phantom.fireImmune": "Fire Immune",
   "text.autoconfig.mob_better_config.option.phantom.fireImmune.@Tooltip": "If enabled, Phantom ignores fire damage.",
-
   "text.autoconfig.mob_better_config.option.phantom.glowing": "Glowing",
   "text.autoconfig.mob_better_config.option.phantom.glowing.@Tooltip": "Makes the Phantom glow permanently.",
-
   "text.autoconfig.mob_better_config.option.phantom.burnInDaylight": "Burn In Daylight",
   "text.autoconfig.mob_better_config.option.phantom.burnInDaylight.@Tooltip": "If enabled, Phantom burns in daylight (not vanilla behavior).",
-
   "text.autoconfig.mob_better_config.option.phantom.bossMode": "Boss Mode",
   "text.autoconfig.mob_better_config.option.phantom.bossMode.@Tooltip": "Enables boss variants for Phantoms. If disabled, no Phantom can become a Boss regardless of spawn chance.",
-
   "text.autoconfig.mob_better_config.option.phantom.forceAllBoss": "Force All Boss",
   "text.autoconfig.mob_better_config.option.phantom.forceAllBoss.@Tooltip": "If enabled, every spawned Phantom becomes a Boss. Overrides boss spawn chance.",
-
   "text.autoconfig.mob_better_config.option.phantom.bossChance": "Boss Spawn Chance",
   "text.autoconfig.mob_better_config.option.phantom.bossChance.@Tooltip": "Chance for a Phantom to spawn as Boss when Boss Mode is enabled. 0.05 = 5%.",
-
   "text.autoconfig.mob_better_config.option.phantom.bossHealthMultiplier": "Boss Health Multiplier",
   "text.autoconfig.mob_better_config.option.phantom.bossHealthMultiplier.@Tooltip": "Multiplies maximum health for Boss Phantoms.",
-
   "text.autoconfig.mob_better_config.option.phantom.bossDamageMultiplier": "Boss Damage Multiplier",
   "text.autoconfig.mob_better_config.option.phantom.bossDamageMultiplier.@Tooltip": "Multiplies attack damage for Boss Phantoms.",
-
   "text.autoconfig.mob_better_config.option.phantom.bossGlowing": "Boss Glowing Effect",
   "text.autoconfig.mob_better_config.option.phantom.bossGlowing.@Tooltip": "If enabled, Boss Phantoms glow to make them easier to identify.",
-
   "text.autoconfig.mob_better_config.option.phantom.bossCustomName": "Boss Custom Name",
   "text.autoconfig.mob_better_config.option.phantom.bossCustomName.@Tooltip": "If enabled, Boss Phantoms display a custom red 'Boss' name tag.",
-
   "text.autoconfig.mob_better_config.option.phantom.circleSpeedMultiplier": "Circle Speed Multiplier",
   "text.autoconfig.mob_better_config.option.phantom.circleSpeedMultiplier.@Tooltip": "Multiplies the Phantom's circling movement speed before attacking. 1.0 = normal vanilla behavior.",
-
   "text.autoconfig.mob_better_config.option.phantom.swoopSpeedMultiplier": "Swoop Speed Multiplier",
-  "text.autoconfig.mob_better_config.option.phantom.swoopSpeedMultiplier.@Tooltip": "Multiplies the Phantom's dive (swoop) attack speed. Vanilla approx: 1.5"
+  "text.autoconfig.mob_better_config.option.phantom.swoopSpeedMultiplier.@Tooltip": "Multiplies the Phantom's dive (swoop) attack speed. Vanilla approx: 1.5",
+  "text.autoconfig.mob_better_config.option.spider.canBreakDoors": "Can Break Doors",
+  "text.autoconfig.mob_better_config.option.spider.canBreakDoors.@Tooltip": "If enabled, spiders will be able to break wooden doors.",
+  "text.autoconfig.mob_better_config.option.spider.doorBreakMode": "Door Break Speed",
+  "text.autoconfig.mob_better_config.option.spider.doorBreakMode.@Tooltip": "Controls how fast spiders break doors.\n0 = Disabled\n1 = Very Slow\n2 = Slow\n3 = Vanilla Speed\n4 = Fast\n5 = Very Fast",
+  "text.autoconfig.mob_better_config.option.phantom.canBreakDoors": "Can Break Doors",
+  "text.autoconfig.mob_better_config.option.phantom.canBreakDoors.@Tooltip": "If enabled, phantoms will be able to break wooden doors (requires custom AI).",
+  "text.autoconfig.mob_better_config.option.phantom.doorBreakMode": "Door Break Speed",
+  "text.autoconfig.mob_better_config.option.phantom.doorBreakMode.@Tooltip": "Controls how fast phantoms break doors.\n0 = Disabled\n1 = Very Slow\n2 = Slow\n3 = Vanilla Speed\n4 = Fast\n5 = Very Fast",
+  "text.autoconfig.mob_better_config.option.enderman": "Enderman",
+  "text.autoconfig.mob_better_config.option.enderman.health": "Health",
+  "text.autoconfig.mob_better_config.option.enderman.health.@Tooltip": "Sets the Enderman's maximum health. Vanilla: 40",
+  "text.autoconfig.mob_better_config.option.enderman.attackDamage": "Attack Damage",
+  "text.autoconfig.mob_better_config.option.enderman.attackDamage.@Tooltip": "Sets the Enderman's melee attack damage. Vanilla: 7",
+  "text.autoconfig.mob_better_config.option.enderman.movementSpeed": "Movement Speed",
+  "text.autoconfig.mob_better_config.option.enderman.movementSpeed.@Tooltip": "Controls movement speed. Vanilla: 0.3",
+  "text.autoconfig.mob_better_config.option.enderman.followRange": "Follow Range",
+  "text.autoconfig.mob_better_config.option.enderman.followRange.@Tooltip": "Distance at which the Enderman detects targets. Vanilla: 64",
+  "text.autoconfig.mob_better_config.option.enderman.canBreakDoors": "Can Break Doors",
+  "text.autoconfig.mob_better_config.option.enderman.canBreakDoors.@Tooltip": "If enabled, Endermen can break wooden doors.",
+  "text.autoconfig.mob_better_config.option.enderman.doorBreakMode": "Door Break Speed",
+  "text.autoconfig.mob_better_config.option.enderman.doorBreakMode.@Tooltip": "Controls how fast doors are broken.\n1 = Very Slow\n2 = Slow\n3 = Vanilla Speed\n4 = Fast\n5 = Very Fast",
+  "text.autoconfig.mob_better_config.option.enderman.enableTeleport": "Enable Teleport",
+  "text.autoconfig.mob_better_config.option.enderman.enableTeleport.@Tooltip": "If disabled, Endermen will not teleport.",
+  "text.autoconfig.mob_better_config.option.enderman.teleportChance": "Teleport Chance Multiplier",
+  "text.autoconfig.mob_better_config.option.enderman.teleportChance.@Tooltip": "Multiplies the chance to teleport. 1.0 = Vanilla behavior",
+  "text.autoconfig.mob_better_config.option.enderman.teleportRangeMultiplier": "Teleport Range Multiplier",
+  "text.autoconfig.mob_better_config.option.enderman.teleportRangeMultiplier.@Tooltip": "Multiplies teleport distance range.",
+  "text.autoconfig.mob_better_config.option.enderman.alwaysAggressive": "Always Aggressive",
+  "text.autoconfig.mob_better_config.option.enderman.alwaysAggressive.@Tooltip": "If enabled, Endermen will attack players without being looked at.",
+  "text.autoconfig.mob_better_config.option.enderman.rageSpeedMultiplier": "Rage Speed Multiplier",
+  "text.autoconfig.mob_better_config.option.enderman.rageSpeedMultiplier.@Tooltip": "Movement speed multiplier when enraged.",
+  "text.autoconfig.mob_better_config.option.enderman.takeWaterDamage": "Take Water Damage",
+  "text.autoconfig.mob_better_config.option.enderman.takeWaterDamage.@Tooltip": "If disabled, Endermen will not take damage from water.",
+  "text.autoconfig.mob_better_config.option.enderman.canPickupBlocks": "Can Pick Up Blocks",
+  "text.autoconfig.mob_better_config.option.enderman.canPickupBlocks.@Tooltip": "If disabled, Endermen cannot pick up blocks.",
+  "text.autoconfig.mob_better_config.option.enderman.spawnMultiplier": "Spawn Multiplier",
+  "text.autoconfig.mob_better_config.option.enderman.spawnMultiplier.@Tooltip": "Number of additional Endermen spawned per natural spawn.",
+  "text.autoconfig.mob_better_config.option.enderman.reinforcementChance": "Reinforcement Chance",
+  "text.autoconfig.mob_better_config.option.enderman.reinforcementChance.@Tooltip": "Chance to spawn reinforcement Endermen when damaged.",
+  "text.autoconfig.mob_better_config.option.enderman.xpMultiplier": "XP Multiplier",
+  "text.autoconfig.mob_better_config.option.enderman.xpMultiplier.@Tooltip": "Multiplies experience dropped on death.",
+  "text.autoconfig.mob_better_config.option.enderman.lootMultiplier": "Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.enderman.lootMultiplier.@Tooltip": "Multiplies item drops on death.",
+  "text.autoconfig.mob_better_config.option.enderman.bossMode": "Enable Boss Mode",
+  "text.autoconfig.mob_better_config.option.enderman.bossMode.@Tooltip": "Allows Endermen to spawn as bosses.",
+  "text.autoconfig.mob_better_config.option.enderman.forceAllBoss": "Force All Boss",
+  "text.autoconfig.mob_better_config.option.enderman.forceAllBoss.@Tooltip": "Forces every Enderman to spawn as a boss.",
+  "text.autoconfig.mob_better_config.option.enderman.bossChance": "Boss Spawn Chance",
+  "text.autoconfig.mob_better_config.option.enderman.bossChance.@Tooltip": "Chance for an Enderman to spawn as a boss.",
+  "text.autoconfig.mob_better_config.option.enderman.bossHealthMultiplier": "Boss Health Multiplier",
+  "text.autoconfig.mob_better_config.option.enderman.bossHealthMultiplier.@Tooltip": "Health multiplier applied to boss Endermen.",
+  "text.autoconfig.mob_better_config.option.enderman.bossDamageMultiplier": "Boss Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.enderman.bossDamageMultiplier.@Tooltip": "Damage multiplier applied to boss Endermen.",
+  "text.autoconfig.mob_better_config.option.enderman.bossGlowing": "Boss Glowing",
+  "text.autoconfig.mob_better_config.option.enderman.bossGlowing.@Tooltip": "Makes boss Endermen glow.",
+  "text.autoconfig.mob_better_config.option.enderman.bossCustomName": "Boss Custom Name",
+  "text.autoconfig.mob_better_config.option.enderman.bossCustomName.@Tooltip": "Displays a custom boss name above the Enderman.",
+  "text.autoconfig.mob_better_config.option.enderman.fireImmune": "Fire Immune",
+  "text.autoconfig.mob_better_config.option.enderman.fireImmune.@Tooltip": "Prevents Endermen from taking fire damage.",
+  "text.autoconfig.mob_better_config.option.enderman.glowing": "Glowing Effect",
+  "text.autoconfig.mob_better_config.option.enderman.glowing.@Tooltip": "Makes Endermen permanently glow.",
+  "text.autoconfig.mob_better_config.option.enderman.burnInDaylight": "Burn In Daylight",
+  "text.autoconfig.mob_better_config.option.enderman.burnInDaylight.@Tooltip": "If enabled, Enderman burns in daylight (not vanilla behavior).",
+  "text.autoconfig.mob_better_config.option.enderman.CustomName": "Enable Custom Name",
+  "text.autoconfig.mob_better_config.option.enderman.CustomName.@Tooltip": "If enabled, Enderman will receive a random custom name using prefix and suffix.",
+  "text.autoconfig.mob_better_config.option.cavespider.CustomName": "Enable Custom Name",
+  "text.autoconfig.mob_better_config.option.cavespider.CustomName.@Tooltip": "If enabled, Cave Spider will receive a random custom name using prefix and suffix.",
+  "text.autoconfig.mob_better_config.option.creeper.CustomName": "Enable Custom Name",
+  "text.autoconfig.mob_better_config.option.creeper.CustomName.@Tooltip": "If enabled, Creeper will receive a random custom name using prefix and suffix.",
+  "text.autoconfig.mob_better_config.option.husk.CustomName": "Enable Custom Name",
+  "text.autoconfig.mob_better_config.option.husk.CustomName.@Tooltip": "If enabled, Husk will receive a random custom name using prefix and suffix.",
+  "text.autoconfig.mob_better_config.option.phantom.CustomName": "Enable Custom Name",
+  "text.autoconfig.mob_better_config.option.phantom.CustomName.@Tooltip": "If enabled, Phantom will receive a random custom name using prefix and suffix.",
+  "text.autoconfig.mob_better_config.option.pillager.CustomName": "Enable Custom Name",
+  "text.autoconfig.mob_better_config.option.pillager.CustomName.@Tooltip": "If enabled, Pillager will receive a random custom name using prefix and suffix.",
+  "text.autoconfig.mob_better_config.option.skeleton.CustomName": "Enable Custom Name",
+  "text.autoconfig.mob_better_config.option.skeleton.CustomName.@Tooltip": "If enabled, Skeleton will receive a random custom name using prefix and suffix.",
+  "text.autoconfig.mob_better_config.option.slime.CustomName": "Enable Custom Name",
+  "text.autoconfig.mob_better_config.option.slime.CustomName.@Tooltip": "If enabled, Slime will receive a random custom name using prefix and suffix.",
+  "text.autoconfig.mob_better_config.option.spider.CustomName": "Enable Custom Name",
+  "text.autoconfig.mob_better_config.option.spider.CustomName.@Tooltip": "If enabled, Spider will receive a random custom name using prefix and suffix.",
+  "text.autoconfig.mob_better_config.option.stray.CustomName": "Enable Custom Name",
+  "text.autoconfig.mob_better_config.option.stray.CustomName.@Tooltip": "If enabled, Stray will receive a random custom name using prefix and suffix.",
+  "text.autoconfig.mob_better_config.option.vindicator.CustomName": "Enable Custom Name",
+  "text.autoconfig.mob_better_config.option.vindicator.CustomName.@Tooltip": "If enabled, Vindicator will receive a random custom name using prefix and suffix.",
+  "text.autoconfig.mob_better_config.option.warden.CustomName": "Enable Custom Name",
+  "text.autoconfig.mob_better_config.option.warden.CustomName.@Tooltip": "If enabled, Warden will receive a random custom name using prefix and suffix.",
+  "text.autoconfig.mob_better_config.option.witch.CustomName": "Enable Custom Name",
+  "text.autoconfig.mob_better_config.option.witch.CustomName.@Tooltip": "If enabled, Witch will receive a random custom name using prefix and suffix.",
+  "text.autoconfig.mob_better_config.option.zombievillager.CustomName": "Enable Custom Name",
+  "text.autoconfig.mob_better_config.option.zombievillager.CustomName.@Tooltip": "If enabled, Zombie Villager will receive a random custom name using prefix and suffix.",
+  "text.autoconfig.mob_better_config.option.enderman.burnSeconds": "Daylight Burn Duration (Seconds)",
+  "text.autoconfig.mob_better_config.option.enderman.burnSeconds.@Tooltip": "How many seconds the Enderman burns when exposed to direct sunlight. 20 ticks = 1 second. Vanilla Zombies burn for about 8 seconds.",
+  "text.autoconfig.mob_better_config.option.wither_skeleton": "Wither Skeleton",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.CustomName": "Enable Custom Name",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.CustomName.@Tooltip": "If enabled, Wither Skeleton will receive a random custom name using prefix and suffix.",
+
+  "text.autoconfig.mob_better_config.option.wither_skeleton.health": "Health",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.health.@Tooltip": "Sets the base health of the Wither Skeleton. Vanilla: 20.0",
+
+  "text.autoconfig.mob_better_config.option.wither_skeleton.attackDamage": "Attack Damage",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.attackDamage.@Tooltip": "Sets the base melee attack damage. Vanilla: 4.0",
+
+  "text.autoconfig.mob_better_config.option.wither_skeleton.movementSpeed": "Movement Speed",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.movementSpeed.@Tooltip": "Sets the movement speed. Vanilla: 0.25",
+
+  "text.autoconfig.mob_better_config.option.wither_skeleton.followRange": "Follow Range",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.followRange.@Tooltip": "Sets how far the Wither Skeleton can detect and follow targets. Vanilla: 16.0",
+
+  "text.autoconfig.mob_better_config.option.wither_skeleton.enableWitherEffect": "Enable Wither Effect",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.enableWitherEffect.@Tooltip": "If enabled, attacks will apply the Wither effect to targets.",
+
+  "text.autoconfig.mob_better_config.option.wither_skeleton.witherDuration": "Wither Duration",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.witherDuration.@Tooltip": "Duration of the Wither effect in ticks. Vanilla: 200 ticks (10 seconds).",
+
+  "text.autoconfig.mob_better_config.option.wither_skeleton.witherAmplifier": "Wither Amplifier",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.witherAmplifier.@Tooltip": "Strength level of the Wither effect. 0 = Wither I.",
+
+  "text.autoconfig.mob_better_config.option.wither_skeleton.flamingArrows": "Flaming Arrows",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.flamingArrows.@Tooltip": "If enabled, arrows shot by the Wither Skeleton will be on fire.",
+
+  "text.autoconfig.mob_better_config.option.wither_skeleton.arrowFireSeconds": "Arrow Fire Duration",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.arrowFireSeconds.@Tooltip": "How long arrows burn targets in ticks. Vanilla: 100 ticks (5 seconds).",
+
+  "text.autoconfig.mob_better_config.option.wither_skeleton.spawnMultiplier": "Spawn Multiplier",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.spawnMultiplier.@Tooltip": "Multiplies the number of Wither Skeletons that spawn.",
+
+  "text.autoconfig.mob_better_config.option.wither_skeleton.reinforcementChance": "Reinforcement Chance",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.reinforcementChance.@Tooltip": "Chance for additional Wither Skeletons to spawn as reinforcements when attacked.",
+
+  "text.autoconfig.mob_better_config.option.wither_skeleton.xpMultiplier": "XP Multiplier",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.xpMultiplier.@Tooltip": "Multiplies the amount of experience dropped on death.",
+
+  "text.autoconfig.mob_better_config.option.wither_skeleton.lootMultiplier": "Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.lootMultiplier.@Tooltip": "Multiplies the amount of loot dropped on death.",
+
+  "text.autoconfig.mob_better_config.option.wither_skeleton.bossMode": "Enable Boss Mode",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.bossMode.@Tooltip": "If enabled, some Wither Skeletons can spawn as boss variants.",
+
+  "text.autoconfig.mob_better_config.option.wither_skeleton.forceAllBoss": "Force All Boss",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.forceAllBoss.@Tooltip": "If enabled, all Wither Skeletons will spawn as bosses.",
+
+  "text.autoconfig.mob_better_config.option.wither_skeleton.bossChance": "Boss Spawn Chance",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.bossChance.@Tooltip": "Chance for a Wither Skeleton to spawn as a boss. Used if Force All Boss is disabled.",
+
+  "text.autoconfig.mob_better_config.option.wither_skeleton.bossHealthMultiplier": "Boss Health Multiplier",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.bossHealthMultiplier.@Tooltip": "Multiplier applied to health when spawned as a boss.",
+
+  "text.autoconfig.mob_better_config.option.wither_skeleton.bossDamageMultiplier": "Boss Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.bossDamageMultiplier.@Tooltip": "Multiplier applied to damage when spawned as a boss.",
+
+  "text.autoconfig.mob_better_config.option.wither_skeleton.bossGlowing": "Boss Glowing Effect",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.bossGlowing.@Tooltip": "If enabled, boss Wither Skeletons will glow.",
+
+  "text.autoconfig.mob_better_config.option.wither_skeleton.bossCustomName": "Boss Custom Name",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.bossCustomName.@Tooltip": "If enabled, boss Wither Skeletons will have a special custom name.",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.arrowDamage": "Arrow Damage",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.arrowDamage.@Tooltip": "Sets the base damage of arrows shot by Wither Skeletons. Vanilla approx: 5.0",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.randomArmorChance": "Random Armor Spawn Chance",
+  "text.autoconfig.mob_better_config.option.wither_skeleton.randomArmorChance.@Tooltip": "Probability (0.0–1.0) that a Wither Skeleton spawns with random armor equipped. Vanilla default: 0.20",
+
+  "text.autoconfig.mob_better_config.option.drowned": "Drowned",
+  "text.autoconfig.mob_better_config.option.drowned.CustomName": "Enable Custom Names",
+  "text.autoconfig.mob_better_config.option.drowned.CustomName.@Tooltip": "Allows Drowned to spawn with random custom names.",
+
+  "text.autoconfig.mob_better_config.option.drowned.health": "Max Health",
+  "text.autoconfig.mob_better_config.option.drowned.health.@Tooltip": "Sets the base maximum health of Drowned. Vanilla: 20.0",
+
+  "text.autoconfig.mob_better_config.option.drowned.randomArmorChance": "Random Armor Chance",
+  "text.autoconfig.mob_better_config.option.drowned.randomArmorChance.@Tooltip": "Chance (0.0–1.0) for a Drowned to spawn wearing random armor. Vanilla approx: 0.20",
+
+  "text.autoconfig.mob_better_config.option.drowned.attackDamage": "Attack Damage",
+  "text.autoconfig.mob_better_config.option.drowned.attackDamage.@Tooltip": "Sets the base melee attack damage of Drowned. Vanilla: 3.0",
+
+  "text.autoconfig.mob_better_config.option.drowned.movementSpeed": "Movement Speed",
+  "text.autoconfig.mob_better_config.option.drowned.movementSpeed.@Tooltip": "Sets the base movement speed of Drowned. Vanilla: 0.23",
+
+  "text.autoconfig.mob_better_config.option.drowned.followRange": "Follow Range",
+  "text.autoconfig.mob_better_config.option.drowned.followRange.@Tooltip": "Detection range for targeting players. Vanilla: 35.0",
+
+  "text.autoconfig.mob_better_config.option.drowned.canBreakDoors": "Can Break Doors",
+  "text.autoconfig.mob_better_config.option.drowned.canBreakDoors.@Tooltip": "Allows Drowned to break wooden doors.",
+
+  "text.autoconfig.mob_better_config.option.drowned.doorBreakMode": "Door Break Difficulty",
+  "text.autoconfig.mob_better_config.option.drowned.doorBreakMode.@Tooltip": "Door breaking difficulty level. 0 = Disabled (Vanilla), 1 = Easy, 2 = Normal, 3 = Hard, 4–5 = Extreme.",
+
+  "text.autoconfig.mob_better_config.option.drowned.tridentChance": "Trident Spawn Chance",
+  "text.autoconfig.mob_better_config.option.drowned.tridentChance.@Tooltip": "Chance (0.0–1.0) for a Drowned to spawn holding a trident. Vanilla approx: 0.10",
+
+  "text.autoconfig.mob_better_config.option.drowned.fishingRodChance": "Fishing Rod Spawn Chance",
+  "text.autoconfig.mob_better_config.option.drowned.fishingRodChance.@Tooltip": "Chance (0.0–1.0) for a Drowned to spawn holding a fishing rod.",
+
+  "text.autoconfig.mob_better_config.option.drowned.nautilusShellChance": "Nautilus Shell Spawn Chance",
+  "text.autoconfig.mob_better_config.option.drowned.nautilusShellChance.@Tooltip": "Chance (0.0–1.0) for a Drowned to spawn holding a nautilus shell.",
+
+  "text.autoconfig.mob_better_config.option.drowned.requireDeepWater": "Require Deep Water",
+  "text.autoconfig.mob_better_config.option.drowned.requireDeepWater.@Tooltip": "If enabled, Drowned only spawn in water below sea level minus offset.",
+
+  "text.autoconfig.mob_better_config.option.drowned.deepWaterOffset": "Deep Water Offset",
+  "text.autoconfig.mob_better_config.option.drowned.deepWaterOffset.@Tooltip": "Number of blocks below sea level required for spawning. Default: 5",
+
+  "text.autoconfig.mob_better_config.option.drowned.allowDaySpawn": "Allow Daytime Spawn",
+  "text.autoconfig.mob_better_config.option.drowned.allowDaySpawn.@Tooltip": "Allows Drowned to spawn during the day.",
+
+  "text.autoconfig.mob_better_config.option.drowned.tridentVelocity": "Trident Velocity",
+  "text.autoconfig.mob_better_config.option.drowned.tridentVelocity.@Tooltip": "Controls how fast thrown tridents travel. Vanilla approx: 1.6",
+
+  "text.autoconfig.mob_better_config.option.drowned.tridentInaccuracy": "Trident Inaccuracy",
+  "text.autoconfig.mob_better_config.option.drowned.tridentInaccuracy.@Tooltip": "Controls projectile spread when throwing tridents. Vanilla approx: 14",
+
+  "text.autoconfig.mob_better_config.option.drowned.tridentDamageMultiplier": "Trident Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.drowned.tridentDamageMultiplier.@Tooltip": "Multiplier applied to trident damage dealt by Drowned.",
+
+  "text.autoconfig.mob_better_config.option.drowned.aggressiveSwimming": "Aggressive Swimming",
+  "text.autoconfig.mob_better_config.option.drowned.aggressiveSwimming.@Tooltip": "Makes Drowned swim more aggressively toward targets.",
+
+  "text.autoconfig.mob_better_config.option.drowned.swimUpBoost": "Swim Upward Boost",
+  "text.autoconfig.mob_better_config.option.drowned.swimUpBoost.@Tooltip": "Additional upward swimming acceleration when chasing players.",
+
+  "text.autoconfig.mob_better_config.option.drowned.spawnMultiplier": "Spawn Multiplier",
+  "text.autoconfig.mob_better_config.option.drowned.spawnMultiplier.@Tooltip": "Number of additional Drowned spawned per natural spawn event.",
+
+  "text.autoconfig.mob_better_config.option.drowned.reinforcementChance": "Reinforcement Chance",
+  "text.autoconfig.mob_better_config.option.drowned.reinforcementChance.@Tooltip": "Chance (0.0–1.0) to spawn another Drowned when damaged.",
+
+  "text.autoconfig.mob_better_config.option.drowned.xpMultiplier": "XP Multiplier",
+  "text.autoconfig.mob_better_config.option.drowned.xpMultiplier.@Tooltip": "Multiplier applied to experience dropped on death.",
+
+  "text.autoconfig.mob_better_config.option.drowned.lootMultiplier": "Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.drowned.lootMultiplier.@Tooltip": "Multiplier applied to item drops.",
+
+  "text.autoconfig.mob_better_config.option.drowned.bossMode": "Enable Boss Mode",
+  "text.autoconfig.mob_better_config.option.drowned.bossMode.@Tooltip": "Allows Drowned to spawn as boss variants.",
+
+  "text.autoconfig.mob_better_config.option.drowned.forceAllBoss": "Force All Boss",
+  "text.autoconfig.mob_better_config.option.drowned.forceAllBoss.@Tooltip": "If enabled, all Drowned spawn as bosses.",
+
+  "text.autoconfig.mob_better_config.option.drowned.bossChance": "Boss Spawn Chance",
+  "text.autoconfig.mob_better_config.option.drowned.bossChance.@Tooltip": "Chance (0.0–1.0) for a Drowned to spawn as a boss.",
+
+  "text.autoconfig.mob_better_config.option.drowned.bossHealthMultiplier": "Boss Health Multiplier",
+  "text.autoconfig.mob_better_config.option.drowned.bossHealthMultiplier.@Tooltip": "Multiplier applied to boss Drowned health.",
+
+  "text.autoconfig.mob_better_config.option.drowned.bossDamageMultiplier": "Boss Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.drowned.bossDamageMultiplier.@Tooltip": "Multiplier applied to boss Drowned attack damage.",
+
+  "text.autoconfig.mob_better_config.option.drowned.bossGlowing": "Boss Glowing",
+  "text.autoconfig.mob_better_config.option.drowned.bossGlowing.@Tooltip": "Makes boss Drowned glow.",
+
+  "text.autoconfig.mob_better_config.option.drowned.bossCustomName": "Boss Custom Name",
+  "text.autoconfig.mob_better_config.option.drowned.bossCustomName.@Tooltip": "Boss Drowned spawn with a special custom name."
 }

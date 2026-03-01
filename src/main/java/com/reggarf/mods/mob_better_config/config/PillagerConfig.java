@@ -7,6 +7,8 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 @Config(name = "configurable_pillager")
 public class PillagerConfig implements ConfigData {
 
+    @ConfigEntry.Gui.Tooltip
+    public boolean CustomName = true;
 
     public double health = 24.0D;          // Vanilla: 24
     public double attackDamage = 5.0D;     // Vanilla: 5

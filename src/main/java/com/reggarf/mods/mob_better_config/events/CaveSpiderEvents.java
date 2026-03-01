@@ -3,6 +3,7 @@ package com.reggarf.mods.mob_better_config.events;
 import com.reggarf.mods.mob_better_config.config.CaveSpiderConfig;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.util.LootUtil;
+import com.reggarf.mods.mob_better_config.util.MobNameUtil;
 import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -59,7 +60,9 @@ public class CaveSpiderEvents {
     private void applyConfig(CaveSpider spider) {
 
         CaveSpiderConfig config = ModConfigs.getCaveSpider();
-
+        if (config.CustomName) {
+            MobNameUtil.applyRandomName(spider);
+        }
         if (spider.getAttribute(Attributes.MAX_HEALTH) != null)
             spider.getAttribute(Attributes.MAX_HEALTH).setBaseValue(config.health);
 

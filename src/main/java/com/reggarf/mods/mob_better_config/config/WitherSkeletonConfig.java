@@ -4,92 +4,59 @@ import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
-@Config(name = "configurable_slime")
-public class SlimeConfig implements ConfigData {
+@Config(name = "configurable_wither_skeleton")
+public class WitherSkeletonConfig implements ConfigData {
+
     @ConfigEntry.Gui.Tooltip
     public boolean CustomName = true;
+    @ConfigEntry.Gui.Tooltip
+    public double health = 20.0D;
+    @ConfigEntry.Gui.Tooltip
+    public double randomArmorChance = 0.2D;// Vanilla: 0.20
+    @ConfigEntry.Gui.Tooltip
+    public double attackDamage = 4.0D;     // Vanilla: 4
+    @ConfigEntry.Gui.Tooltip
+    public double movementSpeed = 0.25D;   // Vanilla: 0.25
+    @ConfigEntry.Gui.Tooltip
+    public double followRange = 16.0D;     // Vanilla: 16
 
     @ConfigEntry.Gui.Tooltip
-    public double healthMultiplier = 1.0D;
+    public boolean enableWitherEffect = true;
 
     @ConfigEntry.Gui.Tooltip
-    public double attackDamageMultiplier = 1.0D;
+    public int witherDuration = 200; // Vanilla: 200 ticks
 
     @ConfigEntry.Gui.Tooltip
-    public double xpMultiplier = 1.0D;
+    public int witherAmplifier = 0;
+
 
     @ConfigEntry.Gui.Tooltip
-    public int fixedSize = -1; // -1 = vanilla size
+    public boolean flamingArrows = true;
+    @ConfigEntry.Gui.Tooltip
+    public double arrowDamage = 3.0D; // Ranged
 
     @ConfigEntry.Gui.Tooltip
-    public double sizeMultiplier = 1.0D;
-
-    @ConfigEntry.Gui.Tooltip
-    public int minSize = 1;
-
-    @ConfigEntry.Gui.Tooltip
-    public int maxSize = 127;
-
-    @ConfigEntry.Gui.Tooltip
-    public double baseMovementSpeed = 0.2D; // Vanilla: 0.2
-
-    @ConfigEntry.Gui.Tooltip
-    public double speedPerSize = 0.1D; // Vanilla: +0.1 per size
-
-    @ConfigEntry.Gui.Tooltip
-    public boolean allowSplit = true;
-
-    @ConfigEntry.Gui.Tooltip
-    public double splitSizeMultiplier = 0.5D; // Vanilla: size / 2
-
-    @ConfigEntry.Gui.Tooltip
-    public int minSplitCount = 2; // Vanilla: 2
-
-    @ConfigEntry.Gui.Tooltip
-    public int maxSplitCount = 4; // Vanilla: 4
-
+    public int arrowFireSeconds = 100; // Vanilla: 100
     @ConfigEntry.Gui.Tooltip
     public int spawnMultiplier = 1;
-
     @ConfigEntry.Gui.Tooltip
-    public boolean preventSplitWhenBoss = true;
-
+    public double reinforcementChance = 0.0D;
     @ConfigEntry.Gui.Tooltip
-    public boolean damageScalesWithSize = true;
-
-    @ConfigEntry.Gui.Tooltip
-    public double knockbackStrength = 0.0D;
-
+    public double xpMultiplier = 1.0D;
     @ConfigEntry.Gui.Tooltip
     public double lootMultiplier = 1.0D;
-
-    @ConfigEntry.Gui.Tooltip
-    public boolean fireImmune = false;
-
-    @ConfigEntry.Gui.Tooltip
-    public boolean glowing = false;
-
-    @ConfigEntry.Gui.Tooltip
-    public boolean despawnInPeaceful = true;
-
     @ConfigEntry.Gui.Tooltip
     public boolean bossMode = false;
-
     @ConfigEntry.Gui.Tooltip
     public boolean forceAllBoss = false;
-
     @ConfigEntry.Gui.Tooltip
     public double bossChance = 0.05D;
-
     @ConfigEntry.Gui.Tooltip
     public double bossHealthMultiplier = 3.0D;
-
     @ConfigEntry.Gui.Tooltip
     public double bossDamageMultiplier = 2.0D;
-
     @ConfigEntry.Gui.Tooltip
     public boolean bossGlowing = true;
-
     @ConfigEntry.Gui.Tooltip
     public boolean bossCustomName = true;
 }
