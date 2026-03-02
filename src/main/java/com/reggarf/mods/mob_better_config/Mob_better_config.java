@@ -3,7 +3,6 @@ package com.reggarf.mods.mob_better_config;
 import com.mojang.logging.LogUtils;
 import com.reggarf.mods.mob_better_config.config.MobBetterConfigRoot;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
-import com.reggarf.mods.mob_better_config.config.ZombieConfig;
 import com.reggarf.mods.mob_better_config.events.*;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.neoforged.api.distmarker.Dist;
@@ -49,6 +48,12 @@ public class Mob_better_config {
         NeoForge.EVENT_BUS.register(new DrownedEvents());
         NeoForge.EVENT_BUS.register(new MagmaCubeEvents());
         NeoForge.EVENT_BUS.register(new BlazeEvents());
+        NeoForge.EVENT_BUS.register(new GhastEvents());
+        NeoForge.EVENT_BUS.register(new EvokerEvents());
+        //NeoForge.EVENT_BUS.register(new VexEvents());
+        NeoForge.EVENT_BUS.register(new RavagerEvents());
+        NeoForge.EVENT_BUS.register(new ShulkerEvents());
+        NeoForge.EVENT_BUS.register(new SilverfishEvents());
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

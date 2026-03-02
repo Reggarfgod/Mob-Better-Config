@@ -842,5 +842,486 @@
   "text.autoconfig.mob_better_config.option.blaze.bossCustomName": "Boss Custom Name",
   "text.autoconfig.mob_better_config.option.blaze.bossCustomName.@Tooltip": "Boss Blazes spawn with a special custom name.",
 
-  "text.autoconfig.mob_better_config.option.blaze": "Blaze"
+  "text.autoconfig.mob_better_config.option.blaze": "Blaze",
+
+  "text.autoconfig.mob_better_config.option.ghast.health": "Health",
+  "text.autoconfig.mob_better_config.option.ghast.health.@Tooltip": "Base health of the Ghast. Vanilla: 10",
+
+  "text.autoconfig.mob_better_config.option.ghast.followRange": "Follow Range",
+  "text.autoconfig.mob_better_config.option.ghast.followRange.@Tooltip": "Detection range for players. Vanilla: 100",
+
+  "text.autoconfig.mob_better_config.option.ghast.explosionPower": "Explosion Power",
+  "text.autoconfig.mob_better_config.option.ghast.explosionPower.@Tooltip": "Explosion strength of Ghast fireballs. Vanilla: 1",
+
+  "text.autoconfig.mob_better_config.option.ghast.totalChargeTime": "Total Charge Time",
+  "text.autoconfig.mob_better_config.option.ghast.totalChargeTime.@Tooltip": "Total ticks before the Ghast fires a fireball. Vanilla: 20",
+
+  "text.autoconfig.mob_better_config.option.ghast.chargeSoundPercent": "Charge Sound Percentage",
+  "text.autoconfig.mob_better_config.option.ghast.chargeSoundPercent.@Tooltip": "When the charging sound plays during charge (0.0 - 1.0). Example: 0.5 = halfway",
+
+  "text.autoconfig.mob_better_config.option.ghast.cooldownAfterShot": "Cooldown After Shot",
+  "text.autoconfig.mob_better_config.option.ghast.cooldownAfterShot.@Tooltip": "Cooldown duration after firing. Vanilla: 40",
+
+  "text.autoconfig.mob_better_config.option.ghast.fireballDamageMultiplier": "Fireball Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.ghast.fireballDamageMultiplier.@Tooltip": "Additional damage multiplier applied to Ghast fireballs.",
+
+  "text.autoconfig.mob_better_config.option.ghast.fireballVelocityMultiplier": "Fireball Velocity Multiplier",
+  "text.autoconfig.mob_better_config.option.ghast.fireballVelocityMultiplier.@Tooltip": "Controls the speed of Ghast fireballs.",
+
+  "text.autoconfig.mob_better_config.option.ghast.floatSpeedMultiplier": "Float Speed Multiplier",
+  "text.autoconfig.mob_better_config.option.ghast.floatSpeedMultiplier.@Tooltip": "Controls Ghast floating movement speed.",
+
+  "text.autoconfig.mob_better_config.option.ghast.spawnMultiplier": "Spawn Multiplier",
+  "text.autoconfig.mob_better_config.option.ghast.spawnMultiplier.@Tooltip": "Number of extra Ghasts spawned per natural spawn.",
+
+  "text.autoconfig.mob_better_config.option.ghast.reinforcementChance": "Reinforcement Chance",
+  "text.autoconfig.mob_better_config.option.ghast.reinforcementChance.@Tooltip": "Chance to spawn reinforcement Ghasts when damaged.",
+
+  "text.autoconfig.mob_better_config.option.ghast.xpMultiplier": "XP Multiplier",
+  "text.autoconfig.mob_better_config.option.ghast.xpMultiplier.@Tooltip": "Experience drop multiplier for Ghasts.",
+
+  "text.autoconfig.mob_better_config.option.ghast.lootMultiplier": "Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.ghast.lootMultiplier.@Tooltip": "Item drop multiplier for Ghasts.",
+
+  "text.autoconfig.mob_better_config.option.ghast.bossMode": "Enable Boss Mode",
+  "text.autoconfig.mob_better_config.option.ghast.bossMode.@Tooltip": "Allows Ghasts to spawn as Boss variants.",
+
+  "text.autoconfig.mob_better_config.option.ghast.forceAllBoss": "Force All Boss",
+  "text.autoconfig.mob_better_config.option.ghast.forceAllBoss.@Tooltip": "If enabled, all Ghasts spawn as Boss.",
+
+  "text.autoconfig.mob_better_config.option.ghast.bossChance": "Boss Spawn Chance",
+  "text.autoconfig.mob_better_config.option.ghast.bossChance.@Tooltip": "Chance for a Ghast to become a Boss.",
+
+  "text.autoconfig.mob_better_config.option.ghast.bossHealthMultiplier": "Boss Health Multiplier",
+  "text.autoconfig.mob_better_config.option.ghast.bossHealthMultiplier.@Tooltip": "Additional health multiplier applied to boss Ghasts.",
+
+  "text.autoconfig.mob_better_config.option.ghast.bossDamageMultiplier": "Boss Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.ghast.bossDamageMultiplier.@Tooltip": "Additional damage multiplier applied to boss Ghasts.",
+
+  "text.autoconfig.mob_better_config.option.ghast.bossGlowing": "Boss Glowing",
+  "text.autoconfig.mob_better_config.option.ghast.bossGlowing.@Tooltip": "If enabled, boss Ghasts will glow.",
+
+  "text.autoconfig.mob_better_config.option.ghast.bossCustomName": "Boss Custom Name",
+  "text.autoconfig.mob_better_config.option.ghast.bossCustomName.@Tooltip": "Boss Ghasts spawn with a special custom name.",
+
+  "text.autoconfig.mob_better_config.option.ghast.CustomName": "Custom Name",
+  "text.autoconfig.mob_better_config.option.ghast.CustomName.@Tooltip": "Spawn with a special custom name.",
+
+
+  "text.autoconfig.mob_better_config.option.ghast": "Ghast",
+
+  "text.autoconfig.mob_better_config.option.evoker": "Evoker",
+
+  "text.autoconfig.mob_better_config.option.evoker.CustomName": "Custom Name",
+  "text.autoconfig.mob_better_config.option.evoker.CustomName.@Tooltip": "Spawn with a special custom name.",
+
+  "text.autoconfig.mob_better_config.option.evoker.health": "Health",
+  "text.autoconfig.mob_better_config.option.evoker.health.@Tooltip": "Base health of the Evoker. Vanilla: 24",
+
+  "text.autoconfig.mob_better_config.option.evoker.movementSpeed": "Movement Speed",
+  "text.autoconfig.mob_better_config.option.evoker.movementSpeed.@Tooltip": "Movement speed of the Evoker. Vanilla: 0.5",
+
+  "text.autoconfig.mob_better_config.option.evoker.followRange": "Follow Range",
+  "text.autoconfig.mob_better_config.option.evoker.followRange.@Tooltip": "How far the Evoker can detect targets. Vanilla: 12",
+
+  "text.autoconfig.mob_better_config.option.evoker.fangsDamageMultiplier": "Fangs Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.evoker.fangsDamageMultiplier.@Tooltip": "Multiplier for Evoker fangs attack damage.",
+
+  "text.autoconfig.mob_better_config.option.evoker.summonVexCount": "Summon Vex Count",
+  "text.autoconfig.mob_better_config.option.evoker.summonVexCount.@Tooltip": "Maximum number of Vex an Evoker can control at once. Vanilla: 3",
+
+  "text.autoconfig.mob_better_config.option.evoker.vexLifeTicks": "Vex Lifetime (Ticks)",
+  "text.autoconfig.mob_better_config.option.evoker.vexLifeTicks.@Tooltip": "How long summoned Vex stay alive. 20 ticks = 1 second.",
+
+  "text.autoconfig.mob_better_config.option.evoker.allowWololo": "Allow Wololo Spell",
+  "text.autoconfig.mob_better_config.option.evoker.allowWololo.@Tooltip": "Allow Evoker to convert blue sheep into red sheep.",
+
+  "text.autoconfig.mob_better_config.option.evoker.strongerInRaid": "Stronger In Raid",
+  "text.autoconfig.mob_better_config.option.evoker.strongerInRaid.@Tooltip": "Apply bonus stats when participating in a raid.",
+
+  "text.autoconfig.mob_better_config.option.evoker.raidHealthBonus": "Raid Health Multiplier",
+  "text.autoconfig.mob_better_config.option.evoker.raidHealthBonus.@Tooltip": "Health multiplier when in a raid.",
+
+  "text.autoconfig.mob_better_config.option.evoker.raidDamageBonus": "Raid Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.evoker.raidDamageBonus.@Tooltip": "Fangs damage multiplier when in a raid.",
+
+  "text.autoconfig.mob_better_config.option.evoker.spawnMultiplier": "Spawn Multiplier",
+  "text.autoconfig.mob_better_config.option.evoker.spawnMultiplier.@Tooltip": "How many Evokers spawn at once.",
+
+  "text.autoconfig.mob_better_config.option.evoker.xpMultiplier": "XP Multiplier",
+  "text.autoconfig.mob_better_config.option.evoker.xpMultiplier.@Tooltip": "Experience drop multiplier.",
+
+  "text.autoconfig.mob_better_config.option.evoker.lootMultiplier": "Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.evoker.lootMultiplier.@Tooltip": "Additional loot drop multiplier.",
+
+  "text.autoconfig.mob_better_config.option.evoker.reinforcementChance": "Reinforcement Chance",
+  "text.autoconfig.mob_better_config.option.evoker.reinforcementChance.@Tooltip": "Chance to spawn reinforcement when damaged.",
+
+  "text.autoconfig.mob_better_config.option.evoker.fireImmune": "Fire Immune",
+  "text.autoconfig.mob_better_config.option.evoker.fireImmune.@Tooltip": "Makes Evoker immune to fire.",
+
+  "text.autoconfig.mob_better_config.option.evoker.glowing": "Glowing",
+  "text.autoconfig.mob_better_config.option.evoker.glowing.@Tooltip": "Evoker permanently glows.",
+
+  "text.autoconfig.mob_better_config.option.evoker.bossMode": "Enable Boss Mode",
+  "text.autoconfig.mob_better_config.option.evoker.bossMode.@Tooltip": "Allow Evoker to spawn as a boss.",
+
+  "text.autoconfig.mob_better_config.option.evoker.forceAllBoss": "Force All Boss",
+  "text.autoconfig.mob_better_config.option.evoker.forceAllBoss.@Tooltip": "All Evokers spawn as bosses.",
+
+  "text.autoconfig.mob_better_config.option.evoker.bossChance": "Boss Spawn Chance",
+  "text.autoconfig.mob_better_config.option.evoker.bossChance.@Tooltip": "Chance for an Evoker to become a boss.",
+
+  "text.autoconfig.mob_better_config.option.evoker.bossHealthMultiplier": "Boss Health Multiplier",
+  "text.autoconfig.mob_better_config.option.evoker.bossHealthMultiplier.@Tooltip": "Health multiplier for boss Evokers.",
+
+  "text.autoconfig.mob_better_config.option.evoker.bossDamageMultiplier": "Boss Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.evoker.bossDamageMultiplier.@Tooltip": "Damage multiplier for boss Evokers.",
+
+  "text.autoconfig.mob_better_config.option.evoker.bossGlowing": "Boss Glowing",
+  "text.autoconfig.mob_better_config.option.evoker.bossGlowing.@Tooltip": "Boss Evokers glow.",
+
+  "text.autoconfig.mob_better_config.option.evoker.bossCustomName": "Boss Custom Name",
+  "text.autoconfig.mob_better_config.option.evoker.bossCustomName.@Tooltip": "Boss Evokers have a special name.",
+
+  "text.autoconfig.mob_better_config.option.ravager": "Ravager",
+
+  "text.autoconfig.mob_better_config.option.ravager.CustomName": "Custom Name",
+  "text.autoconfig.mob_better_config.option.ravager.CustomName.@Tooltip": "Spawn with a special custom name.",
+
+  "text.autoconfig.mob_better_config.option.ravager.health": "Health",
+  "text.autoconfig.mob_better_config.option.ravager.health.@Tooltip": "Base health of the Ravager. Vanilla: 100",
+
+  "text.autoconfig.mob_better_config.option.ravager.attackDamage": "Attack Damage",
+  "text.autoconfig.mob_better_config.option.ravager.attackDamage.@Tooltip": "Base melee damage. Vanilla: 12",
+
+  "text.autoconfig.mob_better_config.option.ravager.movementSpeed": "Movement Speed",
+  "text.autoconfig.mob_better_config.option.ravager.movementSpeed.@Tooltip": "Movement speed of the Ravager. Vanilla: 0.3",
+
+  "text.autoconfig.mob_better_config.option.ravager.followRange": "Follow Range",
+  "text.autoconfig.mob_better_config.option.ravager.followRange.@Tooltip": "How far the Ravager can detect targets. Vanilla: 32",
+
+  "text.autoconfig.mob_better_config.option.ravager.knockbackResistance": "Knockback Resistance",
+  "text.autoconfig.mob_better_config.option.ravager.knockbackResistance.@Tooltip": "Resistance against knockback. Vanilla: 0.75",
+
+  "text.autoconfig.mob_better_config.option.ravager.enableRoar": "Enable Roar",
+  "text.autoconfig.mob_better_config.option.ravager.enableRoar.@Tooltip": "Allow Ravager to use its roar ability.",
+
+  "text.autoconfig.mob_better_config.option.ravager.roarDamageMultiplier": "Roar Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.ravager.roarDamageMultiplier.@Tooltip": "Multiplier applied to roar damage. Vanilla roar damage is 6.",
+
+  "text.autoconfig.mob_better_config.option.ravager.breakLeaves": "Break Leaves",
+  "text.autoconfig.mob_better_config.option.ravager.breakLeaves.@Tooltip": "Allow Ravager to break leaves when colliding.",
+
+  "text.autoconfig.mob_better_config.option.ravager.strongerInRaid": "Stronger In Raid",
+  "text.autoconfig.mob_better_config.option.ravager.strongerInRaid.@Tooltip": "Apply raid health and damage bonuses.",
+
+  "text.autoconfig.mob_better_config.option.ravager.raidHealthBonus": "Raid Health Bonus Multiplier",
+  "text.autoconfig.mob_better_config.option.ravager.raidHealthBonus.@Tooltip": "Health multiplier applied during raids.",
+
+  "text.autoconfig.mob_better_config.option.ravager.raidDamageBonus": "Raid Damage Bonus Multiplier",
+  "text.autoconfig.mob_better_config.option.ravager.raidDamageBonus.@Tooltip": "Damage multiplier applied during raids.",
+
+  "text.autoconfig.mob_better_config.option.ravager.spawnMultiplier": "Spawn Multiplier",
+  "text.autoconfig.mob_better_config.option.ravager.spawnMultiplier.@Tooltip": "Number of Ravagers spawned per natural spawn.",
+
+  "text.autoconfig.mob_better_config.option.ravager.xpMultiplier": "XP Multiplier",
+  "text.autoconfig.mob_better_config.option.ravager.xpMultiplier.@Tooltip": "Multiply experience dropped.",
+
+  "text.autoconfig.mob_better_config.option.ravager.lootMultiplier": "Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.ravager.lootMultiplier.@Tooltip": "Multiply loot drops.",
+
+  "text.autoconfig.mob_better_config.option.ravager.reinforcementChance": "Reinforcement Chance",
+  "text.autoconfig.mob_better_config.option.ravager.reinforcementChance.@Tooltip": "Chance to spawn reinforcement Ravagers when damaged.",
+
+  "text.autoconfig.mob_better_config.option.ravager.fireImmune": "Fire Immune",
+  "text.autoconfig.mob_better_config.option.ravager.fireImmune.@Tooltip": "Prevent Ravager from taking fire damage.",
+
+  "text.autoconfig.mob_better_config.option.ravager.glowing": "Glowing",
+  "text.autoconfig.mob_better_config.option.ravager.glowing.@Tooltip": "Make Ravager glow permanently.",
+
+  "text.autoconfig.mob_better_config.option.ravager.bossMode": "Boss Mode",
+  "text.autoconfig.mob_better_config.option.ravager.bossMode.@Tooltip": "Enable boss scaling system.",
+
+  "text.autoconfig.mob_better_config.option.ravager.forceAllBoss": "Force All Boss",
+  "text.autoconfig.mob_better_config.option.ravager.forceAllBoss.@Tooltip": "Every Ravager becomes a boss.",
+
+  "text.autoconfig.mob_better_config.option.ravager.bossChance": "Boss Chance",
+  "text.autoconfig.mob_better_config.option.ravager.bossChance.@Tooltip": "Chance for Ravager to spawn as boss.",
+
+  "text.autoconfig.mob_better_config.option.ravager.bossHealthMultiplier": "Boss Health Multiplier",
+  "text.autoconfig.mob_better_config.option.ravager.bossHealthMultiplier.@Tooltip": "Health multiplier for boss Ravagers.",
+
+  "text.autoconfig.mob_better_config.option.ravager.bossDamageMultiplier": "Boss Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.ravager.bossDamageMultiplier.@Tooltip": "Damage multiplier for boss Ravagers.",
+
+  "text.autoconfig.mob_better_config.option.ravager.bossGlowing": "Boss Glowing",
+  "text.autoconfig.mob_better_config.option.ravager.bossGlowing.@Tooltip": "Boss Ravagers glow.",
+
+  "text.autoconfig.mob_better_config.option.ravager.bossCustomName": "Boss Custom Name",
+  "text.autoconfig.mob_better_config.option.ravager.bossCustomName.@Tooltip": "Boss Ravagers get a special name.",
+
+
+  "text.autoconfig.mob_better_config.option.shulker": "Shulker",
+
+  "text.autoconfig.mob_better_config.option.shulker.CustomName": "Custom Name",
+  "text.autoconfig.mob_better_config.option.shulker.CustomName.@Tooltip": "Spawn with a special custom name.",
+
+  "text.autoconfig.mob_better_config.option.shulker.health": "Health",
+  "text.autoconfig.mob_better_config.option.shulker.health.@Tooltip": "Base health of the Shulker. (Vanilla: 30)",
+
+  "text.autoconfig.mob_better_config.option.shulker.armorWhenClosed": "Armor When Closed",
+  "text.autoconfig.mob_better_config.option.shulker.armorWhenClosed.@Tooltip": "Total armor value when the Shulker is closed.",
+
+  "text.autoconfig.mob_better_config.option.shulker.enableBulletAttack": "Enable Bullet Attack",
+  "text.autoconfig.mob_better_config.option.shulker.enableBulletAttack.@Tooltip": "Allow Shulkers to shoot Shulker Bullets.",
+
+  "text.autoconfig.mob_better_config.option.shulker.bulletDamageMultiplier": "Bullet Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.shulker.bulletDamageMultiplier.@Tooltip": "Multiplier applied to Shulker Bullet damage.",
+
+  "text.autoconfig.mob_better_config.option.shulker.enableTeleport": "Enable Teleport",
+  "text.autoconfig.mob_better_config.option.shulker.enableTeleport.@Tooltip": "Allow Shulkers to teleport when damaged.",
+
+  "text.autoconfig.mob_better_config.option.shulker.teleportChance": "Teleport Chance",
+  "text.autoconfig.mob_better_config.option.shulker.teleportChance.@Tooltip": "Chance for Shulker to teleport when triggered. (0.0 - 1.0)",
+
+  "text.autoconfig.mob_better_config.option.shulker.enableClone": "Enable Clone",
+  "text.autoconfig.mob_better_config.option.shulker.enableClone.@Tooltip": "Allow Shulkers to create clones when hit by bullets.",
+
+  "text.autoconfig.mob_better_config.option.shulker.cloneChance": "Clone Chance",
+  "text.autoconfig.mob_better_config.option.shulker.cloneChance.@Tooltip": "Chance for clone creation. (0.0 - 1.0)",
+
+  "text.autoconfig.mob_better_config.option.shulker.allowPeek": "Allow Peek",
+  "text.autoconfig.mob_better_config.option.shulker.allowPeek.@Tooltip": "Allow the Shulker to open and attack.",
+
+  "text.autoconfig.mob_better_config.option.shulker.spawnMultiplier": "Spawn Multiplier",
+  "text.autoconfig.mob_better_config.option.shulker.spawnMultiplier.@Tooltip": "Number of Shulkers spawned per natural spawn.",
+
+  "text.autoconfig.mob_better_config.option.shulker.xpMultiplier": "XP Multiplier",
+  "text.autoconfig.mob_better_config.option.shulker.xpMultiplier.@Tooltip": "Multiplier for experience dropped.",
+
+  "text.autoconfig.mob_better_config.option.shulker.lootMultiplier": "Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.shulker.lootMultiplier.@Tooltip": "Multiplier for loot drops.",
+
+  "text.autoconfig.mob_better_config.option.shulker.reinforcementChance": "Reinforcement Chance",
+  "text.autoconfig.mob_better_config.option.shulker.reinforcementChance.@Tooltip": "Chance to spawn reinforcements when damaged.",
+
+  "text.autoconfig.mob_better_config.option.shulker.fireImmune": "Fire Immune",
+  "text.autoconfig.mob_better_config.option.shulker.fireImmune.@Tooltip": "Makes the Shulker immune to fire.",
+
+  "text.autoconfig.mob_better_config.option.shulker.glowing": "Glowing",
+  "text.autoconfig.mob_better_config.option.shulker.glowing.@Tooltip": "Shulker will glow permanently.",
+
+  "text.autoconfig.mob_better_config.option.shulker.bossMode": "Boss Mode",
+  "text.autoconfig.mob_better_config.option.shulker.bossMode.@Tooltip": "Enable boss mechanics for Shulkers.",
+
+  "text.autoconfig.mob_better_config.option.shulker.forceAllBoss": "Force All Boss",
+  "text.autoconfig.mob_better_config.option.shulker.forceAllBoss.@Tooltip": "All spawned Shulkers will be bosses.",
+
+  "text.autoconfig.mob_better_config.option.shulker.bossChance": "Boss Chance",
+  "text.autoconfig.mob_better_config.option.shulker.bossChance.@Tooltip": "Chance for a Shulker to spawn as a boss.",
+
+  "text.autoconfig.mob_better_config.option.shulker.bossHealthMultiplier": "Boss Health Multiplier",
+  "text.autoconfig.mob_better_config.option.shulker.bossHealthMultiplier.@Tooltip": "Health multiplier for boss Shulkers.",
+
+  "text.autoconfig.mob_better_config.option.shulker.bossDamageMultiplier": "Boss Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.shulker.bossDamageMultiplier.@Tooltip": "Damage multiplier for boss Shulkers.",
+
+  "text.autoconfig.mob_better_config.option.shulker.bossGlowing": "Boss Glowing",
+  "text.autoconfig.mob_better_config.option.shulker.bossGlowing.@Tooltip": "Boss Shulkers glow.",
+
+  "text.autoconfig.mob_better_config.option.shulker.bossCustomName": "Boss Custom Name",
+  "text.autoconfig.mob_better_config.option.shulker.bossCustomName.@Tooltip": "Boss Shulkers have a special name.",
+
+  "text.autoconfig.mob_better_config.option.silverfish": "Silverfish",
+
+  "text.autoconfig.mob_better_config.option.silverfish.CustomName": "Custom Name",
+  "text.autoconfig.mob_better_config.option.silverfish.CustomName.@Tooltip": "Spawn with a special custom name.",
+
+  "text.autoconfig.mob_better_config.option.silverfish.health": "Health",
+  "text.autoconfig.mob_better_config.option.silverfish.health.@Tooltip": "Base health of the Silverfish. (Vanilla: 8)",
+
+  "text.autoconfig.mob_better_config.option.silverfish.movementSpeed": "Movement Speed",
+  "text.autoconfig.mob_better_config.option.silverfish.movementSpeed.@Tooltip": "Movement speed of the Silverfish. (Vanilla: 0.25)",
+
+  "text.autoconfig.mob_better_config.option.silverfish.attackDamage": "Attack Damage",
+  "text.autoconfig.mob_better_config.option.silverfish.attackDamage.@Tooltip": "Base melee damage. (Vanilla: 1)",
+
+  "text.autoconfig.mob_better_config.option.silverfish.enableWakeFriends": "Enable Wake Friends",
+  "text.autoconfig.mob_better_config.option.silverfish.enableWakeFriends.@Tooltip": "Allows Silverfish to wake nearby infested blocks when hurt.",
+
+  "text.autoconfig.mob_better_config.option.silverfish.wakeRadius": "Wake Radius",
+  "text.autoconfig.mob_better_config.option.silverfish.wakeRadius.@Tooltip": "Radius to search for infested blocks when waking friends.",
+
+  "text.autoconfig.mob_better_config.option.silverfish.enableMergeWithStone": "Enable Merge With Stone",
+  "text.autoconfig.mob_better_config.option.silverfish.enableMergeWithStone.@Tooltip": "Allows Silverfish to merge into compatible stone blocks.",
+
+  "text.autoconfig.mob_better_config.option.silverfish.mergeChance": "Merge Chance",
+  "text.autoconfig.mob_better_config.option.silverfish.mergeChance.@Tooltip": "Chance to merge into stone when idle. (0.0 - 1.0)",
+
+  "text.autoconfig.mob_better_config.option.silverfish.spawnMultiplier": "Spawn Multiplier",
+  "text.autoconfig.mob_better_config.option.silverfish.spawnMultiplier.@Tooltip": "Number of Silverfish spawned per natural spawn.",
+
+  "text.autoconfig.mob_better_config.option.silverfish.xpMultiplier": "XP Multiplier",
+  "text.autoconfig.mob_better_config.option.silverfish.xpMultiplier.@Tooltip": "Multiplier for experience dropped.",
+
+  "text.autoconfig.mob_better_config.option.silverfish.lootMultiplier": "Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.silverfish.lootMultiplier.@Tooltip": "Multiplier for loot drops.",
+
+  "text.autoconfig.mob_better_config.option.silverfish.reinforcementChance": "Reinforcement Chance",
+  "text.autoconfig.mob_better_config.option.silverfish.reinforcementChance.@Tooltip": "Chance to spawn reinforcements when damaged.",
+
+  "text.autoconfig.mob_better_config.option.silverfish.fireImmune": "Fire Immune",
+  "text.autoconfig.mob_better_config.option.silverfish.fireImmune.@Tooltip": "Makes the Silverfish immune to fire.",
+
+  "text.autoconfig.mob_better_config.option.silverfish.glowing": "Glowing",
+  "text.autoconfig.mob_better_config.option.silverfish.glowing.@Tooltip": "Silverfish will glow permanently.",
+
+  "text.autoconfig.mob_better_config.option.silverfish.bossMode": "Boss Mode",
+  "text.autoconfig.mob_better_config.option.silverfish.bossMode.@Tooltip": "Enable boss mechanics for Silverfish.",
+
+  "text.autoconfig.mob_better_config.option.silverfish.forceAllBoss": "Force All Boss",
+  "text.autoconfig.mob_better_config.option.silverfish.forceAllBoss.@Tooltip": "All spawned Silverfish will be bosses.",
+
+  "text.autoconfig.mob_better_config.option.silverfish.bossChance": "Boss Chance",
+  "text.autoconfig.mob_better_config.option.silverfish.bossChance.@Tooltip": "Chance for a Silverfish to spawn as a boss.",
+
+  "text.autoconfig.mob_better_config.option.silverfish.bossHealthMultiplier": "Boss Health Multiplier",
+  "text.autoconfig.mob_better_config.option.silverfish.bossHealthMultiplier.@Tooltip": "Health multiplier for boss Silverfish.",
+
+  "text.autoconfig.mob_better_config.option.silverfish.bossDamageMultiplier": "Boss Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.silverfish.bossDamageMultiplier.@Tooltip": "Damage multiplier for boss Silverfish.",
+
+  "text.autoconfig.mob_better_config.option.silverfish.bossGlowing": "Boss Glowing",
+  "text.autoconfig.mob_better_config.option.silverfish.bossGlowing.@Tooltip": "Boss Silverfish glow.",
+
+  "text.autoconfig.mob_better_config.option.silverfish.bossCustomName": "Boss Custom Name",
+  "text.autoconfig.mob_better_config.option.silverfish.bossCustomName.@Tooltip": "Boss Silverfish have a special name.",
+
+  "text.autoconfig.mob_better_config.option.blaze.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.blaze.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Blaze.",
+  "text.autoconfig.mob_better_config.option.blaze.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.blaze.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Blaze.",
+
+  "text.autoconfig.mob_better_config.option.cavespider.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.cavespider.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Cave Spider.",
+  "text.autoconfig.mob_better_config.option.cavespider.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.cavespider.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Cave Spider.",
+
+  "text.autoconfig.mob_better_config.option.creeper.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.creeper.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Creeper.",
+  "text.autoconfig.mob_better_config.option.creeper.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.creeper.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Creeper.",
+
+  "text.autoconfig.mob_better_config.option.drowned.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.drowned.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Drowned.",
+  "text.autoconfig.mob_better_config.option.drowned.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.drowned.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Drowned.",
+
+  "text.autoconfig.mob_better_config.option.enderman.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.enderman.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Enderman.",
+  "text.autoconfig.mob_better_config.option.enderman.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.enderman.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Enderman.",
+
+  "text.autoconfig.mob_better_config.option.evoker.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.evoker.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Evoker.",
+  "text.autoconfig.mob_better_config.option.evoker.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.evoker.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Evoker.",
+
+  "text.autoconfig.mob_better_config.option.ghast.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.ghast.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Ghast.",
+  "text.autoconfig.mob_better_config.option.ghast.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.ghast.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Ghast.",
+
+  "text.autoconfig.mob_better_config.option.husk.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.husk.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Husk.",
+  "text.autoconfig.mob_better_config.option.husk.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.husk.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Husk.",
+
+  "text.autoconfig.mob_better_config.option.magmacube.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.magmacube.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Magma Cube.",
+  "text.autoconfig.mob_better_config.option.magmacube.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.magmacube.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Magma Cube.",
+
+  "text.autoconfig.mob_better_config.option.phantom.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.phantom.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Phantom.",
+  "text.autoconfig.mob_better_config.option.phantom.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.phantom.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Phantom.",
+
+  "text.autoconfig.mob_better_config.option.pillager.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.pillager.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Pillager.",
+  "text.autoconfig.mob_better_config.option.pillager.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.pillager.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Pillager.",
+
+  "text.autoconfig.mob_better_config.option.ravager.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.ravager.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Ravager.",
+  "text.autoconfig.mob_better_config.option.ravager.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.ravager.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Ravager.",
+
+  "text.autoconfig.mob_better_config.option.shulker.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.shulker.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Shulker.",
+  "text.autoconfig.mob_better_config.option.shulker.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.shulker.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Shulker.",
+
+  "text.autoconfig.mob_better_config.option.silverfish.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.silverfish.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Silverfish.",
+  "text.autoconfig.mob_better_config.option.silverfish.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.silverfish.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Silverfish.",
+
+  "text.autoconfig.mob_better_config.option.skeleton.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.skeleton.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Skeleton.",
+  "text.autoconfig.mob_better_config.option.skeleton.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.skeleton.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Skeleton.",
+
+  "text.autoconfig.mob_better_config.option.slime.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.slime.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Slime.",
+  "text.autoconfig.mob_better_config.option.slime.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.slime.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Slime.",
+
+  "text.autoconfig.mob_better_config.option.spider.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.spider.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Spider.",
+  "text.autoconfig.mob_better_config.option.spider.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.spider.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Spider.",
+
+  "text.autoconfig.mob_better_config.option.stray.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.stray.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Stray.",
+  "text.autoconfig.mob_better_config.option.stray.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.stray.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Stray.",
+
+  "text.autoconfig.mob_better_config.option.vex.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.vex.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Vex.",
+  "text.autoconfig.mob_better_config.option.vex.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.vex.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Vex.",
+
+  "text.autoconfig.mob_better_config.option.vindicator.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.vindicator.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Vindicator.",
+  "text.autoconfig.mob_better_config.option.vindicator.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.vindicator.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Vindicator.",
+
+  "text.autoconfig.mob_better_config.option.warden.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.warden.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Warden.",
+  "text.autoconfig.mob_better_config.option.warden.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.warden.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Warden.",
+
+  "text.autoconfig.mob_better_config.option.witch.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.witch.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Witch.",
+  "text.autoconfig.mob_better_config.option.witch.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.witch.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Witch.",
+
+  "text.autoconfig.mob_better_config.option.witherskeleton.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.witherskeleton.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Wither Skeleton.",
+  "text.autoconfig.mob_better_config.option.witherskeleton.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.witherskeleton.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Wither Skeleton.",
+
+  "text.autoconfig.mob_better_config.option.zombie.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.zombie.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Zombie.",
+  "text.autoconfig.mob_better_config.option.zombie.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.zombie.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Zombie.",
+
+  "text.autoconfig.mob_better_config.option.zombievillager.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.zombievillager.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Zombie Villager.",
+  "text.autoconfig.mob_better_config.option.zombievillager.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.zombievillager.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Zombie Villager."
+
+
 }

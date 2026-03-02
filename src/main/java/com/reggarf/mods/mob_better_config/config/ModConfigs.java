@@ -72,4 +72,22 @@ public class ModConfigs {
     public static BlazeConfig getBlaze() {
         return ROOT.blaze;
     }
+    public static GhastConfig getGhast() {
+        return ROOT.ghast;
+    }
+    public static EvokerConfig getEvoker() {
+        return ROOT.evoker;
+    }
+//    public static VexConfig getVex() {
+//        return ROOT.vex;
+//    }
+    public static RavagerConfig getRavager() {
+    return ROOT.ravager;
+    }
+    public static ShulkerConfig getShulker() {
+        return ROOT.shulker;
+    }
+    public static SilverfishConfig getSilverfish() {
+        return ROOT.silverfish;
+    }
 }

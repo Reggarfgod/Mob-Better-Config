@@ -64,4 +64,22 @@ public class MobBetterConfigRoot implements ConfigData {
 
     @ConfigEntry.Gui.CollapsibleObject
     public BlazeConfig blaze= new BlazeConfig();
+
+    @ConfigEntry.Gui.CollapsibleObject
+    public GhastConfig ghast= new GhastConfig();
+
+    @ConfigEntry.Gui.CollapsibleObject
+    public EvokerConfig evoker= new EvokerConfig();
+
+//    @ConfigEntry.Gui.CollapsibleObject
+//    public VexConfig vex= new VexConfig();
+
+    @ConfigEntry.Gui.CollapsibleObject
+    public RavagerConfig ravager= new RavagerConfig();
+
+    @ConfigEntry.Gui.CollapsibleObject
+    public ShulkerConfig shulker= new ShulkerConfig();
+
+    @ConfigEntry.Gui.CollapsibleObject
+    public SilverfishConfig silverfish= new SilverfishConfig();
 }

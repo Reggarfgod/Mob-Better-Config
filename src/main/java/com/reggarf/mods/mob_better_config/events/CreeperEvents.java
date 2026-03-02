@@ -81,7 +81,6 @@ public class CreeperEvents {
 
         creeper.setHealth(config.health);
 
-        // Explosion Radius & Fuse Time (reflection safe for 1.21)
         try {
             Field radiusField = Creeper.class.getDeclaredField("explosionRadius");
             radiusField.setAccessible(true);
@@ -93,7 +92,6 @@ public class CreeperEvents {
 
         } catch (Exception ignored) {}
 
-        // ✅ POWERED (Proper 1.21 way using thunderHit with real lightning)
         if (config.powered && creeper.level() instanceof ServerLevel level) {
 
             LightningBolt lightning = EntityType.LIGHTNING_BOLT.create(level);

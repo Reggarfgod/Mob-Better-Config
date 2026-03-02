@@ -8,6 +8,8 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 public class BlazeConfig implements ConfigData {
 
     @ConfigEntry.Gui.Tooltip
+    public boolean CustomName = true;
+    @ConfigEntry.Gui.Tooltip
     public double health = 20.0D;
 //    @ConfigEntry.Gui.Tooltip
 //    public double attackDamage = 6.0D;
@@ -47,6 +49,10 @@ public class BlazeConfig implements ConfigData {
     public double bossHealthMultiplier = 3.0D;
     @ConfigEntry.Gui.Tooltip
     public double bossDamageMultiplier = 2.0D;
+    @ConfigEntry.Gui.Tooltip
+    public double bossXpMultiplier = 5.0D;
+    @ConfigEntry.Gui.Tooltip
+    public double bossLootMultiplier = 2.0D;
     @ConfigEntry.Gui.Tooltip
     public boolean bossGlowing = true;
     @ConfigEntry.Gui.Tooltip

@@ -89,6 +89,10 @@ public class DrownedConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public double bossDamageMultiplier = 2.0D;
     @ConfigEntry.Gui.Tooltip
+    public double bossXpMultiplier = 5.0D;
+    @ConfigEntry.Gui.Tooltip
+    public double bossLootMultiplier = 2.0D;
+    @ConfigEntry.Gui.Tooltip
     public boolean bossGlowing = true;
     @ConfigEntry.Gui.Tooltip
     public boolean bossCustomName = true;

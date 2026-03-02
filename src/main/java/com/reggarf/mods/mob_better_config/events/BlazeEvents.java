@@ -27,6 +27,7 @@ public class BlazeEvents {
     @SubscribeEvent
     public void onJoin(EntityJoinLevelEvent event) {
 
+
         if (!(event.getEntity() instanceof Blaze blaze))
             return;
 
@@ -43,7 +44,9 @@ public class BlazeEvents {
 
         if (blaze.getAttribute(Attributes.FOLLOW_RANGE) != null)
             blaze.getAttribute(Attributes.FOLLOW_RANGE).setBaseValue(config.followRange);
-
+        if (config.CustomName) {
+            MobNameUtil.applyRandomName(blaze);
+        }
         blaze.setHealth((float) config.health);
 
         blaze.goalSelector.getAvailableGoals().removeIf(
@@ -60,7 +63,9 @@ public class BlazeEvents {
                 config.bossHealthMultiplier,
                 config.bossDamageMultiplier,
                 config.bossGlowing,
-                config.bossCustomName
+                config.bossCustomName,
+                config.bossXpMultiplier,
+                config.bossLootMultiplier
         );
 
         for (int i = 1; i < config.spawnMultiplier; i++) {
@@ -69,6 +74,7 @@ public class BlazeEvents {
             extra.getPersistentData().putBoolean(SPAWN_TAG, true);
             level.addFreshEntity(extra);
         }
+
     }
 
     private static class ConfigurableBlazeAttackGoal extends Goal {

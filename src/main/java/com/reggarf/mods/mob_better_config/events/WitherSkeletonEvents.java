@@ -48,7 +48,9 @@ public class WitherSkeletonEvents {
                 config.bossHealthMultiplier,
                 config.bossDamageMultiplier,
                 config.bossGlowing,
-                config.bossCustomName
+                config.bossCustomName,
+                config.bossXpMultiplier,
+                config.bossLootMultiplier
         );
 
         // Spawn multiplier

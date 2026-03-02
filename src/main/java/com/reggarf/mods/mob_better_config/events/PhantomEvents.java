@@ -40,7 +40,9 @@ public class PhantomEvents {
                 config.bossHealthMultiplier,
                 config.bossDamageMultiplier,
                 config.bossGlowing,
-                config.bossCustomName
+                config.bossCustomName,
+                config.bossXpMultiplier,
+                config.bossLootMultiplier
         );
         // Spawn multiplier
         for (int i = 1; i < config.spawnMultiplier; i++) {

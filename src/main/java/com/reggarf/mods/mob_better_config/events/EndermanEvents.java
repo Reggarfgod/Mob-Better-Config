@@ -55,7 +55,9 @@ public class EndermanEvents {
                 config.bossHealthMultiplier,
                 config.bossDamageMultiplier,
                 config.bossGlowing,
-                config.bossCustomName
+                config.bossCustomName,
+                config.bossXpMultiplier,
+                config.bossLootMultiplier
         );
 
         for (int i = 1; i < config.spawnMultiplier; i++) {
