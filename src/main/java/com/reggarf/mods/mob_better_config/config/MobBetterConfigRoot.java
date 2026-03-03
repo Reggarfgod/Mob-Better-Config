@@ -82,4 +82,13 @@ public class MobBetterConfigRoot implements ConfigData {
 
     @ConfigEntry.Gui.CollapsibleObject
     public SilverfishConfig silverfish= new SilverfishConfig();
+
+    @ConfigEntry.Gui.CollapsibleObject
+    public GuardianConfig guardian= new GuardianConfig();
+
+    @ConfigEntry.Gui.CollapsibleObject
+    public ElderGuardianConfig elderguardian= new ElderGuardianConfig();
+
+    @ConfigEntry.Gui.CollapsibleObject
+    public WitherConfig wither= new WitherConfig();
 }

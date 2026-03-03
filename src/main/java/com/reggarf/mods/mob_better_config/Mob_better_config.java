@@ -54,6 +54,8 @@ public class Mob_better_config {
         NeoForge.EVENT_BUS.register(new RavagerEvents());
         NeoForge.EVENT_BUS.register(new ShulkerEvents());
         NeoForge.EVENT_BUS.register(new SilverfishEvents());
+        NeoForge.EVENT_BUS.register(new GuardianEvents());
+        NeoForge.EVENT_BUS.register(new WitherEvents());
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

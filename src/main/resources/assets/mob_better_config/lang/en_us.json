@@ -1321,7 +1321,167 @@
   "text.autoconfig.mob_better_config.option.zombievillager.bossXpMultiplier": "Boss XP Multiplier",
   "text.autoconfig.mob_better_config.option.zombievillager.bossXpMultiplier.@Tooltip": "Multiplies XP dropped by Boss Zombie Villager.",
   "text.autoconfig.mob_better_config.option.zombievillager.bossLootMultiplier": "Boss Loot Multiplier",
-  "text.autoconfig.mob_better_config.option.zombievillager.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Zombie Villager."
+  "text.autoconfig.mob_better_config.option.zombievillager.bossLootMultiplier.@Tooltip": "Multiplies loot dropped by Boss Zombie Villager.",
 
+  "text.autoconfig.mob_better_config.option.guardian": "Guardian",
 
+  "text.autoconfig.mob_better_config.option.guardian.CustomName": "Custom Name",
+  "text.autoconfig.mob_better_config.option.guardian.CustomName.@Tooltip": "Spawn with a special custom name.",
+
+  "text.autoconfig.mob_better_config.option.guardian.health": "Health",
+  "text.autoconfig.mob_better_config.option.guardian.health.@Tooltip": "Base maximum health of the Guardian.",
+
+  "text.autoconfig.mob_better_config.option.guardian.attackDamage": "Attack Damage",
+  "text.autoconfig.mob_better_config.option.guardian.attackDamage.@Tooltip": "Base attack damage of the Guardian.",
+
+  "text.autoconfig.mob_better_config.option.guardian.movementSpeed": "Movement Speed",
+  "text.autoconfig.mob_better_config.option.guardian.movementSpeed.@Tooltip": "Movement speed of the Guardian.",
+
+  "text.autoconfig.mob_better_config.option.guardian.followRange": "Follow Range",
+  "text.autoconfig.mob_better_config.option.guardian.followRange.@Tooltip": "How far the Guardian can detect targets.",
+
+  "text.autoconfig.mob_better_config.option.guardian.enableLaser": "Enable Laser",
+  "text.autoconfig.mob_better_config.option.guardian.enableLaser.@Tooltip": "Enable or disable the Guardian laser attack.",
+
+  "text.autoconfig.mob_better_config.option.guardian.laserDamageMultiplier": "Laser Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.guardian.laserDamageMultiplier.@Tooltip": "Multiplier applied to laser damage.",
+
+  "text.autoconfig.mob_better_config.option.guardian.attackDuration": "Attack Duration",
+  "text.autoconfig.mob_better_config.option.guardian.attackDuration.@Tooltip": "Laser charge duration in ticks (Vanilla: 80).",
+
+  "text.autoconfig.mob_better_config.option.guardian.enableThorns": "Enable Thorns",
+  "text.autoconfig.mob_better_config.option.guardian.enableThorns.@Tooltip": "Enable or disable Guardian thorns damage.",
+
+  "text.autoconfig.mob_better_config.option.guardian.thornsDamage": "Thorns Damage",
+  "text.autoconfig.mob_better_config.option.guardian.thornsDamage.@Tooltip": "Damage dealt back when hit.",
+
+  "text.autoconfig.mob_better_config.option.guardian.targetPlayers": "Target Players",
+  "text.autoconfig.mob_better_config.option.guardian.targetPlayers.@Tooltip": "Allow Guardian to target players.",
+
+  "text.autoconfig.mob_better_config.option.guardian.targetSquid": "Target Squid",
+  "text.autoconfig.mob_better_config.option.guardian.targetSquid.@Tooltip": "Allow Guardian to target squids.",
+
+  "text.autoconfig.mob_better_config.option.guardian.targetAxolotl": "Target Axolotl",
+  "text.autoconfig.mob_better_config.option.guardian.targetAxolotl.@Tooltip": "Allow Guardian to target axolotls.",
+
+  "text.autoconfig.mob_better_config.option.guardian.xpMultiplier": "XP Multiplier",
+  "text.autoconfig.mob_better_config.option.guardian.xpMultiplier.@Tooltip": "Multiplier applied to dropped experience.",
+
+  "text.autoconfig.mob_better_config.option.guardian.lootMultiplier": "Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.guardian.lootMultiplier.@Tooltip": "Multiplier applied to dropped loot.",
+
+  "text.autoconfig.mob_better_config.option.guardian.fireImmune": "Fire Immune",
+  "text.autoconfig.mob_better_config.option.guardian.fireImmune.@Tooltip": "Makes the Guardian immune to fire damage.",
+
+  "text.autoconfig.mob_better_config.option.guardian.glowing": "Glowing",
+  "text.autoconfig.mob_better_config.option.guardian.glowing.@Tooltip": "Make the Guardian glow permanently.",
+
+  "text.autoconfig.mob_better_config.option.guardian.bossMode": "Enable Boss Mode",
+  "text.autoconfig.mob_better_config.option.guardian.bossMode.@Tooltip": "Allow Guardian to spawn as a boss variant.",
+
+  "text.autoconfig.mob_better_config.option.guardian.forceAllBoss": "Force All Boss",
+  "text.autoconfig.mob_better_config.option.guardian.forceAllBoss.@Tooltip": "Make every Guardian spawn as a boss.",
+
+  "text.autoconfig.mob_better_config.option.guardian.bossChance": "Boss Chance",
+  "text.autoconfig.mob_better_config.option.guardian.bossChance.@Tooltip": "Chance for a Guardian to spawn as boss.",
+
+  "text.autoconfig.mob_better_config.option.guardian.bossHealthMultiplier": "Boss Health Multiplier",
+  "text.autoconfig.mob_better_config.option.guardian.bossHealthMultiplier.@Tooltip": "Health multiplier for boss Guardian.",
+
+  "text.autoconfig.mob_better_config.option.guardian.bossDamageMultiplier": "Boss Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.guardian.bossDamageMultiplier.@Tooltip": "Damage multiplier for boss Guardian.",
+
+  "text.autoconfig.mob_better_config.option.guardian.bossGlowing": "Boss Glowing",
+  "text.autoconfig.mob_better_config.option.guardian.bossGlowing.@Tooltip": "Boss Guardian glows permanently.",
+
+  "text.autoconfig.mob_better_config.option.guardian.bossCustomName": "Boss Custom Name",
+  "text.autoconfig.mob_better_config.option.guardian.bossCustomName.@Tooltip": "Boss Guardian has a special name.",
+
+  "text.autoconfig.mob_better_config.option.guardian.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.guardian.bossXpMultiplier.@Tooltip": "XP multiplier for boss Guardian.",
+
+  "text.autoconfig.mob_better_config.option.guardian.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.guardian.bossLootMultiplier.@Tooltip": "Loot multiplier for boss Guardian.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian": "Elder Guardian",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.customName": "Custom Name",
+  "text.autoconfig.mob_better_config.option.elderguardian.customName.@Tooltip": "Spawn with a special custom name.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.health": "Health",
+  "text.autoconfig.mob_better_config.option.elderguardian.health.@Tooltip": "Base maximum health of the Elder Guardian.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.attackDamage": "Attack Damage",
+  "text.autoconfig.mob_better_config.option.elderguardian.attackDamage.@Tooltip": "Base attack damage of the Elder Guardian.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.movementSpeed": "Movement Speed",
+  "text.autoconfig.mob_better_config.option.elderguardian.movementSpeed.@Tooltip": "Movement speed of the Elder Guardian.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.glowing": "Glowing",
+  "text.autoconfig.mob_better_config.option.elderguardian.glowing.@Tooltip": "Make the Elder Guardian glow permanently.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.enableLaser": "Enable Laser",
+  "text.autoconfig.mob_better_config.option.elderguardian.enableLaser.@Tooltip": "Enable or disable the Elder Guardian laser attack.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.laserDamageMultiplier": "Laser Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.elderguardian.laserDamageMultiplier.@Tooltip": "Multiplier applied to Elder laser damage.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.enableThorns": "Enable Thorns",
+  "text.autoconfig.mob_better_config.option.elderguardian.enableThorns.@Tooltip": "Enable or disable Elder Guardian thorns damage.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.thornsDamage": "Thorns Damage",
+  "text.autoconfig.mob_better_config.option.elderguardian.thornsDamage.@Tooltip": "Damage dealt back when hit.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.enableMiningFatigue": "Enable Mining Fatigue",
+  "text.autoconfig.mob_better_config.option.elderguardian.enableMiningFatigue.@Tooltip": "Enable or disable mining fatigue effect.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.miningFatigueInterval": "Mining Fatigue Interval",
+  "text.autoconfig.mob_better_config.option.elderguardian.miningFatigueInterval.@Tooltip": "Interval in ticks between mining fatigue pulses.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.miningFatigueRadius": "Mining Fatigue Radius",
+  "text.autoconfig.mob_better_config.option.elderguardian.miningFatigueRadius.@Tooltip": "Radius of mining fatigue effect.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.miningFatigueDuration": "Mining Fatigue Duration",
+  "text.autoconfig.mob_better_config.option.elderguardian.miningFatigueDuration.@Tooltip": "Duration of mining fatigue effect in ticks.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.miningFatigueAmplifier": "Mining Fatigue Amplifier",
+  "text.autoconfig.mob_better_config.option.elderguardian.miningFatigueAmplifier.@Tooltip": "Strength level of mining fatigue effect.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.bossMode": "Enable Boss Mode",
+  "text.autoconfig.mob_better_config.option.elderguardian.bossMode.@Tooltip": "Allow Elder Guardian to spawn as a boss variant.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.forceAllBoss": "Force All Boss",
+  "text.autoconfig.mob_better_config.option.elderguardian.forceAllBoss.@Tooltip": "Make every Elder Guardian spawn as a boss.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.bossChance": "Boss Chance",
+  "text.autoconfig.mob_better_config.option.elderguardian.bossChance.@Tooltip": "Chance for an Elder Guardian to spawn as boss.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.bossHealthMultiplier": "Boss Health Multiplier",
+  "text.autoconfig.mob_better_config.option.elderguardian.bossHealthMultiplier.@Tooltip": "Health multiplier for boss Elder Guardian.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.bossDamageMultiplier": "Boss Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.elderguardian.bossDamageMultiplier.@Tooltip": "Damage multiplier for boss Elder Guardian.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.bossGlowing": "Boss Glowing",
+  "text.autoconfig.mob_better_config.option.elderguardian.bossGlowing.@Tooltip": "Boss Elder Guardian glows permanently.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.bossCustomName": "Boss Custom Name",
+  "text.autoconfig.mob_better_config.option.elderguardian.bossCustomName.@Tooltip": "Boss Elder Guardian has a special name.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.elderguardian.bossXpMultiplier.@Tooltip": "XP multiplier for boss Elder Guardian.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.elderguardian.bossLootMultiplier.@Tooltip": "Loot multiplier for boss Elder Guardian.",
+  "text.autoconfig.mob_better_config.option.elderguardian.spawnMultiplier": "Spawn Multiplier",
+  "text.autoconfig.mob_better_config.option.elderguardian.spawnMultiplier.@Tooltip": "Multiplier for how many Elder Guardians spawn.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.reinforcementChance": "Reinforcement Chance",
+  "text.autoconfig.mob_better_config.option.elderguardian.reinforcementChance.@Tooltip": "Chance for Elder Guardian to call reinforcements when damaged.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.xpMultiplier": "XP Multiplier",
+  "text.autoconfig.mob_better_config.option.elderguardian.xpMultiplier.@Tooltip": "Multiplier applied to experience dropped by Elder Guardian.",
+
+  "text.autoconfig.mob_better_config.option.elderguardian.lootMultiplier": "Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.elderguardian.lootMultiplier.@Tooltip": "Multiplier applied to loot dropped by Elder Guardian."
 }

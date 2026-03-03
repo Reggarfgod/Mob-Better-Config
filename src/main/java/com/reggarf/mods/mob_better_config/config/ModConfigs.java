@@ -90,4 +90,13 @@ public class ModConfigs {
     public static SilverfishConfig getSilverfish() {
         return ROOT.silverfish;
     }
+    public static GuardianConfig getGuardian() {
+        return ROOT.guardian;
+    }
+    public static ElderGuardianConfig getElderGuardian() {
+        return ROOT.elderguardian;
+    }
+    public static WitherConfig getWither() {
+        return ROOT.wither;
+    }
 }

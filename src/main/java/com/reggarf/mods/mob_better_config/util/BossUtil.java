@@ -1,6 +1,5 @@
 package com.reggarf.mods.mob_better_config.util;
 
-import com.reggarf.mods.mob_better_config.util.LootUtil;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -16,6 +15,7 @@ public class BossUtil {
     private static final String BOSS_TAG = "mob_better_config_boss";
     private static final String BOSS_XP = "mob_better_config_boss_xp";
     private static final String BOSS_LOOT = "mob_better_config_boss_loot";
+    private static final String JOIN_MARK = "mob_better_config_processed";
 
     private static final double DEFAULT_XP_MULTIPLIER = 5.0D;
     private static final double DEFAULT_LOOT_MULTIPLIER = 2.0D;
@@ -37,11 +37,20 @@ public class BossUtil {
         if (!enableBossMode)
             return;
 
-        if (entity.getPersistentData().getBoolean(BOSS_TAG))
+        var data = entity.getPersistentData();
+        if (data.getBoolean(JOIN_MARK))
+            return;
+        data.putBoolean(JOIN_MARK, true);
+        if (data.getBoolean(BOSS_TAG))
             return;
 
-        boolean makeBoss = forceAllBoss ||
-                entity.getRandom().nextDouble() < bossChance;
+        boolean makeBoss;
+
+        if (forceAllBoss) {
+            makeBoss = true;
+        } else {
+            makeBoss = entity.getRandom().nextDouble() < bossChance;
+        }
 
         if (!makeBoss)
             return;
@@ -55,7 +64,6 @@ public class BossUtil {
                 bossLootMultiplier);
     }
 
-    // Backward compatibility
     public static void tryApplyBoss(
             LivingEntity entity,
             boolean enableBossMode,
@@ -134,7 +142,6 @@ public class BossUtil {
         return entity.getPersistentData().getBoolean(BOSS_TAG);
     }
 
-    // XP Multiplier
     @SubscribeEvent
     public static void onExperienceDrop(LivingExperienceDropEvent event) {
 
@@ -151,7 +158,6 @@ public class BossUtil {
         int newXp = (int) (event.getDroppedExperience() * multiplier);
         event.setDroppedExperience(newXp);
     }
-
     @SubscribeEvent
     public static void onDrops(LivingDropsEvent event) {
 
