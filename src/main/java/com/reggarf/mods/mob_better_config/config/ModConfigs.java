@@ -95,6 +95,13 @@ public class ModConfigs {
         return ROOT.wither;
     }
     public static EnderDragonConfig getEnderDragon() {
-        return ROOT.enderDragon;
+        return ROOT.enderdragon;
+    }
+    public static HoglinConfig getHoglin() {
+        return ROOT.hoglin;
+    }
+
+    public static ZoglinConfig getZoglin() {
+        return ROOT.zoglin;
     }
 }

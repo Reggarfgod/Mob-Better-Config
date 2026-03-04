@@ -26,6 +26,8 @@
     "enderdragon.DragonCustomNameMixin",
     "enderdragon.DragonBossModeMixin",
     "enderdragon.DragonXpMixin"
+
+   // "hoglin.HoglinConversionMixin"
   ],
   "client": [
   ],

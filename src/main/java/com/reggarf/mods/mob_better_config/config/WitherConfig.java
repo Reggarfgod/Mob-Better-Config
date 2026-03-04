@@ -1,10 +1,11 @@
 package com.reggarf.mods.mob_better_config.config;
 
+import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
 @Config(name = "wither")
-public class WitherConfig {
+public class WitherConfig implements ConfigData {
 
     @ConfigEntry.Gui.Tooltip
     public boolean customName = true;
