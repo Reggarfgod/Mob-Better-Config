@@ -1483,5 +1483,198 @@
   "text.autoconfig.mob_better_config.option.elderguardian.xpMultiplier.@Tooltip": "Multiplier applied to experience dropped by Elder Guardian.",
 
   "text.autoconfig.mob_better_config.option.elderguardian.lootMultiplier": "Loot Multiplier",
-  "text.autoconfig.mob_better_config.option.elderguardian.lootMultiplier.@Tooltip": "Multiplier applied to loot dropped by Elder Guardian."
+  "text.autoconfig.mob_better_config.option.elderguardian.lootMultiplier.@Tooltip": "Multiplier applied to loot dropped by Elder Guardian.",
+  "text.autoconfig.mob_better_config.option.wither": "Wither",
+
+  "text.autoconfig.mob_better_config.option.wither.customName": "Custom Name",
+  "text.autoconfig.mob_better_config.option.wither.customName.@Tooltip": "Spawn the Wither with a special custom name.",
+
+  "text.autoconfig.mob_better_config.option.wither.glowing": "Glowing",
+  "text.autoconfig.mob_better_config.option.wither.glowing.@Tooltip": "Make the Wither spawn with a glowing outline.",
+
+  "text.autoconfig.mob_better_config.option.wither.health": "Health",
+  "text.autoconfig.mob_better_config.option.wither.health.@Tooltip": "Base maximum health of the Wither.",
+
+  "text.autoconfig.mob_better_config.option.wither.movementSpeed": "Movement Speed",
+  "text.autoconfig.mob_better_config.option.wither.movementSpeed.@Tooltip": "Movement speed of the Wither.",
+
+  "text.autoconfig.mob_better_config.option.wither.flyingSpeed": "Flying Speed",
+  "text.autoconfig.mob_better_config.option.wither.flyingSpeed.@Tooltip": "Flying speed of the Wither.",
+
+  "text.autoconfig.mob_better_config.option.wither.followRange": "Follow Range",
+  "text.autoconfig.mob_better_config.option.wither.followRange.@Tooltip": "Distance at which the Wither detects and follows targets.",
+
+  "text.autoconfig.mob_better_config.option.wither.armor": "Armor",
+  "text.autoconfig.mob_better_config.option.wither.armor.@Tooltip": "Armor value of the Wither.",
+
+  "text.autoconfig.mob_better_config.option.wither.enableBlockBreaking": "Enable Block Breaking",
+  "text.autoconfig.mob_better_config.option.wither.enableBlockBreaking.@Tooltip": "Allow the Wither to break nearby blocks.",
+
+  "text.autoconfig.mob_better_config.option.wither.enableRegeneration": "Enable Regeneration",
+  "text.autoconfig.mob_better_config.option.wither.enableRegeneration.@Tooltip": "Allow the Wither to regenerate health over time.",
+
+  "text.autoconfig.mob_better_config.option.wither.regenerationAmount": "Regeneration Amount",
+  "text.autoconfig.mob_better_config.option.wither.regenerationAmount.@Tooltip": "Amount of health restored per regeneration tick.",
+
+  "text.autoconfig.mob_better_config.option.wither.regenerationInterval": "Regeneration Interval",
+  "text.autoconfig.mob_better_config.option.wither.regenerationInterval.@Tooltip": "Ticks between regeneration events.",
+
+  "text.autoconfig.mob_better_config.option.wither.invulnerableTicks": "Invulnerability Duration",
+  "text.autoconfig.mob_better_config.option.wither.invulnerableTicks.@Tooltip": "Number of ticks the Wither remains invulnerable when spawning.",
+
+  "text.autoconfig.mob_better_config.option.wither.spawnExplosionPower": "Spawn Explosion Power",
+  "text.autoconfig.mob_better_config.option.wither.spawnExplosionPower.@Tooltip": "Explosion strength when the Wither finishes spawning.",
+
+  "text.autoconfig.mob_better_config.option.wither.enableWitherSkull": "Enable Wither Skulls",
+  "text.autoconfig.mob_better_config.option.wither.enableWitherSkull.@Tooltip": "Allow the Wither to shoot Wither skull projectiles.",
+
+  "text.autoconfig.mob_better_config.option.wither.skullDamageMultiplier": "Wither Skull Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.wither.skullDamageMultiplier.@Tooltip": "Multiplier applied to Wither skull projectile damage.",
+
+  "text.autoconfig.mob_better_config.option.wither.enableWitherEffect": "Enable Wither Effect",
+  "text.autoconfig.mob_better_config.option.wither.enableWitherEffect.@Tooltip": "Allow Wither attacks to apply the Wither status effect.",
+
+  "text.autoconfig.mob_better_config.option.wither.xpMultiplier": "XP Multiplier",
+  "text.autoconfig.mob_better_config.option.wither.xpMultiplier.@Tooltip": "Multiplier applied to XP dropped by the Wither.",
+
+  "text.autoconfig.mob_better_config.option.wither.lootMultiplier": "Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.wither.lootMultiplier.@Tooltip": "Multiplier applied to loot dropped by the Wither.",
+
+  "text.autoconfig.mob_better_config.option.wither.bossMode": "Enable Boss Mode",
+  "text.autoconfig.mob_better_config.option.wither.bossMode.@Tooltip": "Enable special boss variants of the Wither.",
+
+  "text.autoconfig.mob_better_config.option.wither.forceAllBoss": "Force All Boss",
+  "text.autoconfig.mob_better_config.option.wither.forceAllBoss.@Tooltip": "Make every spawned Wither a boss variant.",
+
+  "text.autoconfig.mob_better_config.option.wither.bossChance": "Boss Spawn Chance",
+  "text.autoconfig.mob_better_config.option.wither.bossChance.@Tooltip": "Chance for a Wither to spawn as a boss.",
+
+  "text.autoconfig.mob_better_config.option.wither.bossHealthMultiplier": "Boss Health Multiplier",
+  "text.autoconfig.mob_better_config.option.wither.bossHealthMultiplier.@Tooltip": "Health multiplier applied to boss Withers.",
+
+  "text.autoconfig.mob_better_config.option.wither.bossDamageMultiplier": "Boss Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.wither.bossDamageMultiplier.@Tooltip": "Damage multiplier applied to boss Withers.",
+
+  "text.autoconfig.mob_better_config.option.wither.bossGlowing": "Boss Glowing",
+  "text.autoconfig.mob_better_config.option.wither.bossGlowing.@Tooltip": "Make boss Withers glow for easier visibility.",
+
+  "text.autoconfig.mob_better_config.option.wither.bossCustomName": "Boss Custom Name",
+  "text.autoconfig.mob_better_config.option.wither.bossCustomName.@Tooltip": "Give boss Withers a special custom name.",
+
+  "text.autoconfig.mob_better_config.option.wither.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.wither.bossXpMultiplier.@Tooltip": "XP multiplier applied when killing a boss Wither.",
+
+  "text.autoconfig.mob_better_config.option.wither.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.wither.bossLootMultiplier.@Tooltip": "Loot multiplier applied when killing a boss Wither.",
+  "text.autoconfig.mob_better_config.option.enderdragon": "Ender Dragon",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.customName": "Custom Name",
+  "text.autoconfig.mob_better_config.option.enderdragon.customName.@Tooltip": "Spawn the Ender Dragon with a special custom name.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.glowing": "Glowing",
+  "text.autoconfig.mob_better_config.option.enderdragon.glowing.@Tooltip": "Makes the Ender Dragon glow.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.health": "Health",
+  "text.autoconfig.mob_better_config.option.enderdragon.health.@Tooltip": "Base health of the Ender Dragon.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.flyingSpeed": "Flying Speed",
+  "text.autoconfig.mob_better_config.option.enderdragon.flyingSpeed.@Tooltip": "Flying speed multiplier of the Ender Dragon.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.armor": "Armor",
+  "text.autoconfig.mob_better_config.option.enderdragon.armor.@Tooltip": "Armor value of the Ender Dragon.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.attackDamage": "Attack Damage",
+  "text.autoconfig.mob_better_config.option.enderdragon.attackDamage.@Tooltip": "Base attack damage of the Ender Dragon.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.enableDragonBreath": "Enable Dragon Breath",
+  "text.autoconfig.mob_better_config.option.enderdragon.enableDragonBreath.@Tooltip": "Enable or disable the dragon breath attack.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.dragonBreathDamageMultiplier": "Dragon Breath Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.enderdragon.dragonBreathDamageMultiplier.@Tooltip": "Multiplier applied to dragon breath damage.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.enableCrystalHealing": "Enable Crystal Healing",
+  "text.autoconfig.mob_better_config.option.enderdragon.enableCrystalHealing.@Tooltip": "Allow End Crystals to heal the Ender Dragon.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.crystalHealAmount": "Crystal Heal Amount",
+  "text.autoconfig.mob_better_config.option.enderdragon.crystalHealAmount.@Tooltip": "Amount of health restored by crystals.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.crystalHealInterval": "Crystal Heal Interval",
+  "text.autoconfig.mob_better_config.option.enderdragon.crystalHealInterval.@Tooltip": "Ticks between crystal healing events.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.enableBlockBreaking": "Enable Block Breaking",
+  "text.autoconfig.mob_better_config.option.enderdragon.enableBlockBreaking.@Tooltip": "Allow the Ender Dragon to destroy blocks.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.knockbackDamage": "Knockback Damage",
+  "text.autoconfig.mob_better_config.option.enderdragon.knockbackDamage.@Tooltip": "Damage caused when the dragon pushes entities.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.headDamage": "Head Damage",
+  "text.autoconfig.mob_better_config.option.enderdragon.headDamage.@Tooltip": "Damage dealt by the dragon's head attack.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.xpMultiplier": "XP Multiplier",
+  "text.autoconfig.mob_better_config.option.enderdragon.xpMultiplier.@Tooltip": "Multiplier for experience dropped by the dragon.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.lootMultiplier": "Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.enderdragon.lootMultiplier.@Tooltip": "Multiplier for loot dropped by the dragon.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.enableVexReinforcements": "Enable Vex Reinforcements",
+  "text.autoconfig.mob_better_config.option.enderdragon.enableVexReinforcements.@Tooltip": "Allow the dragon to summon Vex reinforcements.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.vexRequireBelowHalfHealth": "Require Below Half Health",
+  "text.autoconfig.mob_better_config.option.enderdragon.vexRequireBelowHalfHealth.@Tooltip": "Vex spawn only when dragon health is below 50%.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.vexSpawnChance": "Vex Spawn Chance",
+  "text.autoconfig.mob_better_config.option.enderdragon.vexSpawnChance.@Tooltip": "Chance per tick to spawn Vex reinforcements.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.vexCount": "Vex Count",
+  "text.autoconfig.mob_better_config.option.enderdragon.vexCount.@Tooltip": "Number of Vex spawned each time.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.vexSpawnRadius": "Vex Spawn Radius",
+  "text.autoconfig.mob_better_config.option.enderdragon.vexSpawnRadius.@Tooltip": "Radius around the dragon where Vex spawn.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.vexLifeTimeSeconds": "Vex Lifetime",
+  "text.autoconfig.mob_better_config.option.enderdragon.vexLifeTimeSeconds.@Tooltip": "How long spawned Vex live (seconds).",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.vexMaxNearby": "Max Nearby Vex",
+  "text.autoconfig.mob_better_config.option.enderdragon.vexMaxNearby.@Tooltip": "Maximum number of Vex allowed near the dragon.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.vexHealth": "Vex Health",
+  "text.autoconfig.mob_better_config.option.enderdragon.vexHealth.@Tooltip": "Health of spawned Vex.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.vexSpeed": "Vex Speed",
+  "text.autoconfig.mob_better_config.option.enderdragon.vexSpeed.@Tooltip": "Movement speed of spawned Vex.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.vexAttackDamage": "Vex Attack Damage",
+  "text.autoconfig.mob_better_config.option.enderdragon.vexAttackDamage.@Tooltip": "Attack damage of spawned Vex.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.vexTargetPlayerDistance": "Vex Target Distance",
+  "text.autoconfig.mob_better_config.option.enderdragon.vexTargetPlayerDistance.@Tooltip": "Distance at which Vex will target players.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.bossMode": "Boss Mode",
+  "text.autoconfig.mob_better_config.option.enderdragon.bossMode.@Tooltip": "Enable special boss behavior for the dragon.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.forceAllBoss": "Force All Boss",
+  "text.autoconfig.mob_better_config.option.enderdragon.forceAllBoss.@Tooltip": "Force every dragon to spawn as a boss variant.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.bossChance": "Boss Chance",
+  "text.autoconfig.mob_better_config.option.enderdragon.bossChance.@Tooltip": "Chance for the dragon to spawn as a boss.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.bossHealthMultiplier": "Boss Health Multiplier",
+  "text.autoconfig.mob_better_config.option.enderdragon.bossHealthMultiplier.@Tooltip": "Multiplier applied to boss dragon health.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.bossDamageMultiplier": "Boss Damage Multiplier",
+  "text.autoconfig.mob_better_config.option.enderdragon.bossDamageMultiplier.@Tooltip": "Multiplier applied to boss dragon damage.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.bossGlowing": "Boss Glowing",
+  "text.autoconfig.mob_better_config.option.enderdragon.bossGlowing.@Tooltip": "Make boss dragons glow.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.bossCustomName": "Boss Custom Name",
+  "text.autoconfig.mob_better_config.option.enderdragon.bossCustomName.@Tooltip": "Give boss dragons a special name.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.bossXpMultiplier": "Boss XP Multiplier",
+  "text.autoconfig.mob_better_config.option.enderdragon.bossXpMultiplier.@Tooltip": "XP multiplier for boss dragons.",
+
+  "text.autoconfig.mob_better_config.option.enderdragon.bossLootMultiplier": "Boss Loot Multiplier",
+  "text.autoconfig.mob_better_config.option.enderdragon.bossLootMultiplier.@Tooltip": "Loot multiplier for boss dragons."
+
+
 }

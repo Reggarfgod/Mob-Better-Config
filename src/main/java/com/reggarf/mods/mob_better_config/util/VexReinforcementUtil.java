@@ -6,6 +6,7 @@ import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Vex;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.phys.AABB;
 
 public class VexReinforcementUtil {
@@ -24,13 +25,11 @@ public class VexReinforcementUtil {
             int maxNearbyVex,
             double vexHealth,
             double vexSpeed,
-            double vexAttackDamage
+            double vexAttackDamage,
+            double targetPlayerDistance
     ) {
 
         if (!enabled)
-            return;
-
-        if (level.isClientSide())
             return;
 
         if (summoner.getPersistentData().getBoolean(REINFORCED_TAG))
@@ -56,6 +55,7 @@ public class VexReinforcementUtil {
         for (int i = 0; i < vexCount; i++) {
 
             Vex vex = EntityType.VEX.create(level);
+
             if (vex == null)
                 continue;
 
@@ -67,35 +67,40 @@ public class VexReinforcementUtil {
                     summoner.getX() + offsetX,
                     summoner.getY() + offsetY,
                     summoner.getZ() + offsetZ,
-                    0.0F,
-                    0.0F
+                    summoner.getYRot(),
+                    summoner.getXRot()
             );
 
             vex.setOwner(summoner);
 
-            // Apply custom attributes
+            // Custom attributes
             if (vex.getAttribute(Attributes.MAX_HEALTH) != null) {
-                vex.getAttribute(Attributes.MAX_HEALTH)
-                        .setBaseValue(vexHealth);
+                vex.getAttribute(Attributes.MAX_HEALTH).setBaseValue(vexHealth);
                 vex.setHealth((float) vexHealth);
             }
 
             if (vex.getAttribute(Attributes.MOVEMENT_SPEED) != null) {
-                vex.getAttribute(Attributes.MOVEMENT_SPEED)
-                        .setBaseValue(vexSpeed);
+                vex.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(vexSpeed);
             }
 
             if (vex.getAttribute(Attributes.ATTACK_DAMAGE) != null) {
-                vex.getAttribute(Attributes.ATTACK_DAMAGE)
-                        .setBaseValue(vexAttackDamage);
+                vex.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(vexAttackDamage);
             }
 
             if (lifeTimeSeconds > 0)
                 vex.setLimitedLife(lifeTimeSeconds * 20);
 
+            // Attack nearest player within config distance
+            Player target = level.getNearestPlayer(vex, targetPlayerDistance);
+            if (target != null) {
+                vex.setTarget(target);
+            }
+
             vex.getPersistentData().putBoolean(REINFORCED_TAG, true);
 
             level.addFreshEntity(vex);
         }
+
+        summoner.getPersistentData().putBoolean(REINFORCED_TAG, true);
     }
 }

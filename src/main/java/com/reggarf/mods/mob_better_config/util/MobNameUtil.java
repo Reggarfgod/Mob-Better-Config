@@ -73,7 +73,7 @@ public class MobNameUtil {
 
         entity.setCustomName(
                 Component.literal(finalName)
-                        .withStyle(ChatFormatting.WHITE)
+                        .withStyle(ChatFormatting.GRAY)
         );
 
         entity.setCustomNameVisible(false);

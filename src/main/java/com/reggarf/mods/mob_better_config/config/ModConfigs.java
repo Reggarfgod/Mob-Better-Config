@@ -15,7 +15,6 @@ public class ModConfigs {
     public static ZombieConfig getZombie() {
         return ROOT.zombie;
     }
-
     public static SkeletonConfig getSkeleton() {
         return ROOT.skeleton;
     }
@@ -28,7 +27,6 @@ public class ModConfigs {
     public static SpiderConfig getSpider() {
         return ROOT.spider;
     }
-
     public static CaveSpiderConfig getCaveSpider() {
         return ROOT.caveSpider;
     }
@@ -44,7 +42,6 @@ public class ModConfigs {
     public static StrayConfig getStray() {
         return ROOT.stray;
     }
-
     public static SlimeConfig getSlime() {
         return ROOT.slime;
     }
@@ -78,9 +75,7 @@ public class ModConfigs {
     public static EvokerConfig getEvoker() {
         return ROOT.evoker;
     }
-//    public static VexConfig getVex() {
-//        return ROOT.vex;
-//    }
+//  public static VexConfig getVex() { return ROOT.vex; }
     public static RavagerConfig getRavager() {
     return ROOT.ravager;
     }
@@ -98,5 +93,8 @@ public class ModConfigs {
     }
     public static WitherConfig getWither() {
         return ROOT.wither;
+    }
+    public static EnderDragonConfig getEnderDragon() {
+        return ROOT.enderDragon;
     }
 }

@@ -9,7 +9,23 @@
 
     "wither.WitherBossRegenMixin",
     "wither.WitherSpawnExplosionMixin",
-    "wither.WitherBlockBreakingMixin"
+    "wither.WitherBlockBreakingMixin",
+    "wither.WitherEffectMixin",
+    "wither.WitherSkullMixin",
+
+    "enderdragon.DragonCrystalHealingMixin",
+    "enderdragon.DragonCrystalHealAmountMixin",
+    "enderdragon.DragonCrystalHealIntervalMixin",
+    "enderdragon.DragonBlockBreakingMixin",
+    "enderdragon.DragonKnockbackDamageMixin",
+    "enderdragon.DragonHeadDamageMixin",
+    "enderdragon.DragonBreathMixin",
+    "enderdragon.DragonHAAMixin",
+    "enderdragon.DragonIgnoreVexMixin",
+    "enderdragon.DragonVexReinforcementMixin",
+    "enderdragon.DragonCustomNameMixin",
+    "enderdragon.DragonBossModeMixin",
+    "enderdragon.DragonXpMixin"
   ],
   "client": [
   ],

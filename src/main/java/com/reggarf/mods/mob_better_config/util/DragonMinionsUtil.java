@@ -13,6 +13,7 @@ import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 public class DragonMinionsUtil {
 
     private static final String DRAGON_MINION_TAG = "mob_better_config_dragon_minion";
+    private static final String MINION_SPAWNED_TAG = "mob_better_config_half_health_minions_spawned";
 
     public static void trySpawnDragonMinion(
             Mob summoner,
@@ -31,36 +32,53 @@ public class DragonMinionsUtil {
         if (level.isClientSide())
             return;
 
+        // Spawn only when summoner is at half health
+        if (summoner.getHealth() > summoner.getMaxHealth() / 2)
+            return;
+
+        // Prevent spawning multiple times
+        if (summoner.getPersistentData().getBoolean(MINION_SPAWNED_TAG))
+            return;
+
         RandomSource random = level.getRandom();
 
         if (random.nextDouble() > spawnChance)
             return;
 
-        EnderDragon dragon = EntityType.ENDER_DRAGON.create(level);
-        if (dragon == null)
-            return;
+        // Mark as spawned so it doesn't happen again
+        summoner.getPersistentData().putBoolean(MINION_SPAWNED_TAG, true);
 
-        dragon.moveTo(
-                summoner.getX(),
-                summoner.getY() + 10,
-                summoner.getZ(),
-                0F,
-                0F
-        );
+        // Spawn 3 minions
+        for (int i = 0; i < 3; i++) {
 
-        dragon.setDragonFight(null);
-        applyStats(dragon, healthMultiplier, damageMultiplier, scaleMultiplier);
-        if (customName) {
-            dragon.setCustomName(
-                    Component.literal("Minion " + dragon.getName().getString())
-                            .withStyle(ChatFormatting.DARK_PURPLE)
+            EnderDragon dragon = EntityType.ENDER_DRAGON.create(level);
+            if (dragon == null)
+                continue;
+
+            dragon.moveTo(
+                    summoner.getX() + random.nextInt(6) - 3,
+                    summoner.getY() + 10,
+                    summoner.getZ() + random.nextInt(6) - 3,
+                    0F,
+                    0F
             );
-            dragon.setCustomNameVisible(false);
+
+            dragon.setDragonFight(null);
+
+            applyStats(dragon, healthMultiplier, damageMultiplier, scaleMultiplier);
+
+            if (customName) {
+                dragon.setCustomName(
+                        Component.literal("Minion " + dragon.getName().getString())
+                                .withStyle(ChatFormatting.DARK_PURPLE)
+                );
+                dragon.setCustomNameVisible(false);
+            }
+
+            dragon.getPersistentData().putBoolean(DRAGON_MINION_TAG, true);
+
+            level.addFreshEntity(dragon);
         }
-
-        dragon.getPersistentData().putBoolean(DRAGON_MINION_TAG, true);
-
-        level.addFreshEntity(dragon);
     }
 
     private static void applyStats(

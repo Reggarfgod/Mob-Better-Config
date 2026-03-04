@@ -91,4 +91,7 @@ public class MobBetterConfigRoot implements ConfigData {
 
     @ConfigEntry.Gui.CollapsibleObject
     public WitherConfig wither= new WitherConfig();
+
+    @ConfigEntry.Gui.CollapsibleObject
+    public EnderDragonConfig enderDragon= new EnderDragonConfig();
 }

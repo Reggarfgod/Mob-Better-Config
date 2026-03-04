@@ -46,7 +46,13 @@ public class WitherConfig {
     public float spawnExplosionPower = 7.0F;
 
     @ConfigEntry.Gui.Tooltip
+    public boolean enableWitherSkull = true;
+
+    @ConfigEntry.Gui.Tooltip
     public double skullDamageMultiplier = 1.0D;
+
+    @ConfigEntry.Gui.Tooltip
+    public boolean enableWitherEffect = true;
 
     @ConfigEntry.Gui.Tooltip
     public double xpMultiplier = 1.0D;
@@ -57,14 +63,22 @@ public class WitherConfig {
     // =========================
     // Boss Mode
     // =========================
-
+    @ConfigEntry.Gui.Tooltip
     public boolean bossMode = false;
+    @ConfigEntry.Gui.Tooltip
     public boolean forceAllBoss = false;
+    @ConfigEntry.Gui.Tooltip
     public double bossChance = 0.2D;
+    @ConfigEntry.Gui.Tooltip
     public double bossHealthMultiplier = 2.0D;
+    @ConfigEntry.Gui.Tooltip
     public double bossDamageMultiplier = 2.0D;
+    @ConfigEntry.Gui.Tooltip
     public boolean bossGlowing = true;
+    @ConfigEntry.Gui.Tooltip
     public boolean bossCustomName = true;
+    @ConfigEntry.Gui.Tooltip
     public double bossXpMultiplier = 2.0D;
+    @ConfigEntry.Gui.Tooltip
     public double bossLootMultiplier = 2.0D;
 }
