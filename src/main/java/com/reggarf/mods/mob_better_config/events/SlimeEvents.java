@@ -14,6 +14,7 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Slime;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
+import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
 import net.neoforged.neoforge.event.entity.living.LivingExperienceDropEvent;
@@ -22,7 +23,7 @@ import net.neoforged.neoforge.event.tick.EntityTickEvent;
 public class SlimeEvents {
 
     @SubscribeEvent
-    public void onJoin(EntityJoinLevelEvent event) {
+    public void onJoin(FinalizeSpawnEvent event) {
 
         if (!(event.getEntity() instanceof Slime slime))
             return;

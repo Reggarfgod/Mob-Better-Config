@@ -19,7 +19,7 @@ import net.neoforged.neoforge.event.tick.EntityTickEvent;
 public class ElderGuardianEvents {
 
     @SubscribeEvent
-    public void onJoin(EntityJoinLevelEvent event) {
+    public void onJoin(FinalizeSpawnEvent event) {
 
         if (!(event.getEntity() instanceof ElderGuardian elder))
             return;

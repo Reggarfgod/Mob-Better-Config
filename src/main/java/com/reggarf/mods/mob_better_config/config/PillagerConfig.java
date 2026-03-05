@@ -10,7 +10,9 @@ public class PillagerConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public boolean CustomName = true;
 
-    public double health = 24.0D;          // Vanilla: 24
+    public double health = 24.0D;
+    @ConfigEntry.Gui.Tooltip
+    public double armor = 4.0D;
     public double attackDamage = 5.0D;     // Vanilla: 5
     public double movementSpeed = 0.35D;   // Vanilla: 0.35
     public double followRange = 32.0D;     // Vanilla: 32

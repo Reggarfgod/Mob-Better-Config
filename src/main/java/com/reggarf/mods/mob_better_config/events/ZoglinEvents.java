@@ -11,6 +11,7 @@ import net.minecraft.world.entity.monster.Zoglin;
 
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
+import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
 import net.neoforged.neoforge.event.entity.living.LivingExperienceDropEvent;
@@ -18,7 +19,7 @@ import net.neoforged.neoforge.event.entity.living.LivingExperienceDropEvent;
 public class ZoglinEvents {
 
     @SubscribeEvent
-    public void onJoin(EntityJoinLevelEvent event) {
+    public void onJoin(FinalizeSpawnEvent event) {
 
         if (!(event.getEntity() instanceof Zoglin zoglin))
             return;

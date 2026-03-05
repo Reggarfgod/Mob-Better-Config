@@ -25,7 +25,7 @@ public class BlazeEvents {
     private static final String SPAWN_TAG = "mbc_spawned";
 
     @SubscribeEvent
-    public void onJoin(EntityJoinLevelEvent event) {
+    public void onJoin(FinalizeSpawnEvent event) {
 
 
         if (!(event.getEntity() instanceof Blaze blaze))

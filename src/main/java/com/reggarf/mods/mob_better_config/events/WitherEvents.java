@@ -17,7 +17,7 @@ import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
 public class WitherEvents {
     @SubscribeEvent
-    public void onJoin(EntityJoinLevelEvent event) {
+    public void onJoin(FinalizeSpawnEvent event) {
 
         if (!(event.getEntity() instanceof WitherBoss wither))
             return;

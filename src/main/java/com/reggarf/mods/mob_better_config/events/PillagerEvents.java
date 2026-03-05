@@ -3,22 +3,21 @@ package com.reggarf.mods.mob_better_config.events;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.PillagerConfig;
 import com.reggarf.mods.mob_better_config.util.*;
+
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Pillager;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.CrossbowItem;
+
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
-import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
-import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
-import net.neoforged.neoforge.event.entity.living.LivingExperienceDropEvent;
+import net.neoforged.neoforge.event.entity.living.*;
 
 public class PillagerEvents {
 
     @SubscribeEvent
-    public void onJoin(EntityJoinLevelEvent event) {
+    public void onJoin(FinalizeSpawnEvent event) {
 
         if (!(event.getEntity() instanceof Pillager pillager))
             return;
@@ -28,10 +27,10 @@ public class PillagerEvents {
 
         PillagerConfig config = ModConfigs.getPillager();
 
-        if (pillager.getPersistentData().getBoolean("mob_better_config_spawned"))
-            return;
-
         applyConfig(pillager, config);
+
+        // Ensure full health on spawn
+        pillager.setHealth((float) config.health);
 
         BossUtil.tryApplyBoss(
                 pillager,
@@ -59,21 +58,25 @@ public class PillagerEvents {
                     pillager.getXRot()
             );
 
-            extra.getPersistentData().putBoolean("mob_better_config_spawned", true);
-
             applyConfig(extra, config);
+            extra.setHealth((float) config.health);
 
             level.addFreshEntity(extra);
         }
     }
 
     private void applyConfig(Pillager pillager, PillagerConfig config) {
-        if (config.CustomName) {
+
+        if (config.CustomName)
             MobNameUtil.applyRandomName(pillager);
-        }
+
         if (pillager.getAttribute(Attributes.MAX_HEALTH) != null)
             pillager.getAttribute(Attributes.MAX_HEALTH)
                     .setBaseValue(config.health);
+
+        if (pillager.getAttribute(Attributes.ARMOR) != null)
+            pillager.getAttribute(Attributes.ARMOR)
+                    .setBaseValue(config.armor);
 
         if (pillager.getAttribute(Attributes.ATTACK_DAMAGE) != null)
             pillager.getAttribute(Attributes.ATTACK_DAMAGE)
@@ -86,8 +89,6 @@ public class PillagerEvents {
         if (pillager.getAttribute(Attributes.FOLLOW_RANGE) != null)
             pillager.getAttribute(Attributes.FOLLOW_RANGE)
                     .setBaseValue(config.followRange);
-
-        pillager.setHealth((float) config.health);
 
         if (config.fireImmune)
             pillager.setRemainingFireTicks(0);
@@ -113,17 +114,14 @@ public class PillagerEvents {
     @SubscribeEvent
     public void onDamage(LivingDamageEvent.Pre event) {
 
-        // Must be projectile
         if (!(event.getSource().getDirectEntity() instanceof AbstractArrow arrow))
             return;
 
-        // Must be fired by Pillager
         if (!(arrow.getOwner() instanceof Pillager pillager))
             return;
 
         PillagerConfig config = ModConfigs.getPillager();
 
-        // Ensure crossbow shot
         if (!(pillager.getMainHandItem().getItem() instanceof CrossbowItem))
             return;
 

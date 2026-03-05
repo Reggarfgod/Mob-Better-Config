@@ -100,4 +100,10 @@ public class MobBetterConfigRoot implements ConfigData {
 
     @ConfigEntry.Gui.CollapsibleObject
     public ZoglinConfig zoglin= new ZoglinConfig();
+
+    @ConfigEntry.Gui.CollapsibleObject
+    public PiglinBruteConfig piglinbrute= new PiglinBruteConfig();
+
+    @ConfigEntry.Gui.CollapsibleObject
+    public ZombifiedPiglinConfig piglin= new ZombifiedPiglinConfig();
 }

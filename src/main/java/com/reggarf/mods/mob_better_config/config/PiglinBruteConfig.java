@@ -1,15 +1,10 @@
 package com.reggarf.mods.mob_better_config.config;
 
-import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
-@Config(name = "configurable_zoglin")
-public class ZoglinConfig implements ConfigData {
-
-    // ===============================
-    // General
-    // ===============================
+@Config(name = "piglin_brute")
+public class PiglinBruteConfig {
 
     @ConfigEntry.Gui.Tooltip
     public boolean customName = true;
@@ -23,12 +18,11 @@ public class ZoglinConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public int spawnMultiplier = 1;
 
-    // ===============================
-    // Stats (Vanilla Values)
-    // ===============================
-
+    // Stats (Vanilla: 40 HP, 6 Damage)
     @ConfigEntry.Gui.Tooltip
     public double health = 40.0;
+    @ConfigEntry.Gui.Tooltip
+    public double armor = 1.0;
 
     @ConfigEntry.Gui.Tooltip
     public double attackDamage = 6.0;
@@ -46,14 +40,14 @@ public class ZoglinConfig implements ConfigData {
     public double attackDamageMultiplier = 1.0;
 
     // ===============================
-    // Special Mechanics
+    // Hoglin Special Mechanics
     // ===============================
 
     @ConfigEntry.Gui.Tooltip
-    public boolean allowBaby = true;
+    public boolean disableZombification = false;
 
     @ConfigEntry.Gui.Tooltip
-    public double babyChance = 0.0;
+    public double convertToZoglinChance = 0.0;
 
     // ===============================
     // Reinforcements

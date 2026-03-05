@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(EnderDragon.class)
-public class DragonHAAMixin {
+public class DragonAttributesMixin {
 
     @Inject(method = "<init>", at = @At("TAIL"))
     private void mobBetterConfig$applyDragonHealth(CallbackInfo ci) {

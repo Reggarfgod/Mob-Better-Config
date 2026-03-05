@@ -15,6 +15,7 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
+import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
@@ -22,7 +23,7 @@ import net.neoforged.neoforge.event.tick.EntityTickEvent;
 public class SkeletonEvents {
 
     @SubscribeEvent
-    public void onSkeletonJoin(EntityJoinLevelEvent event) {
+    public void onSkeletonJoin(FinalizeSpawnEvent event) {
 
         if (!(event.getEntity() instanceof Skeleton skeleton))
             return;

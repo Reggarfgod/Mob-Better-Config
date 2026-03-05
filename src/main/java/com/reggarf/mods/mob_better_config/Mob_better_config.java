@@ -59,7 +59,9 @@ public class Mob_better_config {
         NeoForge.EVENT_BUS.register(new EnderDragonEvents());
         NeoForge.EVENT_BUS.register(new HoglinEvents());
         NeoForge.EVENT_BUS.register(new ZoglinEvents());
-        NeoForge.EVENT_BUS.register(new MobConversionEvents());
+       // NeoForge.EVENT_BUS.register(new MobConversionEvents());
+        NeoForge.EVENT_BUS.register(new PiglinBruteEvents());
+        NeoForge.EVENT_BUS.register(new zombiefiedPiglinEvents());
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

@@ -19,7 +19,7 @@ import java.lang.reflect.Field;
 public class SilverfishEvents {
 
     @SubscribeEvent
-    public void onJoin(EntityJoinLevelEvent event) {
+    public void onJoin(FinalizeSpawnEvent event) {
 
         if (!(event.getEntity() instanceof Silverfish silverfish))
             return;

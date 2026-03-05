@@ -22,7 +22,7 @@ import net.neoforged.neoforge.event.tick.EntityTickEvent;
 public class EvokerEvents {
 
     @SubscribeEvent
-    public void onJoin(EntityJoinLevelEvent event) {
+    public void onJoin(FinalizeSpawnEvent event) {
 
         if (!(event.getEntity() instanceof Evoker evoker))
             return;

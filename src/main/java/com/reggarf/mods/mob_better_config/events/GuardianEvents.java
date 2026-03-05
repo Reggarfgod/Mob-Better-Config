@@ -27,7 +27,7 @@ public class GuardianEvents {
     // =====================================================
 
     @SubscribeEvent
-    public void onJoin(EntityJoinLevelEvent event) {
+    public void onJoin(FinalizeSpawnEvent event) {
 
         if (!(event.getEntity() instanceof Guardian guardian))
             return;

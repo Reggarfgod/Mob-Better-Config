@@ -19,17 +19,15 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
+import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
 public class ZombieEvents {
 
-    private static final int MAX_REINFORCEMENTS = 3;
-    private static final int REINFORCEMENT_COOLDOWN_TICKS = 100; // 5 seconds
-
     @SubscribeEvent
-    public void onZombieJoin(EntityJoinLevelEvent event) {
+    public void onZombieJoin(FinalizeSpawnEvent event) {
         if (!(event.getEntity() instanceof Zombie zombie))
             return;
 

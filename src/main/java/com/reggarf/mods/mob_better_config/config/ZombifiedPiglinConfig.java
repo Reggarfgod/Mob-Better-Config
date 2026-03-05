@@ -4,8 +4,8 @@ import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
-@Config(name = "configurable_zoglin")
-public class ZoglinConfig implements ConfigData {
+@Config(name = "piglin")
+public class ZombifiedPiglinConfig implements ConfigData {
 
     // ===============================
     // General
@@ -29,6 +29,9 @@ public class ZoglinConfig implements ConfigData {
 
     @ConfigEntry.Gui.Tooltip
     public double health = 40.0;
+
+    @ConfigEntry.Gui.Tooltip
+    public double armor = 4.0D;
 
     @ConfigEntry.Gui.Tooltip
     public double attackDamage = 6.0;

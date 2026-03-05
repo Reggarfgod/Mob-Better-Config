@@ -100,8 +100,13 @@ public class ModConfigs {
     public static HoglinConfig getHoglin() {
         return ROOT.hoglin;
     }
-
     public static ZoglinConfig getZoglin() {
         return ROOT.zoglin;
+    }
+    public static PiglinBruteConfig getPiglinBrute() {
+        return ROOT.piglinbrute;
+    }
+    public static ZombifiedPiglinConfig getZombifiedPiglin() {
+        return ROOT.piglin;
     }
 }
