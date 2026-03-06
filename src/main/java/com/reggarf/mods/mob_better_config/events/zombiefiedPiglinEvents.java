@@ -10,7 +10,6 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.ZombifiedPiglin;
 
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
@@ -29,8 +28,10 @@ public class zombiefiedPiglinEvents {
 
         var data = piglin.getPersistentData();
 
-        // Run once per world load
-        if (piglin.tickCount > 1 && data.getBoolean("mob_better_config_processed"))
+        if (data.getBoolean("mob_better_config_processed"))
+            return;
+
+        if (data.getBoolean("mob_better_config_converted"))
             return;
 
         if (BossUtil.isBoss(piglin))
@@ -55,28 +56,28 @@ public class zombiefiedPiglinEvents {
 
         data.putBoolean("mob_better_config_processed", true);
 
-        // Only spawn extra mobs on real spawn (not world reload)
-        if (!data.getBoolean("mob_better_config_spawned") && piglin.tickCount <= 1) {
+        // Spawn multiplier
+        for (int i = 1; i < config.spawnMultiplier; i++) {
 
-            for (int i = 1; i < config.spawnMultiplier; i++) {
+            ZombifiedPiglin extra = EntityType.ZOMBIFIED_PIGLIN.create(level);
 
-                ZombifiedPiglin extra = new ZombifiedPiglin(EntityType.ZOMBIFIED_PIGLIN, level);
+            if (extra == null)
+                continue;
 
-                extra.moveTo(
-                        piglin.getX(),
-                        piglin.getY(),
-                        piglin.getZ(),
-                        piglin.getYRot(),
-                        piglin.getXRot()
-                );
+            extra.moveTo(
+                    piglin.getX(),
+                    piglin.getY(),
+                    piglin.getZ(),
+                    piglin.getYRot(),
+                    piglin.getXRot()
+            );
 
-                var extraData = extra.getPersistentData();
-                extraData.putBoolean("mob_better_config_spawned", true);
+            extra.getPersistentData().putBoolean("mob_better_config_spawned", true);
+            extra.getPersistentData().putBoolean("mob_better_config_processed", true);
 
-                applyConfig(extra, config);
+            applyConfig(extra, config);
 
-                level.addFreshEntity(extra);
-            }
+            level.addFreshEntity(extra);
         }
     }
 
@@ -85,24 +86,20 @@ public class zombiefiedPiglinEvents {
         if (config.customName)
             MobNameUtil.applyRandomName(piglin);
 
-        // MAX HEALTH (safe)
+        // MAX HEALTH
         if (piglin.getAttribute(Attributes.MAX_HEALTH) != null) {
 
-            float max = (float) config.health;
-
             piglin.getAttribute(Attributes.MAX_HEALTH)
-                    .setBaseValue(max);
+                    .setBaseValue(config.health);
 
-            // Do NOT heal if mob already damaged
-            if (piglin.getHealth() > max)
-                piglin.setHealth(max);
+            // Important: update current health
+            piglin.setHealth(piglin.getMaxHealth());
         }
 
         // ARMOR
         if (piglin.getAttribute(Attributes.ARMOR) != null)
             piglin.getAttribute(Attributes.ARMOR)
                     .setBaseValue(config.armor);
-
 
         // ATTACK DAMAGE
         if (piglin.getAttribute(Attributes.ATTACK_DAMAGE) != null)
@@ -124,14 +121,16 @@ public class zombiefiedPiglinEvents {
             piglin.getAttribute(Attributes.ATTACK_KNOCKBACK)
                     .setBaseValue(config.attackKnockback);
 
-        // REINFORCEMENT CHANCE
+        // REINFORCEMENTS
         if (piglin.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
             piglin.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE)
                     .setBaseValue(config.reinforcementChance);
 
+        // Glow
         if (config.glowing)
             piglin.setGlowingTag(true);
 
+        // Baby chance
         if (config.allowBaby && piglin.level().random.nextDouble() < config.babyChance)
             piglin.setBaby(true);
     }

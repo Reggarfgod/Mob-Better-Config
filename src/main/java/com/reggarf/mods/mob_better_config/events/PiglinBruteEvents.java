@@ -1,17 +1,24 @@
 package com.reggarf.mods.mob_better_config.events;
 
+import com.reggarf.mods.mob_better_config.config.HoglinConfig;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.PiglinBruteConfig;
 import com.reggarf.mods.mob_better_config.util.*;
 
+import net.minecraft.core.Holder;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.monster.ZombifiedPiglin;
+import net.minecraft.world.entity.monster.hoglin.Hoglin;
 import net.minecraft.world.entity.monster.piglin.PiglinBrute;
 
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
+import net.neoforged.neoforge.event.entity.living.LivingConversionEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
 import net.neoforged.neoforge.event.entity.living.LivingExperienceDropEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
@@ -21,21 +28,21 @@ public class PiglinBruteEvents {
     @SubscribeEvent
     public void onJoin(FinalizeSpawnEvent event) {
 
-        if (!(event.getEntity() instanceof PiglinBrute brute))
+        if (!(event.getEntity() instanceof PiglinBrute piglinBrute))
             return;
 
-        if (!(brute.level() instanceof ServerLevel))
+        if (!(piglinBrute.level() instanceof ServerLevel level))
             return;
 
         PiglinBruteConfig config = ModConfigs.getPiglinBrute();
 
-        if (brute.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (piglinBrute.getPersistentData().getBoolean("mob_better_config_spawned"))
             return;
 
-        applyConfig(brute, config);
+        applyConfig(piglinBrute, config);
 
         BossUtil.tryApplyBoss(
-                brute,
+                piglinBrute,
                 config.bossMode,
                 config.forceAllBoss,
                 config.bossChance,
@@ -46,6 +53,26 @@ public class PiglinBruteEvents {
                 config.bossXpMultiplier,
                 config.bossLootMultiplier
         );
+
+        // Spawn Multiplier
+        for (int i = 1; i < config.spawnMultiplier; i++) {
+
+            PiglinBrute extra = new PiglinBrute(EntityType.PIGLIN_BRUTE, level);
+
+            extra.moveTo(
+                    piglinBrute.getX(),
+                    piglinBrute.getY(),
+                    piglinBrute.getZ(),
+                    piglinBrute.getYRot(),
+                    piglinBrute.getXRot()
+            );
+
+            extra.getPersistentData().putBoolean("mob_better_config_spawned", true);
+
+            applyConfig(extra, config);
+
+            level.addFreshEntity(extra);
+        }
     }
 
     private void applyConfig(PiglinBrute brute, PiglinBruteConfig config) {
@@ -120,5 +147,53 @@ public class PiglinBruteEvents {
                 brute,
                 config.lootMultiplier
         );
+    }
+
+    @SubscribeEvent
+    public void onConvert(LivingConversionEvent.Post event) {
+
+        if (!(event.getEntity() instanceof PiglinBrute brute))
+            return;
+
+        if (!(event.getOutcome() instanceof ZombifiedPiglin zombified))
+            return;
+
+        if (!(zombified.level() instanceof ServerLevel))
+            return;
+
+        // Copy attributes
+        copyAttribute(brute, zombified, Attributes.MAX_HEALTH);
+        copyAttribute(brute, zombified, Attributes.ATTACK_DAMAGE);
+        copyAttribute(brute, zombified, Attributes.MOVEMENT_SPEED);
+        copyAttribute(brute, zombified, Attributes.ARMOR);
+        copyAttribute(brute, zombified, Attributes.KNOCKBACK_RESISTANCE);
+        copyAttribute(brute, zombified, Attributes.SCALE);
+
+        // Preserve current health
+        zombified.setHealth(brute.getHealth());
+
+        // Preserve glowing
+        if (brute.isCurrentlyGlowing())
+            zombified.setGlowingTag(true);
+
+        // Preserve custom name
+        if (brute.hasCustomName()) {
+            zombified.setCustomName(brute.getCustomName());
+            zombified.setCustomNameVisible(brute.isCustomNameVisible());
+        }
+
+        // Preserve boss state (persistent data)
+        zombified.getPersistentData().merge(brute.getPersistentData());
+    }
+
+    private static void copyAttribute(LivingEntity from, LivingEntity to, Holder<Attribute> attribute) {
+
+        var fromAttr = from.getAttribute(attribute);
+        var toAttr = to.getAttribute(attribute);
+
+        if (fromAttr == null || toAttr == null)
+            return;
+
+        toAttr.setBaseValue(fromAttr.getBaseValue());
     }
 }
