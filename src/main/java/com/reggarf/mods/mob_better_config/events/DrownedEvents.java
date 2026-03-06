@@ -107,20 +107,29 @@ public class DrownedEvents {
             MobNameUtil.applyRandomName(drowned);
         }
         if (drowned.getAttribute(Attributes.MAX_HEALTH) != null)
-            drowned.getAttribute(Attributes.MAX_HEALTH)
-                    .setBaseValue(config.health);
+            drowned.getAttribute(Attributes.MAX_HEALTH).setBaseValue(config.health);
 
         if (drowned.getAttribute(Attributes.ATTACK_DAMAGE) != null)
-            drowned.getAttribute(Attributes.ATTACK_DAMAGE)
-                    .setBaseValue(config.attackDamage);
+            drowned.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(config.attackDamage);
 
         if (drowned.getAttribute(Attributes.MOVEMENT_SPEED) != null)
-            drowned.getAttribute(Attributes.MOVEMENT_SPEED)
-                    .setBaseValue(config.movementSpeed);
+            drowned.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(config.movementSpeed);
+
+        if (drowned.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
+            drowned.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE).setBaseValue(config.reinforcementChance);
+
+        if (drowned.getAttribute(Attributes.ARMOR) != null)
+            drowned.getAttribute(Attributes.ARMOR).setBaseValue(config.armor);
 
         if (drowned.getAttribute(Attributes.FOLLOW_RANGE) != null)
             drowned.getAttribute(Attributes.FOLLOW_RANGE)
                     .setBaseValue(config.followRange);
+
+        if (drowned.getAttribute(Attributes.KNOCKBACK_RESISTANCE) != null)
+            drowned.getAttribute(Attributes.KNOCKBACK_RESISTANCE).setBaseValue(config.knockbackResistance);
+
+        if (drowned.getAttribute(Attributes.ATTACK_KNOCKBACK) != null)
+            drowned.getAttribute(Attributes.ATTACK_KNOCKBACK).setBaseValue(config.attackKnockback);
 
         drowned.setHealth((float) config.health);
         if (random.nextDouble() < config.randomArmorChance) {

@@ -12,6 +12,12 @@ public class SilverfishConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public double health = 8.0D;
     @ConfigEntry.Gui.Tooltip
+    public double armor = 4.0D;
+    @ConfigEntry.Gui.Tooltip
+    public double knockbackResistance = 0.6;
+    @ConfigEntry.Gui.Tooltip
+    public double attackKnockback = 0.0;
+    @ConfigEntry.Gui.Tooltip
     public double movementSpeed = 0.25D;
     @ConfigEntry.Gui.Tooltip
     public double attackDamage = 1.0D;

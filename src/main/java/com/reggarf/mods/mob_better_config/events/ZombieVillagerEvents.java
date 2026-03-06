@@ -2,10 +2,7 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.ZombieVillagerConfig;
-import com.reggarf.mods.mob_better_config.util.ArmorUtil;
-import com.reggarf.mods.mob_better_config.util.LootUtil;
-import com.reggarf.mods.mob_better_config.util.MobNameUtil;
-import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
+import com.reggarf.mods.mob_better_config.util.*;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.EntityType;
@@ -36,7 +33,18 @@ public class ZombieVillagerEvents {
             return;
 
         applyConfig(zv);
-
+        BossUtil.tryApplyBoss(
+                zv,
+                config.bossMode,
+                config.forceAllBoss,
+                config.bossChance,
+                config.bossHealthMultiplier,
+                config.bossDamageMultiplier,
+                config.bossGlowing,
+                config.bossCustomName,
+                config.bossXpMultiplier,
+                config.bossLootMultiplier
+        );
         for (int i = 1; i < config.spawnMultiplier; i++) {
 
             ZombieVillager extra = new ZombieVillager(EntityType.ZOMBIE_VILLAGER, level);
@@ -74,6 +82,21 @@ public class ZombieVillagerEvents {
         if (zv.getAttribute(Attributes.FOLLOW_RANGE) != null)
             zv.getAttribute(Attributes.FOLLOW_RANGE).setBaseValue(config.followRange);
 
+        if (zv.getAttribute(Attributes.KNOCKBACK_RESISTANCE) != null)
+            zv.getAttribute(Attributes.KNOCKBACK_RESISTANCE)
+                    .setBaseValue(config.knockbackResistance);
+
+        if (zv.getAttribute(Attributes.ATTACK_KNOCKBACK) != null)
+            zv.getAttribute(Attributes.ATTACK_KNOCKBACK)
+                    .setBaseValue(config.attackKnockback);
+
+//        if (zv.getAttribute(Attributes.ARMOR) != null)
+//            zv.getAttribute(Attributes.ARMOR).setBaseValue(config.armor);
+
+        if (zv.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
+            zv.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE)
+                    .setBaseValue(config.reinforcementChance);
+
         zv.setHealth(config.health);
 
         if (!config.burnInDaylight)
@@ -87,25 +110,6 @@ public class ZombieVillagerEvents {
 
         if (random.nextDouble() < config.randomArmorChance)
             ArmorUtil.equipRandomArmor(zv, random, 0.5f);
-    }
-
-    @SubscribeEvent
-    public void onDamaged(LivingDamageEvent.Post event) {
-
-        if (!(event.getEntity() instanceof ZombieVillager zv))
-            return;
-
-        if (!(zv.level() instanceof ServerLevel level))
-            return;
-
-        ZombieVillagerConfig config = ModConfigs.getZombieVillager();
-
-        ReinforcementUtil.trySpawnReinforcement(
-                zv,
-                level,
-                config.reinforcementChance,
-                4
-        );
     }
 
     @SubscribeEvent

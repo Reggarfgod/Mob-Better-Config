@@ -101,6 +101,12 @@ public class RavagerEvents {
             ravager.getAttribute(Attributes.KNOCKBACK_RESISTANCE)
                     .setBaseValue(config.knockbackResistance);
 
+        if (ravager.getAttribute(Attributes.ARMOR) != null)
+            ravager.getAttribute(Attributes.ARMOR).setBaseValue(config.armor);
+
+        if (ravager.getAttribute(Attributes.ATTACK_KNOCKBACK) != null)
+            ravager.getAttribute(Attributes.ATTACK_KNOCKBACK).setBaseValue(config.attackKnockback);
+
         ravager.setHealth((float) config.health);
 
         if (config.fireImmune)

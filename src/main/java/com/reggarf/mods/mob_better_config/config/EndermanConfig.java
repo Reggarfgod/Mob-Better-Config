@@ -10,7 +10,13 @@ public class EndermanConfig implements ConfigData {
         @ConfigEntry.Gui.Tooltip
         public boolean CustomName = true;
         @ConfigEntry.Gui.Tooltip
-        public double health = 40.0D;            // Vanilla: 40
+        public double health = 40.0D;
+        @ConfigEntry.Gui.Tooltip
+        public float armor= 2.0F;
+        @ConfigEntry.Gui.Tooltip
+        public double knockbackResistance = 0.6;
+        @ConfigEntry.Gui.Tooltip
+        public double attackKnockback = 0.0;// Vanilla: 40
         @ConfigEntry.Gui.Tooltip
         public double attackDamage = 7.0D;       // Vanilla: 7
         @ConfigEntry.Gui.Tooltip

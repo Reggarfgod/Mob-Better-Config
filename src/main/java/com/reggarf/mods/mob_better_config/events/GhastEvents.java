@@ -57,6 +57,19 @@ public class GhastEvents {
             ghast.getAttribute(Attributes.FOLLOW_RANGE)
                     .setBaseValue(config.followRange);
 
+        if (ghast.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
+            ghast.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE).setBaseValue(config.reinforcementChance);
+
+        if (ghast.getAttribute(Attributes.ARMOR) != null)
+            ghast.getAttribute(Attributes.ARMOR).setBaseValue(config.armor);
+
+        if (ghast.getAttribute(Attributes.KNOCKBACK_RESISTANCE) != null)
+            ghast.getAttribute(Attributes.KNOCKBACK_RESISTANCE).setBaseValue(config.knockbackResistance);
+
+        if (ghast.getAttribute(Attributes.ATTACK_KNOCKBACK) != null)
+            ghast.getAttribute(Attributes.ATTACK_KNOCKBACK).setBaseValue(config.attackKnockback);
+
+
         ghast.setHealth((float) config.health);
         if (config.CustomName) {
             MobNameUtil.applyRandomName(ghast);

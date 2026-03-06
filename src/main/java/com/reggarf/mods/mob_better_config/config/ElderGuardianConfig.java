@@ -12,12 +12,18 @@ public class ElderGuardianConfig implements ConfigData {
 
     @ConfigEntry.Gui.Tooltip
     public double health = 80.0D; // Vanilla: 80
-
     @ConfigEntry.Gui.Tooltip
-    public double attackDamage = 8.0D; // Vanilla: 8
-
+    public float armor= 2.0F;
     @ConfigEntry.Gui.Tooltip
-    public double movementSpeed = 0.3D; // Vanilla: 0.3
+    public double knockbackResistance = 0.6;
+    @ConfigEntry.Gui.Tooltip
+    public double attackKnockback = 0.0;
+    @ConfigEntry.Gui.Tooltip
+    public float attackDamage = 2.0F;
+    @ConfigEntry.Gui.Tooltip
+    public double movementSpeed = 0.3D;
+    @ConfigEntry.Gui.Tooltip
+    public double followRange = 35.0D;
 
     @ConfigEntry.Gui.Tooltip
     public boolean glowing = false;

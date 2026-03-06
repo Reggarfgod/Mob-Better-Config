@@ -89,7 +89,13 @@ public class PillagerEvents {
         if (pillager.getAttribute(Attributes.FOLLOW_RANGE) != null)
             pillager.getAttribute(Attributes.FOLLOW_RANGE)
                     .setBaseValue(config.followRange);
+        if (pillager.getAttribute(Attributes.ATTACK_KNOCKBACK) != null)
+            pillager.getAttribute(Attributes.ATTACK_KNOCKBACK)
+                    .setBaseValue(config.attackKnockback);
 
+        if (pillager.getAttribute(Attributes.KNOCKBACK_RESISTANCE) != null)
+            pillager.getAttribute(Attributes.KNOCKBACK_RESISTANCE)
+                    .setBaseValue(config.knockbackResistance);
         if (config.fireImmune)
             pillager.setRemainingFireTicks(0);
 

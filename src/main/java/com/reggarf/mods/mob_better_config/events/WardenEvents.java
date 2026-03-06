@@ -2,6 +2,7 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.WardenConfig;
+import com.reggarf.mods.mob_better_config.util.BossUtil;
 import com.reggarf.mods.mob_better_config.util.LootUtil;
 import com.reggarf.mods.mob_better_config.util.MobNameUtil;
 import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
@@ -39,7 +40,18 @@ public class WardenEvents {
             return;
 
         applyConfig(warden);
-
+        BossUtil.tryApplyBoss(
+                warden,
+                config.bossMode,
+                config.forceAllBoss,
+                config.bossChance,
+                config.bossHealthMultiplier,
+                config.bossDamageMultiplier,
+                config.bossGlowing,
+                config.bossCustomName,
+                config.bossXpMultiplier,
+                config.bossLootMultiplier
+        );
         for (int i = 1; i < config.spawnMultiplier; i++) {
 
             Warden extra = new Warden(EntityType.WARDEN, level);
@@ -67,6 +79,8 @@ public class WardenEvents {
         if (warden.getAttribute(Attributes.MAX_HEALTH) != null)
             warden.getAttribute(Attributes.MAX_HEALTH)
                     .setBaseValue(config.health);
+        if (warden.getAttribute(Attributes.ARMOR) != null)
+            warden.getAttribute(Attributes.ARMOR).setBaseValue(config.armor);
 
         if (warden.getAttribute(Attributes.ATTACK_DAMAGE) != null)
             warden.getAttribute(Attributes.ATTACK_DAMAGE)

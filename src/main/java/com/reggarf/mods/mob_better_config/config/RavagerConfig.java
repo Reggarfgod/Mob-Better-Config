@@ -18,7 +18,11 @@ public class RavagerConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public double followRange = 32.0D;
     @ConfigEntry.Gui.Tooltip
-    public double knockbackResistance = 0.75D;
+    public double armor = 4.0D;
+    @ConfigEntry.Gui.Tooltip
+    public double knockbackResistance = 0.6;
+    @ConfigEntry.Gui.Tooltip
+    public double attackKnockback = 0.0;
     @ConfigEntry.Gui.Tooltip
     public boolean enableRoar = true;
     @ConfigEntry.Gui.Tooltip
@@ -35,10 +39,6 @@ public class RavagerConfig implements ConfigData {
     public double xpMultiplier = 1.0D;
     @ConfigEntry.Gui.Tooltip
     public double lootMultiplier = 1.0D;
-
-    // ===============================
-    // Reinforcement
-    // ===============================
     @ConfigEntry.Gui.Tooltip
     public double reinforcementChance = 0.0D;
 

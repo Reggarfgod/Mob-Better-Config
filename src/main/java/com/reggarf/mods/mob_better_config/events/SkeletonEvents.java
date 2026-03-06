@@ -2,10 +2,7 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.SkeletonConfig;
-import com.reggarf.mods.mob_better_config.util.ArmorUtil;
-import com.reggarf.mods.mob_better_config.util.LootUtil;
-import com.reggarf.mods.mob_better_config.util.MobNameUtil;
-import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
+import com.reggarf.mods.mob_better_config.util.*;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.EntityType;
@@ -31,7 +28,18 @@ public class SkeletonEvents {
         applyConfig(skeleton);
 
         SkeletonConfig config = ModConfigs.getSkeleton();
-
+        BossUtil.tryApplyBoss(
+                skeleton,
+                config.bossMode,
+                config.forceAllBoss,
+                config.bossChance,
+                config.bossHealthMultiplier,
+                config.bossDamageMultiplier,
+                config.bossGlowing,
+                config.bossCustomName,
+                config.bossXpMultiplier,
+                config.bossLootMultiplier
+        );
         if (skeleton.level() instanceof ServerLevel level) {
 
             for (int i = 1; i < config.spawnMultiplier; i++) {
@@ -74,6 +82,14 @@ public class SkeletonEvents {
             skeleton.getAttribute(Attributes.KNOCKBACK_RESISTANCE)
                     .setBaseValue(config.knockbackResistance);
 
+        if (skeleton.getAttribute(Attributes.ARMOR) != null)
+            skeleton.getAttribute(Attributes.ARMOR).setBaseValue(config.armor);
+
+        if (skeleton.getAttribute(Attributes.ATTACK_KNOCKBACK) != null)
+            skeleton.getAttribute(Attributes.ATTACK_KNOCKBACK).setBaseValue(config.attackKnockback);
+        if (skeleton.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
+            skeleton.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE).setBaseValue(config.reinforcementChance);
+
         skeleton.setHealth(config.health);
 
         if (!config.burnInDaylight)
@@ -90,24 +106,6 @@ public class SkeletonEvents {
         if (random.nextDouble() < config.randomArmorChance) {
             ArmorUtil.equipRandomArmor(skeleton, random, 0.5f);
         }
-    }
-    @SubscribeEvent
-    public void onSkeletonDamaged(LivingDamageEvent.Post event) {
-
-        if (!(event.getEntity() instanceof Skeleton skeleton))
-            return;
-
-        if (!(skeleton.level() instanceof ServerLevel level))
-            return;
-
-        SkeletonConfig config = ModConfigs.getSkeleton();
-
-        ReinforcementUtil.trySpawnReinforcement(
-                skeleton,
-                level,
-                config.reinforcementChance,
-                4 // spawn radius
-        );
     }
     @SubscribeEvent
     public void onSkeletonTick(EntityTickEvent.Post event) {

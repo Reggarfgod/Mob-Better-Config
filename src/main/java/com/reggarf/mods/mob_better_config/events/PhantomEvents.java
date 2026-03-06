@@ -92,6 +92,17 @@ public class PhantomEvents {
             phantom.getAttribute(Attributes.FOLLOW_RANGE)
                     .setBaseValue(config.followRange);
 
+        if (phantom.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
+            phantom.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE).setBaseValue(config.reinforcementChance);
+
+        if (phantom.getAttribute(Attributes.ARMOR) != null)
+            phantom.getAttribute(Attributes.ARMOR).setBaseValue(config.armor);
+
+        if (phantom.getAttribute(Attributes.KNOCKBACK_RESISTANCE) != null)
+            phantom.getAttribute(Attributes.KNOCKBACK_RESISTANCE).setBaseValue(config.knockbackResistance);
+
+        if (phantom.getAttribute(Attributes.ATTACK_KNOCKBACK) != null)
+            phantom.getAttribute(Attributes.ATTACK_KNOCKBACK).setBaseValue(config.attackKnockback);
         phantom.setHealth((float) config.health);
 
         if (config.fixedSize >= 0) {
@@ -137,25 +148,6 @@ public class PhantomEvents {
                 level,
                 phantom,
                 config.lootMultiplier
-        );
-    }
-
-    @SubscribeEvent
-    public void onDamaged(LivingDamageEvent.Post event) {
-
-        if (!(event.getEntity() instanceof Phantom phantom))
-            return;
-
-        if (!(phantom.level() instanceof ServerLevel level))
-            return;
-
-        PhantomConfig config = ModConfigs.getPhantom();
-
-        ReinforcementUtil.trySpawnReinforcement(
-                phantom,
-                level,
-                config.reinforcementChance,
-                4
         );
     }
 

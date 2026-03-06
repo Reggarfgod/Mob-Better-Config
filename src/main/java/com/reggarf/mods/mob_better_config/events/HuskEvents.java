@@ -80,25 +80,26 @@ public class HuskEvents {
             husk.getAttribute(Attributes.MAX_HEALTH).setBaseValue(config.health);
 
         if (husk.getAttribute(Attributes.ATTACK_DAMAGE) != null)
-            husk.getAttribute(Attributes.ATTACK_DAMAGE)
-                    .setBaseValue(
-                            husk.getAttribute(Attributes.ATTACK_DAMAGE).getBaseValue()
-                                    * config.attackDamageMultiplier
-                    );
+            husk.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(config.attackDamage);
 
         if (husk.getAttribute(Attributes.MOVEMENT_SPEED) != null)
-            husk.getAttribute(Attributes.MOVEMENT_SPEED)
-                    .setBaseValue(
-                            husk.getAttribute(Attributes.MOVEMENT_SPEED).getBaseValue()
-                                    * config.movementSpeedMultiplier
-                    );
+            husk.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(config.movementSpeed);
 
         if (husk.getAttribute(Attributes.FOLLOW_RANGE) != null)
             husk.getAttribute(Attributes.FOLLOW_RANGE)
-                    .setBaseValue(
-                            husk.getAttribute(Attributes.FOLLOW_RANGE).getBaseValue()
-                                    * config.followRangeMultiplier
-                    );
+                    .setBaseValue(config.followRange);
+
+        if (husk.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
+            husk.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE).setBaseValue(config.reinforcementChance);
+
+        if (husk.getAttribute(Attributes.ARMOR) != null)
+            husk.getAttribute(Attributes.ARMOR).setBaseValue(config.armor);
+
+        if (husk.getAttribute(Attributes.KNOCKBACK_RESISTANCE) != null)
+            husk.getAttribute(Attributes.KNOCKBACK_RESISTANCE).setBaseValue(config.knockbackResistance);
+
+        if (husk.getAttribute(Attributes.ATTACK_KNOCKBACK) != null)
+            husk.getAttribute(Attributes.ATTACK_KNOCKBACK).setBaseValue(config.attackKnockback);
 
         husk.setHealth(husk.getMaxHealth());
 
@@ -114,8 +115,9 @@ public class HuskEvents {
                         .is(BiomeTags.HAS_DESERT_PYRAMID)) {
 
             if (husk.getAttribute(Attributes.MAX_HEALTH) != null)
-                husk.getAttribute(Attributes.MAX_HEALTH)
-                        .setBaseValue(config.desertHealth);
+                husk.getAttribute(Attributes.MAX_HEALTH).setBaseValue(config.desertHealth);
+            if (husk.getAttribute(Attributes.ARMOR) != null)
+                husk.getAttribute(Attributes.ARMOR).setBaseValue(config.desertarmor);
 
             if (husk.getAttribute(Attributes.ATTACK_DAMAGE) != null)
                 husk.getAttribute(Attributes.ATTACK_DAMAGE)
@@ -131,19 +133,19 @@ public class HuskEvents {
     @SubscribeEvent
     public void onDamage(LivingDamageEvent.Post event) {
 
-        // Reinforcement logic (existing)
-        if (event.getEntity() instanceof Husk husk &&
-                husk.level() instanceof ServerLevel level) {
-
-            HuskConfig config = ModConfigs.getHusk();
-
-            ReinforcementUtil.trySpawnReinforcement(
-                    husk,
-                    level,
-                    config.reinforcementChance,
-                    4
-            );
-        }
+//        // Reinforcement logic (existing)
+//        if (event.getEntity() instanceof Husk husk &&
+//                husk.level() instanceof ServerLevel level) {
+//
+//            HuskConfig config = ModConfigs.getHusk();
+//
+//            ReinforcementUtil.trySpawnReinforcement(
+//                    husk,
+//                    level,
+//                    config.reinforcementChance,
+//                    4
+//            );
+//        }
 
         // Mark target for hunger fix
         if (event.getSource().getEntity() instanceof Husk &&

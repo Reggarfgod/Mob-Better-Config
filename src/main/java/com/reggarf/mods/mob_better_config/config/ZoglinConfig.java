@@ -7,10 +7,6 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 @Config(name = "configurable_zoglin")
 public class ZoglinConfig implements ConfigData {
 
-    // ===============================
-    // General
-    // ===============================
-
     @ConfigEntry.Gui.Tooltip
     public boolean customName = true;
 
@@ -23,12 +19,11 @@ public class ZoglinConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public int spawnMultiplier = 1;
 
-    // ===============================
-    // Stats (Vanilla Values)
-    // ===============================
-
     @ConfigEntry.Gui.Tooltip
     public double health = 40.0;
+
+    @ConfigEntry.Gui.Tooltip
+    public double armor = 4.0D;
 
     @ConfigEntry.Gui.Tooltip
     public double attackDamage = 6.0;
@@ -45,36 +40,20 @@ public class ZoglinConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public double attackDamageMultiplier = 1.0;
 
-    // ===============================
-    // Special Mechanics
-    // ===============================
-
     @ConfigEntry.Gui.Tooltip
     public boolean allowBaby = true;
 
     @ConfigEntry.Gui.Tooltip
     public double babyChance = 0.0;
 
-    // ===============================
-    // Reinforcements
-    // ===============================
-
     @ConfigEntry.Gui.Tooltip
     public double reinforcementChance = 0.0;
-
-    // ===============================
-    // Loot / XP
-    // ===============================
 
     @ConfigEntry.Gui.Tooltip
     public double xpMultiplier = 1.0;
 
     @ConfigEntry.Gui.Tooltip
     public double lootMultiplier = 1.0;
-
-    // ===============================
-    // Boss System
-    // ===============================
 
     @ConfigEntry.Gui.Tooltip
     public boolean bossMode = false;

@@ -22,10 +22,6 @@ import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
 public class GuardianEvents {
 
-    // =====================================================
-    // SPAWN (NORMAL GUARDIAN ONLY)
-    // =====================================================
-
     @SubscribeEvent
     public void onJoin(FinalizeSpawnEvent event) {
 
@@ -79,6 +75,18 @@ public class GuardianEvents {
         if (guardian.getAttribute(Attributes.FOLLOW_RANGE) != null)
             guardian.getAttribute(Attributes.FOLLOW_RANGE)
                     .setBaseValue(config.followRange);
+
+        if (guardian.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
+            guardian.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE).setBaseValue(config.reinforcementChance);
+
+        if (guardian.getAttribute(Attributes.ARMOR) != null)
+            guardian.getAttribute(Attributes.ARMOR).setBaseValue(config.armor);
+
+        if (guardian.getAttribute(Attributes.KNOCKBACK_RESISTANCE) != null)
+            guardian.getAttribute(Attributes.KNOCKBACK_RESISTANCE).setBaseValue(config.knockbackResistance);
+
+        if (guardian.getAttribute(Attributes.ATTACK_KNOCKBACK) != null)
+            guardian.getAttribute(Attributes.ATTACK_KNOCKBACK).setBaseValue(config.attackKnockback);
 
         guardian.setHealth((float) config.health);
 

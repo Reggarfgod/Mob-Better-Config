@@ -100,10 +100,17 @@ public class WitherSkeletonEvents {
             skeleton.getAttribute(Attributes.FOLLOW_RANGE)
                     .setBaseValue(config.followRange);
 
-        skeleton.setHealth((float) config.health);
-        if (random.nextDouble() < config.randomArmorChance) {
-            ArmorUtil.equipRandomArmor(skeleton, random, 0.5f);
-        }
+        if (skeleton.getAttribute(Attributes.ARMOR) != null)
+            skeleton.getAttribute(Attributes.ARMOR).setBaseValue(config.armor);
+
+        if (skeleton.getAttribute(Attributes.KNOCKBACK_RESISTANCE) != null)
+            skeleton.getAttribute(Attributes.KNOCKBACK_RESISTANCE).setBaseValue(config.knockbackResistance);
+
+        if (skeleton.getAttribute(Attributes.ATTACK_KNOCKBACK) != null)
+            skeleton.getAttribute(Attributes.ATTACK_KNOCKBACK).setBaseValue(config.attackKnockback);
+
+        if (skeleton.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
+            skeleton.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE).setBaseValue(config.reinforcementChance);
     }
 
     @SubscribeEvent
@@ -189,25 +196,6 @@ public class WitherSkeletonEvents {
                 level,
                 skeleton,
                 ModConfigs.getWitherSkeleton().lootMultiplier
-        );
-    }
-
-    @SubscribeEvent
-    public void onDamaged(LivingDamageEvent.Post event) {
-
-        if (!(event.getEntity() instanceof WitherSkeleton skeleton))
-            return;
-
-        if (!(skeleton.level() instanceof ServerLevel level))
-            return;
-
-        WitherSkeletonConfig config = ModConfigs.getWitherSkeleton();
-
-        ReinforcementUtil.trySpawnReinforcement(
-                skeleton,
-                level,
-                config.reinforcementChance,
-                4
         );
     }
 }

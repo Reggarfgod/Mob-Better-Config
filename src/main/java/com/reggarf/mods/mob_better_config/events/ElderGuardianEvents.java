@@ -54,56 +54,35 @@ public class ElderGuardianEvents {
             MobNameUtil.applyRandomName(elder);
 
         if (elder.getAttribute(Attributes.MAX_HEALTH) != null)
-            elder.getAttribute(Attributes.MAX_HEALTH)
-                    .setBaseValue(config.health);
+            elder.getAttribute(Attributes.MAX_HEALTH).setBaseValue(config.health);
 
         if (elder.getAttribute(Attributes.ATTACK_DAMAGE) != null)
-            elder.getAttribute(Attributes.ATTACK_DAMAGE)
-                    .setBaseValue(config.attackDamage);
+            elder.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(config.attackDamage);
 
         if (elder.getAttribute(Attributes.MOVEMENT_SPEED) != null)
-            elder.getAttribute(Attributes.MOVEMENT_SPEED)
-                    .setBaseValue(config.movementSpeed);
+            elder.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(config.movementSpeed);
+
+        if (elder.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
+            elder.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE).setBaseValue(config.reinforcementChance);
+
+        if (elder.getAttribute(Attributes.ARMOR) != null)
+            elder.getAttribute(Attributes.ARMOR).setBaseValue(config.armor);
+
+        if (elder.getAttribute(Attributes.FOLLOW_RANGE) != null)
+            elder.getAttribute(Attributes.FOLLOW_RANGE)
+                    .setBaseValue(config.followRange);
+
+        if (elder.getAttribute(Attributes.KNOCKBACK_RESISTANCE) != null)
+            elder.getAttribute(Attributes.KNOCKBACK_RESISTANCE).setBaseValue(config.knockbackResistance);
+
+        if (elder.getAttribute(Attributes.ATTACK_KNOCKBACK) != null)
+            elder.getAttribute(Attributes.ATTACK_KNOCKBACK).setBaseValue(config.attackKnockback);
 
         elder.setHealth((float) config.health);
 
         if (config.glowing)
             elder.setGlowingTag(true);
     }
-
-//    @SubscribeEvent
-//    public void onMiningFatigueTick(EntityTickEvent.Post event) {
-//
-//        if (!(event.getEntity() instanceof ElderGuardian elder))
-//            return;
-//
-//        if (!(elder.level() instanceof ServerLevel level))
-//            return;
-//
-//        ElderGuardianConfig config = ModConfigs.getElderGuardian();
-//
-//        if (!config.enableMiningFatigue)
-//            return;
-//
-//        if ((elder.tickCount + elder.getId())
-//                % config.miningFatigueInterval != 0)
-//            return;
-//
-//        MobEffectInstance effect = new MobEffectInstance(
-//                net.minecraft.world.effect.MobEffects.DIG_SLOWDOWN,
-//                config.miningFatigueDuration,
-//                config.miningFatigueAmplifier
-//        );
-//
-//        net.minecraft.world.effect.MobEffectUtil.addEffectToPlayersAround(
-//                level,
-//                elder,
-//                elder.position(),
-//                config.miningFatigueRadius,
-//                effect,
-//                config.miningFatigueInterval
-//        );
-//    }
 
     @SubscribeEvent
     public void onXP(LivingExperienceDropEvent event) {

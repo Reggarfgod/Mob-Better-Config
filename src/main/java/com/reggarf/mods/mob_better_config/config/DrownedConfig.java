@@ -14,7 +14,13 @@ public class DrownedConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public double randomArmorChance = 0.2D;// Vanilla: 0.20
     @ConfigEntry.Gui.Tooltip
-    public double attackDamage = 3.0D;
+    public float armor= 2.0F;
+    @ConfigEntry.Gui.Tooltip
+    public float attackDamage = 2.0F;
+    @ConfigEntry.Gui.Tooltip
+    public double knockbackResistance = 0.6;
+    @ConfigEntry.Gui.Tooltip
+    public double attackKnockback = 0.0;
     @ConfigEntry.Gui.Tooltip
     public double movementSpeed = 0.23D;
     @ConfigEntry.Gui.Tooltip

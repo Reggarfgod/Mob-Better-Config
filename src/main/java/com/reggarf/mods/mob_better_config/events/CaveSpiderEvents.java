@@ -2,6 +2,7 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.CaveSpiderConfig;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
+import com.reggarf.mods.mob_better_config.util.BossUtil;
 import com.reggarf.mods.mob_better_config.util.LootUtil;
 import com.reggarf.mods.mob_better_config.util.MobNameUtil;
 import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
@@ -39,7 +40,18 @@ public class CaveSpiderEvents {
             return;
 
         applyConfig(spider);
-
+        BossUtil.tryApplyBoss(
+                spider,
+                config.bossMode,
+                config.forceAllBoss,
+                config.bossChance,
+                config.bossHealthMultiplier,
+                config.bossDamageMultiplier,
+                config.bossGlowing,
+                config.bossCustomName,
+                config.bossXpMultiplier,
+                config.bossLootMultiplier
+        );
         for (int i = 1; i < config.spawnMultiplier; i++) {
 
             CaveSpider extra = new CaveSpider(EntityType.CAVE_SPIDER, level);
@@ -73,6 +85,22 @@ public class CaveSpiderEvents {
         if (spider.getAttribute(Attributes.MOVEMENT_SPEED) != null)
             spider.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(config.movementSpeed);
 
+        if (spider.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
+            spider.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE).setBaseValue(config.reinforcementChance);
+
+        if (spider.getAttribute(Attributes.ARMOR) != null)
+            spider.getAttribute(Attributes.ARMOR).setBaseValue(config.armor);
+
+        if (spider.getAttribute(Attributes.FOLLOW_RANGE) != null)
+            spider.getAttribute(Attributes.FOLLOW_RANGE)
+                    .setBaseValue(config.followRange);
+
+        if (spider.getAttribute(Attributes.KNOCKBACK_RESISTANCE) != null)
+            spider.getAttribute(Attributes.KNOCKBACK_RESISTANCE).setBaseValue(config.knockbackResistance);
+
+        if (spider.getAttribute(Attributes.ATTACK_KNOCKBACK) != null)
+            spider.getAttribute(Attributes.ATTACK_KNOCKBACK).setBaseValue(config.attackKnockback);
+
         spider.setHealth(config.health);
 
         if (config.fireImmune)
@@ -80,31 +108,6 @@ public class CaveSpiderEvents {
 
         if (config.glowing)
             spider.setGlowingTag(true);
-    }
-
-    @SubscribeEvent
-    public void onDamage(LivingDamageEvent.Post event) {
-
-        // Reinforcement when spider is hurt
-        if (event.getEntity() instanceof CaveSpider spider &&
-                spider.level() instanceof ServerLevel level) {
-
-            CaveSpiderConfig config = ModConfigs.getCaveSpider();
-
-            ReinforcementUtil.trySpawnReinforcement(
-                    spider,
-                    level,
-                    config.reinforcementChance,
-                    4
-            );
-        }
-
-        // Mark target for poison processing
-        if (event.getSource().getEntity() instanceof CaveSpider &&
-                event.getEntity() instanceof LivingEntity target) {
-
-            target.getPersistentData().putBoolean(POISON_TAG, true);
-        }
     }
 
     @SubscribeEvent
@@ -138,9 +141,6 @@ public class CaveSpiderEvents {
         ));
     }
 
-    // =========================
-    // LOOT MULTIPLIER
-    // =========================
     @SubscribeEvent
     public void onDrops(LivingDropsEvent event) {
 

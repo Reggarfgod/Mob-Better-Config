@@ -10,7 +10,12 @@ public class GhastConfig implements ConfigData {
     public boolean CustomName = true;
     @ConfigEntry.Gui.Tooltip
     public double health = 10.0D; // Vanilla = 10
-
+    @ConfigEntry.Gui.Tooltip
+    public float armor= 2.0F;
+    @ConfigEntry.Gui.Tooltip
+    public double knockbackResistance = 0.6;
+    @ConfigEntry.Gui.Tooltip
+    public double attackKnockback = 0.0;
     @ConfigEntry.Gui.Tooltip
     public double followRange = 100.0D; // Vanilla = 100
 

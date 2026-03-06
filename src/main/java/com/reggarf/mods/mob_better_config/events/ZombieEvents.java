@@ -3,10 +3,7 @@ package com.reggarf.mods.mob_better_config.events;
 import com.reggarf.mods.mob_better_config.ai.CustomBreakDoorGoal;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.ZombieConfig;
-import com.reggarf.mods.mob_better_config.util.ArmorUtil;
-import com.reggarf.mods.mob_better_config.util.LootUtil;
-import com.reggarf.mods.mob_better_config.util.MobNameUtil;
-import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
+import com.reggarf.mods.mob_better_config.util.*;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -34,7 +31,18 @@ public class ZombieEvents {
         applyConfig(zombie);
 
         ZombieConfig config = ModConfigs.getZombie();
-
+        BossUtil.tryApplyBoss(
+                zombie,
+                config.bossMode,
+                config.forceAllBoss,
+                config.bossChance,
+                config.bossHealthMultiplier,
+                config.bossDamageMultiplier,
+                config.bossGlowing,
+                config.bossCustomName,
+                config.bossXpMultiplier,
+                config.bossLootMultiplier
+        );
         if (zombie.level() instanceof ServerLevel level) {
             for (int i = 1; i < config.spawnMultiplier; i++) {
                 Zombie extra = new Zombie(EntityType.ZOMBIE, level);
@@ -73,6 +81,16 @@ public class ZombieEvents {
             zombie.getAttribute(Attributes.KNOCKBACK_RESISTANCE)
                     .setBaseValue(config.knockbackResistance);
 
+        if (zombie.getAttribute(Attributes.ATTACK_KNOCKBACK) != null)
+            zombie.getAttribute(Attributes.ATTACK_KNOCKBACK)
+                    .setBaseValue(config.attackKnockback);
+
+//        if (zombie.getAttribute(Attributes.ARMOR) != null)
+//            zombie.getAttribute(Attributes.ARMOR)
+//                    .setBaseValue(config.armor);
+
+        if (zombie.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
+            zombie.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE).setBaseValue(config.reinforcementChance);
         zombie.setHealth(config.health);
 
         if (config.glowing)
@@ -118,24 +136,6 @@ public class ZombieEvents {
                 new CustomBreakDoorGoal(zombie, breakTicks));
     }
 
-    @SubscribeEvent
-    public void onZombieDamaged(LivingDamageEvent.Post event) {
-
-        if (!(event.getEntity() instanceof Zombie zombie))
-            return;
-
-        if (!(zombie.level() instanceof ServerLevel level))
-            return;
-
-        ZombieConfig config = ModConfigs.getZombie();
-
-        ReinforcementUtil.trySpawnReinforcement(
-                zombie,
-                level,
-                config.reinforcementChance,
-                4 // spawn radius
-        );
-    }
     @SubscribeEvent
     public void onZombieTick(EntityTickEvent.Post event) {
         if (!(event.getEntity() instanceof Zombie zombie))

@@ -9,24 +9,72 @@ public class ZombieConfig implements ConfigData {
 
     @ConfigEntry.Gui.Tooltip
     public boolean CustomName = true;
+    @ConfigEntry.Gui.Tooltip
     public float health = 40.0F;
+//  @ConfigEntry.Gui.Tooltip
+//  public double armor = 4.0D;
+    @ConfigEntry.Gui.Tooltip
+    public double attackKnockback = 0.0;
+    @ConfigEntry.Gui.Tooltip
     public float attackDamage = 6.0F;
+    @ConfigEntry.Gui.Tooltip
     public double movementSpeed = 0.25D;
+    @ConfigEntry.Gui.Tooltip
     public double followRange = 35.0D;
+    @ConfigEntry.Gui.Tooltip
     public double knockbackResistance = 0.2D;
+    @ConfigEntry.Gui.Tooltip
     public double reinforcementChance = 0.2D;
+    @ConfigEntry.Gui.Tooltip
     public boolean canBreakDoors = true;
     @ConfigEntry.BoundedDiscrete(min = 1, max = 5)
     @ConfigEntry.Gui.Tooltip
     public int doorBreakMode = 3;
+    @ConfigEntry.Gui.Tooltip
     public boolean burnInDaylight = true;
+    @ConfigEntry.Gui.Tooltip
     public boolean fireImmune = false;
+    @ConfigEntry.Gui.Tooltip
     public boolean glowing = false;
+    @ConfigEntry.Gui.Tooltip
     public boolean sprintAbility = true;
+    @ConfigEntry.Gui.Tooltip
     public boolean rageMode = true;
+    @ConfigEntry.Gui.Tooltip
     public int spawnMultiplier = 1;
+    @ConfigEntry.Gui.Tooltip
     public double babyChance = 0.1D;
+    @ConfigEntry.Gui.Tooltip
     public boolean randomArmor = true;
+    @ConfigEntry.Gui.Tooltip
     public double armorChance = 0.3D;
+    @ConfigEntry.Gui.Tooltip
     public double lootMultiplier = 1.0D;
+
+    @ConfigEntry.Gui.Tooltip
+    public boolean bossMode = false;
+
+    @ConfigEntry.Gui.Tooltip
+    public boolean forceAllBoss = false;
+
+    @ConfigEntry.Gui.Tooltip
+    public double bossChance = 0.05;
+
+    @ConfigEntry.Gui.Tooltip
+    public double bossHealthMultiplier = 3.0;
+
+    @ConfigEntry.Gui.Tooltip
+    public double bossDamageMultiplier = 2.0;
+
+    @ConfigEntry.Gui.Tooltip
+    public boolean bossGlowing = true;
+
+    @ConfigEntry.Gui.Tooltip
+    public boolean bossCustomName = true;
+
+    @ConfigEntry.Gui.Tooltip
+    public double bossXpMultiplier = 3.0;
+
+    @ConfigEntry.Gui.Tooltip
+    public double bossLootMultiplier = 2.0;
 }

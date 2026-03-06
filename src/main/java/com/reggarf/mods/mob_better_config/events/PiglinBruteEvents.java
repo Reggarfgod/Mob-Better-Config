@@ -148,7 +148,19 @@ public class PiglinBruteEvents {
                 config.lootMultiplier
         );
     }
+    @SubscribeEvent
+    public void onConvertPre(LivingConversionEvent.Pre event) {
 
+        if (!(event.getEntity() instanceof PiglinBrute brute))
+            return;
+
+        PiglinBruteConfig config = ModConfigs.getPiglinBrute();
+
+        if (!config.disableZombification)
+            return;
+
+        event.setCanceled(true);
+    }
     @SubscribeEvent
     public void onConvert(LivingConversionEvent.Post event) {
 

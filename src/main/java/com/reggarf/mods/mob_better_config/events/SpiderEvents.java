@@ -32,7 +32,18 @@ public class SpiderEvents {
             return;
 
         applyConfig(spider);
-
+        BossUtil.tryApplyBoss(
+                spider,
+                config.bossMode,
+                config.forceAllBoss,
+                config.bossChance,
+                config.bossHealthMultiplier,
+                config.bossDamageMultiplier,
+                config.bossGlowing,
+                config.bossCustomName,
+                config.bossXpMultiplier,
+                config.bossLootMultiplier
+        );
         for (int i = 1; i < config.spawnMultiplier; i++) {
 
             Spider extra = new Spider(EntityType.SPIDER, level);
@@ -76,6 +87,13 @@ public class SpiderEvents {
         if (spider.getAttribute(Attributes.FOLLOW_RANGE) != null)
             spider.getAttribute(Attributes.FOLLOW_RANGE).setBaseValue(config.followRange);
 
+        if (spider.getAttribute(Attributes.ARMOR) != null)
+            spider.getAttribute(Attributes.ARMOR).setBaseValue(config.armor);
+
+        if (spider.getAttribute(Attributes.ATTACK_KNOCKBACK) != null)
+            spider.getAttribute(Attributes.ATTACK_KNOCKBACK).setBaseValue(config.attackKnockback);
+        if (spider.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
+            spider.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE).setBaseValue(config.reinforcementChance);
         spider.setHealth(config.health);
 
         if (config.fireImmune)

@@ -14,7 +14,12 @@ public class VindicatorConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.BoundedDiscrete(min = 1, max = 1000)
     public float health = 24.0F;
-
+    @ConfigEntry.Gui.Tooltip
+    public double armor = 4.0D;
+    @ConfigEntry.Gui.Tooltip
+    public double attackKnockback = 0.0;
+    @ConfigEntry.Gui.Tooltip
+    public double knockbackResistance = 0.6;
     @ConfigEntry.Category("attributes")
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.BoundedDiscrete(min = 0, max = 1000)
@@ -76,4 +81,30 @@ public class VindicatorConfig implements ConfigData {
     @ConfigEntry.Category("behavior")
     @ConfigEntry.Gui.Tooltip
     public boolean glowing = false;
+
+    @ConfigEntry.Gui.Tooltip
+    public boolean bossMode = false;
+
+    @ConfigEntry.Gui.Tooltip
+    public boolean forceAllBoss = false;
+
+    @ConfigEntry.Gui.Tooltip
+    public double bossChance = 0.05D;
+
+    @ConfigEntry.Gui.Tooltip
+    public double bossHealthMultiplier = 3.0D;
+
+    @ConfigEntry.Gui.Tooltip
+    public double bossDamageMultiplier = 2.0D;
+
+    @ConfigEntry.Gui.Tooltip
+    public double bossXpMultiplier = 5.0D;
+    @ConfigEntry.Gui.Tooltip
+    public double bossLootMultiplier = 2.0D;
+
+    @ConfigEntry.Gui.Tooltip
+    public boolean bossGlowing = true;
+
+    @ConfigEntry.Gui.Tooltip
+    public boolean bossCustomName = true;
 }

@@ -14,7 +14,12 @@ public class GuardianConfig implements ConfigData {
 
     @ConfigEntry.Gui.Tooltip
     public double health = 30.0D;
-
+    @ConfigEntry.Gui.Tooltip
+    public float armor= 2.0F;
+    @ConfigEntry.Gui.Tooltip
+    public double knockbackResistance = 0.6;
+    @ConfigEntry.Gui.Tooltip
+    public double attackKnockback = 0.0;
     @ConfigEntry.Gui.Tooltip
     public double attackDamage = 6.0D;
 
@@ -24,6 +29,8 @@ public class GuardianConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public double followRange = 16.0D;
 
+    @ConfigEntry.Gui.Tooltip
+    public double reinforcementChance = 0.0D;
 
     @ConfigEntry.Gui.Tooltip
     public boolean enableLaser = true;

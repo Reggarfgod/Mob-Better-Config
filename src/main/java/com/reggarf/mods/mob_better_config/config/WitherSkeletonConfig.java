@@ -12,25 +12,29 @@ public class WitherSkeletonConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public double health = 20.0D;
     @ConfigEntry.Gui.Tooltip
-    public double randomArmorChance = 0.2D;// Vanilla: 0.20
+    public double armor = 4.0D;
     @ConfigEntry.Gui.Tooltip
-    public double attackDamage = 4.0D;     // Vanilla: 4
+    public double attackKnockback = 0.0;
     @ConfigEntry.Gui.Tooltip
-    public double movementSpeed = 0.25D;   // Vanilla: 0.25
+    public double knockbackResistance = 0.6;
     @ConfigEntry.Gui.Tooltip
-    public double followRange = 16.0D;     // Vanilla: 16
+    public double attackDamage = 4.0D;
+    @ConfigEntry.Gui.Tooltip
+    public double movementSpeed = 0.25D;
+    @ConfigEntry.Gui.Tooltip
+    public double followRange = 16.0D;
     @ConfigEntry.Gui.Tooltip
     public boolean enableWitherEffect = true;
     @ConfigEntry.Gui.Tooltip
-    public int witherDuration = 200; // Vanilla: 200 ticks
+    public int witherDuration = 200;
     @ConfigEntry.Gui.Tooltip
     public int witherAmplifier = 0;
     @ConfigEntry.Gui.Tooltip
     public boolean flamingArrows = true;
     @ConfigEntry.Gui.Tooltip
-    public double arrowDamage = 3.0D; // Ranged
+    public double arrowDamage = 3.0D;
     @ConfigEntry.Gui.Tooltip
-    public int arrowFireSeconds = 100; // Vanilla: 100
+    public int arrowFireSeconds = 100;
     @ConfigEntry.Gui.Tooltip
     public int spawnMultiplier = 1;
     @ConfigEntry.Gui.Tooltip

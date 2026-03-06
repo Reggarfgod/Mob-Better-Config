@@ -88,6 +88,18 @@ public class EvokerEvents {
             evoker.getAttribute(Attributes.FOLLOW_RANGE)
                     .setBaseValue(config.followRange);
 
+        if (evoker.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
+            evoker.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE).setBaseValue(config.reinforcementChance);
+
+        if (evoker.getAttribute(Attributes.ARMOR) != null)
+            evoker.getAttribute(Attributes.ARMOR).setBaseValue(config.armor);
+
+        if (evoker.getAttribute(Attributes.KNOCKBACK_RESISTANCE) != null)
+            evoker.getAttribute(Attributes.KNOCKBACK_RESISTANCE).setBaseValue(config.knockbackResistance);
+
+        if (evoker.getAttribute(Attributes.ATTACK_KNOCKBACK) != null)
+            evoker.getAttribute(Attributes.ATTACK_KNOCKBACK).setBaseValue(config.attackKnockback);
+
         evoker.setHealth((float) config.health);
 
         if (config.fireImmune)

@@ -12,6 +12,12 @@ public class ShulkerConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public double health = 30.0D;
     @ConfigEntry.Gui.Tooltip
+    public double armor = 4.0D;
+    @ConfigEntry.Gui.Tooltip
+    public double knockbackResistance = 0.6;
+    @ConfigEntry.Gui.Tooltip
+    public double attackKnockback = 0.0;
+    @ConfigEntry.Gui.Tooltip
     public double armorWhenClosed = 20.0D;
     @ConfigEntry.Gui.Tooltip
     public boolean enableBulletAttack = true;

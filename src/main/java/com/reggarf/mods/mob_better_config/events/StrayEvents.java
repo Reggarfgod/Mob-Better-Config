@@ -2,10 +2,7 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.StrayConfig;
-import com.reggarf.mods.mob_better_config.util.ArmorUtil;
-import com.reggarf.mods.mob_better_config.util.LootUtil;
-import com.reggarf.mods.mob_better_config.util.MobNameUtil;
-import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
+import com.reggarf.mods.mob_better_config.util.*;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -39,7 +36,18 @@ public class StrayEvents {
             return;
 
         applyConfig(stray);
-
+        BossUtil.tryApplyBoss(
+                stray,
+                config.bossMode,
+                config.forceAllBoss,
+                config.bossChance,
+                config.bossHealthMultiplier,
+                config.bossDamageMultiplier,
+                config.bossGlowing,
+                config.bossCustomName,
+                config.bossXpMultiplier,
+                config.bossLootMultiplier
+        );
         for (int i = 1; i < config.spawnMultiplier; i++) {
 
             Stray extra = new Stray(EntityType.STRAY, level);
@@ -91,6 +99,18 @@ public class StrayEvents {
 
         if (stray.getAttribute(Attributes.FOLLOW_RANGE) != null)
             stray.getAttribute(Attributes.FOLLOW_RANGE).setBaseValue(config.followRange);
+
+        if (stray.getAttribute(Attributes.ARMOR) != null)
+            stray.getAttribute(Attributes.ARMOR).setBaseValue(config.armor);
+
+        if (stray.getAttribute(Attributes.KNOCKBACK_RESISTANCE) != null)
+            stray.getAttribute(Attributes.KNOCKBACK_RESISTANCE).setBaseValue(config.knockbackResistance);
+
+        if (stray.getAttribute(Attributes.ATTACK_KNOCKBACK) != null)
+            stray.getAttribute(Attributes.ATTACK_KNOCKBACK).setBaseValue(config.attackKnockback);
+
+        if (stray.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
+            stray.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE).setBaseValue(config.reinforcementChance);
 
         stray.setHealth(config.health);
 
@@ -147,24 +167,7 @@ public class StrayEvents {
         ));
     }
 
-    @SubscribeEvent
-    public void onDamaged(LivingDamageEvent.Post event) {
 
-        if (!(event.getEntity() instanceof Stray stray))
-            return;
-
-        if (!(stray.level() instanceof ServerLevel level))
-            return;
-
-        StrayConfig config = ModConfigs.getStray();
-
-        ReinforcementUtil.trySpawnReinforcement(
-                stray,
-                level,
-                config.reinforcementChance,
-                4
-        );
-    }
 
     @SubscribeEvent
     public void onDrops(LivingDropsEvent event) {

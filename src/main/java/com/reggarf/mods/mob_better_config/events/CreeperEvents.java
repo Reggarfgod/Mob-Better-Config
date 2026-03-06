@@ -2,6 +2,7 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.CreeperConfig;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
+import com.reggarf.mods.mob_better_config.util.BossUtil;
 import com.reggarf.mods.mob_better_config.util.LootUtil;
 import com.reggarf.mods.mob_better_config.util.MobNameUtil;
 import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
@@ -43,7 +44,18 @@ public class CreeperEvents {
             return;
 
         applyConfig(creeper);
-
+        BossUtil.tryApplyBoss(
+                creeper,
+                config.bossMode,
+                config.forceAllBoss,
+                config.bossChance,
+                config.bossHealthMultiplier,
+                config.bossDamageMultiplier,
+                config.bossGlowing,
+                config.bossCustomName,
+                config.bossXpMultiplier,
+                config.bossLootMultiplier
+        );
         for (int i = 1; i < config.spawnMultiplier; i++) {
 
             Creeper extra = new Creeper(EntityType.CREEPER, level);
@@ -68,17 +80,25 @@ public class CreeperEvents {
         if (config.CustomName) {
             MobNameUtil.applyRandomName(creeper);
         }
-        // Health
-        if (creeper.getAttribute(Attributes.MAX_HEALTH) != null) {
-            creeper.getAttribute(Attributes.MAX_HEALTH)
-                    .setBaseValue(config.health);
-        }
+        if (creeper.getAttribute(Attributes.MAX_HEALTH) != null)
+            creeper.getAttribute(Attributes.MAX_HEALTH).setBaseValue(config.health);
 
-        // Movement Speed
-        if (creeper.getAttribute(Attributes.MOVEMENT_SPEED) != null) {
-            creeper.getAttribute(Attributes.MOVEMENT_SPEED)
-                    .setBaseValue(config.movementSpeed);
-        }
+        if (creeper.getAttribute(Attributes.MOVEMENT_SPEED) != null)
+            creeper.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(config.movementSpeed);
+
+        if (creeper.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
+            creeper.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE).setBaseValue(config.reinforcementChance);
+
+        if (creeper.getAttribute(Attributes.ARMOR) != null)
+            creeper.getAttribute(Attributes.ARMOR).setBaseValue(config.armor);
+
+        if (creeper.getAttribute(Attributes.FOLLOW_RANGE) != null)
+            creeper.getAttribute(Attributes.FOLLOW_RANGE)
+                    .setBaseValue(config.followRange);
+
+        if (creeper.getAttribute(Attributes.KNOCKBACK_RESISTANCE) != null)
+            creeper.getAttribute(Attributes.KNOCKBACK_RESISTANCE).setBaseValue(config.knockbackResistance);
+
 
         creeper.setHealth(config.health);
 

@@ -101,6 +101,13 @@ public class ZoglinEvents {
             zoglin.getAttribute(Attributes.ATTACK_KNOCKBACK)
                     .setBaseValue(config.attackKnockback);
 
+        if (zoglin.getAttribute(Attributes.ARMOR) != null)
+            zoglin.getAttribute(Attributes.ARMOR).setBaseValue(config.armor);
+
+        if (zoglin.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
+            zoglin.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE)
+                    .setBaseValue(config.reinforcementChance);
+
         zoglin.setHealth((float) config.health);
 
         if (config.glowing)
@@ -158,22 +165,4 @@ public class ZoglinEvents {
         );
     }
 
-    @SubscribeEvent
-    public void onDamaged(LivingDamageEvent.Post event) {
-
-        if (!(event.getEntity() instanceof Zoglin zoglin))
-            return;
-
-        if (!(zoglin.level() instanceof ServerLevel level))
-            return;
-
-        ZoglinConfig config = ModConfigs.getZoglin();
-
-        ReinforcementUtil.trySpawnReinforcement(
-                zoglin,
-                level,
-                config.reinforcementChance,
-                4
-        );
-    }
 }

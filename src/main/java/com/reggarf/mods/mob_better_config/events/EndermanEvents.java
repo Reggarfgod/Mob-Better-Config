@@ -99,6 +99,18 @@ public class EndermanEvents {
         if (enderman.getAttribute(Attributes.FOLLOW_RANGE) != null)
             enderman.getAttribute(Attributes.FOLLOW_RANGE).setBaseValue(config.followRange);
 
+        if (enderman.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
+            enderman.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE).setBaseValue(config.reinforcementChance);
+
+        if (enderman.getAttribute(Attributes.ARMOR) != null)
+            enderman.getAttribute(Attributes.ARMOR).setBaseValue(config.armor);
+
+        if (enderman.getAttribute(Attributes.KNOCKBACK_RESISTANCE) != null)
+            enderman.getAttribute(Attributes.KNOCKBACK_RESISTANCE).setBaseValue(config.knockbackResistance);
+
+        if (enderman.getAttribute(Attributes.ATTACK_KNOCKBACK) != null)
+            enderman.getAttribute(Attributes.ATTACK_KNOCKBACK).setBaseValue(config.attackKnockback);
+
         enderman.setHealth((float) config.health);
 
         if (!config.canPickupBlocks)

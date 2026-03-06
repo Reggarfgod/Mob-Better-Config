@@ -2,6 +2,7 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.VindicatorConfig;
+import com.reggarf.mods.mob_better_config.util.BossUtil;
 import com.reggarf.mods.mob_better_config.util.LootUtil;
 import com.reggarf.mods.mob_better_config.util.MobNameUtil;
 import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
@@ -32,7 +33,18 @@ public class VindicatorEvents {
             return;
 
         applyConfig(vindicator);
-
+        BossUtil.tryApplyBoss(
+                vindicator,
+                config.bossMode,
+                config.forceAllBoss,
+                config.bossChance,
+                config.bossHealthMultiplier,
+                config.bossDamageMultiplier,
+                config.bossGlowing,
+                config.bossCustomName,
+                config.bossXpMultiplier,
+                config.bossLootMultiplier
+        );
         // Johnny Mode
         if (config.enableJohnnyMode) {
             vindicator.setCustomName(
@@ -78,8 +90,19 @@ public class VindicatorEvents {
                     .setBaseValue(config.movementSpeed);
 
         if (vindicator.getAttribute(Attributes.FOLLOW_RANGE) != null)
-            vindicator.getAttribute(Attributes.FOLLOW_RANGE)
-                    .setBaseValue(config.followRange);
+            vindicator.getAttribute(Attributes.FOLLOW_RANGE).setBaseValue(config.followRange);
+
+        if (vindicator.getAttribute(Attributes.ARMOR) != null)
+            vindicator.getAttribute(Attributes.ARMOR).setBaseValue(config.armor);
+
+        if (vindicator.getAttribute(Attributes.KNOCKBACK_RESISTANCE) != null)
+            vindicator.getAttribute(Attributes.KNOCKBACK_RESISTANCE).setBaseValue(config.knockbackResistance);
+
+        if (vindicator.getAttribute(Attributes.ATTACK_KNOCKBACK) != null)
+            vindicator.getAttribute(Attributes.ATTACK_KNOCKBACK).setBaseValue(config.attackKnockback);
+
+        if (vindicator.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
+            vindicator.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE).setBaseValue(config.reinforcementChance);
 
         vindicator.setHealth(config.health);
 
@@ -89,26 +112,6 @@ public class VindicatorEvents {
         if (config.glowing)
             vindicator.setGlowingTag(true);
     }
-
-    @SubscribeEvent
-    public void onDamaged(LivingDamageEvent.Post event) {
-
-        if (!(event.getEntity() instanceof Vindicator vindicator))
-            return;
-
-        if (!(vindicator.level() instanceof ServerLevel level))
-            return;
-
-        VindicatorConfig config = ModConfigs.getVindicator();
-
-        ReinforcementUtil.trySpawnReinforcement(
-                vindicator,
-                level,
-                config.reinforcementChance,
-                5
-        );
-    }
-
 
     @SubscribeEvent
     public void onDrops(LivingDropsEvent event) {

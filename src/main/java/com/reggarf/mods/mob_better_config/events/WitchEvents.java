@@ -2,10 +2,7 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.WitchConfig;
-import com.reggarf.mods.mob_better_config.util.ArmorUtil;
-import com.reggarf.mods.mob_better_config.util.LootUtil;
-import com.reggarf.mods.mob_better_config.util.MobNameUtil;
-import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
+import com.reggarf.mods.mob_better_config.util.*;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.EntityType;
@@ -41,7 +38,18 @@ public class WitchEvents {
             return;
 
         applyConfig(witch);
-
+        BossUtil.tryApplyBoss(
+                witch,
+                config.bossMode,
+                config.forceAllBoss,
+                config.bossChance,
+                config.bossHealthMultiplier,
+                config.bossDamageMultiplier,
+                config.bossGlowing,
+                config.bossCustomName,
+                config.bossXpMultiplier,
+                config.bossLootMultiplier
+        );
         for (int i = 1; i < config.spawnMultiplier; i++) {
 
             Witch extra = new Witch(EntityType.WITCH, level);
@@ -79,6 +87,19 @@ public class WitchEvents {
         if (witch.getAttribute(Attributes.FOLLOW_RANGE) != null)
             witch.getAttribute(Attributes.FOLLOW_RANGE).setBaseValue(config.followRange);
 
+
+        if (witch.getAttribute(Attributes.ARMOR) != null)
+            witch.getAttribute(Attributes.ARMOR).setBaseValue(config.armor);
+
+        if (witch.getAttribute(Attributes.KNOCKBACK_RESISTANCE) != null)
+            witch.getAttribute(Attributes.KNOCKBACK_RESISTANCE).setBaseValue(config.knockbackResistance);
+
+        if (witch.getAttribute(Attributes.ATTACK_KNOCKBACK) != null)
+            witch.getAttribute(Attributes.ATTACK_KNOCKBACK).setBaseValue(config.attackKnockback);
+
+        if (witch.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
+            witch.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE).setBaseValue(config.reinforcementChance);
+
         witch.setHealth(config.health);
 
         if (config.fireImmune)
@@ -86,29 +107,8 @@ public class WitchEvents {
 
         if (config.glowing)
             witch.setGlowingTag(true);
-
-        if (random.nextDouble() < config.randomArmorChance)
-            ArmorUtil.equipRandomArmor(witch, random, 0.4f);
     }
 
-    @SubscribeEvent
-    public void onDamaged(LivingDamageEvent.Post event) {
-
-        if (!(event.getEntity() instanceof Witch witch))
-            return;
-
-        if (!(witch.level() instanceof ServerLevel level))
-            return;
-
-        WitchConfig config = ModConfigs.getWitch();
-
-        ReinforcementUtil.trySpawnReinforcement(
-                witch,
-                level,
-                config.reinforcementChance,
-                4
-        );
-    }
 
     @SubscribeEvent
     public void onTick(EntityTickEvent.Post event) {

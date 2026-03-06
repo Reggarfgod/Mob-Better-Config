@@ -99,6 +99,17 @@ public class SilverfishEvents {
             silverfish.getAttribute(Attributes.ATTACK_DAMAGE)
                     .setBaseValue(config.attackDamage);
 
+        if (silverfish.getAttribute(Attributes.ARMOR) != null)
+            silverfish.getAttribute(Attributes.ARMOR).setBaseValue(config.armor);
+
+        if (silverfish.getAttribute(Attributes.KNOCKBACK_RESISTANCE) != null)
+            silverfish.getAttribute(Attributes.KNOCKBACK_RESISTANCE).setBaseValue(config.knockbackResistance);
+
+        if (silverfish.getAttribute(Attributes.ATTACK_KNOCKBACK) != null)
+            silverfish.getAttribute(Attributes.ATTACK_KNOCKBACK).setBaseValue(config.attackKnockback);
+        if (silverfish.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
+            silverfish.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE).setBaseValue(config.reinforcementChance);
+
         silverfish.setHealth((float) config.health);
 
         if (config.fireImmune)
@@ -135,25 +146,6 @@ public class SilverfishEvents {
                 level,
                 silverfish,
                 config.lootMultiplier
-        );
-    }
-
-    @SubscribeEvent
-    public void onDamaged(LivingDamageEvent.Post event) {
-
-        if (!(event.getEntity() instanceof Silverfish silverfish))
-            return;
-
-        if (!(silverfish.level() instanceof ServerLevel level))
-            return;
-
-        SilverfishConfig config = ModConfigs.getSilverfish();
-
-        ReinforcementUtil.trySpawnReinforcement(
-                silverfish,
-                level,
-                config.reinforcementChance,
-                4
         );
     }
 }

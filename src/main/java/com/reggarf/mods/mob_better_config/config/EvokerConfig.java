@@ -12,6 +12,12 @@ public class EvokerConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public double health = 24.0D;
     @ConfigEntry.Gui.Tooltip
+    public float armor= 2.0F;
+    @ConfigEntry.Gui.Tooltip
+    public double knockbackResistance = 0.6;
+    @ConfigEntry.Gui.Tooltip
+    public double attackKnockback = 0.0;
+    @ConfigEntry.Gui.Tooltip
     public double movementSpeed = 0.5D;
     @ConfigEntry.Gui.Tooltip
     public double followRange = 12.0D;

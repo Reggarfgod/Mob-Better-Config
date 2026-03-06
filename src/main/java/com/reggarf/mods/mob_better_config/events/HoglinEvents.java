@@ -99,6 +99,9 @@ public class HoglinEvents {
             hoglin.getAttribute(Attributes.ARMOR)
                     .setBaseValue(config.armor);
 
+        if (hoglin.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
+            hoglin.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE).setBaseValue(config.reinforcementChance);
+
         hoglin.setHealth((float) config.health);
 
         if (config.fireImmune)
@@ -153,25 +156,6 @@ public class HoglinEvents {
                 level,
                 hoglin,
                 config.lootMultiplier
-        );
-    }
-
-    @SubscribeEvent
-    public void onDamaged(LivingDamageEvent.Post event) {
-
-        if (!(event.getEntity() instanceof Hoglin hoglin))
-            return;
-
-        if (!(hoglin.level() instanceof ServerLevel level))
-            return;
-
-        HoglinConfig config = ModConfigs.getHoglin();
-
-        ReinforcementUtil.trySpawnReinforcement(
-                hoglin,
-                level,
-                config.reinforcementChance,
-                4
         );
     }
 }

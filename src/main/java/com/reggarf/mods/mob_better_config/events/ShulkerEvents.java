@@ -78,6 +78,17 @@ public class ShulkerEvents {
             shulker.getAttribute(Attributes.MAX_HEALTH)
                     .setBaseValue(config.health);
 
+        if (shulker.getAttribute(Attributes.ARMOR) != null)
+            shulker.getAttribute(Attributes.ARMOR).setBaseValue(config.armor);
+
+        if (shulker.getAttribute(Attributes.KNOCKBACK_RESISTANCE) != null)
+            shulker.getAttribute(Attributes.KNOCKBACK_RESISTANCE).setBaseValue(config.knockbackResistance);
+
+        if (shulker.getAttribute(Attributes.ATTACK_KNOCKBACK) != null)
+            shulker.getAttribute(Attributes.ATTACK_KNOCKBACK).setBaseValue(config.attackKnockback);
+        if (shulker.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
+            shulker.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE).setBaseValue(config.reinforcementChance);
+
         shulker.setHealth((float) config.health);
 
         if (config.fireImmune)
@@ -238,25 +249,4 @@ public class ShulkerEvents {
         );
     }
 
-    // =====================================================
-    // REINFORCEMENT
-    // =====================================================
-    @SubscribeEvent
-    public void onDamaged(net.neoforged.neoforge.event.entity.living.LivingDamageEvent.Post event) {
-
-        if (!(event.getEntity() instanceof Shulker shulker))
-            return;
-
-        if (!(shulker.level() instanceof ServerLevel level))
-            return;
-
-        ShulkerConfig config = ModConfigs.getShulker();
-
-        ReinforcementUtil.trySpawnReinforcement(
-                shulker,
-                level,
-                config.reinforcementChance,
-                4
-        );
-    }
 }
