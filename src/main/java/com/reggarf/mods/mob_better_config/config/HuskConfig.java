@@ -7,6 +7,7 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 @Config(name = "configurable_husk")
 public class HuskConfig implements ConfigData {
 
+
     @ConfigEntry.Gui.Tooltip
     public boolean CustomName = true;
     @ConfigEntry.Gui.Tooltip

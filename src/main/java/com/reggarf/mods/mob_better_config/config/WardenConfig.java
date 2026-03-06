@@ -24,8 +24,6 @@ public class WardenConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public double followRange = 50.0D;
 
-
-    // Sonic Boom
     @ConfigEntry.Gui.Tooltip
     public double sonicBoomDamageMultiplier = 1.0D;
     @ConfigEntry.Gui.Tooltip
@@ -57,15 +55,12 @@ public class WardenConfig implements ConfigData {
     public int spawnMultiplier = 1;
 
 
-    // Reinforcement
-    @ConfigEntry.Gui.Tooltip
-    public double reinforcementChance = 0.0D;
     // Loot
     @ConfigEntry.Gui.Tooltip
     public double lootMultiplier = 1.0D;
     // Behavior
     @ConfigEntry.Gui.Tooltip
-    public boolean fireImmune = true;
+    public boolean fireImmune = false;
     @ConfigEntry.Gui.Tooltip
     public boolean glowing = false;
 

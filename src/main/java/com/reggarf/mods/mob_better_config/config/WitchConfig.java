@@ -35,8 +35,7 @@ public class WitchConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public double reinforcementChance = 0.1D;
     @ConfigEntry.Gui.Tooltip
-    public double lootMultiplier = 1.0D; // 1.0 = normal drops
-
+    public double lootMultiplier = 1.0D;
     @ConfigEntry.Gui.Tooltip
     public boolean bossMode = false;
 

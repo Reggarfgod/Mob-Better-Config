@@ -63,7 +63,6 @@ public class ZombieVillagerConfig implements ConfigData {
 
     @ConfigEntry.Gui.Tooltip
     public double bossXpMultiplier = 3.0;
-
     @ConfigEntry.Gui.Tooltip
     public double bossLootMultiplier = 2.0;
 }

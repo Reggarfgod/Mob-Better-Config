@@ -12,101 +12,132 @@ public class ModConfigs {
         ROOT = AutoConfig.getConfigHolder(MobBetterConfigRoot.class).getConfig();
     }
 
+
     public static ZombieConfig getZombie() {
-        return ROOT.zombie;
+        return ROOT.overworld.zombie;
     }
+
     public static SkeletonConfig getSkeleton() {
-        return ROOT.skeleton;
+        return ROOT.overworld.skeleton;
     }
+
     public static ZombieVillagerConfig getZombieVillager() {
-        return ROOT.zombieVillager;
+        return ROOT.overworld.zombievillager;
     }
+
     public static WitchConfig getWitch() {
-        return ROOT.witch;
+        return ROOT.overworld.witch;
     }
+
     public static SpiderConfig getSpider() {
-        return ROOT.spider;
+        return ROOT.overworld.spider;
     }
+
     public static CaveSpiderConfig getCaveSpider() {
-        return ROOT.caveSpider;
+        return ROOT.overworld.caveSpider;
     }
+
     public static CreeperConfig getCreeper() {
-        return ROOT.creeper;
+        return ROOT.overworld.creeper;
     }
-    public static WardenConfig getWarden() {
-        return ROOT.warden;
-    }
+
     public static VindicatorConfig getVindicator() {
-        return ROOT.vindicator;
+        return ROOT.overworld.vindicator;
     }
+
     public static StrayConfig getStray() {
-        return ROOT.stray;
+        return ROOT.overworld.stray;
     }
+
     public static SlimeConfig getSlime() {
-        return ROOT.slime;
+        return ROOT.overworld.slime;
     }
+
     public static HuskConfig getHusk() {
-        return ROOT.husk;
+        return ROOT.overworld.husk;
     }
+
     public static PillagerConfig getPillager() {
-        return ROOT.pillager;
+        return ROOT.overworld.pillager;
     }
+
     public static PhantomConfig getPhantom() {
-        return ROOT.phantom;
+        return ROOT.overworld.phantom;
     }
+
     public static EndermanConfig getEnderman() {
-        return ROOT.enderman;
+        return ROOT.overworld.enderman;
     }
-    public static WitherSkeletonConfig getWitherSkeleton() {
-        return ROOT.wither_skeleton;
-    }
+
     public static DrownedConfig getDrowned() {
-        return ROOT.drowned;
+        return ROOT.overworld.drowned;
     }
-    public static MagmaCubeConfig getMagmaCube() {
-        return ROOT.magma_cube;
-    }
-    public static BlazeConfig getBlaze() {
-        return ROOT.blaze;
-    }
-    public static GhastConfig getGhast() {
-        return ROOT.ghast;
-    }
+
     public static EvokerConfig getEvoker() {
-        return ROOT.evoker;
+        return ROOT.overworld.evoker;
     }
-//  public static VexConfig getVex() { return ROOT.vex; }
+
     public static RavagerConfig getRavager() {
-    return ROOT.ravager;
+        return ROOT.overworld.ravager;
     }
-    public static ShulkerConfig getShulker() {
-        return ROOT.shulker;
-    }
+
     public static SilverfishConfig getSilverfish() {
-        return ROOT.silverfish;
+        return ROOT.overworld.silverfish;
     }
+
     public static GuardianConfig getGuardian() {
-        return ROOT.guardian;
+        return ROOT.overworld.guardian;
     }
-    public static ElderGuardianConfig getElderGuardian() {
-        return ROOT.elderguardian;
+
+    public static WitherSkeletonConfig getWitherSkeleton() {
+        return ROOT.nether.wither_skeleton;
     }
-    public static WitherConfig getWither() {
-        return ROOT.wither;
+
+    public static MagmaCubeConfig getMagmaCube() {
+        return ROOT.nether.magma_cube;
     }
-    public static EnderDragonConfig getEnderDragon() {
-        return ROOT.enderdragon;
+
+    public static BlazeConfig getBlaze() {
+        return ROOT.nether.blaze;
     }
+
+    public static GhastConfig getGhast() {
+        return ROOT.nether.ghast;
+    }
+
     public static HoglinConfig getHoglin() {
-        return ROOT.hoglin;
+        return ROOT.nether.hoglin;
     }
+
     public static ZoglinConfig getZoglin() {
-        return ROOT.zoglin;
+        return ROOT.nether.zoglin;
     }
+
     public static PiglinBruteConfig getPiglinBrute() {
-        return ROOT.piglinbrute;
+        return ROOT.nether.piglinbrute;
     }
+
     public static ZombifiedPiglinConfig getZombifiedPiglin() {
-        return ROOT.piglin;
+        return ROOT.nether.piglin;
+    }
+
+    public static ShulkerConfig getShulker() {
+        return ROOT.end.shulker;
+    }
+
+    public static WardenConfig getWarden() {
+        return ROOT.bosses.warden;
+    }
+
+    public static ElderGuardianConfig getElderGuardian() {
+        return ROOT.bosses.elderguardian;
+    }
+
+    public static WitherConfig getWither() {
+        return ROOT.bosses.wither;
+    }
+
+    public static EnderDragonConfig getEnderDragon() {
+        return ROOT.bosses.enderdragon;
     }
 }

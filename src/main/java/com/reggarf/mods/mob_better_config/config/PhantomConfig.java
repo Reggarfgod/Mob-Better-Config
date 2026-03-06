@@ -6,9 +6,9 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
 @Config(name = "configurable_phantom")
 public class PhantomConfig implements ConfigData {
+
     @ConfigEntry.Gui.Tooltip
     public boolean CustomName = true;
-
     public double health = 20.0D;
     @ConfigEntry.Gui.Tooltip
     public float armor= 2.0F;

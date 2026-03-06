@@ -7,6 +7,7 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 @Config(name = "configurable_shulker")
 public class ShulkerConfig implements ConfigData {
 
+
     @ConfigEntry.Gui.Tooltip
     public boolean CustomName = true;
     @ConfigEntry.Gui.Tooltip

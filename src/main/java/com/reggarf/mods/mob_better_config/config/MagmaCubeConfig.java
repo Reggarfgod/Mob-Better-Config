@@ -7,7 +7,6 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 @Config(name = "configurable_magma_cube")
 public class MagmaCubeConfig implements ConfigData {
 
-
     @ConfigEntry.Gui.Tooltip
     public boolean CustomName = true;
 

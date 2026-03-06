@@ -9,7 +9,6 @@ public class StrayConfig implements ConfigData {
 
     @ConfigEntry.Gui.Tooltip
     public boolean CustomName = true;
-
     public float health = 20.0F;
     @ConfigEntry.Gui.Tooltip
     public double armor = 4.0D;

@@ -27,7 +27,6 @@ public class WitherConfig implements ConfigData {
 
     @ConfigEntry.Gui.Tooltip
     public double armor = 4.0D;
-
     @ConfigEntry.Gui.Tooltip
     public boolean enableBlockBreaking = true;
 

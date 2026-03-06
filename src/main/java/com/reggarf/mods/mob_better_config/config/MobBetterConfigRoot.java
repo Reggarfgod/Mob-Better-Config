@@ -8,102 +8,126 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 public class MobBetterConfigRoot implements ConfigData {
 
     @ConfigEntry.Gui.CollapsibleObject
-    public ZombieConfig zombie = new ZombieConfig();
+    public OverworldMobs overworld = new OverworldMobs();
 
     @ConfigEntry.Gui.CollapsibleObject
-    public SkeletonConfig skeleton = new SkeletonConfig();
+    public NetherMobs nether = new NetherMobs();
 
     @ConfigEntry.Gui.CollapsibleObject
-    public ZombieVillagerConfig zombieVillager = new ZombieVillagerConfig();
+    public EndMobs end = new EndMobs();
 
     @ConfigEntry.Gui.CollapsibleObject
-    public WitchConfig witch = new WitchConfig();
+    public BossMobs bosses = new BossMobs();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public SpiderConfig spider = new SpiderConfig();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public CaveSpiderConfig caveSpider = new CaveSpiderConfig();
+    public static class OverworldMobs {
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public CreeperConfig creeper = new CreeperConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public ZombieConfig zombie = new ZombieConfig();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public WardenConfig warden = new WardenConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public SkeletonConfig skeleton = new SkeletonConfig();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public VindicatorConfig vindicator = new VindicatorConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public ZombieVillagerConfig zombievillager = new ZombieVillagerConfig();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public StrayConfig stray = new StrayConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public WitchConfig witch = new WitchConfig();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public SlimeConfig slime = new SlimeConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public SpiderConfig spider = new SpiderConfig();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public HuskConfig husk = new HuskConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public CaveSpiderConfig caveSpider = new CaveSpiderConfig();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public PillagerConfig pillager = new PillagerConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public CreeperConfig creeper = new CreeperConfig();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public PhantomConfig phantom= new PhantomConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public VindicatorConfig vindicator = new VindicatorConfig();
 
-    @ConfigEntry.Gui.CollapsibleObject
+        @ConfigEntry.Gui.CollapsibleObject
+        public StrayConfig stray = new StrayConfig();
 
-    public EndermanConfig enderman= new EndermanConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public SlimeConfig slime = new SlimeConfig();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public WitherSkeletonConfig wither_skeleton= new WitherSkeletonConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public HuskConfig husk = new HuskConfig();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public DrownedConfig drowned= new DrownedConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public PillagerConfig pillager = new PillagerConfig();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public MagmaCubeConfig magma_cube= new MagmaCubeConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public PhantomConfig phantom = new PhantomConfig();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public BlazeConfig blaze= new BlazeConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public EndermanConfig enderman = new EndermanConfig();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public GhastConfig ghast= new GhastConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public DrownedConfig drowned = new DrownedConfig();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public EvokerConfig evoker= new EvokerConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public EvokerConfig evoker = new EvokerConfig();
 
-//    @ConfigEntry.Gui.CollapsibleObject
-//    public VexConfig vex= new VexConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public RavagerConfig ravager = new RavagerConfig();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public RavagerConfig ravager= new RavagerConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public SilverfishConfig silverfish = new SilverfishConfig();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public ShulkerConfig shulker= new ShulkerConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public GuardianConfig guardian = new GuardianConfig();
+    }
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public SilverfishConfig silverfish= new SilverfishConfig();
+    public static class NetherMobs {
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public GuardianConfig guardian= new GuardianConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public WitherSkeletonConfig wither_skeleton = new WitherSkeletonConfig();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public ElderGuardianConfig elderguardian= new ElderGuardianConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public MagmaCubeConfig magma_cube = new MagmaCubeConfig();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public WitherConfig wither= new WitherConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public BlazeConfig blaze = new BlazeConfig();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public EnderDragonConfig enderdragon= new EnderDragonConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public GhastConfig ghast = new GhastConfig();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public HoglinConfig hoglin= new HoglinConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public HoglinConfig hoglin = new HoglinConfig();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public ZoglinConfig zoglin= new ZoglinConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public ZoglinConfig zoglin = new ZoglinConfig();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public PiglinBruteConfig piglinbrute= new PiglinBruteConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public PiglinBruteConfig piglinbrute = new PiglinBruteConfig();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public ZombifiedPiglinConfig piglin= new ZombifiedPiglinConfig();
+        @ConfigEntry.Gui.CollapsibleObject
+        public ZombifiedPiglinConfig piglin = new ZombifiedPiglinConfig();
+    }
+
+
+    public static class EndMobs {
+
+        @ConfigEntry.Gui.CollapsibleObject
+        public ShulkerConfig shulker = new ShulkerConfig();
+    }
+
+
+    public static class BossMobs {
+
+        @ConfigEntry.Gui.CollapsibleObject
+        public WardenConfig warden = new WardenConfig();
+
+        @ConfigEntry.Gui.CollapsibleObject
+        public ElderGuardianConfig elderguardian = new ElderGuardianConfig();
+
+        @ConfigEntry.Gui.CollapsibleObject
+        public WitherConfig wither = new WitherConfig();
+
+        @ConfigEntry.Gui.CollapsibleObject
+        public EnderDragonConfig enderdragon = new EnderDragonConfig();
+    }
+
 }

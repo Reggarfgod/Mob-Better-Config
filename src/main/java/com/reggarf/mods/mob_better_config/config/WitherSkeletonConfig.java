@@ -7,6 +7,7 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 @Config(name = "configurable_wither_skeleton")
 public class WitherSkeletonConfig implements ConfigData {
 
+
     @ConfigEntry.Gui.Tooltip
     public boolean CustomName = true;
     @ConfigEntry.Gui.Tooltip

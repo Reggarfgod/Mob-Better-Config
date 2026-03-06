@@ -155,13 +155,6 @@ public class WardenEvents {
                 config.defaultAnger + config.onHurtAngerBoost,
                 false
         );
-
-        ReinforcementUtil.trySpawnReinforcement(
-                warden,
-                level,
-                config.reinforcementChance,
-                8
-        );
     }
 
 

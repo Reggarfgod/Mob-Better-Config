@@ -11,7 +11,6 @@ public class PillagerConfig implements ConfigData {
     public boolean CustomName = true;
     @ConfigEntry.Gui.Tooltip
     public double health = 24.0D;
-
     @ConfigEntry.Gui.Tooltip
     public double armor = 4.0D;
     @ConfigEntry.Gui.Tooltip

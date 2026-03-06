@@ -41,12 +41,10 @@ public class RavagerConfig implements ConfigData {
     public double lootMultiplier = 1.0D;
     @ConfigEntry.Gui.Tooltip
     public double reinforcementChance = 0.0D;
-
     @ConfigEntry.Gui.Tooltip
     public boolean fireImmune = false;
     @ConfigEntry.Gui.Tooltip
     public boolean glowing = false;
-
     @ConfigEntry.Gui.Tooltip
     public boolean bossMode = false;
     @ConfigEntry.Gui.Tooltip
@@ -57,7 +55,6 @@ public class RavagerConfig implements ConfigData {
     public double bossHealthMultiplier = 3.0D;
     @ConfigEntry.Gui.Tooltip
     public double bossDamageMultiplier = 2.0D;
-
     @ConfigEntry.Gui.Tooltip
     public double bossXpMultiplier = 5.0D;
     @ConfigEntry.Gui.Tooltip

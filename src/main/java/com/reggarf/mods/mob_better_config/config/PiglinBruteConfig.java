@@ -16,7 +16,6 @@ public class PiglinBruteConfig {
     @ConfigEntry.Gui.Tooltip
     public int spawnMultiplier = 1;
 
-    // Stats (Vanilla: 40 HP, 6 Damage)
     @ConfigEntry.Gui.Tooltip
     public double health = 40.0;
     @ConfigEntry.Gui.Tooltip

@@ -9,7 +9,6 @@ public class SpiderConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public boolean CustomName = true;
 
-    // Attributes
     public float health = 16.0F;
     @ConfigEntry.Gui.Tooltip
     public double armor = 4.0D;
@@ -21,7 +20,6 @@ public class SpiderConfig implements ConfigData {
     public double movementSpeed = 0.3D;
     @ConfigEntry.Gui.Tooltip
     public double followRange = 30.0D;
-
     @ConfigEntry.Gui.Tooltip
     public boolean canBreakDoors = false;
 

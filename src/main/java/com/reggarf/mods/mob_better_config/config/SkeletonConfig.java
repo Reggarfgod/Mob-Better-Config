@@ -8,7 +8,6 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 public class SkeletonConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public boolean CustomName = true;
-
     public float health = 20.0F;
     @ConfigEntry.Gui.Tooltip
     public double armor = 4.0D;

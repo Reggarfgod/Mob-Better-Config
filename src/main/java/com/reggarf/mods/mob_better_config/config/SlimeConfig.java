@@ -11,7 +11,6 @@ public class SlimeConfig implements ConfigData {
 
     @ConfigEntry.Gui.Tooltip
     public double healthMultiplier = 1.0D;
-
     @ConfigEntry.Gui.Tooltip
     public double attackDamageMultiplier = 1.0D;
 

@@ -50,7 +50,6 @@ public class ZombieConfig implements ConfigData {
     public double armorChance = 0.3D;
     @ConfigEntry.Gui.Tooltip
     public double lootMultiplier = 1.0D;
-
     @ConfigEntry.Gui.Tooltip
     public boolean bossMode = false;
 

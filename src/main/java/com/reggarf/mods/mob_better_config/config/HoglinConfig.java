@@ -6,10 +6,6 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 @Config(name = "configurable_hoglin")
 public class HoglinConfig {
 
-    // ===============================
-    // General
-    // ===============================
-
     @ConfigEntry.Gui.Tooltip
     public boolean customName = true;
 
@@ -22,7 +18,7 @@ public class HoglinConfig {
     @ConfigEntry.Gui.Tooltip
     public int spawnMultiplier = 1;
 
-    // Stats (Vanilla: 40 HP, 6 Damage)
+
     @ConfigEntry.Gui.Tooltip
     public double health = 40.0;
     @ConfigEntry.Gui.Tooltip
@@ -43,36 +39,17 @@ public class HoglinConfig {
     @ConfigEntry.Gui.Tooltip
     public double attackDamageMultiplier = 1.0;
 
-    // ===============================
-    // Hoglin Special Mechanics
-    // ===============================
-
     @ConfigEntry.Gui.Tooltip
     public boolean disableZombification = false;
 
     @ConfigEntry.Gui.Tooltip
-    public double convertToZoglinChance = 0.0;
-
-    // ===============================
-    // Reinforcements
-    // ===============================
-
-    @ConfigEntry.Gui.Tooltip
     public double reinforcementChance = 0.0;
-
-    // ===============================
-    // Loot / XP
-    // ===============================
 
     @ConfigEntry.Gui.Tooltip
     public double xpMultiplier = 1.0;
 
     @ConfigEntry.Gui.Tooltip
     public double lootMultiplier = 1.0;
-
-    // ===============================
-    // Boss System
-    // ===============================
 
     @ConfigEntry.Gui.Tooltip
     public boolean bossMode = false;

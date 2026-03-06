@@ -66,7 +66,6 @@ public class ZoglinConfig implements ConfigData {
 
     @ConfigEntry.Gui.Tooltip
     public double bossHealthMultiplier = 3.0;
-
     @ConfigEntry.Gui.Tooltip
     public double bossDamageMultiplier = 2.0;
 

@@ -23,10 +23,6 @@ public class ZombifiedPiglinConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public int spawnMultiplier = 1;
 
-    // ===============================
-    // Stats (Vanilla Values)
-    // ===============================
-
     @ConfigEntry.Gui.Tooltip
     public double health = 40.0;
 
