@@ -39,7 +39,7 @@ public class SilverfishConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public boolean glowing = false;
     @ConfigEntry.Gui.Tooltip
-    public boolean bossMode = false;
+    public boolean bossMode = true;
     @ConfigEntry.Gui.Tooltip
     public boolean forceAllBoss = false;
     @ConfigEntry.Gui.Tooltip

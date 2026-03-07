@@ -7,9 +7,6 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 @Config(name = "piglin")
 public class ZombifiedPiglinConfig implements ConfigData {
 
-    // ===============================
-    // General
-    // ===============================
 
     @ConfigEntry.Gui.Tooltip
     public boolean customName = true;
@@ -44,26 +41,14 @@ public class ZombifiedPiglinConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public double attackDamageMultiplier = 1.0;
 
-    // ===============================
-    // Special Mechanics
-    // ===============================
-
     @ConfigEntry.Gui.Tooltip
     public boolean allowBaby = true;
 
     @ConfigEntry.Gui.Tooltip
     public double babyChance = 0.0;
 
-    // ===============================
-    // Reinforcements
-    // ===============================
-
     @ConfigEntry.Gui.Tooltip
     public double reinforcementChance = 0.0;
-
-    // ===============================
-    // Loot / XP
-    // ===============================
 
     @ConfigEntry.Gui.Tooltip
     public double xpMultiplier = 1.0;
@@ -71,12 +56,8 @@ public class ZombifiedPiglinConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public double lootMultiplier = 1.0;
 
-    // ===============================
-    // Boss System
-    // ===============================
-
     @ConfigEntry.Gui.Tooltip
-    public boolean bossMode = false;
+    public boolean bossMode = true;
 
     @ConfigEntry.Gui.Tooltip
     public boolean forceAllBoss = false;

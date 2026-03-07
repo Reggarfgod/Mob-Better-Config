@@ -40,7 +40,7 @@ public class BlazeConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public double lootMultiplier = 1.0D;
     @ConfigEntry.Gui.Tooltip
-    public boolean bossMode = false;
+    public boolean bossMode = true;
     @ConfigEntry.Gui.Tooltip
     public boolean forceAllBoss = false;
     @ConfigEntry.Gui.Tooltip

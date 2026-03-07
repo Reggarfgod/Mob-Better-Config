@@ -52,7 +52,7 @@ public class HoglinConfig {
     public double lootMultiplier = 1.0;
 
     @ConfigEntry.Gui.Tooltip
-    public boolean bossMode = false;
+    public boolean bossMode = true;
 
     @ConfigEntry.Gui.Tooltip
     public boolean forceAllBoss = false;

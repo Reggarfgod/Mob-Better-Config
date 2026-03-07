@@ -1,5 +1,5 @@
 {
-
+  "text.autoconfig.mob_better_config.title": "Mob Better Configuration",
   "text.autoconfig.mob_better_config.option.overworld": "Overworld Mobs",
   "text.autoconfig.mob_better_config.option.nether": "Nether Mobs",
   "text.autoconfig.mob_better_config.option.end": "End Mobs",

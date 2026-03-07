@@ -74,7 +74,7 @@ public class GuardianConfig implements ConfigData {
     // ===============================
 
     @ConfigEntry.Gui.Tooltip
-    public boolean bossMode = false;
+    public boolean bossMode = true;
 
     @ConfigEntry.Gui.Tooltip
     public boolean forceAllBoss = false;

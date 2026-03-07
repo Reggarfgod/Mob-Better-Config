@@ -72,7 +72,7 @@ public class SlimeConfig implements ConfigData {
     public boolean despawnInPeaceful = true;
 
     @ConfigEntry.Gui.Tooltip
-    public boolean bossMode = false;
+    public boolean bossMode = true;
 
     @ConfigEntry.Gui.Tooltip
     public boolean forceAllBoss = false;

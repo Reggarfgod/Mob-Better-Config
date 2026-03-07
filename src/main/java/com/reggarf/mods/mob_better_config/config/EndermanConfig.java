@@ -59,7 +59,7 @@ public class EndermanConfig implements ConfigData {
         @ConfigEntry.Gui.Tooltip
         public boolean glowing = false;          // Vanilla: false
         @ConfigEntry.Gui.Tooltip
-        public boolean bossMode = false;         // Vanilla: false
+        public boolean bossMode = true;         // Vanilla: false
         @ConfigEntry.Gui.Tooltip
         public boolean forceAllBoss = false;     // Vanilla: false
         @ConfigEntry.Gui.Tooltip

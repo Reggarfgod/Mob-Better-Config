@@ -47,7 +47,7 @@ public class StrayConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public double armorChance = 0.15D;
     @ConfigEntry.Gui.Tooltip
-    public boolean bossMode = false;
+    public boolean bossMode = true;
 
     @ConfigEntry.Gui.Tooltip
     public boolean forceAllBoss = false;

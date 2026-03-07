@@ -55,7 +55,7 @@ public class HuskConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public int waterConversionTime = 300; // Vanilla zombie default ~300 ticks
     @ConfigEntry.Gui.Tooltip
-    public boolean bossMode = false;
+    public boolean bossMode = true;
     @ConfigEntry.Gui.Tooltip
     public boolean forceAllBoss = false;
     @ConfigEntry.Gui.Tooltip
