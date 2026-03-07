@@ -63,7 +63,7 @@ public class EndermanConfig implements ConfigData {
         @ConfigEntry.Gui.Tooltip
         public boolean forceAllBoss = false;     // Vanilla: false
         @ConfigEntry.Gui.Tooltip
-        public double bossChance = 0.05D;        // Custom system default
+        public double bossChance = 0.01D;        // Custom system default
         @ConfigEntry.Gui.Tooltip
         public double bossHealthMultiplier = 3.0D;
         @ConfigEntry.Gui.Tooltip
@@ -73,7 +73,7 @@ public class EndermanConfig implements ConfigData {
         @ConfigEntry.Gui.Tooltip
         public double bossLootMultiplier = 2.0D;
         @ConfigEntry.Gui.Tooltip
-        public boolean bossGlowing = true;
+        public boolean bossGlowing = false;
         @ConfigEntry.Gui.Tooltip
         public boolean bossCustomName = true;
     }

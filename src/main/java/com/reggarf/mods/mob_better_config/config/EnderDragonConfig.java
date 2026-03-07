@@ -90,7 +90,7 @@ public class EnderDragonConfig implements ConfigData {
     public boolean forceAllBoss = false;
 
     @ConfigEntry.Gui.Tooltip
-    public double bossChance = 0.2D;
+    public double bossChance = 0.01D;
 
     @ConfigEntry.Gui.Tooltip
     public double bossHealthMultiplier = 2.0D;

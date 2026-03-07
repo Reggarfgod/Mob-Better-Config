@@ -61,7 +61,7 @@ public class GhastConfig implements ConfigData {
     public boolean forceAllBoss = false;
 
     @ConfigEntry.Gui.Tooltip
-    public double bossChance = 0.09D;
+    public double bossChance = 0.01D;
 
     @ConfigEntry.Gui.Tooltip
     public double bossHealthMultiplier = 4.0D;
@@ -75,7 +75,7 @@ public class GhastConfig implements ConfigData {
     public double bossLootMultiplier = 2.0D;
 
     @ConfigEntry.Gui.Tooltip
-    public boolean bossGlowing = true;
+    public boolean bossGlowing = false;
 
     @ConfigEntry.Gui.Tooltip
     public boolean bossCustomName = true;

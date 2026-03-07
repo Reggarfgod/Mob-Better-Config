@@ -4,20 +4,17 @@ import com.reggarf.mods.mob_better_config.ai.CustomBreakDoorGoal;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.ZombieConfig;
 import com.reggarf.mods.mob_better_config.util.*;
+
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Zombie;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.entity.monster.ZombifiedPiglin;
+
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.client.event.RenderLivingEvent;
-import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
@@ -27,12 +24,14 @@ public class ZombieEvents {
 
     @SubscribeEvent
     public void onZombieJoin(FinalizeSpawnEvent event) {
-        if (!(event.getEntity() instanceof Zombie zombie))
+
+        if (!(event.getEntity() instanceof Zombie zombie) || zombie instanceof ZombifiedPiglin)
             return;
 
         applyConfig(zombie);
 
         ZombieConfig config = ModConfigs.getZombie();
+
         BossUtil.tryApplyBoss(
                 zombie,
                 config.bossMode,
@@ -45,9 +44,13 @@ public class ZombieEvents {
                 config.bossXpMultiplier,
                 config.bossLootMultiplier
         );
+
         if (zombie.level() instanceof ServerLevel level) {
+
             for (int i = 1; i < config.spawnMultiplier; i++) {
+
                 Zombie extra = new Zombie(EntityType.ZOMBIE, level);
+
                 extra.moveTo(
                         zombie.getX(),
                         zombie.getY(),
@@ -55,6 +58,7 @@ public class ZombieEvents {
                         zombie.getYRot(),
                         zombie.getXRot()
                 );
+
                 level.addFreshEntity(extra);
             }
         }
@@ -64,9 +68,11 @@ public class ZombieEvents {
 
         ZombieConfig config = ModConfigs.getZombie();
         RandomSource random = zombie.level().getRandom();
+
         if (config.CustomName) {
             MobNameUtil.applyRandomName(zombie);
         }
+
         if (zombie.getAttribute(Attributes.MAX_HEALTH) != null)
             zombie.getAttribute(Attributes.MAX_HEALTH).setBaseValue(config.health);
 
@@ -92,7 +98,9 @@ public class ZombieEvents {
 //                    .setBaseValue(config.armor);
 
         if (zombie.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE) != null)
-            zombie.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE).setBaseValue(config.reinforcementChance);
+            zombie.getAttribute(Attributes.SPAWN_REINFORCEMENTS_CHANCE)
+                    .setBaseValue(config.reinforcementChance);
+
         zombie.setHealth(config.health);
 
         if (config.glowing)
@@ -110,12 +118,15 @@ public class ZombieEvents {
         if (config.randomArmor && random.nextDouble() < config.armorChance) {
             ArmorUtil.equipRandomArmor(zombie, random, 0.5f);
         }
+
         applyDoorBreakMode(zombie, config);
     }
+
     private void applyDoorBreakMode(Zombie zombie, ZombieConfig config) {
 
         zombie.goalSelector.removeAllGoals(goal ->
                 goal.getClass().getName().contains("BreakDoor"));
+
         if (!config.canBreakDoors || config.doorBreakMode == 0) {
             zombie.setCanBreakDoors(false);
             return;
@@ -134,21 +145,26 @@ public class ZombieEvents {
             default -> breakTicks = 240;
         }
 
-        zombie.goalSelector.addGoal(1,
-                new CustomBreakDoorGoal(zombie, breakTicks));
+        zombie.goalSelector.addGoal(
+                1,
+                new CustomBreakDoorGoal(zombie, breakTicks)
+        );
     }
 
     @SubscribeEvent
     public void onZombieTick(EntityTickEvent.Post event) {
-        if (!(event.getEntity() instanceof Zombie zombie))
+
+        if (!(event.getEntity() instanceof Zombie zombie) || zombie instanceof ZombifiedPiglin)
             return;
 
         ZombieConfig config = ModConfigs.getZombie();
 
         if (!config.burnInDaylight) {
+
             if (zombie.isOnFire()) {
                 zombie.clearFire();
             }
+
             zombie.setRemainingFireTicks(0);
         }
 
@@ -159,18 +175,36 @@ public class ZombieEvents {
             zombie.setSprinting(true);
 
         if (config.rageMode) {
+
             if (zombie.getHealth() < zombie.getMaxHealth() * 0.3F) {
-                zombie.addEffect(new MobEffectInstance(
-                        MobEffects.MOVEMENT_SPEED, 40, 1, false, false));
-                zombie.addEffect(new MobEffectInstance(
-                        MobEffects.DAMAGE_BOOST, 40, 1, false, false));
+
+                zombie.addEffect(
+                        new MobEffectInstance(
+                                MobEffects.MOVEMENT_SPEED,
+                                40,
+                                1,
+                                false,
+                                false
+                        )
+                );
+
+                zombie.addEffect(
+                        new MobEffectInstance(
+                                MobEffects.DAMAGE_BOOST,
+                                40,
+                                1,
+                                false,
+                                false
+                        )
+                );
             }
         }
     }
+
     @SubscribeEvent
     public void onZombieDrops(LivingDropsEvent event) {
 
-        if (!(event.getEntity() instanceof Zombie zombie))
+        if (!(event.getEntity() instanceof Zombie zombie) || zombie instanceof ZombifiedPiglin)
             return;
 
         if (!(zombie.level() instanceof ServerLevel level))

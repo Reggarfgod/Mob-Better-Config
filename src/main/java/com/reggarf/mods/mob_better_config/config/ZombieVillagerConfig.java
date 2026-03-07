@@ -47,7 +47,7 @@ public class ZombieVillagerConfig implements ConfigData {
     public boolean forceAllBoss = false;
 
     @ConfigEntry.Gui.Tooltip
-    public double bossChance = 0.05;
+    public double bossChance = 0.01;
 
     @ConfigEntry.Gui.Tooltip
     public double bossHealthMultiplier = 3.0;
@@ -56,7 +56,7 @@ public class ZombieVillagerConfig implements ConfigData {
     public double bossDamageMultiplier = 2.0;
 
     @ConfigEntry.Gui.Tooltip
-    public boolean bossGlowing = true;
+    public boolean bossGlowing = false;
 
     @ConfigEntry.Gui.Tooltip
     public boolean bossCustomName = true;

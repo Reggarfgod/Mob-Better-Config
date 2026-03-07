@@ -68,13 +68,13 @@ public class WitherConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public boolean forceAllBoss = false;
     @ConfigEntry.Gui.Tooltip
-    public double bossChance = 0.2D;
+    public double bossChance = 0.01D;
     @ConfigEntry.Gui.Tooltip
     public double bossHealthMultiplier = 2.0D;
     @ConfigEntry.Gui.Tooltip
     public double bossDamageMultiplier = 2.0D;
     @ConfigEntry.Gui.Tooltip
-    public boolean bossGlowing = true;
+    public boolean bossGlowing = false;
     @ConfigEntry.Gui.Tooltip
     public boolean bossCustomName = true;
     @ConfigEntry.Gui.Tooltip

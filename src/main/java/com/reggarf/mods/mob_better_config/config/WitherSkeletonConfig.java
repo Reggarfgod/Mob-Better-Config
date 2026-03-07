@@ -49,7 +49,7 @@ public class WitherSkeletonConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public boolean forceAllBoss = false;
     @ConfigEntry.Gui.Tooltip
-    public double bossChance = 0.05D;
+    public double bossChance = 0.01D;
     @ConfigEntry.Gui.Tooltip
     public double bossHealthMultiplier = 3.0D;
     @ConfigEntry.Gui.Tooltip
@@ -59,7 +59,7 @@ public class WitherSkeletonConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public double bossLootMultiplier = 2.0D;
     @ConfigEntry.Gui.Tooltip
-    public boolean bossGlowing = true;
+    public boolean bossGlowing = false;
     @ConfigEntry.Gui.Tooltip
     public boolean bossCustomName = true;
 }
