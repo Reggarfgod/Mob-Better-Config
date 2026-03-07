@@ -1,6 +1,8 @@
 package com.reggarf.mods.mob_better_config;
 
 import com.mojang.logging.LogUtils;
+import com.reggarf.mods.better_lib.message.online.OnlineMessageLib;
+import com.reggarf.mods.mob_better_config.api.OnlineMessages;
 import com.reggarf.mods.mob_better_config.config.MobBetterConfigRoot;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.register.ModEventRegister;
@@ -30,6 +32,7 @@ public class Mob_better_config {
         ModConfigs.register();
         // Register events
         ModEventRegister.register();
+        OnlineMessageLib.registerPlugin(new OnlineMessages());
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
