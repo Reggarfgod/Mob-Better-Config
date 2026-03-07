@@ -1,21 +1,22 @@
 package com.reggarf.mods.mob_better_config.api;
 
 import com.reggarf.mods.better_lib.message.api.OnlineMessagePlugin;
+import com.reggarf.mods.mob_better_config.Mob_better_config;
 
 public class OnlineMessages implements OnlineMessagePlugin {
     @Override
     public String getModId() {
-        return "mycoolmod";
+        return Mob_better_config.MODID;
     }
 
     @Override
     public String getMessageUrl() {
-        return "https://raw.githubusercontent.com/Reggarfgod/World_First_Join_Message/refs/heads/CC/1.21.1/forge/messages.txt";
+        return "https://raw.githubusercontent.com/Reggarfgod/Mob-Better-Config/refs/heads/master/messages.txt?token=GHSAT0AAAAAADVZTHLS2FPZ5UAVYEV6U6AK2NMADIA";
     }
 
     @Override
     public String getClickableUrl() {
-        return "https://raw.githubusercontent.com/Reggarfgod/World_First_Join_Message/refs/heads/CC/1.21.1/forge/FETCH_URL.txt";
+        return "https://raw.githubusercontent.com/Reggarfgod/Mob-Better-Config/refs/heads/master/url.txt?token=GHSAT0AAAAAADVZTHLT67D34RCI2FNHJ4F42NMAEUQ";
     }
 
     @Override
