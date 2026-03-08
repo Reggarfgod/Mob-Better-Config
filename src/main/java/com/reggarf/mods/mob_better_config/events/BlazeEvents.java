@@ -11,7 +11,7 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.goal.Goal.Flag;
 import net.minecraft.world.entity.monster.Blaze;
-import net.minecraft.world.entity.projectile.SmallFireball;
+import net.minecraft.world.entity.projectile.hurtingprojectile.SmallFireball;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
@@ -213,7 +213,7 @@ public class BlazeEvents {
         if (!(event.getEntity() instanceof Blaze blaze))
             return;
 
-        if (blaze.level().isClientSide)
+        if (blaze.level().isClientSide())
             return;
 
         BlazeConfig config = ModConfigs.getBlaze();
@@ -225,7 +225,6 @@ public class BlazeEvents {
             double newY = motion.y * config.fallSlowMultiplier;
 
             blaze.setDeltaMovement(motion.x, newY, motion.z);
-            blaze.hasImpulse = true;
         }
 
         LivingEntity target = blaze.getTarget();
@@ -243,8 +242,6 @@ public class BlazeEvents {
                         current.y + boost,
                         current.z
                 );
-
-                blaze.hasImpulse = true;
             }
         }
     }

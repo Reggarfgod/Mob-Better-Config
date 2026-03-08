@@ -2,7 +2,8 @@ package com.reggarf.mods.mob_better_config.util;
 
 import com.reggarf.mods.mob_better_config.ai.CustomBreakDoorGoal;
 import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.monster.Zombie;
+import net.minecraft.world.entity.monster.zombie.Zombie;
+
 
 public class DoorBreakUtil {
 

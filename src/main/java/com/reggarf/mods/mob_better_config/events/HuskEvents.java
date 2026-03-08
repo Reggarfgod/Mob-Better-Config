@@ -9,10 +9,10 @@ import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.monster.Husk;
-import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.monster.zombie.Husk;
+import net.minecraft.world.entity.monster.zombie.Zombie;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
@@ -159,6 +159,9 @@ public class HuskEvents {
     @SubscribeEvent
     public void onEntityTick(EntityTickEvent.Post event) {
 
+        if (event.getEntity().level().isClientSide())
+            return;
+
         if (event.getEntity() instanceof LivingEntity target &&
                 NbtUtil.getBooleanSafe(target.getPersistentData(), HUNGER_TAG)) {
 
@@ -169,9 +172,9 @@ public class HuskEvents {
             if (target.hasEffect(MobEffects.HUNGER))
                 target.removeEffect(MobEffects.HUNGER);
 
-            if (config.enableHunger) {
+            if (config.enableHunger && target.level() instanceof ServerLevel level) {
 
-                float difficulty = target.level()
+                float difficulty = level
                         .getCurrentDifficultyAt(target.blockPosition())
                         .getEffectiveDifficulty();
 
@@ -185,7 +188,7 @@ public class HuskEvents {
             }
         }
 
-        // Husk Water Conversion
+        // HUSK WATER CONVERSION
         if (!(event.getEntity() instanceof Husk husk))
             return;
 
@@ -199,7 +202,7 @@ public class HuskEvents {
 
         var data = husk.getPersistentData();
 
-        if (husk.isInWater() || husk.level().isRainingAt(husk.blockPosition())) {
+        if (husk.isInWater() || level.isRainingAt(husk.blockPosition())) {
 
             int timer = NbtUtil.getIntSafe(data, "mbc_water_timer");
             timer++;

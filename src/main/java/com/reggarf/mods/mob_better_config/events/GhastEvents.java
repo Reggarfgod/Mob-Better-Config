@@ -7,7 +7,8 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Ghast;
-import net.minecraft.world.entity.projectile.LargeFireball;
+
+import net.minecraft.world.entity.projectile.hurtingprojectile.LargeFireball;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
@@ -117,7 +118,7 @@ public class GhastEvents {
         if (!(event.getEntity() instanceof Ghast ghast))
             return;
 
-        if (ghast.level().isClientSide)
+        if (ghast.level().isClientSide())
             return;
 
         GhastConfig config = ModConfigs.getGhast();

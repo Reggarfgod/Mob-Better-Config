@@ -1,7 +1,8 @@
 package com.reggarf.mods.mob_better_config.ai;
 
-import net.minecraft.world.entity.monster.Zombie;
+
 import net.minecraft.world.entity.ai.goal.BreakDoorGoal;
+import net.minecraft.world.entity.monster.zombie.Zombie;
 
 public class CustomBreakDoorGoal extends BreakDoorGoal {
 

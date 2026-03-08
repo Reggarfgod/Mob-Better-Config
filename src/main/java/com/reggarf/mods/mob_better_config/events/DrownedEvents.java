@@ -8,8 +8,8 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.monster.Drowned;
-import net.minecraft.world.entity.projectile.ThrownTrident;
+import net.minecraft.world.entity.monster.zombie.Drowned;
+import net.minecraft.world.entity.projectile.arrow.ThrownTrident;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -181,7 +181,7 @@ public class DrownedEvents {
         if (!(event.getEntity() instanceof Drowned drowned))
             return;
 
-        if (drowned.level().isClientSide)
+        if (drowned.level().isClientSide())
             return;
 
         DrownedConfig config = ModConfigs.getDrowned();
@@ -258,7 +258,7 @@ public class DrownedEvents {
         if (!(trident.getOwner() instanceof Drowned drowned))
             return;
 
-        if (drowned.level().isClientSide)
+        if (drowned.level().isClientSide())
             return;
 
         DrownedConfig config = ModConfigs.getDrowned();

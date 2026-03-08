@@ -10,8 +10,9 @@ import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.animal.sheep.Sheep;
-import net.minecraft.world.entity.monster.Evoker;
+
 import net.minecraft.world.entity.monster.Vex;
+import net.minecraft.world.entity.monster.illager.Evoker;
 import net.minecraft.world.entity.projectile.EvokerFangs;
 import net.minecraft.world.item.DyeColor;
 

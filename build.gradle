@@ -99,9 +99,9 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 
 dependencies {
-    implementation "curse.maven:cloth-config-348521:6351757"
-    implementation "curse.maven:jade-324717:6524708"
-    implementation "curse.maven:better-library-1150683:7359503"
+    implementation "curse.maven:cloth-config-348521:7361439"
+    implementation "curse.maven:jade-324717:7313008"
+    implementation "curse.maven:better-library-1150683:7367657"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

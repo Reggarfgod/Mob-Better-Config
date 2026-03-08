@@ -5,7 +5,8 @@ import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.util.*;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.resources.ResourceLocation;
+
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.entity.EntityType;
@@ -13,7 +14,8 @@ import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.EnderMan;
-import net.minecraft.world.entity.projectile.AbstractThrownPotion;
+
+import net.minecraft.world.entity.projectile.throwableitemprojectile.AbstractThrownPotion;
 import net.minecraft.world.item.alchemy.PotionContents;
 import net.minecraft.world.item.alchemy.Potions;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -26,8 +28,8 @@ import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
 public class EndermanEvents {
 
-    private static final ResourceLocation RAGE_ID =
-            ResourceLocation.fromNamespaceAndPath("mob_better_config", "rage_speed");
+    private static final Identifier RAGE_ID =
+            Identifier.fromNamespaceAndPath("mob_better_config", "rage_speed");
 
     @SubscribeEvent
     public void onJoin(FinalizeSpawnEvent event) {

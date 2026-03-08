@@ -8,8 +8,9 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.boss.wither.WitherBoss;
-import net.minecraft.world.entity.projectile.WitherSkull;
 
+
+import net.minecraft.world.entity.projectile.hurtingprojectile.WitherSkull;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.event.entity.living.*;

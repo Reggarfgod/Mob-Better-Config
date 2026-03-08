@@ -7,7 +7,7 @@ import com.reggarf.mods.mob_better_config.api.OnlineMessages;
 import com.reggarf.mods.mob_better_config.config.MobBetterConfigRoot;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.register.ModEventRegister;
-import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.AutoConfigClient;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -35,6 +35,8 @@ public class Mob_better_config {
         ModEventRegister.register();
         OnlineMessageLib.registerPlugin(new OnlineMessages());
         BetterMessages.register();
+
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -43,16 +45,16 @@ public class Mob_better_config {
     public void onServerStarting(ServerStartingEvent event) {
         LOGGER.info("HELLO from server starting");
     }
-    @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+
+    @EventBusSubscriber(modid = MODID, value = Dist.CLIENT)
     public static class ClientModEvents {
 
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
             ModLoadingContext.get().registerExtensionPoint(
                     IConfigScreenFactory.class,
                     () -> (container, parent) ->
-                            AutoConfig.getConfigScreen(
+                            AutoConfigClient.getConfigScreen(
                                    MobBetterConfigRoot.class, parent).get()
             );
         }

@@ -157,7 +157,7 @@ public class PhantomEvents {
         if (!(event.getEntity() instanceof Phantom phantom))
             return;
 
-        if (phantom.level().isClientSide)
+        if (phantom.level().isClientSide())
             return;
 
         PhantomConfig config = ModConfigs.getPhantom();
