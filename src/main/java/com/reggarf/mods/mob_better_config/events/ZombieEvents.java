@@ -11,6 +11,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.monster.Husk;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.monster.ZombifiedPiglin;
 
@@ -25,7 +26,7 @@ public class ZombieEvents {
     @SubscribeEvent
     public void onZombieJoin(FinalizeSpawnEvent event) {
 
-        if (!(event.getEntity() instanceof Zombie zombie) || zombie instanceof ZombifiedPiglin)
+        if (!(event.getEntity() instanceof Zombie zombie) || zombie instanceof ZombifiedPiglin || zombie instanceof Husk)
             return;
 
         applyConfig(zombie);
@@ -154,7 +155,7 @@ public class ZombieEvents {
     @SubscribeEvent
     public void onZombieTick(EntityTickEvent.Post event) {
 
-        if (!(event.getEntity() instanceof Zombie zombie) || zombie instanceof ZombifiedPiglin)
+        if (!(event.getEntity() instanceof Zombie zombie) || zombie instanceof ZombifiedPiglin || zombie instanceof Husk)
             return;
 
         ZombieConfig config = ModConfigs.getZombie();
@@ -204,7 +205,7 @@ public class ZombieEvents {
     @SubscribeEvent
     public void onZombieDrops(LivingDropsEvent event) {
 
-        if (!(event.getEntity() instanceof Zombie zombie) || zombie instanceof ZombifiedPiglin)
+        if (!(event.getEntity() instanceof Zombie zombie) || zombie instanceof ZombifiedPiglin || zombie instanceof Husk)
             return;
 
         if (!(zombie.level() instanceof ServerLevel level))

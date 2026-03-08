@@ -99,8 +99,8 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 
 dependencies {
-    implementation "curse.maven:cloth-config-348521:5729127"
-    implementation "curse.maven:jade-324717:7545219"
+    implementation "curse.maven:cloth-config-348521:5986999"
+    implementation "curse.maven:jade-324717:5835088"
     implementation "curse.maven:better-library-1150683:7359503"
 }
 

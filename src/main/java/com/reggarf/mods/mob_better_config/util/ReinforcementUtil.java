@@ -2,8 +2,10 @@ package com.reggarf.mods.mob_better_config.util;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.monster.Vex;
 import net.minecraft.world.phys.AABB;
 
 public class ReinforcementUtil {
@@ -41,7 +43,9 @@ public class ReinforcementUtil {
         EntityType<?> type = original.getType();
 
         @SuppressWarnings("unchecked")
-        T reinforcement = (T) type.create(level);
+
+        T reinforcement = (T) type.create(level, EntitySpawnReason.NATURAL);
+
 
         if (reinforcement == null)
             return;

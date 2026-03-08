@@ -127,7 +127,7 @@ public class BlazeEvents {
 
                 if (attackTime <= 0) {
                     attackTime = 20;
-                    blaze.doHurtTarget(target);
+                    blaze.doHurtTarget(getServerLevel(blaze), target);
                 }
 
                 blaze.getMoveControl().setWantedPosition(

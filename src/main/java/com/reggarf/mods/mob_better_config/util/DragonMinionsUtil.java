@@ -4,11 +4,13 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
+import net.minecraft.world.entity.monster.ZombifiedPiglin;
 
 public class DragonMinionsUtil {
 
@@ -51,7 +53,9 @@ public class DragonMinionsUtil {
         // Spawn 3 minions
         for (int i = 0; i < 3; i++) {
 
-            EnderDragon dragon = EntityType.ENDER_DRAGON.create(level);
+            EnderDragon dragon =
+                    EntityType.ENDER_DRAGON.create(level, EntitySpawnReason.NATURAL);
+
             if (dragon == null)
                 continue;
 

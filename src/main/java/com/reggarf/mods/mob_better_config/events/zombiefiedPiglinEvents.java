@@ -5,6 +5,7 @@ import com.reggarf.mods.mob_better_config.config.ZombifiedPiglinConfig;
 import com.reggarf.mods.mob_better_config.util.*;
 
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.ZombifiedPiglin;
@@ -59,7 +60,8 @@ public class zombiefiedPiglinEvents {
         // Spawn multiplier
         for (int i = 1; i < config.spawnMultiplier; i++) {
 
-            ZombifiedPiglin extra = EntityType.ZOMBIFIED_PIGLIN.create(level);
+            ZombifiedPiglin extra =
+                    EntityType.ZOMBIFIED_PIGLIN.create(level, EntitySpawnReason.NATURAL);
 
             if (extra == null)
                 continue;
@@ -80,7 +82,6 @@ public class zombiefiedPiglinEvents {
             level.addFreshEntity(extra);
         }
     }
-
     private void applyConfig(ZombifiedPiglin piglin, ZombifiedPiglinConfig config) {
 
         if (config.customName)

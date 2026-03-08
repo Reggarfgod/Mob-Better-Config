@@ -7,10 +7,12 @@ import com.reggarf.mods.mob_better_config.util.LootUtil;
 import com.reggarf.mods.mob_better_config.util.MobNameUtil;
 import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Creeper;
+import net.minecraft.world.entity.monster.ZombifiedPiglin;
 import net.minecraft.world.level.Explosion;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
@@ -115,7 +117,8 @@ public class CreeperEvents {
 
         if (config.powered && creeper.level() instanceof ServerLevel level) {
 
-            LightningBolt lightning = EntityType.LIGHTNING_BOLT.create(level);
+            LightningBolt lightning =
+                    EntityType.LIGHTNING_BOLT.create(level, EntitySpawnReason.NATURAL);
 
             if (lightning != null) {
                 lightning.moveTo(creeper.getX(), creeper.getY(), creeper.getZ());

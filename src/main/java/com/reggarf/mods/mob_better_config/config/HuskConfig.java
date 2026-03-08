@@ -21,7 +21,7 @@ public class HuskConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public double attackDamage = 1.0D;
     @ConfigEntry.Gui.Tooltip
-    public double movementSpeed = 1.0D;
+    public double movementSpeed = 0.3D;
     @ConfigEntry.Gui.Tooltip
     public double followRange = 1.0D;
     @ConfigEntry.Gui.Tooltip
@@ -29,7 +29,7 @@ public class HuskConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public boolean enableHunger = true;
     @ConfigEntry.Gui.Tooltip
-    public int hungerDuration = 140;        // Vanilla: 140 ticks
+    public int hungerDuration = 140;
     @ConfigEntry.Gui.Tooltip
     public int hungerAmplifier = 0;
     @ConfigEntry.Gui.Tooltip

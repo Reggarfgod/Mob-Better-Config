@@ -5,6 +5,7 @@ import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.util.*;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BiomeTags;
+import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -165,7 +166,6 @@ public class HuskEvents {
 
             HuskConfig config = ModConfigs.getHusk();
 
-            // Remove vanilla hunger first
             if (target.hasEffect(MobEffects.HUNGER))
                 target.removeEffect(MobEffects.HUNGER);
 
@@ -185,6 +185,7 @@ public class HuskEvents {
             }
         }
 
+        // Husk Water Conversion
         if (!(event.getEntity() instanceof Husk husk))
             return;
 
@@ -205,7 +206,7 @@ public class HuskEvents {
 
             if (timer >= config.waterConversionTime) {
 
-                Zombie zombie = EntityType.ZOMBIE.create(level);
+                Zombie zombie = EntityType.ZOMBIE.create(level, EntitySpawnReason.CONVERSION);
 
                 if (zombie != null) {
 
@@ -217,12 +218,23 @@ public class HuskEvents {
                             husk.getXRot()
                     );
 
-                    zombie.setHealth(zombie.getMaxHealth());
+                    zombie.finalizeSpawn(
+                            level,
+                            level.getCurrentDifficultyAt(zombie.blockPosition()),
+                            EntitySpawnReason.CONVERSION,
+                            null
+                    );
 
                     level.addFreshEntity(zombie);
+
                     husk.discard();
+
+                    if (!husk.isSilent()) {
+                        level.levelEvent(null, 1041, husk.blockPosition(), 0);
+                    }
                 }
 
+                data.putInt("mbc_water_timer", 0);
                 return;
             }
 
@@ -232,7 +244,6 @@ public class HuskEvents {
             data.putInt("mbc_water_timer", 0);
         }
     }
-
     @SubscribeEvent
     public void onXP(LivingExperienceDropEvent event) {
 

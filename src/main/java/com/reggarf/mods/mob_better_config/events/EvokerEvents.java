@@ -4,9 +4,10 @@ import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.EvokerConfig;
 import com.reggarf.mods.mob_better_config.util.*;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.animal.Sheep;
 import net.minecraft.world.entity.monster.Evoker;
@@ -100,6 +101,8 @@ public class EvokerEvents {
         if (evoker.getAttribute(Attributes.ATTACK_KNOCKBACK) != null)
             evoker.getAttribute(Attributes.ATTACK_KNOCKBACK).setBaseValue(config.attackKnockback);
 
+
+
         evoker.setHealth((float) config.health);
 
         if (config.fireImmune)
@@ -168,7 +171,6 @@ public class EvokerEvents {
 
         EvokerConfig config = ModConfigs.getEvoker();
 
-        // Prevent recursion for custom spawned vex
         if (vex.getPersistentData().getBoolean("mob_better_config_spawned"))
             return;
 
@@ -177,53 +179,52 @@ public class EvokerEvents {
             return;
         }
 
-        // Count CURRENT existing vex from this evoker
         int existing = level.getEntitiesOfClass(
                 Vex.class,
-                evoker.getBoundingBox().inflate(32),
+                evoker.getBoundingBox().inflate(16),
                 v -> v.getOwner() == evoker
         ).size();
 
-        //Cap to config amount
+        // Cap vex amount
         if (existing >= config.summonVexCount) {
             event.setCanceled(true);
             return;
         }
 
         vex.setLimitedLife(config.vexLifeTicks);
-        // Only run once per spell (when first vex appears)
+
         if (config.summonVexCount > 3 && existing == 1) {
 
             int extra = config.summonVexCount - 3;
 
             for (int i = 0; i < extra; i++) {
 
-                Vex newVex = EntityType.VEX.create(level);
+                BlockPos pos = evoker.blockPosition().offset(
+                        -2 + level.random.nextInt(5),
+                        1,
+                        -2 + level.random.nextInt(5)
+                );
+
+                Vex newVex = EntityType.VEX.create(level, EntitySpawnReason.MOB_SUMMONED);
                 if (newVex == null) continue;
 
-                newVex.moveTo(
-                        vex.getX(),
-                        vex.getY(),
-                        vex.getZ(),
-                        0F,
-                        0F
-                );
+                newVex.moveTo(pos, 0F, 0F);
 
                 newVex.finalizeSpawn(
                         level,
-                        level.getCurrentDifficultyAt(newVex.blockPosition()),
-                        MobSpawnType.MOB_SUMMONED,
+                        level.getCurrentDifficultyAt(pos),
+                        EntitySpawnReason.MOB_SUMMONED,
                         null
                 );
 
                 newVex.setOwner(evoker);
-                newVex.setBoundOrigin(evoker.blockPosition());
+                newVex.setBoundOrigin(pos);
                 newVex.setLimitedLife(config.vexLifeTicks);
 
-                // Prevent recursion
+
                 newVex.getPersistentData().putBoolean("mob_better_config_spawned", true);
 
-                level.addFreshEntity(newVex);
+                level.addFreshEntityWithPassengers(newVex);
             }
         }
     }
