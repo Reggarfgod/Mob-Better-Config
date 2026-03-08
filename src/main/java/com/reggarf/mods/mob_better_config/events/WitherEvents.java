@@ -27,7 +27,7 @@ public class WitherEvents {
 
         WitherConfig config = ModConfigs.getWither();
 
-        if (wither.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (NbtUtil.getBooleanSafe(wither.getPersistentData(),"mob_better_config_spawned"))
             return;
 
         applyConfig(wither, config);

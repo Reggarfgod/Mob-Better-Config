@@ -29,7 +29,7 @@ public class SilverfishEvents {
 
         SilverfishConfig config = ModConfigs.getSilverfish();
 
-        if (silverfish.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (NbtUtil.getBooleanSafe(silverfish.getPersistentData(),("mob_better_config_spawned")))
             return;
 
         applyConfig(silverfish, config);
@@ -66,7 +66,7 @@ public class SilverfishEvents {
 
             Silverfish extra = new Silverfish(EntityType.SILVERFISH, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     silverfish.getX(),
                     silverfish.getY(),
                     silverfish.getZ(),

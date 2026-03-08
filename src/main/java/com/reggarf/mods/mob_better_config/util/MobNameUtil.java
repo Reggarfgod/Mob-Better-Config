@@ -60,7 +60,7 @@ public class MobNameUtil {
     public static void applyRandomName(LivingEntity entity) {
 
         // Prevent renaming on reload
-        if (entity.getPersistentData().getBoolean(NAME_TAG))
+        if (NbtUtil.getBooleanSafe(entity.getPersistentData(),NAME_TAG))
             return;
 
         String prefix = PREFIXES.get(RANDOM.nextInt(PREFIXES.size()));

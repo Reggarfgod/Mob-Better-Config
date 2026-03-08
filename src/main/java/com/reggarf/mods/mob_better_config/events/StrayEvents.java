@@ -32,7 +32,7 @@ public class StrayEvents {
 
         StrayConfig config = ModConfigs.getStray();
 
-        if (stray.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (NbtUtil.getBooleanSafe(stray.getPersistentData(),"mob_better_config_spawned"))
             return;
 
         applyConfig(stray);
@@ -52,7 +52,7 @@ public class StrayEvents {
 
             Stray extra = new Stray(EntityType.STRAY, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     stray.getX(),
                     stray.getY(),
                     stray.getZ(),
@@ -161,7 +161,7 @@ public class StrayEvents {
             return;
 
         arrow.addEffect(new MobEffectInstance(
-                MobEffects.MOVEMENT_SLOWDOWN,
+                MobEffects.SLOWNESS,
                 config.slownessDuration,
                 config.slownessAmplifier
         ));

@@ -30,7 +30,7 @@ public class HoglinEvents {
 
         HoglinConfig config = ModConfigs.getHoglin();
 
-        if (hoglin.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (NbtUtil.getBooleanSafe(hoglin.getPersistentData(),("mob_better_config_spawned")))
             return;
 
         applyConfig(hoglin, config);
@@ -53,7 +53,7 @@ public class HoglinEvents {
 
             Hoglin extra = new Hoglin(EntityType.HOGLIN, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     hoglin.getX(),
                     hoglin.getY(),
                     hoglin.getZ(),

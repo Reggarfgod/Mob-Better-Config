@@ -23,7 +23,7 @@ public class ReinforcementUtil {
             return;
 
         //If this mob is already a reinforcement → do nothing
-        if (original.getPersistentData().getBoolean(REINFORCED_TAG))
+        if (NbtUtil.getBooleanSafe(original.getPersistentData(),REINFORCED_TAG))
             return;
 
         RandomSource random = level.getRandom();
@@ -53,7 +53,7 @@ public class ReinforcementUtil {
         double offsetX = random.nextInt(radius * 2 + 1) - radius;
         double offsetZ = random.nextInt(radius * 2 + 1) - radius;
 
-        reinforcement.moveTo(
+        reinforcement.snapTo(
                 original.getX() + offsetX,
                 original.getY(),
                 original.getZ() + offsetZ,

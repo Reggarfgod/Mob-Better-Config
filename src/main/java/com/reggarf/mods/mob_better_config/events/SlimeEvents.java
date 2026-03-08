@@ -2,10 +2,7 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.SlimeConfig;
-import com.reggarf.mods.mob_better_config.util.BossUtil;
-import com.reggarf.mods.mob_better_config.util.LootUtil;
-import com.reggarf.mods.mob_better_config.util.MobNameUtil;
-import com.reggarf.mods.mob_better_config.util.XPUtil;
+import com.reggarf.mods.mob_better_config.util.*;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.Mth;
 import net.minecraft.world.Difficulty;
@@ -33,7 +30,7 @@ public class SlimeEvents {
 
         SlimeConfig config = ModConfigs.getSlime();
 
-        if (slime.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (NbtUtil.getBooleanSafe(slime.getPersistentData(),"mob_better_config_spawned"))
             return;
 
         applyConfig(slime, config);
@@ -56,7 +53,7 @@ public class SlimeEvents {
 
             Slime extra = new Slime(EntityType.SLIME, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     slime.getX(),
                     slime.getY(),
                     slime.getZ(),
@@ -175,7 +172,7 @@ public class SlimeEvents {
 
             child.setSize(newSize, true);
 
-            child.moveTo(
+            child.snapTo(
                     parent.getX(),
                     parent.getY(),
                     parent.getZ(),

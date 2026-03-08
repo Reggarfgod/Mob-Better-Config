@@ -29,7 +29,7 @@ public class PhantomEvents {
 
         PhantomConfig config = ModConfigs.getPhantom();
 
-        if (phantom.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (NbtUtil.getBooleanSafe(phantom.getPersistentData(),("mob_better_config_spawned")))
             return;
 
         applyConfig(phantom, config);
@@ -50,7 +50,7 @@ public class PhantomEvents {
 
             Phantom extra = new Phantom(EntityType.PHANTOM, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     phantom.getX(),
                     phantom.getY(),
                     phantom.getZ(),
@@ -172,9 +172,9 @@ public class PhantomEvents {
             if (phantom.isOnFire())
                 phantom.clearFire();
 
-        } else {
+        }else {
 
-            if (level.isDay()
+            if (level.getDayTime() % 24000 < 13000
                     && level.canSeeSky(phantom.blockPosition())) {
 
                 float brightness = phantom.getLightLevelDependentMagicValue();

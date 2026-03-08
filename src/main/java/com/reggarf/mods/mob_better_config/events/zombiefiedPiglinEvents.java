@@ -29,10 +29,10 @@ public class zombiefiedPiglinEvents {
 
         var data = piglin.getPersistentData();
 
-        if (data.getBoolean("mob_better_config_processed"))
+        if(NbtUtil.getBooleanSafe(data,"mob_better_config_processed"))
             return;
 
-        if (data.getBoolean("mob_better_config_converted"))
+        if (NbtUtil.getBooleanSafe(data,"mob_better_config_converted"))
             return;
 
         if (BossUtil.isBoss(piglin))
@@ -66,7 +66,7 @@ public class zombiefiedPiglinEvents {
             if (extra == null)
                 continue;
 
-            extra.moveTo(
+            extra.snapTo(
                     piglin.getX(),
                     piglin.getY(),
                     piglin.getZ(),

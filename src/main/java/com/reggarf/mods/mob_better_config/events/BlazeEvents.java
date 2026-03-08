@@ -36,7 +36,8 @@ public class BlazeEvents {
 
         BlazeConfig config = ModConfigs.getBlaze();
 
-        if (blaze.getPersistentData().getBoolean(SPAWN_TAG))
+
+        if (NbtUtil.getBooleanSafe(blaze.getPersistentData(), (SPAWN_TAG)))
             return;
 
         if (blaze.getAttribute(Attributes.MAX_HEALTH) != null)
@@ -70,7 +71,10 @@ public class BlazeEvents {
 
         for (int i = 1; i < config.spawnMultiplier; i++) {
             Blaze extra = new Blaze(EntityType.BLAZE, level);
-            extra.moveTo(blaze.getX(), blaze.getY(), blaze.getZ());
+            extra.snapTo
+                    (blaze.getX(),
+                            blaze.getY(),
+                            blaze.getZ());
             extra.getPersistentData().putBoolean(SPAWN_TAG, true);
             level.addFreshEntity(extra);
         }

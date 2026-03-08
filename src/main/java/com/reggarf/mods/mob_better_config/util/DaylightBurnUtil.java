@@ -41,14 +41,13 @@ public class DaylightBurnUtil {
             entity.setRemainingFireTicks(0);
             return;
         }
-
-        if (!level.isDay())
+        if (level.getDayTime() % 24000L >= 12000L)
             return;
 
         if (!level.canSeeSky(entity.blockPosition()))
             return;
 
-        if (entity.isInWaterRainOrBubble())
+        if (entity.isInWaterOrRain())
             return;
 
         // Vanilla brightness logic (like Zombie/Skeleton)

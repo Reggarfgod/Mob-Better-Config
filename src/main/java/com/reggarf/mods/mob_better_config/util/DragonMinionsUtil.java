@@ -39,7 +39,7 @@ public class DragonMinionsUtil {
             return;
 
         // Prevent spawning multiple times
-        if (summoner.getPersistentData().getBoolean(MINION_SPAWNED_TAG))
+        if (NbtUtil.getBooleanSafe(summoner.getPersistentData(),MINION_SPAWNED_TAG))
             return;
 
         RandomSource random = level.getRandom();
@@ -59,7 +59,7 @@ public class DragonMinionsUtil {
             if (dragon == null)
                 continue;
 
-            dragon.moveTo(
+            dragon.snapTo(
                     summoner.getX() + random.nextInt(6) - 3,
                     summoner.getY() + 10,
                     summoner.getZ() + random.nextInt(6) - 3,

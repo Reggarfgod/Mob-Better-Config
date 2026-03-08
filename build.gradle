@@ -58,7 +58,7 @@ neoForge {
         }
 
         data {
-            data()
+            clientData()
 
             // example of overriding the workingDirectory set in configureEach above, uncomment if you want to use it
             // gameDirectory = project.file('run-data')
@@ -99,8 +99,8 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 
 dependencies {
-    implementation "curse.maven:cloth-config-348521:5986999"
-    implementation "curse.maven:jade-324717:5835088"
+    implementation "curse.maven:cloth-config-348521:6351757"
+    implementation "curse.maven:jade-324717:6524708"
     implementation "curse.maven:better-library-1150683:7359503"
 }
 

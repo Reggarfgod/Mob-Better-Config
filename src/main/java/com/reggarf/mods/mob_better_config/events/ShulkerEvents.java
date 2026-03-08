@@ -31,7 +31,7 @@ public class ShulkerEvents {
 
         ShulkerConfig config = ModConfigs.getShulker();
 
-        if (shulker.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (NbtUtil.getBooleanSafe(shulker.getPersistentData(),("mob_better_config_spawned")))
             return;
 
         applyConfig(shulker, config);
@@ -53,7 +53,7 @@ public class ShulkerEvents {
 
             Shulker extra = new Shulker(EntityType.SHULKER, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     shulker.getX(),
                     shulker.getY(),
                     shulker.getZ(),
@@ -127,7 +127,7 @@ public class ShulkerEvents {
 
         ShulkerConfig config = ModConfigs.getShulker();
 
-        if (!shulker.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (!NbtUtil.getBooleanSafe(shulker.getPersistentData(), "mob_better_config_spawned"))
             return;
 
         if (!config.enableClone) {

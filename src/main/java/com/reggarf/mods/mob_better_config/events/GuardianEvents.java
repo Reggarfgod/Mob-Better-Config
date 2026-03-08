@@ -36,7 +36,7 @@ public class GuardianEvents {
 
         GuardianConfig config = ModConfigs.getGuardian();
 
-        if (guardian.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (NbtUtil.getBooleanSafe(guardian.getPersistentData(),("mob_better_config_spawned")))
             return;
 
         applyConfig(guardian, config);

@@ -28,7 +28,7 @@ public class SpiderEvents {
 
         SpiderConfig config = ModConfigs.getSpider();
 
-        if (spider.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (NbtUtil.getBooleanSafe(spider.getPersistentData(),"mob_better_config_spawned"))
             return;
 
         applyConfig(spider);
@@ -48,7 +48,7 @@ public class SpiderEvents {
 
             Spider extra = new Spider(EntityType.SPIDER, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     spider.getX(),
                     spider.getY(),
                     spider.getZ(),

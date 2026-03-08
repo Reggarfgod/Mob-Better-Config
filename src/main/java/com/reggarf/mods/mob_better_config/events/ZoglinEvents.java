@@ -28,10 +28,10 @@ public class ZoglinEvents {
             return;
 
         var data = zoglin.getPersistentData();
-        if (data.getBoolean("mob_better_config_processed"))
+        if (NbtUtil.getBooleanSafe(data,"mob_better_config_processed"))
             return;
 
-        if (data.getBoolean("mob_better_config_converted"))
+        if (NbtUtil.getBooleanSafe(data,"mob_better_config_converted"))
             return;
 
         if (BossUtil.isBoss(zoglin))
@@ -59,7 +59,7 @@ public class ZoglinEvents {
 
             Zoglin extra = new Zoglin(EntityType.ZOGLIN, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     zoglin.getX(),
                     zoglin.getY(),
                     zoglin.getZ(),

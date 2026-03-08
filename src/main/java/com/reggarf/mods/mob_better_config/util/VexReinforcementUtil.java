@@ -34,7 +34,7 @@ public class VexReinforcementUtil {
         if (!enabled)
             return;
 
-        if (summoner.getPersistentData().getBoolean(REINFORCED_TAG))
+        if (NbtUtil.getBooleanSafe(summoner.getPersistentData(),REINFORCED_TAG))
             return;
 
         if (requireBelowHalfHealth &&
@@ -66,7 +66,7 @@ public class VexReinforcementUtil {
             double offsetY = random.nextInt(3);
             double offsetZ = random.nextInt(spawnRadius * 2 + 1) - spawnRadius;
 
-            vex.moveTo(
+            vex.snapTo(
                     summoner.getX() + offsetX,
                     summoner.getY() + offsetY,
                     summoner.getZ() + offsetZ,

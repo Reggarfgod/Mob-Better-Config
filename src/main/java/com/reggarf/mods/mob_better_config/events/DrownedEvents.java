@@ -28,7 +28,7 @@ public class DrownedEvents {
 
         DrownedConfig config = ModConfigs.getDrowned();
 
-        if (!config.allowDaySpawn && drowned.level().isDay()) {
+        if (!config.allowDaySpawn && drowned.level().getDayTime() % 24000 < 13000) {
             event.setResult(MobSpawnEvent.PositionCheck.Result.FAIL);
             return;
         }
@@ -55,9 +55,8 @@ public class DrownedEvents {
 
         DrownedConfig config = ModConfigs.getDrowned();
 
-        if (drowned.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (NbtUtil.getBooleanSafe(drowned.getPersistentData(), "mob_better_config_spawned"))
             return;
-
         applyConfig(drowned, config);
         applyEquipment(drowned, config);
 
@@ -79,7 +78,7 @@ public class DrownedEvents {
 
             Drowned extra = new Drowned(EntityType.DROWNED, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     drowned.getX(),
                     drowned.getY(),
                     drowned.getZ(),

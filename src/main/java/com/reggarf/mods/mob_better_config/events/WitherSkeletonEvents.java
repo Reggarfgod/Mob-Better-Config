@@ -36,7 +36,7 @@ public class WitherSkeletonEvents {
 
         WitherSkeletonConfig config = ModConfigs.getWitherSkeleton();
 
-        if (skeleton.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (NbtUtil.getBooleanSafe(skeleton.getPersistentData(),"mob_better_config_spawned"))
             return;
 
         applyConfig(skeleton, config);
@@ -60,7 +60,7 @@ public class WitherSkeletonEvents {
             WitherSkeleton extra =
                     new WitherSkeleton(EntityType.WITHER_SKELETON, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     skeleton.getX(),
                     skeleton.getY(),
                     skeleton.getZ(),
@@ -130,7 +130,7 @@ public class WitherSkeletonEvents {
         if (!(event.getEntity() instanceof LivingEntity target))
             return;
 
-        if (!target.getPersistentData().getBoolean(WITHER_TAG))
+        if (!NbtUtil.getBooleanSafe(target.getPersistentData(), WITHER_TAG))
             return;
 
         target.getPersistentData().remove(WITHER_TAG);

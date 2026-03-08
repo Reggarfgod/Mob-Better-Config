@@ -89,12 +89,15 @@ public class GhastEvents {
         );
 
         // Spawn multiplier
-        if (!ghast.getPersistentData().getBoolean("mbc_spawned")) {
+
+            if (NbtUtil.getBooleanSafe(ghast.getPersistentData(), "mob_better_config_spawned"))
+                return;
+        {
 
             for (int i = 1; i < config.spawnMultiplier; i++) {
 
                 Ghast extra = new Ghast(EntityType.GHAST, level);
-                extra.moveTo(
+                extra.snapTo(
                         ghast.getX(),
                         ghast.getY(),
                         ghast.getZ(),

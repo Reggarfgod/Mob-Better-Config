@@ -2,10 +2,7 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.WardenConfig;
-import com.reggarf.mods.mob_better_config.util.BossUtil;
-import com.reggarf.mods.mob_better_config.util.LootUtil;
-import com.reggarf.mods.mob_better_config.util.MobNameUtil;
-import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
+import com.reggarf.mods.mob_better_config.util.*;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -36,7 +33,7 @@ public class WardenEvents {
 
         WardenConfig config = ModConfigs.getWarden();
 
-        if (warden.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (NbtUtil.getBooleanSafe(warden.getPersistentData(),"mob_better_config_spawned"))
             return;
 
         applyConfig(warden);
@@ -56,7 +53,7 @@ public class WardenEvents {
 
             Warden extra = new Warden(EntityType.WARDEN, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     warden.getX(),
                     warden.getY(),
                     warden.getZ(),

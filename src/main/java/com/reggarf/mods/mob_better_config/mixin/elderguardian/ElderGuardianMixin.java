@@ -51,7 +51,7 @@ public class ElderGuardianMixin {
 
         // Replace effect with config values
         MobEffectInstance customEffect = new MobEffectInstance(
-                MobEffects.DIG_SLOWDOWN,
+                MobEffects.MINING_FATIGUE,
                 config.miningFatigueDuration,
                 config.miningFatigueAmplifier
         );

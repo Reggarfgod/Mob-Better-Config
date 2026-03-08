@@ -2,11 +2,7 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.MagmaCubeConfig;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
-import com.reggarf.mods.mob_better_config.util.BossUtil;
-import com.reggarf.mods.mob_better_config.util.LootUtil;
-import com.reggarf.mods.mob_better_config.util.MobNameUtil;
-import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
-import com.reggarf.mods.mob_better_config.util.XPUtil;
+import com.reggarf.mods.mob_better_config.util.*;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.Mth;
 import net.minecraft.world.Difficulty;
@@ -75,7 +71,7 @@ public class MagmaCubeEvents {
 
         MagmaCubeConfig config = ModConfigs.getMagmaCube();
 
-        if (cube.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (NbtUtil.getBooleanSafe(cube.getPersistentData(),("mob_better_config_spawned")))
             return;
 
         applyConfig(cube, config);
@@ -98,7 +94,7 @@ public class MagmaCubeEvents {
 
             MagmaCube extra = new MagmaCube(EntityType.MAGMA_CUBE, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     cube.getX(),
                     cube.getY(),
                     cube.getZ(),
@@ -142,7 +138,7 @@ public class MagmaCubeEvents {
 
             child.setSize(newSize, true);
 
-            child.moveTo(
+            child.snapTo(
                     parent.getX(),
                     parent.getY(),
                     parent.getZ(),

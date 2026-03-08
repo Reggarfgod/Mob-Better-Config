@@ -4,6 +4,7 @@ import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.EnderDragonConfig;
 import com.reggarf.mods.mob_better_config.util.BossUtil;
 
+import com.reggarf.mods.mob_better_config.util.NbtUtil;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 
@@ -30,7 +31,7 @@ public class DragonBossModeMixin {
         if (!(dragon.level() instanceof ServerLevel))
             return;
 
-        if (dragon.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (NbtUtil.getBooleanSafe(dragon.getPersistentData(),"mob_better_config_spawned"))
             return;
 
         dragon.getPersistentData().putBoolean("mob_better_config_spawned", true);

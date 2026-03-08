@@ -2,10 +2,7 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.CaveSpiderConfig;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
-import com.reggarf.mods.mob_better_config.util.BossUtil;
-import com.reggarf.mods.mob_better_config.util.LootUtil;
-import com.reggarf.mods.mob_better_config.util.MobNameUtil;
-import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
+import com.reggarf.mods.mob_better_config.util.*;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -36,7 +33,7 @@ public class CaveSpiderEvents {
 
         CaveSpiderConfig config = ModConfigs.getCaveSpider();
 
-        if (spider.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (NbtUtil.getBooleanSafe(spider.getPersistentData(), "mob_better_config_spawned"))
             return;
 
         applyConfig(spider);
@@ -56,7 +53,7 @@ public class CaveSpiderEvents {
 
             CaveSpider extra = new CaveSpider(EntityType.CAVE_SPIDER, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     spider.getX(),
                     spider.getY(),
                     spider.getZ(),
@@ -116,8 +113,9 @@ public class CaveSpiderEvents {
         if (!(event.getEntity() instanceof LivingEntity target))
             return;
 
-        if (!target.getPersistentData().getBoolean(POISON_TAG))
+        if (!NbtUtil.getBooleanSafe(target.getPersistentData(), POISON_TAG))
             return;
+
 
         target.getPersistentData().remove(POISON_TAG);
 

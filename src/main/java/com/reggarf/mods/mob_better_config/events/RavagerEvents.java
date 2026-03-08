@@ -37,7 +37,7 @@ public class RavagerEvents {
 
         RavagerConfig config = ModConfigs.getRavager();
 
-        if (ravager.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (NbtUtil.getBooleanSafe(ravager.getPersistentData(),("mob_better_config_spawned")))
             return;
 
         applyConfig(ravager, config);
@@ -60,7 +60,7 @@ public class RavagerEvents {
 
             Ravager extra = new Ravager(EntityType.RAVAGER, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     ravager.getX(),
                     ravager.getY(),
                     ravager.getZ(),

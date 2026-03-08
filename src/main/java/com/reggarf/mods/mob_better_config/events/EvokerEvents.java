@@ -9,7 +9,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.animal.Sheep;
+import net.minecraft.world.entity.animal.sheep.Sheep;
 import net.minecraft.world.entity.monster.Evoker;
 import net.minecraft.world.entity.monster.Vex;
 import net.minecraft.world.entity.projectile.EvokerFangs;
@@ -33,7 +33,7 @@ public class EvokerEvents {
 
         EvokerConfig config = ModConfigs.getEvoker();
 
-        if (evoker.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (NbtUtil.getBooleanSafe(evoker.getPersistentData(), "mob_better_config_spawned"))
             return;
 
         applyConfig(evoker, config);
@@ -56,7 +56,7 @@ public class EvokerEvents {
 
             Evoker extra = new Evoker(EntityType.EVOKER, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     evoker.getX(),
                     evoker.getY(),
                     evoker.getZ(),
@@ -171,8 +171,7 @@ public class EvokerEvents {
 
         EvokerConfig config = ModConfigs.getEvoker();
 
-        if (vex.getPersistentData().getBoolean("mob_better_config_spawned"))
-            return;
+        if (NbtUtil.getBooleanSafe(vex.getPersistentData(), "mob_better_config_spawned"))
 
         if (!config.enableVexSummon) {
             event.setCanceled(true);
@@ -208,7 +207,7 @@ public class EvokerEvents {
                 Vex newVex = EntityType.VEX.create(level, EntitySpawnReason.MOB_SUMMONED);
                 if (newVex == null) continue;
 
-                newVex.moveTo(pos, 0F, 0F);
+                newVex.snapTo(pos, 0F, 0F);
 
                 newVex.finalizeSpawn(
                         level,

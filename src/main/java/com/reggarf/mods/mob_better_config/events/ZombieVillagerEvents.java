@@ -29,7 +29,7 @@ public class ZombieVillagerEvents {
         ZombieVillagerConfig config = ModConfigs.getZombieVillager();
 
         //Prevent multiplied mobs from multiplying again
-        if (zv.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (NbtUtil.getBooleanSafe(zv.getPersistentData(),"mob_better_config_spawned"))
             return;
 
         applyConfig(zv);
@@ -49,7 +49,7 @@ public class ZombieVillagerEvents {
 
             ZombieVillager extra = new ZombieVillager(EntityType.ZOMBIE_VILLAGER, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     zv.getX(),
                     zv.getY(),
                     zv.getZ(),

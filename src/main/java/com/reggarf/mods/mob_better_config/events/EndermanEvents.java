@@ -4,6 +4,7 @@ import com.reggarf.mods.mob_better_config.config.EndermanConfig;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.util.*;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.DamageTypeTags;
@@ -12,11 +13,10 @@ import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.EnderMan;
-import net.minecraft.world.entity.projectile.ThrownPotion;
+import net.minecraft.world.entity.projectile.AbstractThrownPotion;
 import net.minecraft.world.item.alchemy.PotionContents;
 import net.minecraft.world.item.alchemy.Potions;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.event.entity.EntityTeleportEvent;
 import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
@@ -27,10 +27,7 @@ import net.neoforged.neoforge.event.tick.EntityTickEvent;
 public class EndermanEvents {
 
     private static final ResourceLocation RAGE_ID =
-            ResourceLocation.fromNamespaceAndPath(
-                    "mob_better_config",
-                    "rage_speed"
-            );
+            ResourceLocation.fromNamespaceAndPath("mob_better_config", "rage_speed");
 
     @SubscribeEvent
     public void onJoin(FinalizeSpawnEvent event) {
@@ -41,8 +38,11 @@ public class EndermanEvents {
         if (!(enderman.level() instanceof ServerLevel level))
             return;
 
-        if (enderman.getPersistentData().getBoolean("mob_better_config_spawned"))
+        CompoundTag tag = enderman.getPersistentData();
+
+        if (NbtUtil.getBooleanSafe(tag, "mob_better_config_spawned")) {
             return;
+        }
 
         EndermanConfig config = ModConfigs.getEnderman();
 
@@ -65,13 +65,9 @@ public class EndermanEvents {
 
             EnderMan extra = new EnderMan(EntityType.ENDERMAN, level);
 
-            extra.moveTo(
-                    enderman.getX(),
-                    enderman.getY(),
-                    enderman.getZ(),
-                    enderman.getYRot(),
-                    enderman.getXRot()
-            );
+            extra.setPos(enderman.getX(), enderman.getY(), enderman.getZ());
+            extra.setYRot(enderman.getYRot());
+            extra.setXRot(enderman.getXRot());
 
             extra.getPersistentData().putBoolean("mob_better_config_spawned", true);
 
@@ -80,16 +76,18 @@ public class EndermanEvents {
             level.addFreshEntity(extra);
         }
     }
-
     private void applyConfig(EnderMan enderman, EndermanConfig config) {
+
         DoorBreakUtil.handleDoorBreaking(
                 enderman,
                 config.canBreakDoors,
                 config.doorBreakMode
         );
+
         if (config.CustomName) {
             MobNameUtil.applyRandomName(enderman);
         }
+
         if (enderman.getAttribute(Attributes.MAX_HEALTH) != null)
             enderman.getAttribute(Attributes.MAX_HEALTH).setBaseValue(config.health);
 
@@ -210,19 +208,17 @@ public class EndermanEvents {
 
         EndermanConfig config = ModConfigs.getEnderman();
 
-        // If water damage is allowed, do nothing
         if (config.takeWaterDamage)
             return;
 
-        // Vanilla water damage happens when entity is wet
-        if (enderman.isInWaterRainOrBubble()
+        if (enderman.isInWater()
+                || enderman.level().isRainingAt(enderman.blockPosition())
                 || event.getSource().is(DamageTypeTags.IS_DROWNING)) {
 
             event.setNewDamage(0.0F);
         }
 
-        // Handle splash water bottle
-        if (event.getSource().getDirectEntity() instanceof ThrownPotion potion) {
+        if (event.getSource().getDirectEntity() instanceof AbstractThrownPotion potion) {
 
             PotionContents contents =
                     potion.getItem().getOrDefault(

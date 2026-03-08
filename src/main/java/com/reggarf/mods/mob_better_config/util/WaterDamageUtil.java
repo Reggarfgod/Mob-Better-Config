@@ -25,8 +25,8 @@ public class WaterDamageUtil {
             return;
         }
 
-        // Block wet damage (rain, water, bubble column)
-        if (entity.isInWaterRainOrBubble()) {
+        // Block wet damage (rain, water)
+        if (entity.isInWaterOrRain()) {
             event.setCanceled(true);
         }
     }

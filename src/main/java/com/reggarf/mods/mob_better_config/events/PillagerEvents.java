@@ -50,7 +50,7 @@ public class PillagerEvents {
 
             Pillager extra = new Pillager(EntityType.PILLAGER, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     pillager.getX(),
                     pillager.getY(),
                     pillager.getZ(),

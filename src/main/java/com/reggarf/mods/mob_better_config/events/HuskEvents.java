@@ -37,7 +37,7 @@ public class HuskEvents {
 
         HuskConfig config = ModConfigs.getHusk();
 
-        if (husk.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (NbtUtil.getBooleanSafe(husk.getPersistentData(),("mob_better_config_spawned")))
             return;
 
         applyConfig(husk, config);
@@ -59,7 +59,7 @@ public class HuskEvents {
 
             Husk extra = new Husk(EntityType.HUSK, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     husk.getX(),
                     husk.getY(),
                     husk.getZ(),
@@ -160,7 +160,7 @@ public class HuskEvents {
     public void onEntityTick(EntityTickEvent.Post event) {
 
         if (event.getEntity() instanceof LivingEntity target &&
-                target.getPersistentData().getBoolean(HUNGER_TAG)) {
+                NbtUtil.getBooleanSafe(target.getPersistentData(), HUNGER_TAG)) {
 
             target.getPersistentData().remove(HUNGER_TAG);
 
@@ -199,9 +199,9 @@ public class HuskEvents {
 
         var data = husk.getPersistentData();
 
-        if (husk.isInWaterRainOrBubble()) {
+        if (husk.isInWater() || husk.level().isRainingAt(husk.blockPosition())) {
 
-            int timer = data.getInt("mbc_water_timer");
+            int timer = NbtUtil.getIntSafe(data, "mbc_water_timer");
             timer++;
 
             if (timer >= config.waterConversionTime) {
@@ -210,7 +210,7 @@ public class HuskEvents {
 
                 if (zombie != null) {
 
-                    zombie.moveTo(
+                    zombie.snapTo(
                             husk.getX(),
                             husk.getY(),
                             husk.getZ(),

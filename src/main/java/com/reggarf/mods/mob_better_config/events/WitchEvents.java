@@ -10,7 +10,8 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.monster.Witch;
-import net.minecraft.world.entity.projectile.ThrownPotion;
+
+import net.minecraft.world.entity.projectile.AbstractThrownPotion;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.AABB;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -34,7 +35,7 @@ public class WitchEvents {
         WitchConfig config = ModConfigs.getWitch();
 
         // Prevent recursive multiplier
-        if (witch.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (NbtUtil.getBooleanSafe(witch.getPersistentData(), "mob_better_config_spawned"))
             return;
 
         applyConfig(witch);
@@ -54,7 +55,7 @@ public class WitchEvents {
 
             Witch extra = new Witch(EntityType.WITCH, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     witch.getX(),
                     witch.getY(),
                     witch.getZ(),
@@ -153,7 +154,7 @@ public class WitchEvents {
     @SubscribeEvent
     public void onPotionImpact(net.neoforged.neoforge.event.entity.ProjectileImpactEvent event) {
 
-        if (!(event.getProjectile() instanceof ThrownPotion potion))
+        if (!(event.getProjectile() instanceof AbstractThrownPotion potion))
             return;
 
         if (!(potion.getOwner() instanceof Witch witch))

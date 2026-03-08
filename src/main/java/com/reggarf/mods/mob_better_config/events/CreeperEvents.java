@@ -2,10 +2,7 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.CreeperConfig;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
-import com.reggarf.mods.mob_better_config.util.BossUtil;
-import com.reggarf.mods.mob_better_config.util.LootUtil;
-import com.reggarf.mods.mob_better_config.util.MobNameUtil;
-import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
+import com.reggarf.mods.mob_better_config.util.*;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
@@ -42,7 +39,7 @@ public class CreeperEvents {
 
         CreeperConfig config = ModConfigs.getCreeper();
 
-        if (creeper.getPersistentData().getBoolean(SPAWN_TAG))
+        if (!NbtUtil.getBooleanSafe(creeper.getPersistentData(), SPAWN_TAG))
             return;
 
         applyConfig(creeper);
@@ -62,7 +59,7 @@ public class CreeperEvents {
 
             Creeper extra = new Creeper(EntityType.CREEPER, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     creeper.getX(),
                     creeper.getY(),
                     creeper.getZ(),
@@ -121,7 +118,7 @@ public class CreeperEvents {
                     EntityType.LIGHTNING_BOLT.create(level, EntitySpawnReason.NATURAL);
 
             if (lightning != null) {
-                lightning.moveTo(creeper.getX(), creeper.getY(), creeper.getZ());
+                lightning.snapTo(creeper.getX(), creeper.getY(), creeper.getZ());
                 creeper.thunderHit(level, lightning);
             }
         }

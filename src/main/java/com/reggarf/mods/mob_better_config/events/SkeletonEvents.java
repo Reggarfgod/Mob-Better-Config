@@ -45,7 +45,7 @@ public class SkeletonEvents {
             for (int i = 1; i < config.spawnMultiplier; i++) {
                 Skeleton extra = new Skeleton(EntityType.SKELETON, level);
 
-                extra.moveTo(
+                extra.snapTo(
                         skeleton.getX(),
                         skeleton.getY(),
                         skeleton.getZ(),
@@ -142,7 +142,7 @@ public class SkeletonEvents {
 
         if (config.bowPowerMultiplier != 1.0D) {
 
-            double baseDamage = arrow.getBaseDamage();
+            double baseDamage = 2.0D;
             arrow.setBaseDamage(baseDamage * config.bowPowerMultiplier);
         }
     }

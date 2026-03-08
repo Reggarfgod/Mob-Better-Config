@@ -1,5 +1,6 @@
 package com.reggarf.mods.mob_better_config.events;
 
+import com.reggarf.mods.mob_better_config.util.NbtUtil;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -21,21 +22,26 @@ public class MobConversionEvents {
         if (oldEntity == null || newEntity == null)
             return;
 
-        if (oldEntity.getPersistentData().getBoolean(BOSS_TAG)) {
+        var oldData = oldEntity.getPersistentData();
+        var newData = newEntity.getPersistentData();
 
-            newEntity.getPersistentData().putBoolean(BOSS_TAG, true);
+        // Preserve boss tag
+        if (NbtUtil.getBooleanSafe(oldData, BOSS_TAG)) {
 
-            newEntity.getPersistentData().putDouble(
+            NbtUtil.putBooleanSafe(newData, BOSS_TAG, true);
+
+            newData.putDouble(
                     BOSS_XP,
-                    oldEntity.getPersistentData().getDouble(BOSS_XP)
+                    NbtUtil.getDoubleSafe(oldData, BOSS_XP)
             );
 
-            newEntity.getPersistentData().putDouble(
+            newData.putDouble(
                     BOSS_LOOT,
-                    oldEntity.getPersistentData().getDouble(BOSS_LOOT)
+                    NbtUtil.getDoubleSafe(oldData, BOSS_LOOT)
             );
         }
 
+        // Copy health
         AttributeInstance oldHealth = oldEntity.getAttribute(Attributes.MAX_HEALTH);
         AttributeInstance newHealth = newEntity.getAttribute(Attributes.MAX_HEALTH);
 
@@ -45,6 +51,7 @@ public class MobConversionEvents {
             newEntity.setHealth((float) hp);
         }
 
+        // Copy attack damage
         AttributeInstance oldDamage = oldEntity.getAttribute(Attributes.ATTACK_DAMAGE);
         AttributeInstance newDamage = newEntity.getAttribute(Attributes.ATTACK_DAMAGE);
 
@@ -52,6 +59,7 @@ public class MobConversionEvents {
             newDamage.setBaseValue(oldDamage.getBaseValue());
         }
 
+        // Copy scale (1.20.5+ feature)
         AttributeInstance oldScale = oldEntity.getAttribute(Attributes.SCALE);
         AttributeInstance newScale = newEntity.getAttribute(Attributes.SCALE);
 
@@ -59,9 +67,11 @@ public class MobConversionEvents {
             newScale.setBaseValue(oldScale.getBaseValue());
         }
 
+        // Copy glowing state
         if (oldEntity.isCurrentlyGlowing())
             newEntity.setGlowingTag(true);
 
+        // Copy name
         newEntity.setCustomName(oldEntity.getCustomName());
         newEntity.setCustomNameVisible(oldEntity.isCustomNameVisible());
     }

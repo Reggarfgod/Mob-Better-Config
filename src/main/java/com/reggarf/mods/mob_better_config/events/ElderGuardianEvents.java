@@ -29,7 +29,7 @@ public class ElderGuardianEvents {
 
         ElderGuardianConfig config = ModConfigs.getElderGuardian();
 
-        if (elder.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (NbtUtil.getBooleanSafe(elder.getPersistentData(), "mob_better_config_spawned"))
             return;
 
         applyConfig(elder, config);

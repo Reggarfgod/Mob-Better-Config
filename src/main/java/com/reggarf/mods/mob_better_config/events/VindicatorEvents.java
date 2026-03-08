@@ -2,10 +2,7 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.VindicatorConfig;
-import com.reggarf.mods.mob_better_config.util.BossUtil;
-import com.reggarf.mods.mob_better_config.util.LootUtil;
-import com.reggarf.mods.mob_better_config.util.MobNameUtil;
-import com.reggarf.mods.mob_better_config.util.ReinforcementUtil;
+import com.reggarf.mods.mob_better_config.util.*;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -29,7 +26,7 @@ public class VindicatorEvents {
 
         VindicatorConfig config = ModConfigs.getVindicator();
 
-        if (vindicator.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (NbtUtil.getBooleanSafe(vindicator.getPersistentData(),"mob_better_config_spawned"))
             return;
 
         applyConfig(vindicator);
@@ -56,7 +53,7 @@ public class VindicatorEvents {
 
             Vindicator extra = new Vindicator(EntityType.VINDICATOR, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     vindicator.getX(),
                     vindicator.getY(),
                     vindicator.getZ(),

@@ -52,7 +52,7 @@ public class ZombieEvents {
 
                 Zombie extra = new Zombie(EntityType.ZOMBIE, level);
 
-                extra.moveTo(
+                extra.snapTo(
                         zombie.getX(),
                         zombie.getY(),
                         zombie.getZ(),
@@ -181,7 +181,7 @@ public class ZombieEvents {
 
                 zombie.addEffect(
                         new MobEffectInstance(
-                                MobEffects.MOVEMENT_SPEED,
+                                MobEffects.SPEED,
                                 40,
                                 1,
                                 false,
@@ -191,7 +191,7 @@ public class ZombieEvents {
 
                 zombie.addEffect(
                         new MobEffectInstance(
-                                MobEffects.DAMAGE_BOOST,
+                                MobEffects.STRENGTH,
                                 40,
                                 1,
                                 false,

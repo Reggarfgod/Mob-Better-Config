@@ -27,7 +27,8 @@ public class EnderDragonEvents {
 
         EnderDragonConfig config = ModConfigs.getEnderDragon();
 
-        if (dragon.getPersistentData().getBoolean("mob_better_config_spawned"))
+
+        if (NbtUtil.getBooleanSafe(dragon.getPersistentData(), "mob_better_config_spawned"))
             return;
 
         applyConfig(dragon, config);

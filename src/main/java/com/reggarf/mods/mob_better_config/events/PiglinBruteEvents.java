@@ -36,7 +36,7 @@ public class PiglinBruteEvents {
 
         PiglinBruteConfig config = ModConfigs.getPiglinBrute();
 
-        if (piglinBrute.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (NbtUtil.getBooleanSafe(piglinBrute.getPersistentData(),("mob_better_config_spawned")))
             return;
 
         applyConfig(piglinBrute, config);
@@ -59,7 +59,7 @@ public class PiglinBruteEvents {
 
             PiglinBrute extra = new PiglinBrute(EntityType.PIGLIN_BRUTE, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     piglinBrute.getX(),
                     piglinBrute.getY(),
                     piglinBrute.getZ(),

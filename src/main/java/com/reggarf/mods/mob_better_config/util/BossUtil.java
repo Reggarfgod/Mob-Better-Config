@@ -38,10 +38,13 @@ public class BossUtil {
             return;
 
         var data = entity.getPersistentData();
-        if (data.getBoolean(JOIN_MARK))
+
+        if (NbtUtil.getBooleanSafe(data, JOIN_MARK))
             return;
+
         data.putBoolean(JOIN_MARK, true);
-        if (data.getBoolean(BOSS_TAG))
+
+        if (NbtUtil.getBooleanSafe(data, BOSS_TAG))
             return;
 
         boolean makeBoss;
@@ -139,7 +142,7 @@ public class BossUtil {
     }
 
     public static boolean isBoss(LivingEntity entity) {
-        return entity.getPersistentData().getBoolean(BOSS_TAG);
+        return NbtUtil.getBooleanSafe(entity.getPersistentData(), BOSS_TAG);
     }
 
     @SubscribeEvent
@@ -147,16 +150,15 @@ public class BossUtil {
 
         LivingEntity living = event.getEntity();
 
-        if (!living.getPersistentData().getBoolean(BOSS_TAG))
+        if (!NbtUtil.getBooleanSafe(living.getPersistentData(), BOSS_TAG))
             return;
 
-        double multiplier = living.getPersistentData().getDouble(BOSS_XP);
+        double multiplier = NbtUtil.getDoubleSafe(living.getPersistentData(), BOSS_XP);
 
         if (multiplier <= 0)
             multiplier = DEFAULT_XP_MULTIPLIER;
 
         int newXp = (int) (event.getDroppedExperience() * multiplier);
-        event.setDroppedExperience(newXp);
     }
     @SubscribeEvent
     public static void onDrops(LivingDropsEvent event) {
@@ -166,10 +168,10 @@ public class BossUtil {
         if (!(entity.level() instanceof ServerLevel level))
             return;
 
-        if (!entity.getPersistentData().getBoolean(BOSS_TAG))
+        if (!NbtUtil.getBooleanSafe(entity.getPersistentData(), BOSS_TAG))
             return;
 
-        double multiplier = entity.getPersistentData().getDouble(BOSS_LOOT);
+        double multiplier = NbtUtil.getDoubleSafe(entity.getPersistentData(), BOSS_LOOT);
 
         if (multiplier <= 1.0D)
             multiplier = DEFAULT_LOOT_MULTIPLIER;
