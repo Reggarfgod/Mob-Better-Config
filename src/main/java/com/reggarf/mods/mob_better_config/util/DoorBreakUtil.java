@@ -10,7 +10,6 @@ public class DoorBreakUtil {
 
     /**
      * Applies configurable door breaking behavior.
-     * Works for Zombies and any Mob that supports door breaking.
      */
     public static void handleDoorBreaking(
             Mob mob,
@@ -18,41 +17,36 @@ public class DoorBreakUtil {
             int doorBreakMode
     ) {
 
-        // Only mobs with door-breaking capability (Zombie-based mobs)
+        // Only zombies support door breaking
         if (!(mob instanceof Zombie zombie))
             return;
 
-        // Remove existing break door goals (vanilla + custom)
+        // Remove any existing door break goals
         zombie.goalSelector.removeAllGoals(goal ->
                 goal.getClass().getName().contains("BreakDoor"));
 
-        // Disabled
-        if (!canBreakDoors || doorBreakMode <= 0) {
+        // Disable door breaking
+        if (!canBreakDoors || doorBreakMode == 0) {
             zombie.setCanBreakDoors(false);
             return;
         }
 
         zombie.setCanBreakDoors(true);
 
-        int breakTicks = getBreakTicks(doorBreakMode);
+        int breakTicks;
+
+        switch (doorBreakMode) {
+            case 1 -> breakTicks = 400;
+            case 2 -> breakTicks = 300;
+            case 3 -> breakTicks = 240;
+            case 4 -> breakTicks = 120;
+            case 5 -> breakTicks = 60;
+            default -> breakTicks = 240;
+        }
 
         zombie.goalSelector.addGoal(
                 1,
                 new CustomBreakDoorGoal(zombie, breakTicks)
         );
-    }
-
-    /**
-     * Converts config mode into break duration.
-     */
-    private static int getBreakTicks(int mode) {
-        return switch (mode) {
-            case 1 -> 400; // very slow
-            case 2 -> 300;
-            case 3 -> 240; // vanilla-like
-            case 4 -> 120;
-            case 5 -> 60;  // very fast
-            default -> 240;
-        };
     }
 }

@@ -4,7 +4,7 @@
   "package": "com.reggarf.mods.mob_better_config.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "guardian.GuardianAttackDurationMixin",
+  /*  "guardian.GuardianAttackDurationMixin",
     "elderguardian.ElderGuardianMixin",
 
     "wither.WitherBossRegenMixin",
@@ -25,7 +25,7 @@
     "enderdragon.DragonVexReinforcementMixin",
     "enderdragon.DragonCustomNameMixin",
     "enderdragon.DragonBossModeMixin",
-    "enderdragon.DragonXpMixin",
+    "enderdragon.DragonXpMixin",*/
 
     "minecraft.RangedAttributeMixin"
 

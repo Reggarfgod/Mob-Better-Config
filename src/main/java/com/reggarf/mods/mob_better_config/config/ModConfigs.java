@@ -1,5 +1,7 @@
 package com.reggarf.mods.mob_better_config.config;
 
+import net.minecraft.world.entity.EntityType;
+
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 
@@ -8,136 +10,123 @@ public class ModConfigs {
     private static MobBetterConfigRoot ROOT;
 
     public static void register() {
-        AutoConfig.register(MobBetterConfigRoot.class, GsonConfigSerializer::new);
-        ROOT = AutoConfig.getConfigHolder(MobBetterConfigRoot.class).getConfig();
+
+        AutoConfig.register(
+                MobBetterConfigRoot.class,
+                GsonConfigSerializer::new
+        );
+
+        ROOT = AutoConfig
+                .getConfigHolder(MobBetterConfigRoot.class)
+                .getConfig();
     }
 
+    public static MobConfig get(EntityType<?> type) {
 
-    public static ZombieConfig getZombie() {
-        return ROOT.overworld.zombie;
-    }
+        if (ROOT == null)
+            return new MobConfig();
 
-    public static SkeletonConfig getSkeleton() {
-        return ROOT.overworld.skeleton;
-    }
 
-    public static ZombieVillagerConfig getZombieVillager() {
-        return ROOT.overworld.zombievillager;
-    }
+        if (type == EntityType.ZOMBIE)
+            return ROOT.overworld.zombie;
 
-    public static WitchConfig getWitch() {
-        return ROOT.overworld.witch;
-    }
+        if (type == EntityType.SKELETON)
+            return ROOT.overworld.skeleton;
 
-    public static SpiderConfig getSpider() {
-        return ROOT.overworld.spider;
-    }
+        if (type == EntityType.CREEPER)
+            return ROOT.overworld.creeper;
 
-    public static CaveSpiderConfig getCaveSpider() {
-        return ROOT.overworld.caveSpider;
-    }
+        if (type == EntityType.SPIDER)
+            return ROOT.overworld.spider;
 
-    public static CreeperConfig getCreeper() {
-        return ROOT.overworld.creeper;
-    }
+//        if (type == EntityType.CAVE_SPIDER)
+//            return ROOT.overworld.caveSpider;
 
-    public static VindicatorConfig getVindicator() {
-        return ROOT.overworld.vindicator;
-    }
+        if (type == EntityType.ENDERMAN)
+            return ROOT.overworld.enderman;
 
-    public static StrayConfig getStray() {
-        return ROOT.overworld.stray;
-    }
+        if (type == EntityType.WITCH)
+            return ROOT.overworld.witch;
 
-    public static SlimeConfig getSlime() {
-        return ROOT.overworld.slime;
-    }
+//        if (type == EntityType.DROWNED)
+//            return ROOT.overworld.drowned;
+//
+//        if (type == EntityType.PHANTOM)
+//            return ROOT.overworld.phantom;
+//
+//        if (type == EntityType.PILLAGER)
+//            return ROOT.overworld.pillager;
+//
+//        if (type == EntityType.VINDICATOR)
+//            return ROOT.overworld.vindicator;
+//
+//        if (type == EntityType.RAVAGER)
+//            return ROOT.overworld.ravager;
 
-    public static HuskConfig getHusk() {
-        return ROOT.overworld.husk;
-    }
+//        if (type == EntityType.SLIME)
+//            return ROOT.overworld.slime;
 
-    public static PillagerConfig getPillager() {
-        return ROOT.overworld.pillager;
-    }
+//        if (type == EntityType.HUSK)
+//            return ROOT.overworld.husk;
 
-    public static PhantomConfig getPhantom() {
-        return ROOT.overworld.phantom;
-    }
+//        if (type == EntityType.STRAY)
+//            return ROOT.overworld.stray;
 
-    public static EndermanConfig getEnderman() {
-        return ROOT.overworld.enderman;
-    }
+//        if (type == EntityType.SILVERFISH)
+//            return ROOT.overworld.silverfish;
 
-    public static DrownedConfig getDrowned() {
-        return ROOT.overworld.drowned;
-    }
+//        if (type == EntityType.GUARDIAN)
+//            return ROOT.overworld.guardian;
 
-    public static EvokerConfig getEvoker() {
-        return ROOT.overworld.evoker;
-    }
 
-    public static RavagerConfig getRavager() {
-        return ROOT.overworld.ravager;
-    }
+        /*NETHER*/
+        if (type == EntityType.BLAZE)
+            return ROOT.nether.blaze;
 
-    public static SilverfishConfig getSilverfish() {
-        return ROOT.overworld.silverfish;
-    }
+        if (type == EntityType.GHAST)
+            return ROOT.nether.ghast;
 
-    public static GuardianConfig getGuardian() {
-        return ROOT.overworld.guardian;
-    }
+//        if (type == EntityType.MAGMA_CUBE)
+//            return ROOT.nether.magma_cube;
+//
+//        if (type == EntityType.WITHER_SKELETON)
+//            return ROOT.nether.wither_skeleton;
+//
+//        if (type == EntityType.ZOGLIN)
+//            return ROOT.nether.zoglin;
+//
+//        if (type == EntityType.HOGLIN)
+//            return ROOT.nether.hoglin;
 
-    public static WitherSkeletonConfig getWitherSkeleton() {
-        return ROOT.nether.wither_skeleton;
-    }
+//        if (type == EntityType.PIGLIN_BRUTE)
+//            return ROOT.nether.piglinbrute;
 
-    public static MagmaCubeConfig getMagmaCube() {
-        return ROOT.nether.magma_cube;
-    }
+//        if (type == EntityType.ZOMBIFIED_PIGLIN)
+//            return ROOT.nether.piglin;
 
-    public static BlazeConfig getBlaze() {
-        return ROOT.nether.blaze;
-    }
+        /* ===================== */
+        /* END                   */
+        /* ===================== */
 
-    public static GhastConfig getGhast() {
-        return ROOT.nether.ghast;
-    }
+        if (type == EntityType.SHULKER)
+            return ROOT.end.shulker;
 
-    public static HoglinConfig getHoglin() {
-        return ROOT.nether.hoglin;
-    }
+        /* ===================== */
+        /* BOSSES                */
+        /* ===================== */
 
-    public static ZoglinConfig getZoglin() {
-        return ROOT.nether.zoglin;
-    }
+        if (type == EntityType.WARDEN)
+            return ROOT.bosses.warden;
 
-    public static PiglinBruteConfig getPiglinBrute() {
-        return ROOT.nether.piglinbrute;
-    }
+//        if (type == EntityType.ELDER_GUARDIAN)
+//            return ROOT.bosses.elderguardian;
 
-    public static ZombifiedPiglinConfig getZombifiedPiglin() {
-        return ROOT.nether.piglin;
-    }
+        if (type == EntityType.WITHER)
+            return ROOT.bosses.wither;
 
-    public static ShulkerConfig getShulker() {
-        return ROOT.end.shulker;
-    }
+//        if (type == EntityType.ENDER_DRAGON)
+//            return ROOT.bosses.enderdragon;
 
-    public static WardenConfig getWarden() {
-        return ROOT.bosses.warden;
-    }
-
-    public static ElderGuardianConfig getElderGuardian() {
-        return ROOT.bosses.elderguardian;
-    }
-
-    public static WitherConfig getWither() {
-        return ROOT.bosses.wither;
-    }
-
-    public static EnderDragonConfig getEnderDragon() {
-        return ROOT.bosses.enderdragon;
+        return new MobConfig();
     }
 }

@@ -6,7 +6,8 @@ import com.reggarf.mods.mob_better_config.api.BetterMessages;
 import com.reggarf.mods.mob_better_config.api.OnlineMessages;
 import com.reggarf.mods.mob_better_config.config.MobBetterConfigRoot;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
-import com.reggarf.mods.mob_better_config.register.ModEventRegister;
+import com.reggarf.mods.mob_better_config.handle.HostileMobEvents;
+
 import me.shedaniel.autoconfig.AutoConfig;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -32,7 +33,8 @@ public class Mob_better_config {
         // Register config
         ModConfigs.register();
         // Register events
-        ModEventRegister.register();
+        NeoForge.EVENT_BUS.register(new HostileMobEvents());
+       // ModEventRegister.register();
         OnlineMessageLib.registerPlugin(new OnlineMessages());
         BetterMessages.register();
     }
