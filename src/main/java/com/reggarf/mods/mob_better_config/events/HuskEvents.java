@@ -73,6 +73,7 @@ public class HuskEvents {
     }
 
     private void applyConfig(Husk husk, HuskConfig config) {
+
         if (config.CustomName) {
             MobNameUtil.applyRandomName(husk);
         }

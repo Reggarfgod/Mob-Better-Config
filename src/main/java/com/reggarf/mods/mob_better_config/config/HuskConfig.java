@@ -21,9 +21,9 @@ public class HuskConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public double attackDamage = 1.0D;
     @ConfigEntry.Gui.Tooltip
-    public double movementSpeed = 0.23D;
+    public double movementSpeed = 0.25D;
     @ConfigEntry.Gui.Tooltip
-    public double followRange = 1.0D;
+    public double followRange = 40.0D;
     @ConfigEntry.Gui.Tooltip
     public double xpMultiplier = 1.0D;
     @ConfigEntry.Gui.Tooltip
