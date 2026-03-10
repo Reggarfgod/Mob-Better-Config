@@ -25,8 +25,9 @@ public class ZombieEvents {
     @SubscribeEvent
     public void onZombieJoin(FinalizeSpawnEvent event) {
 
-        if (!(event.getEntity() instanceof Zombie zombie) || zombie instanceof ZombifiedPiglin)
+       if (!(event.getEntity() instanceof Zombie zombie) || zombie instanceof ZombifiedPiglin || zombie instanceof Husk)
             return;
+
 
         applyConfig(zombie);
 
