@@ -1,0 +1,57 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.reggarf.mods.mob_better_config.mixin",
+  "refmap": "${mod_id}.refmap.json",
+  "compatibilityLevel": "JAVA_18",
+  "mixins": [],
+  "client": [
+    "MixinMinecraft",
+   "blaze.SmallFireballMixin",
+    "cavespider.CaveSpiderMixin",
+    "elderguardian.ElderGuardianMixin",
+
+    "enderdragon.DragonCrystalHealingMixin",
+    "enderdragon.DragonCrystalHealAmountMixin",
+    "enderdragon.DragonCrystalHealIntervalMixin",
+    "enderdragon.DragonBlockBreakingMixin",
+    "enderdragon.DragonKnockbackDamageMixin",
+    "enderdragon.DragonHeadDamageMixin",
+    "enderdragon.DragonBreathMixin",
+    "enderdragon.DragonAttributesMixin",
+    "enderdragon.DragonIgnoreVexMixin",
+    "enderdragon.DragonVexReinforcementMixin",
+    "enderdragon.DragonCustomNameMixin",
+    "enderdragon.DragonBossModeMixin",
+    "enderdragon.DragonXpMixin",
+
+    "enderman.EndermanWaterDamageMixin",
+
+    "husk.HuskWaterConversionMixin",
+    "brute.AbstractPiglinMixin",
+
+    "pillager.AbstractArrowMixin",
+    "ravager.RavagerRoarMixin",
+
+    "shulker.ShulkerTeleportMixin",
+    "shulker.ShulkerAttackMixin",
+    "shulker.ShulkerPeekMixin",
+    "shulker.ShulkerCloneMixin",
+    "shulker.ShulkerBulletDamageMixin",
+
+    "witch.WitchMixin",
+
+    "wither.WitherSkullMixin",
+    "wither.WitherBlockBreakingMixin",
+    "wither.WitherSpawnExplosionMixin",
+    "wither.WitherBossRegenMixin",
+    "wither.WitherEffectMixin",
+
+    "witherSkeleton.WitherSkeletonArrowMixin",
+    "witherSkeleton.WitherSkeletonMixin"
+  ],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

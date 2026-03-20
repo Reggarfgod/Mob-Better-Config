@@ -1,0 +1,70 @@
+package com.reggarf.mods.mob_better_config.register;
+
+import com.reggarf.mods.mob_better_config.events.WitchEvents;
+
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.event.entity.living.*;
+import net.neoforged.neoforge.event.entity.ProjectileImpactEvent;
+import net.neoforged.neoforge.event.tick.EntityTickEvent;
+
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.monster.Witch;
+import net.minecraft.world.entity.projectile.ThrownPotion;
+
+public class NeoForgeWitchEvents {
+
+    @SubscribeEvent
+    public void onSpawn(FinalizeSpawnEvent event) {
+
+        if (!(event.getEntity() instanceof Witch witch))
+            return;
+
+        if (!(witch.level() instanceof ServerLevel level))
+            return;
+
+        WitchEvents.onSpawn(witch, level);
+    }
+
+    @SubscribeEvent
+    public void onTick(EntityTickEvent.Post event) {
+
+        if (event.getEntity() instanceof Witch witch) {
+            WitchEvents.onTick(witch);
+        }
+    }
+
+    @SubscribeEvent
+    public void onPotionImpact(ProjectileImpactEvent event) {
+
+        if (!(event.getProjectile() instanceof ThrownPotion potion))
+            return;
+
+        if (!(potion.level() instanceof ServerLevel level))
+            return;
+
+        WitchEvents.onPotionImpact(potion, level);
+    }
+
+    @SubscribeEvent
+    public void onXP(LivingExperienceDropEvent event) {
+
+        if (!(event.getEntity() instanceof Witch))
+            return;
+
+        event.setDroppedExperience(
+                (int) WitchEvents.modifyXP(event.getDroppedExperience())
+        );
+    }
+
+    @SubscribeEvent
+    public void onDrops(LivingDropsEvent event) {
+
+        if (!(event.getEntity() instanceof Witch witch))
+            return;
+
+        if (!(witch.level() instanceof ServerLevel level))
+            return;
+
+        WitchEvents.onDrops(level, witch);
+    }
+}

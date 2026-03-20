@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Mob_Better_Config.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Mob_Better_Config.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/Mob_Better_Config.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common/Mob_Better_Config.common.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/Mob_Better_Config.fabric.main.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/Mob_Better_Config.fabric.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/Mob_Better_Config.fabric.test.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/Mob_Better_Config.fabric.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/forge/Mob_Better_Config.forge.main.iml" filepath="$PROJECT_DIR$/.idea/modules/forge/Mob_Better_Config.forge.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/forge/Mob_Better_Config.forge.test.iml" filepath="$PROJECT_DIR$/.idea/modules/forge/Mob_Better_Config.forge.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/neoforge/Mob_Better_Config.neoforge.main.iml" filepath="$PROJECT_DIR$/.idea/modules/neoforge/Mob_Better_Config.neoforge.main.iml" />
     </modules>
   </component>
 </project>
