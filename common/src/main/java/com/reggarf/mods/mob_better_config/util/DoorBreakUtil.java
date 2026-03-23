@@ -1,20 +1,15 @@
 package com.reggarf.mods.mob_better_config.util;
 
 import com.reggarf.mods.mob_better_config.ai.CustomBreakDoorGoal;
+import com.reggarf.mods.mob_better_config.mixin.MobAccessor;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.goal.GoalSelector;
 import net.minecraft.world.entity.ai.navigation.GroundPathNavigation;
-
-import java.lang.reflect.Field;
 
 public class DoorBreakUtil {
 
     private DoorBreakUtil() {}
 
-    /**
-     * Applies configurable door breaking behavior.
-     * Works for any mob using GroundPathNavigation.
-     */
     public static void handleDoorBreaking(
             Mob mob,
             boolean canBreakDoors,
@@ -37,20 +32,13 @@ public class DoorBreakUtil {
 
         int breakTicks = getBreakTicks(doorBreakMode);
 
-        try {
+        GoalSelector goalSelector =
+                ((MobAccessor) mob).getGoalSelector();
 
-            Field goalSelectorField = Mob.class.getDeclaredField("goalSelector");
-            goalSelectorField.setAccessible(true);
-
-            GoalSelector goalSelector = (GoalSelector) goalSelectorField.get(mob);
-
-            goalSelector.addGoal(
-                    1,
-                    new CustomBreakDoorGoal(mob, breakTicks)
-            );
-
-        } catch (Exception ignored) {}
-
+        goalSelector.addGoal(
+                1,
+                new CustomBreakDoorGoal(mob, breakTicks)
+        );
     }
 
     private static int getBreakTicks(int mode) {

@@ -48,7 +48,8 @@
     "wither.WitherEffectMixin",
 
     "witherSkeleton.WitherSkeletonArrowMixin",
-    "witherSkeleton.WitherSkeletonMixin"
+    "witherSkeleton.WitherSkeletonMixin",
+    "MobAccessor"
   ],
   "server": [],
   "injectors": {

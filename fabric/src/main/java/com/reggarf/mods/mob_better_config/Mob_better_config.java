@@ -13,7 +13,7 @@ public class Mob_better_config implements ModInitializer {
         FabricBossEvents.register();
         FabricWaterDamageEvents.init();
         Constants.LOG.info("Hello Fabric world!");
-        CommonClass.init();
+
 
         FabricBlazeEvents.register();
         FabricCaveSpiderEvents.register();
@@ -46,5 +46,7 @@ public class Mob_better_config implements ModInitializer {
         FabricZoglinEvents.register();
         FabricZombifiedPiglinEvents.register();
         FabricZombieVillagerEvents.register();
+
+        CommonClass.init();
     }
 }

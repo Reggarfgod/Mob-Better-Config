@@ -20,7 +20,7 @@ public class FabricBossEvents {
 
             double lootMultiplier = BossUtil.getLootMultiplier(entity);
 
-            // Fabric requires custom drop logic here
+
         });
 
     }
