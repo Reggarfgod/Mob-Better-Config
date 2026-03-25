@@ -7,12 +7,8 @@ import org.spongepowered.asm.mixin.Overwrite;
 @Mixin(RangedAttribute.class)
 public abstract class RangedAttributeMixin {
 
-    /**
-     * @author ReggerF
-     * @reason Remove attribute clamping limit
-     */
     @Overwrite
     public double sanitizeValue(double value) {
-        return value; // completely removes min/max clamp
+        return value;
     }
 }
