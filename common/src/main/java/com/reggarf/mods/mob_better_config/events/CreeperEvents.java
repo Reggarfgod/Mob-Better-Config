@@ -67,26 +67,40 @@ public class CreeperEvents {
 
         CreeperConfig config = ModConfigs.getCreeper();
 
-        try {
-
-            Field radiusField = Creeper.class.getDeclaredField("explosionRadius");
-            radiusField.setAccessible(true);
-            radiusField.setInt(creeper, config.explosionRadius);
-
-            Field swellField = Creeper.class.getDeclaredField("maxSwell");
-            swellField.setAccessible(true);
-            swellField.setInt(creeper, config.fuseTime);
-
-        } catch (Exception ignored) {}
-
         if (config.powered) {
 
-            LightningBolt lightning = EntityType.LIGHTNING_BOLT.create(level);
+            LightningBolt lightning = createLightning(level);
 
             if (lightning != null) {
                 lightning.moveTo(creeper.getX(), creeper.getY(), creeper.getZ());
                 creeper.thunderHit(level, lightning);
             }
+        }
+    }
+    private static LightningBolt createLightning(ServerLevel level) {
+        try {
+            Class<?> entityTypeClass = EntityType.LIGHTNING_BOLT.getClass();
+
+            try {
+                // NEW versions
+                Class<?> spawnReasonClass = Class.forName("net.minecraft.world.entity.EntitySpawnReason");
+
+                Object reason = spawnReasonClass.getField("EVENT").get(null);
+
+                return (LightningBolt) entityTypeClass
+                        .getMethod("create", net.minecraft.world.level.Level.class, spawnReasonClass)
+                        .invoke(EntityType.LIGHTNING_BOLT, level, reason);
+
+            } catch (ClassNotFoundException | NoSuchMethodException ignored) {
+                // OLD versions
+                return (LightningBolt) entityTypeClass
+                        .getMethod("create", net.minecraft.world.level.Level.class)
+                        .invoke(EntityType.LIGHTNING_BOLT, level);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
         }
     }
 

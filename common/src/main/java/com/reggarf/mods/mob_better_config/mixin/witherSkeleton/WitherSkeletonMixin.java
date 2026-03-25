@@ -3,6 +3,7 @@ package com.reggarf.mods.mob_better_config.mixin.witherSkeleton;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.WitherSkeletonConfig;
 
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.WitherSkeleton;
@@ -18,10 +19,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class WitherSkeletonMixin {
 
     @Inject(
-        method = "doHurtTarget",
-        at = @At("TAIL")
+            method = "doHurtTarget",
+            at = @At("TAIL")
     )
-    private void mbc$modifyWitherEffect(Entity target, CallbackInfoReturnable<Boolean> cir) {
+    private void mbc$modifyWitherEffect(ServerLevel level, Entity target, CallbackInfoReturnable<Boolean> cir) {
 
         if (!cir.getReturnValue())
             return;

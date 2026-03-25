@@ -11,6 +11,8 @@
     "cavespider.CaveSpiderMixin",
     "elderguardian.ElderGuardianMixin",
 
+    "creeper.CreeperMixin",
+
     "enderdragon.DragonCrystalHealingMixin",
     "enderdragon.DragonCrystalHealAmountMixin",
     "enderdragon.DragonCrystalHealIntervalMixin",

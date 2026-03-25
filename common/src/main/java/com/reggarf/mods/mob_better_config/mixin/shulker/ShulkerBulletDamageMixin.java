@@ -4,7 +4,6 @@ import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.monster.Shulker;
 import net.minecraft.world.entity.projectile.ShulkerBullet;
-
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
@@ -16,11 +15,16 @@ public class ShulkerBulletDamageMixin {
             method = "onHitEntity",
             at = @At(
                     value = "INVOKE",
-                    target = "Lnet/minecraft/world/entity/Entity;hurt(Lnet/minecraft/world/damagesource/DamageSource;F)Z"
+                    target = "Lnet/minecraft/world/entity/Entity;hurtOrSimulate(Lnet/minecraft/world/damagesource/DamageSource;F)Z"
             ),
-            index = 1
+            index = 1,
+            require = 0
     )
-    private float mbc$modifyBulletDamage(float originalDamage) {
+    private float mbc$modifyBulletDamage_new(float originalDamage) {
+        return applyMultiplier(originalDamage);
+    }
+
+    private float applyMultiplier(float originalDamage) {
 
         ShulkerBullet bullet = (ShulkerBullet)(Object)this;
         Entity owner = bullet.getOwner();

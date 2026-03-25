@@ -133,15 +133,14 @@ public class CommonMobHandler {
         }
     }
 
-
     public static void spawnMultiplier(Mob mob, ServerLevel level, int multiplier) {
 
         for (int i = 1; i < multiplier; i++) {
 
-            Mob extra = (Mob) mob.getType().create(level);
+            Mob extra = createMobCrossVersion(mob, level);
 
             if (extra == null)
-                return;
+                continue;
 
             extra.moveTo(
                     mob.getX(),
@@ -150,6 +149,7 @@ public class CommonMobHandler {
                     mob.getYRot(),
                     mob.getXRot()
             );
+
             markInitialized(extra);
             level.addFreshEntity(extra);
         }
@@ -161,5 +161,34 @@ public class CommonMobHandler {
 
         if (instance != null)
             instance.setBaseValue(value);
+    }
+
+    private static Mob createMobCrossVersion(Mob mob, ServerLevel level) {
+        try {
+            Class<?> entityTypeClass = mob.getType().getClass();
+
+            // NEW method: create(Level, EntitySpawnReason)
+            try {
+                Class<?> spawnReasonClass = Class.forName("net.minecraft.world.entity.EntitySpawnReason");
+
+                Object spawnReason = spawnReasonClass
+                        .getField("EVENT")
+                        .get(null);
+
+                return (Mob) entityTypeClass
+                        .getMethod("create", net.minecraft.world.level.Level.class, spawnReasonClass)
+                        .invoke(mob.getType(), level, spawnReason);
+
+            } catch (ClassNotFoundException | NoSuchMethodException ignored) {
+                // Fallback OLD method: create(Level)
+                return (Mob) entityTypeClass
+                        .getMethod("create", net.minecraft.world.level.Level.class)
+                        .invoke(mob.getType(), level);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

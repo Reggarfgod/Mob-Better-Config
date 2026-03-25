@@ -46,6 +46,7 @@ public class Mob_better_config implements ModInitializer {
         FabricZoglinEvents.register();
         FabricZombifiedPiglinEvents.register();
         FabricZombieVillagerEvents.register();
+        FabricMagmaCubeEvents.register();
 
         CommonClass.init();
     }

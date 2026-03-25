@@ -192,12 +192,12 @@ public class NeoForgeMagmaCubeEvents {
         if (!config.damageScalesWithSize)
             event.setNewDamage((float) config.attackDamageMultiplier);
 
-        ReinforcementUtil.trySpawnReinforcement(
-                cube,
-                (ServerLevel) cube.level(),
-                config.reinforcementChance,
-                4
-        );
+//        ReinforcementUtil.trySpawnReinforcement(
+//                cube,
+//                (ServerLevel) cube.level(),
+//                config.reinforcementChance,
+//                4
+//        );
     }
 
     @SubscribeEvent

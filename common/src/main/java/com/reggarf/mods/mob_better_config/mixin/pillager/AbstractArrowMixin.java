@@ -15,12 +15,12 @@ import org.spongepowered.asm.mixin.injection.ModifyArg;
 public abstract class AbstractArrowMixin {
 
     @ModifyArg(
-        method = "onHitEntity",
-        at = @At(
-            value = "INVOKE",
-            target = "Lnet/minecraft/world/entity/Entity;hurt(Lnet/minecraft/world/damagesource/DamageSource;F)Z"
-        ),
-        index = 1
+            method = "onHitEntity",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/world/entity/Entity;hurtOrSimulate(Lnet/minecraft/world/damagesource/DamageSource;F)Z"
+            ),
+            index = 1
     )
     private float mobbetterconfig$modifyArrowDamage(float damage) {
 

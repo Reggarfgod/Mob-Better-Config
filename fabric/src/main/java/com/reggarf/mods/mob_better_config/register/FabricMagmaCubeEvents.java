@@ -87,12 +87,12 @@ public class FabricMagmaCubeEvents {
             if (!config.damageScalesWithSize)
                 entity.setLastHurtByMob(cube);
 
-            ReinforcementUtil.trySpawnReinforcement(
-                    cube,
-                    (ServerLevel) cube.level(),
-                    config.reinforcementChance,
-                    4
-            );
+//            ReinforcementUtil.trySpawnReinforcement(
+//                    cube,
+//                    (ServerLevel) cube.level(),
+//                    config.reinforcementChance,
+//                    4
+//            );
 
             return true;
         });

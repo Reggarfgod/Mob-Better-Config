@@ -2,9 +2,12 @@ package com.reggarf.mods.mob_better_config.mixin.wither;
 
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.WitherConfig;
+
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.boss.wither.WitherBoss;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Level.ExplosionInteraction;
+
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
@@ -13,15 +16,15 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public abstract class WitherSpawnExplosionMixin {
 
     @Redirect(
-        method = "customServerAiStep",
-        at = @At(
-            value = "INVOKE",
-            target = "Lnet/minecraft/world/level/Level;explode(Lnet/minecraft/world/entity/Entity;DDDFZLnet/minecraft/world/level/Level$ExplosionInteraction;)Lnet/minecraft/world/level/Explosion;"
-        )
+            method = "customServerAiStep",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/server/level/ServerLevel;explode(Lnet/minecraft/world/entity/Entity;DDDFZLnet/minecraft/world/level/Level$ExplosionInteraction;)V"
+            )
     )
-    private net.minecraft.world.level.Explosion mobBetterConfig$modifySpawnExplosion(
-            Level level,
-            net.minecraft.world.entity.Entity entity,
+    private void mobBetterConfig$modifySpawnExplosion(
+            ServerLevel level,
+            Entity entity,
             double x,
             double y,
             double z,
@@ -34,6 +37,6 @@ public abstract class WitherSpawnExplosionMixin {
 
         float newPower = config.spawnExplosionPower;
 
-        return level.explode(entity, x, y, z, newPower, fire, interaction);
+        level.explode(entity, x, y, z, newPower, fire, interaction);
     }
 }

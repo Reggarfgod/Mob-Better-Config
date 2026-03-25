@@ -71,9 +71,9 @@ public class MagmaCubeConfig implements ConfigData {
 
     @ConfigEntry.Gui.Tooltip
     public int spawnMultiplier = 1;
-
-    @ConfigEntry.Gui.Tooltip
-    public double reinforcementChance = 0.0D;
+//
+//    @ConfigEntry.Gui.Tooltip
+//    public double reinforcementChance = 0.0D;
 
 
     @ConfigEntry.Gui.Tooltip
