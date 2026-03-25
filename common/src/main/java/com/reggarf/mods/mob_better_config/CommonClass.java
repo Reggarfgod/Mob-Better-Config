@@ -1,9 +1,6 @@
 package com.reggarf.mods.mob_better_config;
 
 
-import com.reggarf.mods.better_lib.message.online.OnlineMessageLib;
-import com.reggarf.mods.mob_better_config.api.BetterMessages;
-import com.reggarf.mods.mob_better_config.api.OnlineMessages;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.platform.Services;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -22,8 +19,8 @@ public class CommonClass {
         Constants.LOG.info("Hello from Common init on {}! we are currently in a {} environment!", Services.PLATFORM.getPlatformName(), Services.PLATFORM.getEnvironmentName());
         Constants.LOG.info("The ID for diamonds is {}", BuiltInRegistries.ITEM.getKey(Items.DIAMOND));
         ModConfigs.register();
-        OnlineMessageLib.registerPlugin(new OnlineMessages());
-        BetterMessages.register();
+        //OnlineMessageLib.registerPlugin(new OnlineMessages());
+       // BetterMessages.register();
 
         if (Services.PLATFORM.isModLoaded("mob_better_config")) {
             Constants.LOG.info("Hello to mob_better_config");
