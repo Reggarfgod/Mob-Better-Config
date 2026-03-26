@@ -58,7 +58,7 @@ public class FabricDrownedEvents {
 
                 Drowned extra = new Drowned(EntityType.DROWNED, serverLevel);
 
-                extra.moveTo(
+                extra.snapTo(
                         drowned.getX(),
                         drowned.getY(),
                         drowned.getZ(),

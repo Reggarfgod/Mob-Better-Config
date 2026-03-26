@@ -10,6 +10,11 @@ mixin {
     config("${mod_id}.mixins.json")
     config("${mod_id}.forge.mixins.json")
 }
+jar {
+    manifest {
+        attributes["MixinConfigs"] = "${mod_id}.mixins.json,${mod_id}.forge.mixins.json"
+    }
+}
 
 minecraft {
     mappings channel: 'official', version: minecraft_version
@@ -67,7 +72,7 @@ minecraft {
 sourceSets.main.resources.srcDir 'src/generated/resources'
 
 dependencies {
-    minecraft "net.minecraftforge:forge:${minecraft_version_forge}-${forge_version}"
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
 
     // Forge's hack fix

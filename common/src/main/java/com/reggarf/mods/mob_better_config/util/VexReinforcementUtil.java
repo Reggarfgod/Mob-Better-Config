@@ -67,7 +67,7 @@ public class VexReinforcementUtil {
             double offsetY = random.nextInt(3);
             double offsetZ = random.nextInt(spawnRadius * 2 + 1) - spawnRadius;
 
-            vex.moveTo(
+            vex.snapTo(
                     summoner.getX() + offsetX,
                     summoner.getY() + offsetY,
                     summoner.getZ() + offsetZ,

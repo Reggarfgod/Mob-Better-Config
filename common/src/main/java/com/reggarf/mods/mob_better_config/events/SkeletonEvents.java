@@ -95,9 +95,8 @@ public class SkeletonEvents {
         SkeletonConfig config = ModConfigs.getSkeleton();
 
         if (config.bowPowerMultiplier != 1.0D) {
-            arrow.setBaseDamage(
-                    arrow.getBaseDamage() * config.bowPowerMultiplier
-            );
+            double base = 2.0D;
+            arrow.setBaseDamage(base * config.bowPowerMultiplier);
         }
     }
 

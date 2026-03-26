@@ -21,7 +21,7 @@ public class DrownedEvents {
 
         DrownedConfig config = ModConfigs.getDrowned();
 
-        if (!config.allowDaySpawn && drowned.level().isDay())
+        if (!config.allowDaySpawn && drowned.level().isBrightOutside())
             return false;
 
         if (config.requireDeepWater) {
@@ -62,7 +62,7 @@ public class DrownedEvents {
 
             Drowned extra = new Drowned(EntityType.DROWNED, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     drowned.getX(),
                     drowned.getY(),
                     drowned.getZ(),

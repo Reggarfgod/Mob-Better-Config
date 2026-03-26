@@ -111,7 +111,7 @@ public class StrayEvents {
             return;
 
         arrow.addEffect(new MobEffectInstance(
-                MobEffects.MOVEMENT_SLOWDOWN,
+                MobEffects.SLOWNESS,
                 config.slownessDuration,
                 config.slownessAmplifier
         ));

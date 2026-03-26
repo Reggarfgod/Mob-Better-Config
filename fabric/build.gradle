@@ -16,10 +16,10 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
 
-    modImplementation "curse.maven:jade-324717:5835099"
+    modImplementation "curse.maven:jade-324717:6504606"
+    modImplementation "curse.maven:cloth-config-348521:6351756"
     modImplementation "curse.maven:better-library-1150683:7359507"
-    modImplementation "curse.maven:cloth-config-348521:5986997"
-    modImplementation "curse.maven:modmenu-308702:5960778"
+    modImplementation "curse.maven:modmenu-308702:7808731"
 }
 
 loom {

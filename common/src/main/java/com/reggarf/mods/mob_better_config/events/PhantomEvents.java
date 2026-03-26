@@ -41,7 +41,7 @@ public class PhantomEvents {
 
             Phantom extra = new Phantom(EntityType.PHANTOM, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     phantom.getX(),
                     phantom.getY(),
                     phantom.getZ(),
@@ -128,7 +128,8 @@ public class PhantomEvents {
 
         } else {
 
-            if (level.isDay() && level.canSeeSky(phantom.blockPosition())) {
+            if (level.getDayTime() % 24000 < 13000 &&
+                    level.canSeeSky(phantom.blockPosition())) {
 
                 float brightness = phantom.getLightLevelDependentMagicValue();
 

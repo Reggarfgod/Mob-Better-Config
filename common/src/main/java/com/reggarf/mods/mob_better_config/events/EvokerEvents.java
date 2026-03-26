@@ -3,11 +3,11 @@ package com.reggarf.mods.mob_better_config.events;
 import com.reggarf.mods.mob_better_config.config.EvokerConfig;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.handle.CommonMobHandler;
-import com.reggarf.mods.mob_better_config.util.*;
-
+import com.reggarf.mods.mob_better_config.util.BossUtil;
+import com.reggarf.mods.mob_better_config.util.LootUtil;
 import com.reggarf.mods.mob_better_config.util.helper.EntitySpawnUtil;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.animal.Sheep;
+import net.minecraft.world.entity.animal.sheep.Sheep;
 import net.minecraft.world.entity.monster.Evoker;
 import net.minecraft.world.entity.monster.Vex;
 import net.minecraft.world.entity.projectile.EvokerFangs;
@@ -134,7 +134,7 @@ public class EvokerEvents {
                 Vex newVex = EntitySpawnUtil.createVex(level);
                 if (newVex == null) continue;
 
-                newVex.moveTo(
+                newVex.snapTo(
                         vex.getX(),
                         vex.getY(),
                         vex.getZ(),

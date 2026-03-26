@@ -45,7 +45,7 @@ public class ZoglinEvents {
 
             Zoglin extra = new Zoglin(EntityType.ZOGLIN, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     zoglin.getX(),
                     zoglin.getY(),
                     zoglin.getZ(),

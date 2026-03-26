@@ -3,7 +3,8 @@ package com.reggarf.mods.mob_better_config.register;
 import com.reggarf.mods.mob_better_config.events.EvokerEvents;
 
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.animal.Sheep;
+
+import net.minecraft.world.entity.animal.sheep.Sheep;
 import net.minecraft.world.entity.monster.Evoker;
 import net.minecraft.world.entity.monster.Vex;
 import net.minecraft.world.entity.projectile.EvokerFangs;

@@ -41,13 +41,13 @@ public class DaylightBurnUtil {
             return;
         }
 
-        if (!level.isDay())
+        if (!level.isBrightOutside())
             return;
 
         if (!level.canSeeSky(entity.blockPosition()))
             return;
 
-        if (entity.isInWaterRainOrBubble())
+        if (entity.isInWaterOrRain() || entity.isInPowderSnow || entity.wasInPowderSnow)
             return;
 
         // Vanilla brightness logic (like Zombie/Skeleton)

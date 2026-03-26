@@ -49,6 +49,7 @@ public class ZombieEvents {
     private static void applyConfig(Zombie zombie) {
 
         ZombieConfig config = ModConfigs.getZombie();
+
         RandomSource random = zombie.level().getRandom();
 
         CommonMobHandler.applyCommonAttributes(

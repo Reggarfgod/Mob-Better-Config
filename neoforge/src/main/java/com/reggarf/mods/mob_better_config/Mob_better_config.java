@@ -1,7 +1,6 @@
 package com.reggarf.mods.mob_better_config;
 
 
-import com.reggarf.mods.better_lib.message.online.OnlineMessageLib;
 import com.reggarf.mods.mob_better_config.api.BetterMessages;
 import com.reggarf.mods.mob_better_config.events.NeoBossEvents;
 import com.reggarf.mods.mob_better_config.events.NeoWaterDamageEvents;
@@ -21,7 +20,7 @@ public class Mob_better_config {
         //NeoForge.EVENT_BUS.register(NeoExplosionEvents.class);
         // Use NeoForge to bootstrap the Common mod.
         // OnlineMessageLib.registerPlugin(new OnlineMessages());
-         BetterMessages.register();
+        BetterMessages.register();
         // Register events
         NeoForge.EVENT_BUS.register(NeoForgeBlazeEvents.class);
         NeoForge.EVENT_BUS.register(NeoForgeCaveSpiderEvents.class);

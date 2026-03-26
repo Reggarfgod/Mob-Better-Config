@@ -57,7 +57,7 @@ public class FabricSlimeEvents {
 
                 Slime extra = new Slime(EntityType.SLIME, serverLevel);
 
-                extra.moveTo(
+                extra.snapTo(
                         slime.getX(),
                         slime.getY(),
                         slime.getZ(),

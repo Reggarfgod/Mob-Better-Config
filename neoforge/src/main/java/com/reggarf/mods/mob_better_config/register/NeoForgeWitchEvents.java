@@ -2,6 +2,7 @@ package com.reggarf.mods.mob_better_config.register;
 
 import com.reggarf.mods.mob_better_config.events.WitchEvents;
 
+import net.minecraft.world.entity.projectile.AbstractThrownPotion;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.living.*;
 import net.neoforged.neoforge.event.entity.ProjectileImpactEvent;
@@ -9,7 +10,7 @@ import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.monster.Witch;
-import net.minecraft.world.entity.projectile.ThrownPotion;
+
 
 public class NeoForgeWitchEvents {
 
@@ -36,7 +37,7 @@ public class NeoForgeWitchEvents {
     @SubscribeEvent
     public void onPotionImpact(ProjectileImpactEvent event) {
 
-        if (!(event.getProjectile() instanceof ThrownPotion potion))
+        if (!(event.getProjectile() instanceof AbstractThrownPotion potion))
             return;
 
         if (!(potion.level() instanceof ServerLevel level))

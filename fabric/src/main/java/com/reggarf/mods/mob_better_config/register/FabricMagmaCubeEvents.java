@@ -58,7 +58,7 @@ public class FabricMagmaCubeEvents {
 
                 MagmaCube extra = new MagmaCube(EntityType.MAGMA_CUBE, serverLevel);
 
-                extra.moveTo(
+                extra.snapTo(
                         cube.getX(),
                         cube.getY(),
                         cube.getZ(),

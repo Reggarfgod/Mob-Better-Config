@@ -72,7 +72,7 @@ public class CreeperEvents {
             LightningBolt lightning = createLightning(level);
 
             if (lightning != null) {
-                lightning.moveTo(creeper.getX(), creeper.getY(), creeper.getZ());
+                lightning.snapTo(creeper.getX(), creeper.getY(), creeper.getZ());
                 creeper.thunderHit(level, lightning);
             }
         }

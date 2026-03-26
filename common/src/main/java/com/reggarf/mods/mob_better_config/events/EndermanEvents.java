@@ -3,21 +3,15 @@ package com.reggarf.mods.mob_better_config.events;
 import com.reggarf.mods.mob_better_config.config.EndermanConfig;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.handle.CommonMobHandler;
-import com.reggarf.mods.mob_better_config.util.*;
-
-import net.minecraft.core.component.DataComponents;
+import com.reggarf.mods.mob_better_config.util.BossUtil;
+import com.reggarf.mods.mob_better_config.util.DaylightBurnUtil;
+import com.reggarf.mods.mob_better_config.util.LootUtil;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.tags.DamageTypeTags;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.EnderMan;
-import net.minecraft.world.entity.projectile.ThrownPotion;
-import net.minecraft.world.item.alchemy.PotionContents;
-import net.minecraft.world.item.alchemy.Potions;
-import net.minecraft.world.damagesource.DamageSource;
 
 public class EndermanEvents {
 

@@ -47,7 +47,7 @@ public class VindicatorEvents {
 
             Vindicator extra = new Vindicator(EntityType.VINDICATOR, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     vindicator.getX(),
                     vindicator.getY(),
                     vindicator.getZ(),

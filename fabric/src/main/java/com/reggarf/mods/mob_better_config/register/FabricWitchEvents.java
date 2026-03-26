@@ -10,7 +10,8 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.monster.Witch;
-import net.minecraft.world.entity.projectile.ThrownPotion;
+import net.minecraft.world.entity.projectile.AbstractThrownPotion;
+
 
 public class FabricWitchEvents {
 
@@ -41,7 +42,7 @@ public class FabricWitchEvents {
         // POTION IMPACT
         ServerEntityEvents.ENTITY_LOAD.register((entity, level) -> {
 
-            if (entity instanceof ThrownPotion potion && level instanceof ServerLevel serverLevel) {
+            if (entity instanceof AbstractThrownPotion potion && level instanceof ServerLevel serverLevel) {
                 WitchEvents.onPotionImpact(potion, serverLevel);
             }
 

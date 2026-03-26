@@ -72,7 +72,7 @@ public class NeoForgeMagmaCubeEvents {
 
         MagmaCubeConfig config = ModConfigs.getMagmaCube();
 
-        if (cube.getPersistentData().getBoolean("mob_better_config_spawned"))
+        if (NbtUtil.getBooleanSafe(cube.getPersistentData(),("mob_better_config_spawned")))
             return;
 
         applyConfig(cube, config);
@@ -95,7 +95,7 @@ public class NeoForgeMagmaCubeEvents {
 
             MagmaCube extra = new MagmaCube(EntityType.MAGMA_CUBE, level);
 
-            extra.moveTo(
+            extra.snapTo(
                     cube.getX(),
                     cube.getY(),
                     cube.getZ(),
@@ -139,7 +139,7 @@ public class NeoForgeMagmaCubeEvents {
 
             child.setSize(newSize, true);
 
-            child.moveTo(
+            child.snapTo(
                     parent.getX(),
                     parent.getY(),
                     parent.getZ(),

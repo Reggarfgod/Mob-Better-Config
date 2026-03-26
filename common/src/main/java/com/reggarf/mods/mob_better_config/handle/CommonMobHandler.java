@@ -94,7 +94,7 @@ public class CommonMobHandler {
 
         if (jumpBoost && mob.onGround() && mob.getTarget() != null) {
             mob.addEffect(new MobEffectInstance(
-                    MobEffects.JUMP,
+                    MobEffects.JUMP_BOOST,
                     40,
                     1,
                     false,
@@ -105,7 +105,7 @@ public class CommonMobHandler {
         if (rageMode && mob.getHealth() < mob.getMaxHealth() * 0.3F) {
 
             mob.addEffect(new MobEffectInstance(
-                    MobEffects.MOVEMENT_SPEED,
+                    MobEffects.SPEED,
                     40,
                     1,
                     false,
@@ -113,7 +113,7 @@ public class CommonMobHandler {
             ));
 
             mob.addEffect(new MobEffectInstance(
-                    MobEffects.DAMAGE_BOOST,
+                    MobEffects.INSTANT_DAMAGE,
                     40,
                     1,
                     false,
@@ -121,10 +121,10 @@ public class CommonMobHandler {
             ));
         }
 
-        if (nightBuff && mob.level().isNight()) {
+        if (nightBuff && !mob.level().isBrightOutside()) {
 
             mob.addEffect(new MobEffectInstance(
-                    MobEffects.MOVEMENT_SPEED,
+                    MobEffects.SPEED,
                     60,
                     0,
                     false,
@@ -142,7 +142,7 @@ public class CommonMobHandler {
             if (extra == null)
                 continue;
 
-            extra.moveTo(
+            extra.snapTo(
                     mob.getX(),
                     mob.getY(),
                     mob.getZ(),

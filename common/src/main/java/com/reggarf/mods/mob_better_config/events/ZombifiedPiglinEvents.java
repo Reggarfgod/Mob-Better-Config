@@ -49,7 +49,7 @@ public class ZombifiedPiglinEvents {
             if (extra == null)
                 continue;
 
-            extra.moveTo(
+            extra.snapTo(
                     piglin.getX(),
                     piglin.getY(),
                     piglin.getZ(),
