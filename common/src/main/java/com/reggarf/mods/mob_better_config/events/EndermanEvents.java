@@ -6,7 +6,8 @@ import com.reggarf.mods.mob_better_config.handle.CommonMobHandler;
 import com.reggarf.mods.mob_better_config.util.BossUtil;
 import com.reggarf.mods.mob_better_config.util.DaylightBurnUtil;
 import com.reggarf.mods.mob_better_config.util.LootUtil;
-import net.minecraft.resources.ResourceLocation;
+
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -15,8 +16,8 @@ import net.minecraft.world.entity.monster.EnderMan;
 
 public class EndermanEvents {
 
-    private static final ResourceLocation RAGE_ID =
-            ResourceLocation.fromNamespaceAndPath("mob_better_config", "rage_speed");
+    private static final Identifier RAGE_ID =
+            Identifier.fromNamespaceAndPath("mob_better_config", "rage_speed");
 
     public static void onJoin(EnderMan enderman, ServerLevel level) {
 

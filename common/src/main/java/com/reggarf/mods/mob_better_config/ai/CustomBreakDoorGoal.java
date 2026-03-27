@@ -1,9 +1,9 @@
 package com.reggarf.mods.mob_better_config.ai;
 
-import com.reggarf.mods.mob_better_config.util.helper.LevelUtils;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.goal.BreakDoorGoal;
-import net.minecraft.world.level.GameRules;
+import net.minecraft.world.level.gamerules.GameRules;
 
 public class CustomBreakDoorGoal extends BreakDoorGoal {
 
@@ -37,8 +37,12 @@ public class CustomBreakDoorGoal extends BreakDoorGoal {
 
         if (progress >= breakTime) {
 
-            if (LevelUtils.canMobGrief(mob.level())) {
-                LevelUtils.destroyBlock(mob.level(), this.doorPos, mob);
+            if (mob.level() instanceof ServerLevel serverLevel) {
+
+                if (serverLevel.getGameRules().get(GameRules.MOB_GRIEFING)) {
+                    serverLevel.destroyBlock(this.doorPos, true, mob);
+                }
+
             }
 
             progress = 0;

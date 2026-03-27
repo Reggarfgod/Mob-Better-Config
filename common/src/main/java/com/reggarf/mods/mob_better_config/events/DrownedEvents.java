@@ -9,9 +9,8 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.monster.Blaze;
-import net.minecraft.world.entity.monster.Drowned;
-import net.minecraft.world.entity.projectile.ThrownTrident;
+import net.minecraft.world.entity.monster.zombie.Drowned;
+import net.minecraft.world.entity.projectile.arrow.ThrownTrident;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
@@ -85,7 +84,7 @@ public class DrownedEvents {
 
     public static void onTick(Drowned drowned) {
 
-        if (drowned.level().isClientSide)
+        if (drowned.level().isClientSide())
             return;
 
         DrownedConfig config = ModConfigs.getDrowned();
@@ -126,7 +125,7 @@ public class DrownedEvents {
 
     public static void onTridentSpawn(Drowned drowned, ThrownTrident trident) {
 
-        if (drowned.level().isClientSide)
+        if (drowned.level().isClientSide())
             return;
 
         if (drowned.getTarget() == null)

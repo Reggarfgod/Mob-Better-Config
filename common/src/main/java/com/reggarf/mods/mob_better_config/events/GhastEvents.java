@@ -7,7 +7,7 @@ import com.reggarf.mods.mob_better_config.util.*;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.monster.Ghast;
-import net.minecraft.world.entity.projectile.LargeFireball;
+import net.minecraft.world.entity.projectile.hurtingprojectile.LargeFireball;
 import net.minecraft.world.phys.Vec3;
 
 import java.util.HashMap;
@@ -71,7 +71,7 @@ public class GhastEvents {
 
     public static void tick(Ghast ghast) {
 
-        if (ghast.level().isClientSide)
+        if (ghast.level().isClientSide())
             return;
 
         GhastConfig config = ModConfigs.getGhast();

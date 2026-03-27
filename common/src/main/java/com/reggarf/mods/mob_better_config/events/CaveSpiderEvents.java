@@ -6,7 +6,8 @@ import com.reggarf.mods.mob_better_config.handle.CommonMobHandler;
 import com.reggarf.mods.mob_better_config.util.BossUtil;
 import com.reggarf.mods.mob_better_config.util.LootUtil;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.monster.CaveSpider;
+import net.minecraft.world.entity.monster.spider.CaveSpider;
+
 
 public class CaveSpiderEvents {
 

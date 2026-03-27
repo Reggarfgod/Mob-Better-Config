@@ -5,11 +5,14 @@ import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.handle.CommonMobHandler;
 import com.reggarf.mods.mob_better_config.util.BossUtil;
 import com.reggarf.mods.mob_better_config.util.LootUtil;
-import com.reggarf.mods.mob_better_config.util.helper.EntitySpawnUtil;
+
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.EntitySpawnReason;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.animal.sheep.Sheep;
-import net.minecraft.world.entity.monster.Evoker;
+
 import net.minecraft.world.entity.monster.Vex;
+import net.minecraft.world.entity.monster.illager.Evoker;
 import net.minecraft.world.entity.projectile.EvokerFangs;
 import net.minecraft.world.item.DyeColor;
 
@@ -108,30 +111,35 @@ public class EvokerEvents {
 
         EvokerConfig config = ModConfigs.getEvoker();
 
+        // Prevent recursion for custom spawned vex
         if (vex.getTags().contains("mob_better_config_spawned"))
             return true;
 
         if (!config.enableVexSummon)
             return false;
 
+        // Count CURRENT existing vex from this evoker
         int existing = level.getEntitiesOfClass(
                 Vex.class,
                 evoker.getBoundingBox().inflate(32),
                 v -> v.getOwner() == evoker
         ).size();
 
+        // Cap to config amount
         if (existing >= config.summonVexCount)
             return false;
 
         vex.setLimitedLife(config.vexLifeTicks);
 
+        // Only run once per spell (when first vex appears)
         if (config.summonVexCount > 3 && existing == 1) {
 
             int extra = config.summonVexCount - 3;
 
             for (int i = 0; i < extra; i++) {
 
-                Vex newVex = EntitySpawnUtil.createVex(level);
+                //Vex newVex = EntityType.VEX.create(level);
+                Vex newVex = EntityType.VEX.create(level, EntitySpawnReason.MOB_SUMMONED);
                 if (newVex == null) continue;
 
                 newVex.snapTo(
@@ -142,12 +150,18 @@ public class EvokerEvents {
                         0F
                 );
 
-                EntitySpawnUtil.finalizeSpawn(newVex, level);
+                newVex.finalizeSpawn(
+                        level,
+                        level.getCurrentDifficultyAt(newVex.blockPosition()),
+                        EntitySpawnReason.MOB_SUMMONED,
+                        null
+                );
 
                 newVex.setOwner(evoker);
                 newVex.setBoundOrigin(evoker.blockPosition());
                 newVex.setLimitedLife(config.vexLifeTicks);
 
+                // Prevent recursion
                 newVex.addTag("mob_better_config_spawned");
 
                 level.addFreshEntity(newVex);

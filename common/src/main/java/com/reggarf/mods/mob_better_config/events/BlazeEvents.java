@@ -10,7 +10,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.monster.Blaze;
-import net.minecraft.world.entity.projectile.SmallFireball;
+import net.minecraft.world.entity.projectile.hurtingprojectile.SmallFireball;
 import net.minecraft.world.phys.Vec3;
 
 import java.util.EnumSet;
@@ -78,13 +78,9 @@ public class BlazeEvents {
 
         if (!blaze.onGround() && motion.y < 0.0D) {
 
-            blaze.setDeltaMovement(
-                    motion.x,
-                    motion.y * config.fallSlowMultiplier,
-                    motion.z
-            );
+            double newY = motion.y * config.fallSlowMultiplier;
 
-            blaze.hasImpulse = true;
+            blaze.setDeltaMovement(motion.x, newY, motion.z);
         }
 
         LivingEntity target = blaze.getTarget();
@@ -95,13 +91,13 @@ public class BlazeEvents {
 
                 Vec3 current = blaze.getDeltaMovement();
 
+                double boost = 0.15D * config.verticalBoostMultiplier;
+
                 blaze.setDeltaMovement(
                         current.x,
-                        current.y + 0.15D * config.verticalBoostMultiplier,
+                        current.y + boost,
                         current.z
                 );
-
-                blaze.hasImpulse = true;
             }
         }
     }

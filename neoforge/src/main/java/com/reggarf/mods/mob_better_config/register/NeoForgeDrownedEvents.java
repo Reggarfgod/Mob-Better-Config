@@ -2,8 +2,9 @@ package com.reggarf.mods.mob_better_config.register;
 
 import com.reggarf.mods.mob_better_config.events.DrownedEvents;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.monster.Drowned;
-import net.minecraft.world.entity.projectile.ThrownTrident;
+
+import net.minecraft.world.entity.monster.zombie.Drowned;
+import net.minecraft.world.entity.projectile.arrow.ThrownTrident;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
