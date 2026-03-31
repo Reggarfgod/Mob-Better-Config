@@ -1,5 +1,8 @@
 package com.reggarf.mods.mob_better_config.util;
 
+import com.reggarf.mods.mob_better_config.data.MobData;
+import com.reggarf.mods.mob_better_config.data.MobStats;
+
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.EntitySpawnReason;
@@ -33,9 +36,9 @@ public class VexReinforcementUtil {
         if (!enabled)
             return;
 
-        // Prevent repeat spawning
-        if (summoner.getTags().contains(REINFORCED_TAG))
+        if (MobData.get(summoner).reinforced) {
             return;
+        }
 
         if (requireBelowHalfHealth &&
                 summoner.getHealth() > summoner.getMaxHealth() / 2.0F)
@@ -56,9 +59,7 @@ public class VexReinforcementUtil {
 
         for (int i = 0; i < vexCount; i++) {
 
-//            Vex vex = EntityType.VEX.create(level);
-            Vex vex =
-                    EntityType.VEX.create(level, EntitySpawnReason.NATURAL);
+            Vex vex = EntityType.VEX.create(level, EntitySpawnReason.NATURAL);
 
             if (vex == null)
                 continue;
@@ -94,24 +95,21 @@ public class VexReinforcementUtil {
             if (lifeTimeSeconds > 0)
                 vex.setLimitedLife(lifeTimeSeconds * 20);
 
-            // Attack nearest player
             Player target = level.getNearestPlayer(vex, targetPlayerDistance);
 
             if (target != null) {
                 vex.setTarget(target);
             }
-
-            // mark vex as reinforcement
             vex.addTag(REINFORCED_TAG);
 
             level.addFreshEntity(vex);
         }
 
-        // mark summoner so it cannot spawn again
-        summoner.addTag(REINFORCED_TAG);
+        MobStats stats = MobData.get(summoner);
+        stats.reinforced = true;
     }
 
     public static boolean isReinforced(Mob mob) {
-        return mob.getTags().contains(REINFORCED_TAG);
+        return MobData.get(mob).reinforced;
     }
 }

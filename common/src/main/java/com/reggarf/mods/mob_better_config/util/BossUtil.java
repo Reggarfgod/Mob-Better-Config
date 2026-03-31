@@ -1,18 +1,16 @@
 package com.reggarf.mods.mob_better_config.util;
 
+import com.reggarf.mods.mob_better_config.data.MobData;
+import com.reggarf.mods.mob_better_config.data.MobStats;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 
 public class BossUtil {
-
-    public static final String BOSS_TAG = "mob_better_config_boss";
-    public static final String TIER_TAG = "mob_better_config_tier_";
-
-    public static final String XP_TAG = "mob_better_config_xp_";
-    public static final String LOOT_TAG = "mob_better_config_loot_";
 
     private static final double DEFAULT_SCALE = 1.5;
 
@@ -57,13 +55,7 @@ public class BossUtil {
         if (isBoss(entity))
             return;
 
-        boolean makeBoss;
-
-        if (forceAllBoss) {
-            makeBoss = true;
-        } else {
-            makeBoss = entity.getRandom().nextDouble() < bossChance;
-        }
+        boolean makeBoss = forceAllBoss || entity.getRandom().nextDouble() < bossChance;
 
         if (!makeBoss)
             return;
@@ -101,11 +93,14 @@ public class BossUtil {
             BossTier tier
     ) {
 
-        entity.addTag(BOSS_TAG);
-        entity.addTag(TIER_TAG + tier.name());
+        if (!(entity instanceof Mob mob))
+            return;
 
-        entity.addTag(XP_TAG + xpMultiplier);
-        entity.addTag(LOOT_TAG + lootMultiplier);
+        MobStats stats = MobData.get(mob);
+        stats.boss = true;
+        stats.tier = tier.ordinal();
+        stats.xp = (float) xpMultiplier;
+        stats.loot = (float) lootMultiplier;
 
         AttributeInstance maxHealth = entity.getAttribute(Attributes.MAX_HEALTH);
         if (maxHealth != null) {
@@ -129,9 +124,10 @@ public class BossUtil {
         if (glowing) {
             entity.setGlowingTag(true);
 
-            if (!entity.level().isClientSide) {
-                var server = entity.getServer();
-                if (server != null) {
+            if (!entity.level().isClientSide()) {
+                if (entity.level() instanceof net.minecraft.server.level.ServerLevel serverLevel) {
+
+                    var server = serverLevel.getServer();
                     var scoreboard = server.getScoreboard();
 
                     String teamName = "mbc_glow_" + tier.name().toLowerCase();
@@ -142,8 +138,7 @@ public class BossUtil {
                         team = scoreboard.addPlayerTeam(teamName);
                         team.setColor(tier.color);
                     }
-
-                    scoreboard.addPlayerToTeam(entity.getStringUUID(), team);
+                    scoreboard.addPlayerToTeam(entity.getScoreboardName(), team);
                 }
             }
         }
@@ -157,36 +152,38 @@ public class BossUtil {
         }
     }
 
-
-
     private static String formatTier(BossTier tier) {
         String n = tier.name().toLowerCase();
         return Character.toUpperCase(n.charAt(0)) + n.substring(1);
     }
 
+
     public static boolean isBoss(LivingEntity entity) {
-        return entity.getTags().contains(BOSS_TAG);
+        if (entity instanceof Mob mob) {
+            return MobData.get(mob).boss;
+        }
+        return false;
     }
 
     public static double getXpMultiplier(LivingEntity entity) {
-        for (String tag : entity.getTags()) {
-            if (tag.startsWith(XP_TAG)) {
-                try {
-                    return Double.parseDouble(tag.replace(XP_TAG, ""));
-                } catch (Exception ignored) {}
-            }
+        if (entity instanceof Mob mob) {
+            return MobData.get(mob).xp;
         }
         return 5.0;
     }
 
     public static double getLootMultiplier(LivingEntity entity) {
-        for (String tag : entity.getTags()) {
-            if (tag.startsWith(LOOT_TAG)) {
-                try {
-                    return Double.parseDouble(tag.replace(LOOT_TAG, ""));
-                } catch (Exception ignored) {}
-            }
+        if (entity instanceof Mob mob) {
+            return MobData.get(mob).loot;
         }
         return 2.0;
+    }
+
+    public static BossTier getTier(LivingEntity entity) {
+        if (entity instanceof Mob mob) {
+            int id = MobData.get(mob).tier;
+            return BossTier.values()[id];
+        }
+        return BossTier.COMMON;
     }
 }

@@ -2,11 +2,11 @@ package com.reggarf.mods.mob_better_config.register;
 
 import com.reggarf.mods.mob_better_config.events.VindicatorEvents;
 
+import net.minecraft.world.entity.monster.illager.Vindicator;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.living.*;
 
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.monster.Vindicator;
 
 public class NeoForgeVindicatorEvents {
 

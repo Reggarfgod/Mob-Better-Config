@@ -22,7 +22,7 @@ public class ShulkerTeleportMixin {
             return;
         }
 
-        if (self.level().random.nextDouble() > config.teleportChance) {
+        if (self.getRandom().nextDouble() > config.teleportChance) {
             cir.setReturnValue(false);
         }
     }

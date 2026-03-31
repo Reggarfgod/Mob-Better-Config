@@ -43,7 +43,7 @@ public class ZombieConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public boolean sprintAbility = true;
     @ConfigEntry.Gui.Tooltip
-    public boolean rageMode = true;
+    public boolean rageMode = false;
     @ConfigEntry.Gui.Tooltip
     public int spawnMultiplier = 1;
     @ConfigEntry.Gui.Tooltip

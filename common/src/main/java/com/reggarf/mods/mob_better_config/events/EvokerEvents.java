@@ -2,6 +2,7 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.EvokerConfig;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
+import com.reggarf.mods.mob_better_config.data.MobData;
 import com.reggarf.mods.mob_better_config.handle.CommonMobHandler;
 import com.reggarf.mods.mob_better_config.util.BossUtil;
 import com.reggarf.mods.mob_better_config.util.LootUtil;
@@ -112,7 +113,7 @@ public class EvokerEvents {
         EvokerConfig config = ModConfigs.getEvoker();
 
         // Prevent recursion for custom spawned vex
-        if (vex.getTags().contains("mob_better_config_spawned"))
+        if (MobData.get(vex).spawned)
             return true;
 
         if (!config.enableVexSummon)

@@ -7,9 +7,9 @@ import com.reggarf.mods.mob_better_config.util.*;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.monster.Skeleton;
-import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.monster.skeleton.Skeleton;
+import net.minecraft.world.entity.projectile.arrow.AbstractArrow;
+
 
 public class SkeletonEvents {
 

@@ -7,7 +7,8 @@ import com.reggarf.mods.mob_better_config.util.*;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.boss.wither.WitherBoss;
-import net.minecraft.world.entity.projectile.WitherSkull;
+import net.minecraft.world.entity.projectile.hurtingprojectile.WitherSkull;
+
 
 public class WitherEvents {
 

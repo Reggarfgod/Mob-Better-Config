@@ -5,7 +5,8 @@ import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.monster.CaveSpider;
+
+import net.minecraft.world.entity.monster.spider.CaveSpider;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;

@@ -11,8 +11,6 @@ import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
 public class NeoForgeGuardianEvents {
 
-    /* ---------------- Spawn ---------------- */
-
     @SubscribeEvent
     public void onSpawn(FinalizeSpawnEvent event) {
 
@@ -24,9 +22,6 @@ public class NeoForgeGuardianEvents {
 
         GuardianEvents.onSpawn(guardian, level);
     }
-
-    /* ---------------- Tick ---------------- */
-
     @SubscribeEvent
     public void onPreTick(EntityTickEvent.Pre event) {
 
@@ -44,8 +39,6 @@ public class NeoForgeGuardianEvents {
 
         GuardianEvents.onPostTick(guardian);
     }
-
-    /* ---------------- Thorns ---------------- */
 
     @SubscribeEvent
     public void onDamage(LivingIncomingDamageEvent event) {

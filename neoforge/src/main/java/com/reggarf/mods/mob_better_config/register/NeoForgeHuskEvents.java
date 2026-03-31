@@ -3,8 +3,9 @@ package com.reggarf.mods.mob_better_config.register;
 import com.reggarf.mods.mob_better_config.events.HuskEvents;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.monster.Husk;
 
+
+import net.minecraft.world.entity.monster.zombie.Husk;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;

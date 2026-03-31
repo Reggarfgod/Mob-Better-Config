@@ -2,15 +2,13 @@ package com.reggarf.mods.mob_better_config.register;
 
 import com.reggarf.mods.mob_better_config.events.SkeletonEvents;
 
-import com.reggarf.mods.mob_better_config.events.ZombieEvents;
-import net.minecraft.world.entity.monster.Zombie;
+import net.minecraft.world.entity.monster.skeleton.Skeleton;
+import net.minecraft.world.entity.projectile.arrow.AbstractArrow;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.event.entity.living.*;
 
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.monster.Skeleton;
-import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
 public class NeoForgeSkeletonEvents {

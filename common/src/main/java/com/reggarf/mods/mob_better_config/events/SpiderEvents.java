@@ -7,8 +7,8 @@ import com.reggarf.mods.mob_better_config.util.*;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.monster.Spider;
+import net.minecraft.world.entity.monster.spider.Spider;
+
 
 public class SpiderEvents {
 

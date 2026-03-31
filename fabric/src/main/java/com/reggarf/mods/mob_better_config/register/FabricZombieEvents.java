@@ -9,7 +9,8 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.ExperienceOrb;
-import net.minecraft.world.entity.monster.Zombie;
+import net.minecraft.world.entity.monster.zombie.Zombie;
+
 
 public class FabricZombieEvents {
 
@@ -25,14 +26,11 @@ public class FabricZombieEvents {
         });
 
         // TICK
-        ServerTickEvents.END_WORLD_TICK.register(level -> {
+        ServerTickEvents.END_LEVEL_TICK.register(level -> {
 
-            for (var entity : level.getAllEntities()) {
-
-                if (entity instanceof Zombie zombie) {
-                    ZombieEvents.onTick(zombie);
-                }
-
+            // iterate only zombies (efficient enough)
+            for (Zombie zombie : level.getEntitiesOfClass(Zombie.class, level.getWorldBorder().getCollisionShape().bounds())) {
+                ZombieEvents.onTick(zombie);
             }
 
         });

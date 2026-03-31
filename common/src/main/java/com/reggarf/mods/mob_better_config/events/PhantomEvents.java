@@ -8,7 +8,6 @@ import com.reggarf.mods.mob_better_config.util.*;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.monster.Husk;
 import net.minecraft.world.entity.monster.Phantom;
 import net.minecraft.world.level.Level;
 
@@ -111,7 +110,7 @@ public class PhantomEvents {
 
     public static void onTick(Phantom phantom) {
 
-        if (phantom.level().isClientSide)
+        if (phantom.level().isClientSide())
             return;
 
         PhantomConfig config = ModConfigs.getPhantom();
@@ -128,7 +127,7 @@ public class PhantomEvents {
 
         } else {
 
-            if (level.getDayTime() % 24000 < 13000 &&
+            if (level.getGameTime() % 24000 < 13000 &&
                     level.canSeeSky(phantom.blockPosition())) {
 
                 float brightness = phantom.getLightLevelDependentMagicValue();

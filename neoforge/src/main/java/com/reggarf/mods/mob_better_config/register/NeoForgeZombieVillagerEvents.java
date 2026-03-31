@@ -1,13 +1,14 @@
 package com.reggarf.mods.mob_better_config.register;
 
 import com.reggarf.mods.mob_better_config.events.ZombieVillagerEvents;
-
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.monster.zombie.ZombieVillager;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.event.entity.living.*;
+import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
+import net.neoforged.neoforge.event.entity.living.LivingExperienceDropEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.monster.ZombieVillager;
 
 public class NeoForgeZombieVillagerEvents {
 

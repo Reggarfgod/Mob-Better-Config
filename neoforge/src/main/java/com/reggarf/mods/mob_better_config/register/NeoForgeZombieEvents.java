@@ -3,8 +3,9 @@ package com.reggarf.mods.mob_better_config.register;
 import com.reggarf.mods.mob_better_config.events.ZombieEvents;
 
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.monster.Zombie;
 
+
+import net.minecraft.world.entity.monster.zombie.Zombie;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;

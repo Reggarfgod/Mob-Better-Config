@@ -2,33 +2,35 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.HuskConfig;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
+import com.reggarf.mods.mob_better_config.data.MobData;
 import com.reggarf.mods.mob_better_config.handle.CommonMobHandler;
 import com.reggarf.mods.mob_better_config.util.*;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BiomeTags;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.monster.Husk;
-import net.minecraft.world.entity.monster.Zombie;
+import net.minecraft.world.entity.Mob;
+
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.monster.zombie.Husk;
 
 import java.util.Map;
 import java.util.WeakHashMap;
 
 public class HuskEvents {
 
-    private static final String SPAWN_TAG = "mob_better_config_spawned";
-    private static final String HUNGER_TAG = "mob_better_config_hunger_flag";
-
     private static final Map<Husk, Integer> WATER_TIMERS = new WeakHashMap<>();
 
+    // =========================
+    // SPAWN
+    // =========================
     public static void onSpawn(Husk husk, ServerLevel level) {
+
         if (CommonMobHandler.isInitialized(husk))
             return;
-        CommonMobHandler.markInitialized(husk);
 
+        CommonMobHandler.markInitialized(husk);
 
         HuskConfig config = ModConfigs.getHusk();
 
@@ -68,8 +70,7 @@ public class HuskEvents {
                 config.bossLootMultiplier
         );
 
-        /* Desert Buff */
-
+        // Desert Buff
         if (config.desertBuff &&
                 husk.level().getBiome(husk.blockPosition())
                         .is(BiomeTags.HAS_DESERT_PYRAMID)) {
@@ -96,34 +97,45 @@ public class HuskEvents {
         );
     }
 
-
     public static void onDamage(LivingEntity target, LivingEntity attacker) {
 
         if (!(attacker instanceof Husk))
             return;
-
-        target.addTag(HUNGER_TAG);
+        if (target instanceof Mob mob) {
+            MobData.get(mob).hunger = true;
+        }
     }
 
     public static void onTargetTick(LivingEntity target) {
 
-        if (!target.getTags().contains(HUNGER_TAG))
+        if (!(target instanceof Mob mob))
             return;
 
-        target.removeTag(HUNGER_TAG);
+        var stats = MobData.get(mob);
+
+        // Only run if flagged
+        if (!stats.hunger)
+            return;
+
+        // Reset flag (so it doesn't spam)
+        stats.hunger = false;
 
         HuskConfig config = ModConfigs.getHusk();
-
-        if (target.hasEffect(MobEffects.HUNGER))
-            target.removeEffect(MobEffects.HUNGER);
 
         if (!config.enableHunger)
             return;
 
-        float difficulty =
-                target.level()
-                        .getCurrentDifficultyAt(target.blockPosition())
-                        .getEffectiveDifficulty();
+
+        if (target.hasEffect(MobEffects.HUNGER))
+            target.removeEffect(MobEffects.HUNGER);
+
+        float difficulty = 1.0F;
+
+        if (target.level() instanceof ServerLevel serverLevel) {
+            difficulty = serverLevel
+                    .getCurrentDifficultyAt(target.blockPosition())
+                    .getEffectiveDifficulty();
+        }
 
         int duration = (int) (config.hungerDuration * difficulty);
 
@@ -134,62 +146,14 @@ public class HuskEvents {
         ));
     }
 
-
-//    public static void onTick(Husk husk) {
-//
-//        if (!(husk.level() instanceof ServerLevel level))
-//            return;
-//
-//        HuskConfig config = ModConfigs.getHusk();
-//
-//        if (!config.convertInWater)
-//            return;
-//
-//        if (husk.isInWaterRainOrBubble()) {
-//
-//            int timer = WATER_TIMERS.getOrDefault(husk, 0);
-//            timer++;
-//
-//            if (timer >= config.waterConversionTime) {
-//
-//                Zombie zombie = EntityType.ZOMBIE.create(level);
-//
-//                if (zombie != null) {
-//
-//                    zombie.moveTo(
-//                            husk.getX(),
-//                            husk.getY(),
-//                            husk.getZ(),
-//                            husk.getYRot(),
-//                            husk.getXRot()
-//                    );
-//
-//                    zombie.setHealth(zombie.getMaxHealth());
-//
-//                    level.addFreshEntity(zombie);
-//
-//                    husk.discard();
-//                }
-//
-//                WATER_TIMERS.remove(husk);
-//                return;
-//            }
-//
-//            WATER_TIMERS.put(husk, timer);
-//
-//        } else {
-//
-//            WATER_TIMERS.put(husk, 0);
-//        }
-//    }
-
     public static float modifyXP(float xp) {
-
         HuskConfig config = ModConfigs.getHusk();
-
         return xp * (float) config.xpMultiplier;
     }
 
+    // =========================
+    // DROPS
+    // =========================
     public static void onDrops(ServerLevel level, Husk husk) {
 
         HuskConfig config = ModConfigs.getHusk();

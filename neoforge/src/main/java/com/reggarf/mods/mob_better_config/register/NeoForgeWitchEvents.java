@@ -1,15 +1,15 @@
 package com.reggarf.mods.mob_better_config.register;
 
 import com.reggarf.mods.mob_better_config.events.WitchEvents;
-
-import net.minecraft.world.entity.projectile.AbstractThrownPotion;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.event.entity.living.*;
-import net.neoforged.neoforge.event.entity.ProjectileImpactEvent;
-import net.neoforged.neoforge.event.tick.EntityTickEvent;
-
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.monster.Witch;
+import net.minecraft.world.entity.projectile.throwableitemprojectile.AbstractThrownPotion;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.event.entity.ProjectileImpactEvent;
+import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
+import net.neoforged.neoforge.event.entity.living.LivingExperienceDropEvent;
+import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
 
 public class NeoForgeWitchEvents {

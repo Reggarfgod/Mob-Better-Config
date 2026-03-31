@@ -7,8 +7,8 @@ import com.reggarf.mods.mob_better_config.util.*;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.monster.Vindicator;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.monster.illager.Vindicator;
 
 public class VindicatorEvents {
 

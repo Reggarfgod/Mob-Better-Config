@@ -2,6 +2,8 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.GhastConfig;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
+import com.reggarf.mods.mob_better_config.data.MobData;
+import com.reggarf.mods.mob_better_config.data.MobStats;
 import com.reggarf.mods.mob_better_config.handle.CommonMobHandler;
 import com.reggarf.mods.mob_better_config.util.*;
 
@@ -58,8 +60,10 @@ public class GhastEvents {
         );
 
         // Spawn multiplier
-        if (!ghast.getTags().contains(SPAWN_TAG)) {
-            ghast.addTag(SPAWN_TAG);
+        MobStats stats = MobData.get(ghast);
+        if (!stats.spawned) {
+            stats.spawned = true;
+
             CommonMobHandler.spawnMultiplier(
                     ghast,
                     level,

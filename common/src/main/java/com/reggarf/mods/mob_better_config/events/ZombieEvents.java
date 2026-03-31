@@ -1,20 +1,15 @@
 package com.reggarf.mods.mob_better_config.events;
 
-import com.reggarf.mods.mob_better_config.ai.CustomBreakDoorGoal;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
-import com.reggarf.mods.mob_better_config.config.PhantomConfig;
 import com.reggarf.mods.mob_better_config.config.ZombieConfig;
 import com.reggarf.mods.mob_better_config.handle.CommonMobHandler;
-import com.reggarf.mods.mob_better_config.util.*;
-
+import com.reggarf.mods.mob_better_config.util.BossUtil;
+import com.reggarf.mods.mob_better_config.util.LootUtil;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.monster.Husk;
-import net.minecraft.world.entity.monster.Zombie;
-import net.minecraft.world.entity.monster.ZombifiedPiglin;
+import net.minecraft.world.entity.monster.zombie.Husk;
+import net.minecraft.world.entity.monster.zombie.Zombie;
+import net.minecraft.world.entity.monster.zombie.ZombifiedPiglin;
 
 public class ZombieEvents {
 

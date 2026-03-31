@@ -1,14 +1,13 @@
 package com.reggarf.mods.mob_better_config.register;
 
-import com.reggarf.mods.mob_better_config.events.SkeletonEvents;
 import com.reggarf.mods.mob_better_config.events.SpiderEvents;
-
-import net.minecraft.world.entity.monster.Skeleton;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.event.entity.living.*;
-
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.monster.Spider;
+
+import net.minecraft.world.entity.monster.spider.Spider;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
+import net.neoforged.neoforge.event.entity.living.LivingExperienceDropEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
 public class NeoForgeSpiderEvents {

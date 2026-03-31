@@ -1,17 +1,16 @@
 package com.reggarf.mods.mob_better_config.register;
 
-import com.reggarf.mods.mob_better_config.events.SpiderEvents;
 import com.reggarf.mods.mob_better_config.events.StrayEvents;
-
-import net.minecraft.world.entity.monster.Spider;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.monster.skeleton.Stray;
+import net.minecraft.world.entity.projectile.arrow.AbstractArrow;
+import net.minecraft.world.entity.projectile.arrow.Arrow;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
-import net.neoforged.neoforge.event.entity.living.*;
-
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.monster.Stray;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.projectile.Arrow;
+import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
+import net.neoforged.neoforge.event.entity.living.LivingExperienceDropEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
 public class NeoForgeStrayEvents {

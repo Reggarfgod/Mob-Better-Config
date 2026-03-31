@@ -1,12 +1,13 @@
 package com.reggarf.mods.mob_better_config.register;
 
 import com.reggarf.mods.mob_better_config.events.ZombifiedPiglinEvents;
-
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.event.entity.living.*;
-
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.monster.ZombifiedPiglin;
+import net.minecraft.world.entity.monster.zombie.ZombifiedPiglin;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
+import net.neoforged.neoforge.event.entity.living.LivingExperienceDropEvent;
+
 
 public class NeoForgeZombifiedPiglinEvents {
 

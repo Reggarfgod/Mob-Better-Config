@@ -65,7 +65,7 @@ repositories {
         url "https://cursemaven.com"
     }
 }
-
 dependencies {
     implementation "curse.maven:cloth-config-348521:7817583"
+    implementation "curse.maven:jade-324717:7817285"
 }

@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(Creeper.class)
 public abstract class CreeperMixin {
 
-    // 🔥 Replace reflection with direct access
+    // Replace reflection with direct access
     @Shadow @Mutable private int explosionRadius;
     @Shadow @Mutable private int maxSwell;
 

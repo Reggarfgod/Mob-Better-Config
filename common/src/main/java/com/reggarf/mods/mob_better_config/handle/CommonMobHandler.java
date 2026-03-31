@@ -1,5 +1,6 @@
 package com.reggarf.mods.mob_better_config.handle;
 
+import com.reggarf.mods.mob_better_config.data.MobData;
 import com.reggarf.mods.mob_better_config.util.DoorBreakUtil;
 import com.reggarf.mods.mob_better_config.util.MobNameUtil;
 import net.minecraft.server.level.ServerLevel;
@@ -12,13 +13,11 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 
 public class CommonMobHandler {
 
-    public static final String INIT_TAG = "mbc_initialized";
-
     public static boolean isInitialized(Mob mob) {
-        return mob.getTags().contains(INIT_TAG);
+        return MobData.get(mob).initialized;
     }
     public static void markInitialized(Mob mob) {
-        mob.addTag(INIT_TAG);
+        MobData.get(mob).initialized = true;
     }
     public static void applyCommonAttributes(
             Mob mob,

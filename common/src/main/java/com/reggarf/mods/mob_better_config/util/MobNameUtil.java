@@ -1,8 +1,12 @@
 package com.reggarf.mods.mob_better_config.util;
 
+import com.reggarf.mods.mob_better_config.data.MobData;
+import com.reggarf.mods.mob_better_config.data.MobStats;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Mob;
 
 import java.util.List;
 import java.util.Random;
@@ -59,9 +63,13 @@ public class MobNameUtil {
 
     public static void applyRandomName(LivingEntity entity) {
 
-        // Prevent renaming multiple times
-        if (entity.getTags().contains(NAME_TAG))
-            return;
+        if (entity instanceof Mob mob) {
+            MobStats stats = MobData.get(mob);
+            if (stats.named) {
+                return;
+            }
+            stats.named = true;
+        }
 
         String prefix = PREFIXES.get(RANDOM.nextInt(PREFIXES.size()));
         String suffix = SUFFIXES.get(RANDOM.nextInt(SUFFIXES.size()));
@@ -76,7 +84,8 @@ public class MobNameUtil {
         );
 
         entity.setCustomNameVisible(false);
-        // mark as already named
+
+        // Optional: keep tag for non-Mob fallback/debug
         entity.addTag(NAME_TAG);
     }
 }

@@ -2,12 +2,14 @@ package com.reggarf.mods.mob_better_config.mixin.blaze;
 
 
 import com.reggarf.mods.mob_better_config.events.BlazeEvents;
+
 import com.reggarf.mods.mob_better_config.util.helper.DamageCompatUtil;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.monster.Blaze;
-import net.minecraft.world.entity.projectile.SmallFireball;
+
+import net.minecraft.world.entity.projectile.hurtingprojectile.SmallFireball;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

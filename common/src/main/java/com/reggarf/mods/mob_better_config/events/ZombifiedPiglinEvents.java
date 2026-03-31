@@ -2,13 +2,15 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.ZombifiedPiglinConfig;
+import com.reggarf.mods.mob_better_config.data.MobData;
 import com.reggarf.mods.mob_better_config.handle.CommonMobHandler;
 import com.reggarf.mods.mob_better_config.util.*;
 
 import com.reggarf.mods.mob_better_config.util.helper.EntitySpawnUtil;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.monster.ZombifiedPiglin;
+import net.minecraft.world.entity.monster.zombie.ZombifiedPiglin;
+
 
 public class ZombifiedPiglinEvents {
 
@@ -16,7 +18,7 @@ public class ZombifiedPiglinEvents {
 
     public static void onSpawn(ZombifiedPiglin piglin, ServerLevel level) {
 
-        if (piglin.getTags().contains(PROCESSED_TAG))
+        if (MobData.get(piglin).processed)
             return;
 
         if (BossUtil.isBoss(piglin))

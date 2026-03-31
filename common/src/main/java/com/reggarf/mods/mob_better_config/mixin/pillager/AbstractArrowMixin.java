@@ -3,8 +3,9 @@ package com.reggarf.mods.mob_better_config.mixin.pillager;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.PillagerConfig;
 
-import net.minecraft.world.entity.monster.Pillager;
-import net.minecraft.world.entity.projectile.AbstractArrow;
+
+import net.minecraft.world.entity.monster.illager.Pillager;
+import net.minecraft.world.entity.projectile.arrow.AbstractArrow;
 import net.minecraft.world.item.CrossbowItem;
 
 import org.spongepowered.asm.mixin.Mixin;

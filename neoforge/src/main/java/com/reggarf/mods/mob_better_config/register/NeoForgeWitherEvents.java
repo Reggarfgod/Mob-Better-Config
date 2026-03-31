@@ -2,12 +2,12 @@ package com.reggarf.mods.mob_better_config.register;
 
 import com.reggarf.mods.mob_better_config.events.WitherEvents;
 
+import net.minecraft.world.entity.projectile.hurtingprojectile.WitherSkull;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.living.*;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.boss.wither.WitherBoss;
-import net.minecraft.world.entity.projectile.WitherSkull;
 
 public class NeoForgeWitherEvents {
 

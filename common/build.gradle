@@ -22,6 +22,7 @@ dependencies {
     compileOnly group: 'io.github.llamalad7', name: 'mixinextras-common', version: '0.3.5'
     annotationProcessor group: 'io.github.llamalad7', name: 'mixinextras-common', version: '0.3.5'
     implementation "curse.maven:cloth-config-348521:7817583"
+    implementation "curse.maven:jade-324717:7817285"
 }
 
 configurations {

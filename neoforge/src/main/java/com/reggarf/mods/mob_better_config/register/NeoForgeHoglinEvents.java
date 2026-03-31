@@ -10,8 +10,6 @@ import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 
 public class NeoForgeHoglinEvents {
 
-    /* ---------------- Spawn ---------------- */
-
     @SubscribeEvent
     public void onSpawn(FinalizeSpawnEvent event) {
 
@@ -24,9 +22,6 @@ public class NeoForgeHoglinEvents {
         HoglinEvents.onSpawn(hoglin, level);
     }
 
-
-    /* ---------------- Damage ---------------- */
-
     @SubscribeEvent
     public void onDamage(LivingDamageEvent.Pre event) {
 
@@ -37,9 +32,6 @@ public class NeoForgeHoglinEvents {
 
         event.setNewDamage(newDamage);
     }
-
-
-    /* ---------------- XP ---------------- */
 
     @SubscribeEvent
     public void onXP(LivingExperienceDropEvent event) {
@@ -53,9 +45,6 @@ public class NeoForgeHoglinEvents {
 
         event.setDroppedExperience(xp);
     }
-
-
-    /* ---------------- Drops ---------------- */
 
     @SubscribeEvent
     public void onDrops(LivingDropsEvent event) {
