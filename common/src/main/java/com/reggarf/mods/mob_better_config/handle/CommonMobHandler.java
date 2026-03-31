@@ -1,6 +1,7 @@
 package com.reggarf.mods.mob_better_config.handle;
 
 import com.reggarf.mods.mob_better_config.data.MobData;
+import com.reggarf.mods.mob_better_config.data.MobStats;
 import com.reggarf.mods.mob_better_config.util.DoorBreakUtil;
 import com.reggarf.mods.mob_better_config.util.MobNameUtil;
 import net.minecraft.server.level.ServerLevel;
@@ -101,7 +102,14 @@ public class CommonMobHandler {
             ));
         }
 
-        if (rageMode && mob.getHealth() < mob.getMaxHealth() * 0.3F) {
+        MobStats data = MobData.get(mob);
+
+        if (rageMode && !data.rageTriggered && mob.getHealth() < mob.getMaxHealth() * 0.1F) {
+
+            data.rageTriggered = true;
+
+            float newHealth = (float) (mob.getMaxHealth() * 0.2F);
+            mob.setHealth(newHealth);
 
             mob.addEffect(new MobEffectInstance(
                     MobEffects.SPEED,

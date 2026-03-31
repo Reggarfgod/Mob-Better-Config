@@ -13,5 +13,7 @@ public class MobStats {
     public boolean named;
     public boolean reinforced;
 
+    public boolean rageTriggered = false;
+
     public MobStats() {}
 }
