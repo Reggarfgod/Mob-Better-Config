@@ -2,6 +2,7 @@ package com.reggarf.mods.mob_better_config.register;
 
 import com.reggarf.mods.mob_better_config.config.MagmaCubeConfig;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
+import com.reggarf.mods.mob_better_config.handle.CommonMobHandler;
 import com.reggarf.mods.mob_better_config.util.*;
 
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
@@ -34,10 +35,9 @@ public class FabricMagmaCubeEvents {
 
             MagmaCubeConfig config = ModConfigs.getMagmaCube();
 
-            if (cube.getTags().contains("mob_better_config_spawned"))
+            if (CommonMobHandler.isInitialized(cube))
                 return;
-
-            cube.addTag("mob_better_config_spawned");
+            CommonMobHandler.markInitialized(cube);
 
             applyConfig(cube, config);
 
@@ -131,19 +131,26 @@ public class FabricMagmaCubeEvents {
         });
 
 
-        ServerTickEvents.END_SERVER_TICK.register((MinecraftServer server) -> {
+        ServerTickEvents.END_SERVER_TICK.register(server -> {
 
             for (ServerLevel level : server.getAllLevels()) {
 
-                for (MagmaCube cube : level.getEntitiesOfClass(
-                        MagmaCube.class,
-                        level.getWorldBorder().getCollisionShape().bounds()
-                )) {
+                java.util.Set<net.minecraft.world.entity.monster.MagmaCube> processed = new java.util.HashSet<>();
 
-                    if (level.getDifficulty() == Difficulty.PEACEFUL &&
-                            ModConfigs.getMagmaCube().despawnInPeaceful) {
+                for (var player : level.players()) {
 
-                        cube.discard();
+                    for (var magma : level.getEntitiesOfClass(
+                            net.minecraft.world.entity.monster.MagmaCube.class,
+                            player.getBoundingBox().inflate(64)
+                    )) {
+
+                        if (processed.add(magma)) {
+
+                            // your logic here
+                            if (magma.level().getDifficulty() == net.minecraft.world.Difficulty.PEACEFUL) {
+                                magma.discard();
+                            }
+                        }
                     }
                 }
             }

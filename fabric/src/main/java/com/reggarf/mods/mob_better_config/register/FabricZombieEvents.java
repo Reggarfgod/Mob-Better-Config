@@ -28,10 +28,17 @@ public class FabricZombieEvents {
         // TICK
         ServerTickEvents.END_LEVEL_TICK.register(level -> {
 
-            // iterate only zombies (efficient enough)
-            for (Zombie zombie : level.getEntitiesOfClass(Zombie.class, level.getWorldBorder().getCollisionShape().bounds())) {
-                ZombieEvents.onTick(zombie);
-            }
+            level.players().forEach(player -> {
+
+                var zombies = level.getEntitiesOfClass(
+                        Zombie.class,
+                        player.getBoundingBox().inflate(64)
+                );
+
+                for (Zombie zombie : zombies) {
+                    ZombieEvents.onTick(zombie);
+                }
+            });
 
         });
 

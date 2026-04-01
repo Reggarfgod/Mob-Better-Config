@@ -10,8 +10,9 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 
 import net.minecraft.world.entity.animal.sheep.Sheep;
-import net.minecraft.world.entity.monster.Evoker;
+
 import net.minecraft.world.entity.monster.Vex;
+import net.minecraft.world.entity.monster.illager.Evoker;
 import net.minecraft.world.entity.projectile.EvokerFangs;
 
 public class FabricEvokerEvents {
@@ -53,7 +54,7 @@ public class FabricEvokerEvents {
             return true;
         });
 
-        ServerTickEvents.END_WORLD_TICK.register(level -> {
+        ServerTickEvents.END_LEVEL_TICK.register(level -> {
 
             for (Entity entity : level.getAllEntities()) {
 

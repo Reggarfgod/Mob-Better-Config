@@ -2,6 +2,7 @@ package com.reggarf.mods.mob_better_config.register;
 
 import com.reggarf.mods.mob_better_config.config.DrownedConfig;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
+import com.reggarf.mods.mob_better_config.handle.CommonMobHandler;
 import com.reggarf.mods.mob_better_config.util.*;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
@@ -12,8 +13,9 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.monster.Drowned;
-import net.minecraft.world.entity.projectile.ThrownTrident;
+
+import net.minecraft.world.entity.monster.zombie.Drowned;
+import net.minecraft.world.entity.projectile.arrow.ThrownTrident;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
@@ -33,9 +35,9 @@ public class FabricDrownedEvents {
             DrownedConfig config = ModConfigs.getDrowned();
 
             // Prevent duplicate spawn multiplier
-            if (drowned.getTags().contains("mob_better_config_spawned"))
+            if (CommonMobHandler.isInitialized(drowned))
                 return;
-            drowned.addTag("mob_better_config_spawned");
+            CommonMobHandler.markInitialized(drowned);
 
             applyConfig(drowned, config);
             applyEquipment(drowned, config);
@@ -77,7 +79,7 @@ public class FabricDrownedEvents {
 
         // Tick event
 
-                ServerTickEvents.END_WORLD_TICK.register((ServerLevel level) -> {
+                ServerTickEvents.END_LEVEL_TICK.register((ServerLevel level) -> {
 
                     for (Entity entity : level.getAllEntities()) {
 
@@ -116,7 +118,7 @@ public class FabricDrownedEvents {
             if (!(trident.getOwner() instanceof Drowned drowned))
                 return;
 
-            if (drowned.level().isClientSide)
+            if (drowned.level().isClientSide())
                 return;
 
             if (drowned.getTarget() == null)

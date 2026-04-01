@@ -2,6 +2,7 @@ package com.reggarf.mods.mob_better_config.register;
 
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.SlimeConfig;
+import com.reggarf.mods.mob_better_config.handle.CommonMobHandler;
 import com.reggarf.mods.mob_better_config.util.*;
 
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
@@ -33,10 +34,9 @@ public class FabricSlimeEvents {
 
             SlimeConfig config = ModConfigs.getSlime();
 
-            if (slime.getTags().contains(SPAWN_TAG))
+            if (CommonMobHandler.isInitialized(slime))
                 return;
-
-            slime.addTag(SPAWN_TAG);
+            CommonMobHandler.markInitialized(slime);
 
             applyConfig(slime, config);
 
@@ -121,17 +121,22 @@ public class FabricSlimeEvents {
 
             for (ServerLevel level : server.getAllLevels()) {
 
-                for (Slime slime : level.getEntitiesOfClass(
-                        Slime.class,
-                        level.getWorldBorder().getCollisionShape().bounds())) {
+                SlimeConfig config = ModConfigs.getSlime();
 
-                    SlimeConfig config = ModConfigs.getSlime();
+                if (!config.despawnInPeaceful)
+                    continue;
 
-                    if (!config.despawnInPeaceful)
-                        continue;
+                for (var player : level.players()) {
 
-                    if (slime.level().getDifficulty() == Difficulty.PEACEFUL)
-                        slime.discard();
+                    for (Slime slime : level.getEntitiesOfClass(
+                            Slime.class,
+                            player.getBoundingBox().inflate(64)
+                    )) {
+
+                        if (slime.level().getDifficulty() == Difficulty.PEACEFUL) {
+                            slime.discard();
+                        }
+                    }
                 }
             }
         });
