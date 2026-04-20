@@ -1,7 +1,5 @@
 package com.reggarf.mods.mob_better_config.util;
 
-import com.reggarf.mods.mob_better_config.data.MobData;
-import com.reggarf.mods.mob_better_config.data.MobStats;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
@@ -36,9 +34,9 @@ public class VexReinforcementUtil {
         if (!enabled)
             return;
 
-        if (MobData.get(summoner).reinforced) {
+        // Prevent repeat spawning
+        if (summoner.getTags().contains(REINFORCED_TAG))
             return;
-        }
 
         if (requireBelowHalfHealth &&
                 summoner.getHealth() > summoner.getMaxHealth() / 2.0F)
@@ -105,11 +103,11 @@ public class VexReinforcementUtil {
             level.addFreshEntity(vex);
         }
 
-        MobStats stats = MobData.get(summoner);
-        stats.reinforced = true;
+        // mark summoner so it cannot spawn again
+        summoner.addTag(REINFORCED_TAG);
     }
 
     public static boolean isReinforced(Mob mob) {
-        return MobData.get(mob).reinforced;
+        return mob.getTags().contains(REINFORCED_TAG);
     }
 }

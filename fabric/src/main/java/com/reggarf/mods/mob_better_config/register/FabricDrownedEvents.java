@@ -79,7 +79,7 @@ public class FabricDrownedEvents {
 
         // Tick event
 
-                ServerTickEvents.END_LEVEL_TICK.register((ServerLevel level) -> {
+                ServerTickEvents.END_WORLD_TICK.register((ServerLevel level) -> {
 
                     for (Entity entity : level.getAllEntities()) {
 

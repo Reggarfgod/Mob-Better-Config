@@ -2,12 +2,9 @@ package com.reggarf.mods.mob_better_config.mixin.enderdragon;
 
 import com.reggarf.mods.mob_better_config.config.EnderDragonConfig;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
-import com.reggarf.mods.mob_better_config.data.MobData;
-import com.reggarf.mods.mob_better_config.data.MobStats;
 import com.reggarf.mods.mob_better_config.util.BossUtil;
 
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 
 import org.spongepowered.asm.mixin.Mixin;
@@ -20,7 +17,11 @@ public class DragonBossModeMixin {
 
     @Inject(
             method = "aiStep",
-            at = @At("HEAD")
+            at = @At(
+                    value = "FIELD",
+                    target = "Lnet/minecraft/world/entity/boss/enderdragon/EnderDragon;dragonFight:Lnet/minecraft/world/level/dimension/end/EndDragonFight;",
+                    shift = At.Shift.AFTER
+            )
     )
     private void mobBetterConfig$applyBoss(CallbackInfo ci) {
 
@@ -29,13 +30,11 @@ public class DragonBossModeMixin {
         if (!(dragon.level() instanceof ServerLevel))
             return;
 
-        if (!(dragon instanceof Mob mob))
-            return;
-        MobStats stats = MobData.get(mob);
-        if (stats.spawned)
+        // Multiloader-safe persistence check
+        if (dragon.getTags().contains("mob_better_config_spawned"))
             return;
 
-        stats.spawned = true;
+        dragon.addTag("mob_better_config_spawned");
 
         EnderDragonConfig config = ModConfigs.getEnderDragon();
 

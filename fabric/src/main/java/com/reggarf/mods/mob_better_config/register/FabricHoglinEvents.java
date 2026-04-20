@@ -3,19 +3,16 @@ package com.reggarf.mods.mob_better_config.register;
 import com.reggarf.mods.mob_better_config.events.HoglinEvents;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
-import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
 
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.monster.hoglin.Hoglin;
-import net.minecraft.world.damagesource.DamageSource;
 
 public class FabricHoglinEvents {
 
-    public static void register() {
+    private static final String DAMAGE_TAG = "mbc_damage_processing";
 
-        /* Spawn */
+    public static void register() {
 
         ServerEntityEvents.ENTITY_LOAD.register((entity, level) -> {
 
@@ -29,24 +26,37 @@ public class FabricHoglinEvents {
         });
 
 
-        /* Damage modifier */
-
         ServerLivingEntityEvents.ALLOW_DAMAGE.register((entity, source, amount) -> {
+
+            if (entity.getTags().contains(DAMAGE_TAG)) {
+                return true;
+            }
 
             if (source.getEntity() instanceof Hoglin) {
 
                 float newDamage = HoglinEvents.modifyAttackDamage(amount);
 
-                entity.hurt(source, newDamage);
-                return false;
+                // mark processing
+                entity.addTag(DAMAGE_TAG);
+
+                try {
+
+                    float extra = newDamage - amount;
+
+                    if (extra > 0) {
+                        entity.setHealth(entity.getHealth() - extra);
+                    }
+
+                } finally {
+                    entity.removeTag(DAMAGE_TAG);
+                }
             }
 
             return true;
         });
 
 
-        /* Death (loot + xp) */
-
+        /* Death */
         ServerLivingEntityEvents.AFTER_DEATH.register((entity, source) -> {
 
             if (!(entity instanceof Hoglin hoglin))

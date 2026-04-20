@@ -2,7 +2,6 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.ZombifiedPiglinConfig;
-import com.reggarf.mods.mob_better_config.data.MobData;
 import com.reggarf.mods.mob_better_config.handle.CommonMobHandler;
 import com.reggarf.mods.mob_better_config.util.*;
 
@@ -18,7 +17,7 @@ public class ZombifiedPiglinEvents {
 
     public static void onSpawn(ZombifiedPiglin piglin, ServerLevel level) {
 
-        if (MobData.get(piglin).processed)
+        if (piglin.getTags().contains(PROCESSED_TAG))
             return;
 
         if (BossUtil.isBoss(piglin))

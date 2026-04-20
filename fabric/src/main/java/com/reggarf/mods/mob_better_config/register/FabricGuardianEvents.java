@@ -30,7 +30,7 @@ public class FabricGuardianEvents {
 
         /* ---------------- Tick ---------------- */
 
-        ServerTickEvents.END_LEVEL_TICK.register(level -> {
+        ServerTickEvents.END_WORLD_TICK.register(level -> {
 
             for (Entity entity : level.getAllEntities()) {
 

@@ -2,7 +2,6 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.HuskConfig;
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
-import com.reggarf.mods.mob_better_config.data.MobData;
 import com.reggarf.mods.mob_better_config.handle.CommonMobHandler;
 import com.reggarf.mods.mob_better_config.util.*;
 
@@ -21,7 +20,8 @@ import java.util.WeakHashMap;
 public class HuskEvents {
 
     private static final Map<Husk, Integer> WATER_TIMERS = new WeakHashMap<>();
-
+    private static final String SPAWN_TAG = "mob_better_config_spawned";
+    private static final String HUNGER_TAG = "mob_better_config_hunger_flag";
     // =========================
     // SPAWN
     // =========================
@@ -101,24 +101,18 @@ public class HuskEvents {
 
         if (!(attacker instanceof Husk))
             return;
-        if (target instanceof Mob mob) {
-            MobData.get(mob).hunger = true;
-        }
+
+        target.addTag(HUNGER_TAG);
     }
+
 
     public static void onTargetTick(LivingEntity target) {
 
-        if (!(target instanceof Mob mob))
+
+        if (!target.getTags().contains(HUNGER_TAG))
             return;
 
-        var stats = MobData.get(mob);
-
-        // Only run if flagged
-        if (!stats.hunger)
-            return;
-
-        // Reset flag (so it doesn't spam)
-        stats.hunger = false;
+        target.removeTag(HUNGER_TAG);
 
         HuskConfig config = ModConfigs.getHusk();
 

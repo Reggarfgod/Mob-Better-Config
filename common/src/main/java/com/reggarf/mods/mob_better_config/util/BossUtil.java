@@ -1,8 +1,5 @@
 package com.reggarf.mods.mob_better_config.util;
 
-import com.reggarf.mods.mob_better_config.data.MobData;
-import com.reggarf.mods.mob_better_config.data.MobStats;
-
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
@@ -13,6 +10,10 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 public class BossUtil {
 
     private static final double DEFAULT_SCALE = 1.5;
+    private static final String TAG_BOSS = "mbc_boss";
+    private static final String TAG_XP = "mbc_xp=";
+    private static final String TAG_LOOT = "mbc_loot=";
+    private static final String TAG_TIER = "mbc_tier=";
 
     public enum BossTier {
         COMMON(1.0, 1.0, 1.0, 1.0, ChatFormatting.WHITE),
@@ -49,16 +50,11 @@ public class BossUtil {
             double lootMultiplier
     ) {
 
-        if (!enableBossMode)
-            return;
-
-        if (isBoss(entity))
-            return;
+        if (!enableBossMode) return;
+        if (isBoss(entity)) return;
 
         boolean makeBoss = forceAllBoss || entity.getRandom().nextDouble() < bossChance;
-
-        if (!makeBoss)
-            return;
+        if (!makeBoss) return;
 
         BossTier tier = rollTier(entity);
 
@@ -93,15 +89,18 @@ public class BossUtil {
             BossTier tier
     ) {
 
-        if (!(entity instanceof Mob mob))
-            return;
+        if (!(entity instanceof Mob)) return;
 
-        MobStats stats = MobData.get(mob);
-        stats.boss = true;
-        stats.tier = tier.ordinal();
-        stats.xp = (float) xpMultiplier;
-        stats.loot = (float) lootMultiplier;
+        entity.getTags().removeIf(tag ->
+                tag.startsWith("mbc_")
+        );
 
+        entity.addTag(TAG_BOSS);
+        entity.addTag(TAG_TIER + tier.name());
+        entity.addTag(TAG_XP + xpMultiplier);
+        entity.addTag(TAG_LOOT + lootMultiplier);
+
+        // HEALTH
         AttributeInstance maxHealth = entity.getAttribute(Attributes.MAX_HEALTH);
         if (maxHealth != null) {
             double newHealth = maxHealth.getBaseValue() * healthMultiplier;
@@ -109,6 +108,7 @@ public class BossUtil {
             entity.setHealth((float) newHealth);
         }
 
+        // DAMAGE
         AttributeInstance attackDamage = entity.getAttribute(Attributes.ATTACK_DAMAGE);
         if (attackDamage != null) {
             attackDamage.setBaseValue(
@@ -116,11 +116,13 @@ public class BossUtil {
             );
         }
 
+        // SCALE
         AttributeInstance scale = entity.getAttribute(Attributes.SCALE);
         if (scale != null) {
             scale.setBaseValue(DEFAULT_SCALE + tier.healthMul * 0.3);
         }
 
+        // GLOWING
         if (glowing) {
             entity.setGlowingTag(true);
 
@@ -143,6 +145,7 @@ public class BossUtil {
             }
         }
 
+        // NAME
         if (customName) {
             entity.setCustomName(
                     Component.literal(formatTier(tier) + " Boss " + entity.getName().getString())
@@ -157,32 +160,39 @@ public class BossUtil {
         return Character.toUpperCase(n.charAt(0)) + n.substring(1);
     }
 
-
     public static boolean isBoss(LivingEntity entity) {
-        if (entity instanceof Mob mob) {
-            return MobData.get(mob).boss;
-        }
-        return false;
+        return entity.getTags().contains(TAG_BOSS);
     }
 
     public static double getXpMultiplier(LivingEntity entity) {
-        if (entity instanceof Mob mob) {
-            return MobData.get(mob).xp;
+        for (String tag : entity.getTags()) {
+            if (tag.startsWith(TAG_XP)) {
+                try {
+                    return Double.parseDouble(tag.split("=")[1]);
+                } catch (Exception ignored) {}
+            }
         }
-        return 5.0;
+        return 1.0;
     }
 
     public static double getLootMultiplier(LivingEntity entity) {
-        if (entity instanceof Mob mob) {
-            return MobData.get(mob).loot;
+        for (String tag : entity.getTags()) {
+            if (tag.startsWith(TAG_LOOT)) {
+                try {
+                    return Double.parseDouble(tag.split("=")[1]);
+                } catch (Exception ignored) {}
+            }
         }
-        return 2.0;
+        return 1.0;
     }
 
     public static BossTier getTier(LivingEntity entity) {
-        if (entity instanceof Mob mob) {
-            int id = MobData.get(mob).tier;
-            return BossTier.values()[id];
+        for (String tag : entity.getTags()) {
+            if (tag.startsWith(TAG_TIER)) {
+                try {
+                    return BossTier.valueOf(tag.split("=")[1]);
+                } catch (Exception ignored) {}
+            }
         }
         return BossTier.COMMON;
     }

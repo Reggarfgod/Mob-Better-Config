@@ -1,7 +1,5 @@
 package com.reggarf.mods.mob_better_config.handle;
 
-import com.reggarf.mods.mob_better_config.data.MobData;
-import com.reggarf.mods.mob_better_config.data.MobStats;
 import com.reggarf.mods.mob_better_config.util.DoorBreakUtil;
 import com.reggarf.mods.mob_better_config.util.MobNameUtil;
 import net.minecraft.server.level.ServerLevel;
@@ -14,11 +12,13 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 
 public class CommonMobHandler {
 
+    public static final String INIT_TAG = "mbc_initialized";
+
     public static boolean isInitialized(Mob mob) {
-        return MobData.get(mob).initialized;
+        return mob.getTags().contains(INIT_TAG);
     }
     public static void markInitialized(Mob mob) {
-        MobData.get(mob).initialized = true;
+        mob.addTag(INIT_TAG);
     }
     public static void applyCommonAttributes(
             Mob mob,
@@ -102,14 +102,7 @@ public class CommonMobHandler {
             ));
         }
 
-        MobStats data = MobData.get(mob);
-
-        if (rageMode && !data.rageTriggered && mob.getHealth() < mob.getMaxHealth() * 0.1F) {
-
-            data.rageTriggered = true;
-
-            float newHealth = (float) (mob.getMaxHealth() * 0.2F);
-            mob.setHealth(newHealth);
+        if (rageMode && mob.getHealth() < mob.getMaxHealth() * 0.3F) {
 
             mob.addEffect(new MobEffectInstance(
                     MobEffects.SPEED,

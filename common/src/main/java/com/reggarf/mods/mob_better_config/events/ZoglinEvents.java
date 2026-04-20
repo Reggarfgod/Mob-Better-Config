@@ -2,7 +2,6 @@ package com.reggarf.mods.mob_better_config.events;
 
 import com.reggarf.mods.mob_better_config.config.ModConfigs;
 import com.reggarf.mods.mob_better_config.config.ZoglinConfig;
-import com.reggarf.mods.mob_better_config.data.MobData;
 import com.reggarf.mods.mob_better_config.handle.CommonMobHandler;
 import com.reggarf.mods.mob_better_config.util.*;
 
@@ -16,7 +15,8 @@ public class ZoglinEvents {
 
     public static void onSpawn(Zoglin zoglin, ServerLevel level) {
 
-        MobData.get(zoglin).processed = true;
+        if (zoglin.getTags().contains(PROCESSED_TAG))
+            return;
 
         if (BossUtil.isBoss(zoglin))
             return;
